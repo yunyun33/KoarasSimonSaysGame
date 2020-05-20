@@ -37,6 +37,16 @@ class TotalScoreViewController: UIViewController {
         }
     }
     
+    @IBAction func goToRegisterNameButton(_ sender: Any) {
+        //storyboardのインスタンス取得
+        let storyboard: UIStoryboard = self.storyboard!
+        //遷移先ViewControllerのインスタンス取得
+        let nextView = storyboard.instantiateViewController(withIdentifier: "view4") as! RegisterNameViewController
+        //画面遷移
+        self.navigationController?.present       (nextView, animated: true)
+    }
+    
+    
     @IBAction func reTryButton(_ sender: Any) {
         let index = navigationController!.viewControllers.count - 3
         navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)

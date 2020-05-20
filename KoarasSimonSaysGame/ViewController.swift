@@ -22,5 +22,9 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(nextView, animated: true)
     }
     
+    @IBAction func onTapTest(_ sender: Any) {
+        let ranking = UserDefaults.standard.string(forKey: "nameAndScore")
+        print(ranking)
+    }
 }
 

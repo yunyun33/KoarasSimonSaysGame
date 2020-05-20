@@ -17,6 +17,9 @@
 		BA006F87243C58C8000AB5F6 /* KoarasSimonSaysGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F86243C58C8000AB5F6 /* KoarasSimonSaysGameUITests.swift */; };
 		BA006F95243C5AB4000AB5F6 /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F94243C5AB4000AB5F6 /* PlayGameViewController.swift */; };
 		BA006F972441D132000AB5F6 /* TotalScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */; };
+		BA006F992442FD74000AB5F6 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */; };
+		BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */; };
+		BAFBB912246F8116005FFEEF /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BAFBB911246F8116005FFEEF /* playBGM.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		BA006F88243C58C8000AB5F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA006F94243C5AB4000AB5F6 /* PlayGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
 		BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoreViewController.swift; sourceTree = "<group>"; };
+		BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
+		BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDateViewController.swift; sourceTree = "<group>"; };
+		BAFBB911246F8116005FFEEF /* playBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBGM.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +114,11 @@
 				BA006F68243C58C0000AB5F6 /* ViewController.swift */,
 				BA006F94243C5AB4000AB5F6 /* PlayGameViewController.swift */,
 				BA006F6A243C58C0000AB5F6 /* Main.storyboard */,
+				BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */,
 				BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */,
+				BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */,
 				BA006F6D243C58C8000AB5F6 /* Assets.xcassets */,
+				BAFBB911246F8116005FFEEF /* playBGM.mp3 */,
 				BA006F6F243C58C8000AB5F6 /* LaunchScreen.storyboard */,
 				BA006F72243C58C8000AB5F6 /* Info.plist */,
 			);
@@ -239,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA006F71243C58C8000AB5F6 /* LaunchScreen.storyboard in Resources */,
+				BAFBB912246F8116005FFEEF /* playBGM.mp3 in Resources */,
 				BA006F6E243C58C8000AB5F6 /* Assets.xcassets in Resources */,
 				BA006F6C243C58C0000AB5F6 /* Main.storyboard in Resources */,
 			);
@@ -266,7 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA006F69243C58C0000AB5F6 /* ViewController.swift in Sources */,
+				BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */,
 				BA006F65243C58C0000AB5F6 /* AppDelegate.swift in Sources */,
+				BA006F992442FD74000AB5F6 /* RegisterNameViewController.swift in Sources */,
 				BA006F95243C5AB4000AB5F6 /* PlayGameViewController.swift in Sources */,
 				BA006F67243C58C0000AB5F6 /* SceneDelegate.swift in Sources */,
 				BA006F972441D132000AB5F6 /* TotalScoreViewController.swift in Sources */,

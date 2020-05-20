@@ -1,16 +1,18 @@
 
 import UIKit
+import AVFoundation
 
-class PlayGameViewController: UIViewController {
+class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBOutlet weak var instructionLabel: UILabel!
     
     @IBOutlet weak var koalasFlagImageView: UIImageView!
     
+    @IBOutlet weak var countDownLabel: UILabel!
     @IBOutlet weak var goodLabel: UILabel!
     @IBOutlet weak var missLabel: UILabel!
     
-    let instructionText = ["上あげて！", "下さげて！", "右あげて！", "左あげて！"]
+    let instructionText = ["上あげて！", "下さげて！", "右にして！", "左にして！"]
 
     //回答を代入する変数
     var answer: String = ""
@@ -18,6 +20,15 @@ class PlayGameViewController: UIViewController {
     var okCount: Int = 0
     //ミスカウント数
     var missCount: Int = 0
+    
+    //BGMのインスタンス生成
+    var audioPlayer : AVAudioPlayer!
+    
+    //タイマー
+           var timer : Timer?
+           var count = 0
+           //設定値を扱うキーを設定
+           let settingKey = "timerValue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +39,43 @@ class PlayGameViewController: UIViewController {
         
         koalasFlagImageView.image = UIImage(named: "Ready.png")
 
+       //BGM再生
+        do {
+            let filePath = Bundle.main.path(forResource: "playBGM",ofType: "mp3")
+            let music = URL(fileURLWithPath: filePath!)
+            audioPlayer = try AVAudioPlayer(contentsOf: music)
+        } catch {
+            print("error")
+        }
+        audioPlayer.play()
+        
+        //--------タイマーの設定--------
+        //UserDefaultsのインスタンス生成
+        let settingTimer = UserDefaults.standard
+        //UserDefaultsに秒数を登録
+        settingTimer.register(defaults: [settingKey: 10])
+        
+        //タイマーをアンラップ
+        if let timer = timer {
+            //もしタイマーが、実行中だったらスタートしない
+            if timer.isValid == true {
+                //何もしない
+                return
+            }
+        }
+        
+        //タイマースタート
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(self.timerInterrupt(_:)),
+                                     userInfo: nil,
+                                     repeats: true)        
+        
         //goodLabelをアニメーションするまで透明にしておく
-        goodLabel.alpha = 0.0
-        missLabel.alpha = 0.0
+               goodLabel.alpha = 0.0
+               missLabel.alpha = 0.0
     }
-    
+   
     //--------旗揚げゲーム--------
     @IBAction func upButton(_ sender: Any) {
         goToNextQuestion(tappedString: instructionText[0])
@@ -66,6 +109,8 @@ class PlayGameViewController: UIViewController {
                 UserDefaults.standard.set(totalCount, forKey: "totalScore")
                 
                 showTotalScore()
+                
+                audioPlayer.stop()
                 
             } else {
                 //次の問題を用意する
@@ -120,6 +165,32 @@ class PlayGameViewController: UIViewController {
             self.missLabel.center.y -= 120.0
             self.missLabel.alpha = 0.0
         }, completion: nil)
+    }
+    
+    //画面の更新をする(戻り値: remainCount:残り時間)
+    func displayUpdate() -> Int {
+        let settingTimer = UserDefaults.standard
+        //取得した秒数をtimerValueに渡す
+        let timerValue = settingTimer.integer(forKey: settingKey)
+        //残り時間
+        let remainCount = timerValue - count
+        //残り時間をラベルに表示
+        countDownLabel.text = "残り\(remainCount)秒"
+        //残り時間を戻り値に設定
+        return remainCount
+    }
+    
+    //時間経過の処理
+    @objc func timerInterrupt(_ timer: Timer) {
+        //経過時間に+1していく
+        count += 1
+        
+        //残り時間が0以下のとき、タイマーを止める
+        if displayUpdate() <= 0 {
+            count = 0
+            //タイマー停止
+            timer.invalidate()
+        }
     }
     
     //制作用スキップボタン
