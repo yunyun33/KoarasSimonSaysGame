@@ -48,13 +48,10 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
     }
     
     
-    @IBAction func onTapDoNotRegister(_ sender: Any) {
-    //storyboardのインスタンス取得
-        let storyboard: UIStoryboard = self.storyboard!
-        //遷移先ViewControllerのインスタンス取得
-        let nextView = storyboard.instantiateViewController(withIdentifier: "view1") as! ViewController
-        //画面遷移
-        self.navigationController?.pushViewController(nextView, animated: true)
+    @IBAction func onTapDoNotRegisterButton(_ sender: Any) {
+        dismiss(animated: false, completion: nil)
+        let navigationController = presentingViewController as? UINavigationController
+        navigationController?.popToRootViewController(animated: false)
     }
     
     //UserDefaultsに保存できているか確認ボタン

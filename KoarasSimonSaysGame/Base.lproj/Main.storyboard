@@ -295,7 +295,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="登録しない"/>
                                         <connections>
-                                            <action selector="onTapDoNotRegister:" destination="FEb-5k-zNg" eventType="touchUpInside" id="xHF-yo-0Ae"/>
+                                            <action selector="onTapDoNotRegisterButton:" destination="FEb-5k-zNg" eventType="touchUpInside" id="jC6-kd-UEr"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's your name?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xAF-h6-hEM">
