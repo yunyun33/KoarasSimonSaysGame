@@ -102,17 +102,10 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
             okCount += 1
             showGoodLabel()
             nextInstructionText()
-        
         } else {
             missCount += 1
             showMissLabel()
             nextInstructionText()
-        }
-        
-        var totalScore = okCount - missCount
-        //totalScoreがマイナスだったら0にする
-        if totalScore < 0 {
-            totalScore = 0
         }
 
         //画像を切り替える
@@ -122,6 +115,16 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
             case instructionText[2]: koalasFlagImageView.image = UIImage(named: "Right.png")
             case instructionText[3]: koalasFlagImageView.image = UIImage(named: "Left.png")
             default: break
+        }
+    }
+  
+    //scoreの計算
+    private func calculateScore() {
+        //score計算
+        totalScore = okCount - missCount
+        //totalScoreがマイナスだったら0にする
+        if totalScore < 0 {
+            totalScore = 0
         }
     }
     
@@ -182,8 +185,9 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
         //残り時間が0以下のとき、タイマーを止める
         if displayUpdate() <= 0 {
             count = 0
-            //タイマー停止
+            //タイマー停止したら実行すること
             timer.invalidate()
+            calculateScore()
             showTotalScore()
             audioPlayer.stop()
         }
