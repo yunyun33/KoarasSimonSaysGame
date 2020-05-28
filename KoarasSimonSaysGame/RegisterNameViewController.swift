@@ -44,7 +44,17 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         //遷移先ViewControllerのインスタンス取得
         let nextView = storyboard.instantiateViewController(withIdentifier: "view5") as! RankingDateViewController
         //画面遷移
-        self.navigationController?.present       (nextView, animated: true)
+        self.navigationController?.pushViewController(nextView, animated: true)
+    }
+    
+    
+    @IBAction func onTapDoNotRegister(_ sender: Any) {
+    //storyboardのインスタンス取得
+        let storyboard: UIStoryboard = self.storyboard!
+        //遷移先ViewControllerのインスタンス取得
+        let nextView = storyboard.instantiateViewController(withIdentifier: "view1") as! ViewController
+        //画面遷移
+        self.navigationController?.pushViewController(nextView, animated: true)
     }
     
     //UserDefaultsに保存できているか確認ボタン
