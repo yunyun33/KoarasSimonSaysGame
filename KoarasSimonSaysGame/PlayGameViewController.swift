@@ -16,10 +16,10 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
 
     //回答を代入する変数
     var answer: String = ""
-    //正解カウント数
+    //スコアカウント
     var okCount: Int = 0
-    //ミスカウント数
     var missCount: Int = 0
+    var totalScore: Int = 0
     
     //BGMのインスタンス生成
     var audioPlayer : AVAudioPlayer!
@@ -35,6 +35,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
 
         let randomInstructionText = instructionText.randomElement()!
         
+        countDownLabel.text = "残り15秒"
         instructionLabel.text = "\(randomInstructionText)"
         
         koalasFlagImageView.image = UIImage(named: "Ready.png")
@@ -53,7 +54,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
         //UserDefaultsのインスタンス生成
         let settingTimer = UserDefaults.standard
         //UserDefaultsに秒数を登録
-        settingTimer.register(defaults: [settingKey: 10])
+        settingTimer.register(defaults: [settingKey: 15])
         
         //タイマーをアンラップ
         if let timer = timer {
@@ -100,28 +101,20 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
         if instructionLabel.text == answer {
             okCount += 1
             showGoodLabel()
-            
-            if okCount == 10 {
-                
-                let totalCount: Int = okCount - missCount
-                print(okCount)
-                print(missCount)
-                UserDefaults.standard.set(totalCount, forKey: "totalScore")
-                
-                showTotalScore()
-                
-                audioPlayer.stop()
-                
-            } else {
-                //次の問題を用意する
-                nextInstructionText()
-            }
-
+            nextInstructionText()
+        
         } else {
             missCount += 1
             showMissLabel()
+            nextInstructionText()
         }
         
+        var totalScore = okCount - missCount
+        //totalScoreがマイナスだったら0にする
+        if totalScore < 0 {
+            totalScore = 0
+        }
+
         //画像を切り替える
         switch tappedString {
             case instructionText[0]: koalasFlagImageView.image = UIImage(named: "Up.png")
@@ -137,6 +130,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
         let storyboard: UIStoryboard = self.storyboard!
         //遷移先ViewControllerのインスタンス取得
         let nextView = storyboard.instantiateViewController(withIdentifier: "view3") as! TotalScoreViewController
+        nextView.totalScore = totalScore
         //画面遷移
         self.navigationController?.pushViewController(nextView, animated: true)
     }
@@ -190,6 +184,8 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
             count = 0
             //タイマー停止
             timer.invalidate()
+            showTotalScore()
+            audioPlayer.stop()
         }
     }
     

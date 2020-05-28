@@ -12,7 +12,8 @@ class TotalScoreViewController: UIViewController {
 
     @IBOutlet weak var totalScoreLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
-    
+ 
+    var totalScore: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +21,19 @@ class TotalScoreViewController: UIViewController {
         //2つ前の画面に戻りたいため、tabvarを消す。
         self.navigationController?.navigationBar.isHidden = true
         
-        let getTotalScore = UserDefaults.standard.string(forKey: "totalScore")
+        //let getTotalScore = UserDefaults.standard.string(forKey: "totalScore")
         
-        let totalScoreString: String = getTotalScore!
-        let totalScoreInt: Int = Int(totalScoreString)!
+//        let totalScoreString: String = getTotalScore!
+//        let totalScoreInt: Int = Int(totalScoreString)!
         
-        if totalScoreInt >= 10 {
-            totalScoreLabel.text = "\(totalScoreString)点です。"
+        if totalScore >= 20 {
+            totalScoreLabel.text = "\(totalScore)点です。"
             commentLabel.text = "すごいですね"
-        } else if totalScoreInt >= 5 {
-            totalScoreLabel.text = "\(totalScoreString)点です。"
+        } else if totalScore >= 8 {
+            totalScoreLabel.text = "\(totalScore)点です。"
             commentLabel.text = "もう少しでしたね"
         } else {
-            totalScoreLabel.text = "\(totalScoreString)点です。"
+            totalScoreLabel.text = "\(totalScore)点です。"
             commentLabel.text = "もう少し頑張りましょう"
         }
     }

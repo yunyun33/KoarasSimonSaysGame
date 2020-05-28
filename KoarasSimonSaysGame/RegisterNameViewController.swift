@@ -14,7 +14,7 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var registerButton: UIButton!
     private var nameText: String?
     
-    let totalScore: String = ""
+    var totalScore: String = ""
     var rankingArray: [String] = []
     
     override func viewDidLoad() {
@@ -37,7 +37,16 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         } else {
             UserDefaults.standard.set([rankingName], forKey: "nameAndScore")
         }
+        
+        //登録するボタンを押してRankingDateViewへ遷移する
+        //storyboardのインスタンス取得
+        let storyboard: UIStoryboard = self.storyboard!
+        //遷移先ViewControllerのインスタンス取得
+        let nextView = storyboard.instantiateViewController(withIdentifier: "view5") as! RankingDateViewController
+        //画面遷移
+        self.navigationController?.present       (nextView, animated: true)
     }
+    
     //UserDefaultsに保存できているか確認ボタン
     @IBAction func onTapTestButton(_ sender: Any) {
         let ranking = UserDefaults.standard.stringArray(forKey: "nameAndScore")
