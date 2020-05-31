@@ -46,10 +46,13 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         dismiss(animated: false, completion: nil)
         let navigationController = presentingViewController as? UINavigationController
         navigationController?.popToRootViewController(animated: false)
+        //TotalScoreViewControllerでnavigationcontorollerを消していたので、homeに戻る時に出す
+        navigationController?.navigationBar.isHidden = false
     }
     
     @IBAction func onTapDoNotRegisterButton(_ sender: Any) {
         dismiss(animated: false, completion: nil)
+        //↑まず消して、↓homeに遷移(戻る)
         let navigationController = presentingViewController as? UINavigationController
         navigationController?.popToRootViewController(animated: false)
     }

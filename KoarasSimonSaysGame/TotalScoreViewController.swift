@@ -18,7 +18,7 @@ class TotalScoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //2つ前の画面に戻りたいため、tabvarを消す。
+        //2つ前の画面に戻りたいため、navigationvarを消す。
         self.navigationController?.navigationBar.isHidden = true
         
         //let getTotalScore = UserDefaults.standard.string(forKey: "totalScore")
