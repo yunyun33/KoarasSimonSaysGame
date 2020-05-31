@@ -14,7 +14,7 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var registerButton: UIButton!
     private var nameText: String?
     
-    var totalScore: String = ""
+    var totalScore: Int = 0
     var rankingArray: [String] = []
     
     override func viewDidLoad() {
@@ -31,35 +31,27 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         if nameTextField.text == "" {
             return
         }
-        if var ranking: [String] = UserDefaults.standard.stringArray(forKey: "nameAndScore") {
-            ranking.append(rankingName)
-            UserDefaults.standard.set(ranking, forKey: "nameAndScore")
+        // 保存するメモ情報を配列にする 0: 名前, 1: スコア
+        let rankingToSave: [String] = [rankingName, "\(totalScore)"]
+        // すでに保存されているメモがあれば追加して保存
+        if var memo: [[String]] = UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] {
+            memo.append(rankingToSave)
+            UserDefaults.standard.set(memo, forKey: "nameAndScore")
         } else {
-            UserDefaults.standard.set([rankingName], forKey: "nameAndScore")
+            // 保存しているメモがなければ新規で保存
+            UserDefaults.standard.set([rankingToSave], forKey: "nameAndScore")
         }
-        
-        //登録するボタンを押してRankingDateViewへ遷移する
-        //storyboardのインスタンス取得
-        let storyboard: UIStoryboard = self.storyboard!
-        //遷移先ViewControllerのインスタンス取得
-        let nextView = storyboard.instantiateViewController(withIdentifier: "view5") as! RankingDateViewController
-        //画面遷移
-        self.navigationController?.pushViewController(nextView, animated: true)
-    }
-    
-    
-    @IBAction func onTapDoNotRegisterButton(_ sender: Any) {
+
+        //登録するボタンを押してhomeへ戻る
         dismiss(animated: false, completion: nil)
         let navigationController = presentingViewController as? UINavigationController
         navigationController?.popToRootViewController(animated: false)
     }
     
-    //UserDefaultsに保存できているか確認ボタン
-    @IBAction func onTapTestButton(_ sender: Any) {
-        let ranking = UserDefaults.standard.stringArray(forKey: "nameAndScore")
-        
-        print(ranking)
-        
+    @IBAction func onTapDoNotRegisterButton(_ sender: Any) {
+        dismiss(animated: false, completion: nil)
+        let navigationController = presentingViewController as? UINavigationController
+        navigationController?.popToRootViewController(animated: false)
     }
     
     private func writeName() {

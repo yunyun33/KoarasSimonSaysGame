@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uzv-2Y-VDv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uzv-2Y-VDv">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,11 +29,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IY-j4-UQp">
-                                <rect key="frame" x="133" y="604" width="108" height="30"/>
+                                <rect key="frame" x="133" y="651" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="保存確認ボタン"/>
                                 <connections>
                                     <action selector="onTapTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VkA-uX-lYH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGj-G4-Qlt">
+                                <rect key="frame" x="160" y="541" width="55" height="30"/>
+                                <state key="normal" title="Ranking"/>
+                                <connections>
+                                    <action selector="onTapRankingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahd-em-t1M"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,6 +48,8 @@
                         <constraints>
                             <constraint firstItem="nhd-ty-up3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="DSp-SB-KGh"/>
                             <constraint firstItem="CUP-HQ-bzi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K6l-G3-NAU"/>
+                            <constraint firstItem="DGj-G4-Qlt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="OOH-m7-Nsr"/>
+                            <constraint firstItem="DGj-G4-Qlt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fdT-9h-BsD"/>
                             <constraint firstItem="CUP-HQ-bzi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="hUy-uW-hFL"/>
                             <constraint firstItem="nhd-ty-up3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="klB-2Q-2uh"/>
                         </constraints>
@@ -246,16 +255,6 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="o7a-HH-XEs">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVR-RZ-39q">
-                                            <rect key="frame" x="152" y="589" width="62" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="確認する"/>
-                                            <connections>
-                                                <action selector="onTapTestButton:" destination="FEb-5k-zNg" eventType="touchUpInside" id="Cyv-DV-s7W"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
@@ -390,12 +389,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nb-2M-3Dg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3445.5999999999999" y="125.61576354679804"/>
+            <point key="canvasLocation" x="3529" y="126"/>
         </scene>
         <!--Ranking Date View Controller-->
         <scene sceneID="Swf-h6-wqO">
             <objects>
-                <viewController id="bRS-je-zfM" customClass="RankingDateViewController" customModule="KoarasSimonSaysGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="view5" id="bRS-je-zfM" customClass="RankingDateViewController" customModule="KoarasSimonSaysGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b2j-dG-Thn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -424,10 +423,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jtP-9R-NEO"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Vx3-wP-zHP" id="gdv-us-3Rl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrX-Pb-wKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4313" y="126"/>
+            <point key="canvasLocation" x="4382" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RW6-bq-TAo">

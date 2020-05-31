@@ -43,6 +43,7 @@ class TotalScoreViewController: UIViewController {
         let storyboard: UIStoryboard = self.storyboard!
         //遷移先ViewControllerのインスタンス取得
         let nextView = storyboard.instantiateViewController(withIdentifier: "view4") as! RegisterNameViewController
+         nextView.totalScore = totalScore
         //画面遷移
         self.navigationController?.present       (nextView, animated: true)
     }
