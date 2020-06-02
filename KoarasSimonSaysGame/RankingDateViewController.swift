@@ -9,7 +9,7 @@
 import UIKit
 
 class RankingDateViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     var nameAndScore: [[String]] = []
     
@@ -31,6 +31,11 @@ class RankingDateViewController: UIViewController {
         }
         tableView.reloadData()
     }
+    
+    @IBAction func onTapDelete(_ sender: Any) {
+        alert()
+    }
+    
 }
 
 extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource {
@@ -48,4 +53,21 @@ extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource 
       
         return cell ?? UITableViewCell()
     }
+    
+    //ランキング削除ボタンが押された時のアラート
+    func alert() {
+        let alert: UIAlertController = UIAlertController(title: "ランキングデータを\n削除します。",
+                                                         message: "データは全て削除されます。",
+                                                         preferredStyle: .alert)
+        //OKボタン
+        let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in }
+        alert.addAction(okAction)
+        //キャンセルボタン
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .default) { (UIAlertAction) in }
+               alert.addAction(cancelAction)
+        //アラート画面を表示させる
+        present(alert, animated: true, completion: nil)
+        return
+    }
+
 }
