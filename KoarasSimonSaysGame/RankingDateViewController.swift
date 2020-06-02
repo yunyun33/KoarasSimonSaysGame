@@ -12,6 +12,7 @@ class RankingDateViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var nameAndScore: [[String]] = []
+    var index: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,11 +61,20 @@ extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource 
                                                          message: "データは全て削除されます。",
                                                          preferredStyle: .alert)
         //OKボタン
-        let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in }
+        let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler:{
+                    (action:UIAlertAction!) -> Void in
+            //OKボタン押されたらUserDefaltsのデータ削除
+            UserDefaults.standard.removeObject(forKey: "nameAndScore")
+            //↑のだけだとボタン押した瞬間は画面に表示されたままのため↓で表示を消す
+            self.nameAndScore = []
+            self.tableView.reloadData()
+        })
         alert.addAction(okAction)
+        
         //キャンセルボタン
         let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .default) { (UIAlertAction) in }
-               alert.addAction(cancelAction)
+        alert.addAction(cancelAction)
+        
         //アラート画面を表示させる
         present(alert, animated: true, completion: nil)
         return
