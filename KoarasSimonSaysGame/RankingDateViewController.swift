@@ -16,10 +16,11 @@ class RankingDateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //カスタムセルと紐づける
+        tableView.register(UINib(nibName: "RankingCell", bundle: nil), forCellReuseIdentifier: "rankingCell")
+        
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.contentInset = UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,32 +28,42 @@ class RankingDateViewController: UIViewController {
         nameAndScore.removeAll()
                
         if let savedname = UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] {
-            nameAndScore = savedname
+            //同立の場合、最初にgameした人が上に表示される
+            nameAndScore = savedname.sorted(by: {Double($0[1])! > Double($1[1])!})
             print(nameAndScore)
         }
         tableView.reloadData()
     }
     
     @IBAction func onTapDelete(_ sender: Any) {
-        alert()
+        navigationController?.popViewController(animated: true)
+        //alert()
     }
     
 }
 
 extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    //セルの高さ
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 || indexPath.row == 2 {
+            return 100
+        } else {
+            return 50
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nameAndScore.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        //同立の場合、最初にgameした人が上に表示される
-        let sortedRankingDate = nameAndScore.sorted(by: {Double($0[1])! > Double($1[1])!})
+        let cell = tableView.dequeueReusableCell(withIdentifier: "rankingCell", for: indexPath) as! RankingCell
         
-        var ranking = sortedRankingDate[indexPath.row]
-        //indexPath.row+1　で左側に1,2,3と表示される
-        cell.textLabel?.text = "\(indexPath.row + 1) \(ranking) "
+        cell.rankingNumberLabel.text = "\(indexPath.row + 1)位"
+        cell.rankingNameLabel.text = "\(nameAndScore[indexPath.row][0])"
+        cell.rankingScoreLabel.text = "\(nameAndScore[indexPath.row][1])点"
       
-        return cell ?? UITableViewCell()
+        return cell 
     }
     
     //ランキング削除ボタンが押された時のアラート
@@ -66,7 +77,7 @@ extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource 
             //OKボタン押されたらUserDefaltsのデータ削除
             UserDefaults.standard.removeObject(forKey: "nameAndScore")
             //↑のだけだとボタン押した瞬間は画面に表示されたままのため↓で表示を消す
-            self.nameAndScore = []
+            self.nameAndScore.removeAll()
             self.tableView.reloadData()
         })
         alert.addAction(okAction)

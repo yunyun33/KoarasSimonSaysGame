@@ -7,13 +7,13 @@
 //
 
 import UIKit
-protocol RabkingCellDelegate: AnyObject {
-    func didTapDelete(at index: Int)
     
-}
+
 class RankingCell: UITableViewCell {
 
-    @IBOutlet weak var rankingLabel: UILabel!
+    @IBOutlet weak var rankingNumberLabel: UILabel!   
+    @IBOutlet weak var rankingNameLabel: UILabel!
+    @IBOutlet weak var rankingScoreLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,12 +24,5 @@ class RankingCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    func configureCell(name: String,
-                       score: String) {
-        
-        rankingLabel.text = "\(name), score:\(score)"
-        
     }
 }
