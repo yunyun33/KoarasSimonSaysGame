@@ -3,8 +3,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var titleNameLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,11 +26,7 @@ class ViewController: UIViewController {
         let storyboard: UIStoryboard = self.storyboard!
         let nextView = storyboard.instantiateViewController(withIdentifier: "view5") as! RankingDateViewController
         self.navigationController?.pushViewController(nextView, animated: true)
+        navigationController?.navigationBar.isHidden = false
     }
-    
-    @IBAction func onTapTest(_ sender: Any) {
-        //let memo = UserDefaults.standard.string(forKey: "nameAndScore")
-        print(UserDefaults.standard.array(forKey: "nameAndScore"))
-    }
-}
 
+}

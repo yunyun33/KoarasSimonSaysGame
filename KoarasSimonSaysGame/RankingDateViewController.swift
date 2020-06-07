@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RankingDateViewController: UIViewController {
+class RankingDateViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var nameAndScore: [[String]] = []
@@ -16,11 +16,27 @@ class RankingDateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "ランキング"
+        // ↑文字の色設定
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.purple]
+        
+        // ナビゲーションバーの透明化
+        // 半透明の指定（デフォルト値）
+        self.navigationController?.navigationBar.isTranslucent = true
+        // 空の背景画像設定
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        // ナビゲーションバーの影画像（境界線の画像）を空に設定
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        
         //カスタムセルと紐づける
         tableView.register(UINib(nibName: "RankingCell", bundle: nil), forCellReuseIdentifier: "rankingCell")
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //navigationBarの戻るボタン押した時のイベントに必要
+        navigationController?.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,8 +52,7 @@ class RankingDateViewController: UIViewController {
     }
     
     @IBAction func onTapDelete(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-        //alert()
+        alert()
     }
     
 }
@@ -46,11 +61,7 @@ extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource 
     
     //セルの高さ
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 || indexPath.row == 2 {
-            return 100
-        } else {
-            return 50
-        }
+            return 60
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -90,5 +101,13 @@ extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource 
         present(alert, animated: true, completion: nil)
         return
     }
+    
+    //navigationBarの戻るボタン押した時の処理
+       func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+           if viewController is ViewController {
+               //ホームでnavigationBarが出るのを防止
+               navigationController.navigationBar.isHidden = true
+           }
+       }
 
 }

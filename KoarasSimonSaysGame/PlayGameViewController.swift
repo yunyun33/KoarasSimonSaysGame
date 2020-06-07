@@ -37,6 +37,14 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         //navigationBarの戻るボタン押した時のイベントに必要
         navigationController?.delegate = self
         
+        // ナビゲーションバーの透明化
+        // 半透明の指定（デフォルト値）
+        self.navigationController?.navigationBar.isTranslucent = true
+        // 空の背景画像設定
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        // ナビゲーションバーの影画像（境界線の画像）を空に設定
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        
         let randomInstructionText = instructionText.randomElement()!
         
         countDownLabel.text = "残り15秒"
@@ -244,19 +252,8 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
             //タイマー停止,BGM停止
             timer?.invalidate()
             audioPlayer.stop()
+            navigationController.navigationBar.isHidden = true
         }
     }
-//    @objc func backAction(sender: UIBarButtonItem)  {
-//        self.navigationController?.popViewController(animated: true)
-//    }
     
-    //制作用スキップボタン
-    @IBAction func skipButton(_ sender: Any) {
-        //storyboardのインスタンス取得
-        let storyboard: UIStoryboard = self.storyboard!
-        //遷移先ViewControllerのインスタンス取得
-        let nextView = storyboard.instantiateViewController(withIdentifier: "view3") as! TotalScoreViewController
-        self.navigationController?.pushViewController(nextView, animated: true)
-        audioPlayer.stop()
-    }
 }

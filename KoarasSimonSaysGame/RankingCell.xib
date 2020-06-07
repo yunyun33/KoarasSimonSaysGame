@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANW-Uv-Skc">
-                        <rect key="frame" x="169" y="11.5" width="42" height="21"/>
+                        <rect key="frame" x="149" y="11.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                     <constraint firstItem="1JT-ps-Uzt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MrR-TX-9hL"/>
                     <constraint firstItem="1JT-ps-Uzt" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-130" id="e4I-FN-1bC"/>
                     <constraint firstItem="DSf-WM-2qb" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="110" id="fbj-hy-Q5c"/>
-                    <constraint firstItem="ANW-Uv-Skc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="30" id="fjC-9k-cgU"/>
+                    <constraint firstItem="ANW-Uv-Skc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="10" id="fjC-9k-cgU"/>
                     <constraint firstItem="ANW-Uv-Skc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fsl-Fd-oZ8"/>
                     <constraint firstItem="wdj-D0-J0F" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kKM-nK-C6f"/>
                     <constraint firstItem="wdj-D0-J0F" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-50" id="qy5-GH-144"/>
