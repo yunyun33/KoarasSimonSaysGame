@@ -1,8 +1,9 @@
 
 import UIKit
 import AVFoundation
+import AudioToolbox
 
-class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
+class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var instructionLabel: UILabel!
     
@@ -33,6 +34,9 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //navigationBarの戻るボタン押した時のイベントに必要
+        navigationController?.delegate = self
+        
         let randomInstructionText = instructionText.randomElement()!
         
         countDownLabel.text = "残り15秒"
@@ -54,7 +58,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
         //UserDefaultsのインスタンス生成
         let settingTimer = UserDefaults.standard
         //UserDefaultsに秒数を登録
-        settingTimer.register(defaults: [settingKey: 15])
+        settingTimer.register(defaults: [settingKey: 3])
         
         //タイマーをアンラップ
         if let timer = timer {
@@ -100,12 +104,13 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
         //正解の判定をする
         if instructionLabel.text == answer {
             okCount += 1
+            okBGM()
             showGoodLabel()
             nextInstructionText()
         } else {
             missCount += 1
+            ngBGM()
             showMissLabel()
-            nextInstructionText()
         }
 
         //画像を切り替える
@@ -164,6 +169,46 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
         }, completion: nil)
     }
     
+    //正解した時のBGM再生
+    func okBGM() {
+        do {
+            let audioSession = AVAudioSession.sharedInstance()
+            try audioSession.setCategory(AVAudioSession.Category.ambient)
+            try audioSession.setActive(true)
+        } catch let error {
+                    print(error)
+        }
+        var soundId:SystemSoundID = 0
+
+        // システムサウンドへのパスを指定
+        if let soundUrl:NSURL = NSURL(fileURLWithPath: "/System/Library/Audio/UISounds/okBGM.caf") {
+
+            // SystemsoundIDを作成して再生実行
+            AudioServicesCreateSystemSoundID(soundUrl, &soundId)
+            AudioServicesPlaySystemSound(soundId)
+        }
+    }
+    
+    //不正解した時のBGM再生
+    func ngBGM() {
+        do {
+            let audioSession = AVAudioSession.sharedInstance()
+            try audioSession.setCategory(AVAudioSession.Category.ambient)
+            try audioSession.setActive(true)
+        } catch let error {
+                    print(error)
+        }
+        var soundId:SystemSoundID = 1
+
+        // システムサウンドへのパスを指定
+        if let soundUrl:NSURL = NSURL(fileURLWithPath: "/System/Library/Audio/UISounds/ngBGM.caf") {
+
+            // SystemsoundIDを作成して再生実行
+            AudioServicesCreateSystemSoundID(soundUrl, &soundId)
+            AudioServicesPlaySystemSound(soundId)
+        }
+    }
+    
     //画面の更新をする(戻り値: remainCount:残り時間)
     func displayUpdate() -> Int {
         let settingTimer = UserDefaults.standard
@@ -185,13 +230,25 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
         //残り時間が0以下のとき、タイマーを止める
         if displayUpdate() <= 0 {
             count = 0
-            //タイマー停止したら実行すること
+            //タイマー停止,停止と一緒に実行すること
             timer.invalidate()
             calculateScore()
             showTotalScore()
             audioPlayer.stop()
         }
     }
+    
+    //navigationBarの戻るボタン押した時の処理
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if viewController is ViewController {
+            //タイマー停止,BGM停止
+            timer?.invalidate()
+            audioPlayer.stop()
+        }
+    }
+//    @objc func backAction(sender: UIBarButtonItem)  {
+//        self.navigationController?.popViewController(animated: true)
+//    }
     
     //制作用スキップボタン
     @IBAction func skipButton(_ sender: Any) {
@@ -200,5 +257,6 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate {
         //遷移先ViewControllerのインスタンス取得
         let nextView = storyboard.instantiateViewController(withIdentifier: "view3") as! TotalScoreViewController
         self.navigationController?.pushViewController(nextView, animated: true)
+        audioPlayer.stop()
     }
 }

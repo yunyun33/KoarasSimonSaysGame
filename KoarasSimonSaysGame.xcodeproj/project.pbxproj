@@ -21,6 +21,8 @@
 		BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */; };
 		BAE6E6882483E6460077D8AE /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6862483E6460077D8AE /* RankingCell.swift */; };
 		BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6872483E6460077D8AE /* RankingCell.xib */; };
+		BAE6E68F2488CAAB0077D8AE /* okBGM.caf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E68E2488CAAB0077D8AE /* okBGM.caf */; };
+		BAE6E6912488CABD0077D8AE /* ngBGM.caf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6902488CABD0077D8AE /* ngBGM.caf */; };
 		BAFBB912246F8116005FFEEF /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BAFBB911246F8116005FFEEF /* playBGM.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDateViewController.swift; sourceTree = "<group>"; };
 		BAE6E6862483E6460077D8AE /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		BAE6E6872483E6460077D8AE /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
+		BAE6E68E2488CAAB0077D8AE /* okBGM.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = okBGM.caf; sourceTree = "<group>"; };
+		BAE6E6902488CABD0077D8AE /* ngBGM.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ngBGM.caf; sourceTree = "<group>"; };
 		BAFBB911246F8116005FFEEF /* playBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBGM.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +129,8 @@
 				BAE6E6872483E6460077D8AE /* RankingCell.xib */,
 				BA006F6D243C58C8000AB5F6 /* Assets.xcassets */,
 				BAFBB911246F8116005FFEEF /* playBGM.mp3 */,
+				BAE6E68E2488CAAB0077D8AE /* okBGM.caf */,
+				BAE6E6902488CABD0077D8AE /* ngBGM.caf */,
 				BA006F6F243C58C8000AB5F6 /* LaunchScreen.storyboard */,
 				BA006F72243C58C8000AB5F6 /* Info.plist */,
 			);
@@ -265,6 +271,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE6E6912488CABD0077D8AE /* ngBGM.caf in Resources */,
+				BAE6E68F2488CAAB0077D8AE /* okBGM.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

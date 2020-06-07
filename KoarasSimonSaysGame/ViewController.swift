@@ -7,6 +7,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //navigationcontorollerを消す
+        navigationController?.navigationBar.isHidden = true
     }
 
         
@@ -18,6 +21,7 @@ class ViewController: UIViewController {
         let nextView = storyboard.instantiateViewController(withIdentifier: "view2") as! PlayGameViewController
         //画面遷移
         self.navigationController?.pushViewController(nextView, animated: true)
+        navigationController?.navigationBar.isHidden = false
     }
     
     @IBAction func onTapRankingButton(_ sender: Any) {
