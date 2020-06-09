@@ -16,8 +16,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANW-Uv-Skc">
-                        <rect key="frame" x="149" y="11.5" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ANW-Uv-Skc">
+                        <rect key="frame" x="140" y="9.5" width="100" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="2cN-tB-qsO"/>
+                            <constraint firstAttribute="height" constant="25" id="gkG-tq-Aqu"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -36,7 +40,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSf-WM-2qb">
-                        <rect key="frame" x="249" y="11.5" width="42" height="21"/>
+                        <rect key="frame" x="259" y="11.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -46,8 +50,8 @@
                     <constraint firstItem="DSf-WM-2qb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="42N-IH-QAa"/>
                     <constraint firstItem="1JT-ps-Uzt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MrR-TX-9hL"/>
                     <constraint firstItem="1JT-ps-Uzt" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-130" id="e4I-FN-1bC"/>
-                    <constraint firstItem="DSf-WM-2qb" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="110" id="fbj-hy-Q5c"/>
-                    <constraint firstItem="ANW-Uv-Skc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="10" id="fjC-9k-cgU"/>
+                    <constraint firstItem="DSf-WM-2qb" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="120" id="fbj-hy-Q5c"/>
+                    <constraint firstItem="ANW-Uv-Skc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="30" id="fjC-9k-cgU"/>
                     <constraint firstItem="ANW-Uv-Skc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fsl-Fd-oZ8"/>
                     <constraint firstItem="wdj-D0-J0F" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kKM-nK-C6f"/>
                     <constraint firstItem="wdj-D0-J0F" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-50" id="qy5-GH-144"/>

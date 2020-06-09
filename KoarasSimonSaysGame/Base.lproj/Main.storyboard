@@ -113,13 +113,13 @@
                                 <rect key="frame" x="60" y="256" width="255" height="200"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="good♪" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWn-ay-bDO">
-                                <rect key="frame" x="140.33333333333334" y="325" width="94.666666666666657" height="42"/>
+                                <rect key="frame" x="140.33333333333334" y="265" width="94.666666666666657" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="0.92549019610000005" green="0.32156862749999998" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bQ-9p-6HE">
-                                <rect key="frame" x="152.66666666666666" y="325" width="70" height="42"/>
+                                <rect key="frame" x="152.66666666666666" y="265" width="70" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="0.30980392159999998" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -144,7 +144,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6bQ-9p-6HE" firstAttribute="centerY" secondItem="hLS-iU-wjv" secondAttribute="centerY" constant="-60" id="37W-jI-6zs"/>
+                            <constraint firstItem="6bQ-9p-6HE" firstAttribute="centerY" secondItem="hLS-iU-wjv" secondAttribute="centerY" constant="-120" id="37W-jI-6zs"/>
                             <constraint firstItem="3yh-5t-1dT" firstAttribute="centerX" secondItem="hLS-iU-wjv" secondAttribute="centerX" id="553-DP-0UG"/>
                             <constraint firstItem="aNj-n5-mrD" firstAttribute="centerY" secondItem="hLS-iU-wjv" secondAttribute="centerY" constant="130" id="7aS-xU-PTr"/>
                             <constraint firstItem="3yh-5t-1dT" firstAttribute="centerY" secondItem="hLS-iU-wjv" secondAttribute="centerY" constant="-50" id="8Ej-nM-Ig3"/>
@@ -152,7 +152,7 @@
                             <constraint firstItem="m8d-z9-Ade" firstAttribute="centerX" secondItem="hLS-iU-wjv" secondAttribute="centerX" constant="-120" id="B3r-3l-k71"/>
                             <constraint firstItem="z7D-Gd-Nux" firstAttribute="centerX" secondItem="hLS-iU-wjv" secondAttribute="centerX" constant="120" id="DZ0-YU-LgN"/>
                             <constraint firstItem="Wju-KR-1wh" firstAttribute="centerY" secondItem="hLS-iU-wjv" secondAttribute="centerY" constant="-280" id="Ixs-kG-3ah"/>
-                            <constraint firstItem="yWn-ay-bDO" firstAttribute="centerY" secondItem="hLS-iU-wjv" secondAttribute="centerY" constant="-60" id="Ja1-VZ-1HD"/>
+                            <constraint firstItem="yWn-ay-bDO" firstAttribute="centerY" secondItem="hLS-iU-wjv" secondAttribute="centerY" constant="-120" id="Ja1-VZ-1HD"/>
                             <constraint firstItem="Wju-KR-1wh" firstAttribute="centerX" secondItem="hLS-iU-wjv" secondAttribute="centerX" id="OZc-dZ-Jn2"/>
                             <constraint firstItem="m8d-z9-Ade" firstAttribute="centerY" secondItem="hLS-iU-wjv" secondAttribute="centerY" constant="220" id="Of2-AK-leC"/>
                             <constraint firstItem="HGo-5S-3Dr" firstAttribute="centerX" secondItem="hLS-iU-wjv" secondAttribute="centerX" id="PyX-1e-Abi"/>

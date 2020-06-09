@@ -18,9 +18,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
     //回答を代入する変数
     var answer: String = ""
     //スコアカウント
-    var okCount: Int = 0
-    var missCount: Int = 0
-    var totalScore: Int = 0
+    var scoreCount: Int = 0
     
     //BGMのインスタンス生成
     var audioPlayer : AVAudioPlayer!
@@ -66,7 +64,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         //UserDefaultsのインスタンス生成
         let settingTimer = UserDefaults.standard
         //UserDefaultsに秒数を登録
-        settingTimer.register(defaults: [settingKey: 3])
+        settingTimer.register(defaults: [settingKey: 15])
         
         //タイマーをアンラップ
         if let timer = timer {
@@ -111,12 +109,15 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         
         //正解の判定をする
         if instructionLabel.text == answer {
-            okCount += 1
+            scoreCount += 1
             okBGM()
             showGoodLabel()
             nextInstructionText()
         } else {
-            missCount += 1
+            scoreCount -= 1
+                if scoreCount < 0 {
+                    scoreCount = 0
+                }
             ngBGM()
             showMissLabel()
         }
@@ -131,22 +132,12 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         }
     }
   
-    //scoreの計算
-    private func calculateScore() {
-        //score計算
-        totalScore = okCount - missCount
-        //totalScoreがマイナスだったら0にする
-        if totalScore < 0 {
-            totalScore = 0
-        }
-    }
-    
     private func showTotalScore() {
         //storyboardのインスタンス取得
         let storyboard: UIStoryboard = self.storyboard!
         //遷移先ViewControllerのインスタンス取得
         let nextView = storyboard.instantiateViewController(withIdentifier: "view3") as! TotalScoreViewController
-        nextView.totalScore = totalScore
+        nextView.totalScore = scoreCount
         //画面遷移
         self.navigationController?.pushViewController(nextView, animated: true)
     }
@@ -240,7 +231,6 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
             count = 0
             //タイマー停止,停止と一緒に実行すること
             timer.invalidate()
-            calculateScore()
             showTotalScore()
             audioPlayer.stop()
         }
