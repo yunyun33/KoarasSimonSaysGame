@@ -232,10 +232,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyP-8V-TmQ">
-                                <rect key="frame" x="62.666666666666657" y="318.66666666666669" width="249.99999999999997" height="35"/>
+                                <rect key="frame" x="37.666666666666657" y="306" width="300" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="Hf2-Nz-LhQ"/>
-                                    <constraint firstAttribute="width" constant="250" id="l7w-bY-prX"/>
+                                    <constraint firstAttribute="height" constant="80" id="Hf2-Nz-LhQ"/>
+                                    <constraint firstAttribute="width" constant="300" id="l7w-bY-prX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Kazesawa-Bold" family="Kazesawa" pointSize="18"/>
                                 <color key="textColor" red="0.34901960784313724" green="0.41960784313725491" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -278,7 +278,7 @@
                             <constraint firstItem="TJ5-yv-1Ez" firstAttribute="centerX" secondItem="5w7-v7-L61" secondAttribute="centerX" id="E8M-pF-uLb"/>
                             <constraint firstItem="QN7-PU-KDW" firstAttribute="leading" secondItem="p12-dx-7mZ" secondAttribute="leading" id="EMo-85-AeI"/>
                             <constraint firstItem="DF5-xO-HJ4" firstAttribute="centerX" secondItem="5w7-v7-L61" secondAttribute="centerX" id="FQT-Ye-hYU"/>
-                            <constraint firstItem="TyP-8V-TmQ" firstAttribute="centerY" secondItem="5w7-v7-L61" secondAttribute="centerY" constant="-70" id="Gdm-de-VfS"/>
+                            <constraint firstItem="TyP-8V-TmQ" firstAttribute="centerY" secondItem="5w7-v7-L61" secondAttribute="centerY" constant="-60" id="Gdm-de-VfS"/>
                             <constraint firstItem="p12-dx-7mZ" firstAttribute="bottom" secondItem="QN7-PU-KDW" secondAttribute="bottom" id="JGF-Mf-aPq"/>
                             <constraint firstItem="QN7-PU-KDW" firstAttribute="top" secondItem="p12-dx-7mZ" secondAttribute="top" id="MTf-b8-ElN"/>
                             <constraint firstItem="TJ5-yv-1Ez" firstAttribute="centerY" secondItem="5w7-v7-L61" secondAttribute="centerY" constant="-200" id="OZF-SE-FJY"/>
