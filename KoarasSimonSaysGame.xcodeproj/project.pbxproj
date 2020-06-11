@@ -23,6 +23,8 @@
 		BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6872483E6460077D8AE /* RankingCell.xib */; };
 		BAE6E68F2488CAAB0077D8AE /* okBGM.caf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E68E2488CAAB0077D8AE /* okBGM.caf */; };
 		BAE6E6912488CABD0077D8AE /* ngBGM.caf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6902488CABD0077D8AE /* ngBGM.caf */; };
+		BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */; };
+		BAE6E6AA24919CFD0077D8AE /* Kazesawa-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69424919C970077D8AE /* Kazesawa-Bold.woff */; };
 		BAFBB912246F8116005FFEEF /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BAFBB911246F8116005FFEEF /* playBGM.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,26 @@
 		BAE6E6872483E6460077D8AE /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
 		BAE6E68E2488CAAB0077D8AE /* okBGM.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = okBGM.caf; sourceTree = "<group>"; };
 		BAE6E6902488CABD0077D8AE /* ngBGM.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ngBGM.caf; sourceTree = "<group>"; };
+		BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Semibold.woff"; sourceTree = "<group>"; };
+		BAE6E69424919C970077D8AE /* Kazesawa-Bold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Bold.woff"; sourceTree = "<group>"; };
+		BAE6E69624919C970077D8AE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BAE6E69724919C970077D8AE /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		BAE6E69824919C970077D8AE /* Kazesawa-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Regular.woff"; sourceTree = "<group>"; };
+		BAE6E69924919C970077D8AE /* Kazesawa-Extrabold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Extrabold.woff"; sourceTree = "<group>"; };
+		BAE6E69A24919C970077D8AE /* Kazesawa-Extrabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Extrabold.ttf"; sourceTree = "<group>"; };
+		BAE6E69C24919C980077D8AE /* README_J */ = {isa = PBXFileReference; lastKnownFileType = text; path = README_J; sourceTree = "<group>"; };
+		BAE6E69D24919C980077D8AE /* README_E */ = {isa = PBXFileReference; lastKnownFileType = text; path = README_E; sourceTree = "<group>"; };
+		BAE6E69E24919C980077D8AE /* LICENSE_E */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE_E; sourceTree = "<group>"; };
+		BAE6E69F24919C980077D8AE /* LICENSE_J */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE_J; sourceTree = "<group>"; };
+		BAE6E6A024919C980077D8AE /* Kazesawa-Light.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Light.woff"; sourceTree = "<group>"; };
+		BAE6E6A124919C980077D8AE /* Kazesawa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Bold.ttf"; sourceTree = "<group>"; };
+		BAE6E6A224919C980077D8AE /* Kazesawa-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Semibold.ttf"; sourceTree = "<group>"; };
+		BAE6E6A324919C980077D8AE /* Kazesawa-ExtraLight.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-ExtraLight.woff"; sourceTree = "<group>"; };
+		BAE6E6A424919C980077D8AE /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		BAE6E6A524919C980077D8AE /* Kazesawa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Regular.ttf"; sourceTree = "<group>"; };
+		BAE6E6A624919C980077D8AE /* Kazesawa-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-ExtraLight.ttf"; sourceTree = "<group>"; };
+		BAE6E6A724919C980077D8AE /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		BAE6E6A824919C980077D8AE /* Kazesawa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Light.ttf"; sourceTree = "<group>"; };
 		BAFBB911246F8116005FFEEF /* playBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBGM.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +119,7 @@
 		BA006F58243C58C0000AB5F6 = {
 			isa = PBXGroup;
 			children = (
+				BAE6E69224919C970077D8AE /* kazesawa */,
 				BA006F63243C58C0000AB5F6 /* KoarasSimonSaysGame */,
 				BA006F7A243C58C8000AB5F6 /* KoarasSimonSaysGameTests */,
 				BA006F85243C58C8000AB5F6 /* KoarasSimonSaysGameUITests */,
@@ -153,6 +176,49 @@
 				BA006F88243C58C8000AB5F6 /* Info.plist */,
 			);
 			path = KoarasSimonSaysGameUITests;
+			sourceTree = "<group>";
+		};
+		BAE6E69224919C970077D8AE /* kazesawa */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */,
+				BAE6E69424919C970077D8AE /* Kazesawa-Bold.woff */,
+				BAE6E69524919C970077D8AE /* source-sans-pro */,
+				BAE6E69824919C970077D8AE /* Kazesawa-Regular.woff */,
+				BAE6E69924919C970077D8AE /* Kazesawa-Extrabold.woff */,
+				BAE6E69A24919C970077D8AE /* Kazesawa-Extrabold.ttf */,
+				BAE6E69B24919C970077D8AE /* mplus */,
+				BAE6E6A024919C980077D8AE /* Kazesawa-Light.woff */,
+				BAE6E6A124919C980077D8AE /* Kazesawa-Bold.ttf */,
+				BAE6E6A224919C980077D8AE /* Kazesawa-Semibold.ttf */,
+				BAE6E6A324919C980077D8AE /* Kazesawa-ExtraLight.woff */,
+				BAE6E6A424919C980077D8AE /* README.txt */,
+				BAE6E6A524919C980077D8AE /* Kazesawa-Regular.ttf */,
+				BAE6E6A624919C980077D8AE /* Kazesawa-ExtraLight.ttf */,
+				BAE6E6A724919C980077D8AE /* LICENSE.txt */,
+				BAE6E6A824919C980077D8AE /* Kazesawa-Light.ttf */,
+			);
+			path = kazesawa;
+			sourceTree = "<group>";
+		};
+		BAE6E69524919C970077D8AE /* source-sans-pro */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6E69624919C970077D8AE /* README.md */,
+				BAE6E69724919C970077D8AE /* LICENSE.txt */,
+			);
+			path = "source-sans-pro";
+			sourceTree = "<group>";
+		};
+		BAE6E69B24919C970077D8AE /* mplus */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6E69C24919C980077D8AE /* README_J */,
+				BAE6E69D24919C980077D8AE /* README_E */,
+				BAE6E69E24919C980077D8AE /* LICENSE_E */,
+				BAE6E69F24919C980077D8AE /* LICENSE_J */,
+			);
+			path = mplus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +325,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE6E6AA24919CFD0077D8AE /* Kazesawa-Bold.woff in Resources */,
+				BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */,
 				BA006F71243C58C8000AB5F6 /* LaunchScreen.storyboard in Resources */,
 				BAFBB912246F8116005FFEEF /* playBGM.mp3 in Resources */,
 				BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */,

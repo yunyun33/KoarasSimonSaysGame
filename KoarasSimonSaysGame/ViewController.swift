@@ -8,6 +8,15 @@ class ViewController: UIViewController {
         
         //navigationcontorollerを消す
         navigationController?.navigationBar.isHidden = true
+        
+        // 次の画面のBackボタンを「戻る」に変更
+           self.navigationItem.backBarButtonItem = UIBarButtonItem(
+               title:  "戻る",
+               style:  .plain,
+               target: nil,
+               action: nil
+           )
+        
     }
 
         
