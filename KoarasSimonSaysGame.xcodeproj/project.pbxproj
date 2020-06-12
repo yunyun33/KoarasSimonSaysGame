@@ -25,6 +25,16 @@
 		BAE6E6912488CABD0077D8AE /* ngBGM.caf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6902488CABD0077D8AE /* ngBGM.caf */; };
 		BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */; };
 		BAE6E6AA24919CFD0077D8AE /* Kazesawa-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69424919C970077D8AE /* Kazesawa-Bold.woff */; };
+		BAE6E6AB249257410077D8AE /* Kazesawa-Extrabold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69924919C970077D8AE /* Kazesawa-Extrabold.woff */; };
+		BAE6E6AC249257460077D8AE /* Kazesawa-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69824919C970077D8AE /* Kazesawa-Regular.woff */; };
+		BAE6E6AD249257530077D8AE /* Kazesawa-Light.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A024919C980077D8AE /* Kazesawa-Light.woff */; };
+		BAE6E6AE249257580077D8AE /* Kazesawa-ExtraLight.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A324919C980077D8AE /* Kazesawa-ExtraLight.woff */; };
+		BAE6E6AF249257680077D8AE /* Kazesawa-Extrabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69A24919C970077D8AE /* Kazesawa-Extrabold.ttf */; };
+		BAE6E6B02492576D0077D8AE /* Kazesawa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A124919C980077D8AE /* Kazesawa-Bold.ttf */; };
+		BAE6E6B12492576F0077D8AE /* Kazesawa-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A224919C980077D8AE /* Kazesawa-Semibold.ttf */; };
+		BAE6E6B2249257790077D8AE /* Kazesawa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A524919C980077D8AE /* Kazesawa-Regular.ttf */; };
+		BAE6E6B32492577D0077D8AE /* Kazesawa-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A624919C980077D8AE /* Kazesawa-ExtraLight.ttf */; };
+		BAE6E6B4249257810077D8AE /* Kazesawa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A824919C980077D8AE /* Kazesawa-Light.ttf */; };
 		BAFBB912246F8116005FFEEF /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BAFBB911246F8116005FFEEF /* playBGM.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -325,13 +335,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE6E6AB249257410077D8AE /* Kazesawa-Extrabold.woff in Resources */,
+				BAE6E6B02492576D0077D8AE /* Kazesawa-Bold.ttf in Resources */,
+				BAE6E6AC249257460077D8AE /* Kazesawa-Regular.woff in Resources */,
+				BAE6E6B32492577D0077D8AE /* Kazesawa-ExtraLight.ttf in Resources */,
 				BAE6E6AA24919CFD0077D8AE /* Kazesawa-Bold.woff in Resources */,
 				BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */,
 				BA006F71243C58C8000AB5F6 /* LaunchScreen.storyboard in Resources */,
+				BAE6E6AE249257580077D8AE /* Kazesawa-ExtraLight.woff in Resources */,
 				BAFBB912246F8116005FFEEF /* playBGM.mp3 in Resources */,
+				BAE6E6B2249257790077D8AE /* Kazesawa-Regular.ttf in Resources */,
+				BAE6E6AF249257680077D8AE /* Kazesawa-Extrabold.ttf in Resources */,
 				BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */,
 				BA006F6E243C58C8000AB5F6 /* Assets.xcassets in Resources */,
 				BA006F6C243C58C0000AB5F6 /* Main.storyboard in Resources */,
+				BAE6E6B4249257810077D8AE /* Kazesawa-Light.ttf in Resources */,
+				BAE6E6B12492576F0077D8AE /* Kazesawa-Semibold.ttf in Resources */,
+				BAE6E6AD249257530077D8AE /* Kazesawa-Light.woff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

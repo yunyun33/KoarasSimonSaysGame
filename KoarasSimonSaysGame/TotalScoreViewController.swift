@@ -21,25 +21,25 @@ class TotalScoreViewController: UIViewController {
         //2つ前の画面に戻りたいため、navigationvarを消す。
         self.navigationController?.navigationBar.isHidden = true
         
-        if totalScore >= 50 {
+        if totalScore >= 21 {
             totalScoreLabel.text = "\(totalScore)点です。"
             commentLabel.numberOfLines = 2
             commentLabel.text = "すごいですね\nあなたは旗振り名人です！"
-        } else if totalScore >= 21 {
+        } else if totalScore <= 20 {
             totalScoreLabel.text = "\(totalScore)点です。"
             commentLabel.numberOfLines = 2
             commentLabel.text = "パチパチパチ\nお上手ですね"
-        } else if totalScore >= 10 {
+        } else if totalScore <= 15 {
             totalScoreLabel.text = "\(totalScore)点です。"
             commentLabel.numberOfLines = 2
             commentLabel.text = "もう少しでしたね\nもう一度やってみましょう！"
+        } else if totalScore <= 10 {
+                totalScoreLabel.text = "\(totalScore)点です。"
+                commentLabel.text = "もう少し頑張りましょう"
         } else if totalScore == 0 {
             totalScoreLabel.text = "\(totalScore)点です。"
             commentLabel.numberOfLines = 2
             commentLabel.text = "もしかして寝ていましたか？\n私も眠くなってきました..."
-        } else {
-            totalScoreLabel.text = "\(totalScore)点です。"
-            commentLabel.text = "もう少し頑張りましょう"
         }
     }
     
