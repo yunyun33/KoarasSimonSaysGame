@@ -19,7 +19,7 @@ class RankingDateViewController: UIViewController, UINavigationControllerDelegat
         
         self.navigationItem.title = "ランキング"
         // ↑文字の色設定
-        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.purple]
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(red: 89/225, green: 107/225, blue: 179/225, alpha: 1)]
         
         // ナビゲーションバーの透明化
         // 半透明の指定（デフォルト値）
