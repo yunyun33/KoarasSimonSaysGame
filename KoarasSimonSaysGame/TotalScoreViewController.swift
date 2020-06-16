@@ -25,19 +25,19 @@ class TotalScoreViewController: UIViewController {
             totalScoreLabel.text = "\(totalScore)点です。"
             commentLabel.numberOfLines = 2
             commentLabel.text = "す、すごい！\nあなたの弟子にしてください！"
-        } else if totalScore <= 24 {
+        } else if totalScore >= 21 {
             totalScoreLabel.text = "\(totalScore)点です。"
             commentLabel.numberOfLines = 2
             commentLabel.text = "すごいですね\nあなたは旗振り名人です！"
-        } else if totalScore <= 20 {
+        } else if totalScore >= 16 {
             totalScoreLabel.text = "\(totalScore)点です。"
             commentLabel.numberOfLines = 2
             commentLabel.text = "パチパチパチ\nお上手ですね"
-        } else if totalScore <= 15 {
+        } else if totalScore >= 11 {
             totalScoreLabel.text = "\(totalScore)点です。"
             commentLabel.numberOfLines = 2
             commentLabel.text = "もう少しでしたね\nもう一度やってみましょう！"
-        } else if totalScore <= 10 {
+        } else if totalScore >= 1 {
                 totalScoreLabel.text = "\(totalScore)点です。"
                 commentLabel.text = "もう少し頑張りましょう"
         } else if totalScore == 0 {

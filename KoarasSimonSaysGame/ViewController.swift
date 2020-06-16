@@ -37,5 +37,13 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(nextView, animated: true)
         navigationController?.navigationBar.isHidden = false
     }
+    
+    @IBAction func onTapMenuButton(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+            let nextView = storyboard.instantiateViewController(withIdentifier: "view6") as! MenuViewController
+            self.navigationController?.pushViewController(nextView, animated: true)
+            navigationController?.navigationBar.isHidden = false
+    }
+    
 
 }

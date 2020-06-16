@@ -32,34 +32,34 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="koala" translatesAutoresizingMaskIntoConstraints="NO" id="wdj-D0-J0F">
-                        <rect key="frame" x="85" y="-3" width="50" height="50"/>
+                        <rect key="frame" x="83" y="-3" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="0dx-w5-42V"/>
                             <constraint firstAttribute="height" constant="50" id="im8-hc-jg9"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JT-ps-Uzt">
-                        <rect key="frame" x="8.5" y="10" width="43.5" height="24"/>
+                        <rect key="frame" x="10" y="10" width="43" height="24"/>
                         <fontDescription key="fontDescription" name="Kazesawa-Regular" family="Kazesawa" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSf-WM-2qb">
-                        <rect key="frame" x="258.5" y="10" width="43.5" height="24"/>
+                        <rect key="frame" x="258" y="10" width="44" height="24"/>
                         <fontDescription key="fontDescription" name="Kazesawa-Regular" family="Kazesawa" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="DSf-WM-2qb" secondAttribute="trailing" constant="18" id="0tM-82-Woj"/>
                     <constraint firstItem="DSf-WM-2qb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="42N-IH-QAa"/>
+                    <constraint firstItem="wdj-D0-J0F" firstAttribute="leading" secondItem="1JT-ps-Uzt" secondAttribute="trailing" constant="30" id="HAa-3m-TO2"/>
                     <constraint firstItem="1JT-ps-Uzt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MrR-TX-9hL"/>
-                    <constraint firstItem="1JT-ps-Uzt" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-130" id="e4I-FN-1bC"/>
-                    <constraint firstItem="DSf-WM-2qb" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="120" id="fbj-hy-Q5c"/>
-                    <constraint firstItem="ANW-Uv-Skc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="30" id="fjC-9k-cgU"/>
+                    <constraint firstItem="ANW-Uv-Skc" firstAttribute="leading" secondItem="wdj-D0-J0F" secondAttribute="trailing" constant="7" id="Vgs-R7-4iB"/>
                     <constraint firstItem="ANW-Uv-Skc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fsl-Fd-oZ8"/>
+                    <constraint firstItem="1JT-ps-Uzt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="jOW-fn-bWj"/>
                     <constraint firstItem="wdj-D0-J0F" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kKM-nK-C6f"/>
-                    <constraint firstItem="wdj-D0-J0F" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-50" id="qy5-GH-144"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.56470588239999997" green="0.83529411760000005" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

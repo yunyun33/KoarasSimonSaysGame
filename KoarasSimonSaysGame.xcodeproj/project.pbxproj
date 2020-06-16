@@ -35,6 +35,7 @@
 		BAE6E6B2249257790077D8AE /* Kazesawa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A524919C980077D8AE /* Kazesawa-Regular.ttf */; };
 		BAE6E6B32492577D0077D8AE /* Kazesawa-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A624919C980077D8AE /* Kazesawa-ExtraLight.ttf */; };
 		BAE6E6B4249257810077D8AE /* Kazesawa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A824919C980077D8AE /* Kazesawa-Light.ttf */; };
+		BAE6E6BC249645BE0077D8AE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */; };
 		BAFBB912246F8116005FFEEF /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BAFBB911246F8116005FFEEF /* playBGM.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		BAE6E6A624919C980077D8AE /* Kazesawa-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-ExtraLight.ttf"; sourceTree = "<group>"; };
 		BAE6E6A724919C980077D8AE /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		BAE6E6A824919C980077D8AE /* Kazesawa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Light.ttf"; sourceTree = "<group>"; };
+		BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		BAFBB911246F8116005FFEEF /* playBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBGM.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +168,7 @@
 				BAE6E6902488CABD0077D8AE /* ngBGM.caf */,
 				BA006F6F243C58C8000AB5F6 /* LaunchScreen.storyboard */,
 				BA006F72243C58C8000AB5F6 /* Info.plist */,
+				BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */,
 			);
 			path = KoarasSimonSaysGame;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */,
 				BA006F65243C58C0000AB5F6 /* AppDelegate.swift in Sources */,
 				BA006F992442FD74000AB5F6 /* RegisterNameViewController.swift in Sources */,
+				BAE6E6BC249645BE0077D8AE /* MenuViewController.swift in Sources */,
 				BA006F95243C5AB4000AB5F6 /* PlayGameViewController.swift in Sources */,
 				BA006F67243C58C0000AB5F6 /* SceneDelegate.swift in Sources */,
 				BAE6E6882483E6460077D8AE /* RankingCell.swift in Sources */,
@@ -490,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -544,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

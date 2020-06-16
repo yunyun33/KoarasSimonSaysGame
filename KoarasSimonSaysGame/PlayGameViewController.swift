@@ -1,7 +1,6 @@
 
 import UIKit
 import AVFoundation
-import AudioToolbox
 
 class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigationControllerDelegate {
 
@@ -110,7 +109,6 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         //正解の判定をする
         if instructionLabel.text == answer {
             scoreCount += 1
-            okBGM()
             showGoodLabel()
             nextInstructionText()
         } else {
@@ -118,7 +116,6 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
                 if scoreCount < 0 {
                     scoreCount = 0
                 }
-            ngBGM()
             showMissLabel()
         }
 
@@ -167,47 +164,6 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
             self.missLabel.alpha = 0.0
         }, completion: nil)
     }
-    
-    //正解した時のBGM再生
-    func okBGM() {
-        do {
-            let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(AVAudioSession.Category.ambient)
-            try audioSession.setActive(true)
-        } catch let error {
-                    print(error)
-        }
-        var soundId:SystemSoundID = 0
-
-        // システムサウンドへのパスを指定
-        if let soundUrl:NSURL = NSURL(fileURLWithPath: "/System/Library/Audio/UISounds/okBGM.caf") {
-
-            // SystemsoundIDを作成して再生実行
-            AudioServicesCreateSystemSoundID(soundUrl, &soundId)
-            AudioServicesPlaySystemSound(soundId)
-        }
-    }
-    
-    //不正解した時のBGM再生
-    func ngBGM() {
-        do {
-            let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(AVAudioSession.Category.ambient)
-            try audioSession.setActive(true)
-        } catch let error {
-                    print(error)
-        }
-        var soundId:SystemSoundID = 1
-
-        // システムサウンドへのパスを指定
-        if let soundUrl:NSURL = NSURL(fileURLWithPath: "/System/Library/Audio/UISounds/ngBGM.caf") {
-
-            // SystemsoundIDを作成して再生実行
-            AudioServicesCreateSystemSoundID(soundUrl, &soundId)
-            AudioServicesPlaySystemSound(soundId)
-        }
-    }
-    
     //画面の更新をする(戻り値: remainCount:残り時間)
     func displayUpdate() -> Int {
         let settingTimer = UserDefaults.standard
