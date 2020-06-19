@@ -21,8 +21,6 @@
 		BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */; };
 		BAE6E6882483E6460077D8AE /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6862483E6460077D8AE /* RankingCell.swift */; };
 		BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6872483E6460077D8AE /* RankingCell.xib */; };
-		BAE6E68F2488CAAB0077D8AE /* okBGM.caf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E68E2488CAAB0077D8AE /* okBGM.caf */; };
-		BAE6E6912488CABD0077D8AE /* ngBGM.caf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6902488CABD0077D8AE /* ngBGM.caf */; };
 		BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */; };
 		BAE6E6AA24919CFD0077D8AE /* Kazesawa-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69424919C970077D8AE /* Kazesawa-Bold.woff */; };
 		BAE6E6AB249257410077D8AE /* Kazesawa-Extrabold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69924919C970077D8AE /* Kazesawa-Extrabold.woff */; };
@@ -57,7 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BA006F61243C58C0000AB5F6 /* KoarasSimonSaysGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoarasSimonSaysGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA006F61243C58C0000AB5F6 /* コアラさんの旗ふりゲーム.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "コアラさんの旗ふりゲーム.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA006F64243C58C0000AB5F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA006F66243C58C0000AB5F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA006F68243C58C0000AB5F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,8 +75,6 @@
 		BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDateViewController.swift; sourceTree = "<group>"; };
 		BAE6E6862483E6460077D8AE /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		BAE6E6872483E6460077D8AE /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
-		BAE6E68E2488CAAB0077D8AE /* okBGM.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = okBGM.caf; sourceTree = "<group>"; };
-		BAE6E6902488CABD0077D8AE /* ngBGM.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ngBGM.caf; sourceTree = "<group>"; };
 		BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Semibold.woff"; sourceTree = "<group>"; };
 		BAE6E69424919C970077D8AE /* Kazesawa-Bold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Bold.woff"; sourceTree = "<group>"; };
 		BAE6E69624919C970077D8AE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -142,7 +138,7 @@
 		BA006F62243C58C0000AB5F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA006F61243C58C0000AB5F6 /* KoarasSimonSaysGame.app */,
+				BA006F61243C58C0000AB5F6 /* コアラさんの旗ふりゲーム.app */,
 				BA006F77243C58C8000AB5F6 /* KoarasSimonSaysGameTests.xctest */,
 				BA006F82243C58C8000AB5F6 /* KoarasSimonSaysGameUITests.xctest */,
 			);
@@ -164,8 +160,6 @@
 				BAE6E6872483E6460077D8AE /* RankingCell.xib */,
 				BA006F6D243C58C8000AB5F6 /* Assets.xcassets */,
 				BAFBB911246F8116005FFEEF /* playBGM.mp3 */,
-				BAE6E68E2488CAAB0077D8AE /* okBGM.caf */,
-				BAE6E6902488CABD0077D8AE /* ngBGM.caf */,
 				BA006F6F243C58C8000AB5F6 /* LaunchScreen.storyboard */,
 				BA006F72243C58C8000AB5F6 /* Info.plist */,
 				BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */,
@@ -251,7 +245,7 @@
 			);
 			name = KoarasSimonSaysGame;
 			productName = KoarasSimonSaysGame;
-			productReference = BA006F61243C58C0000AB5F6 /* KoarasSimonSaysGame.app */;
+			productReference = BA006F61243C58C0000AB5F6 /* コアラさんの旗ふりゲーム.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BA006F76243C58C8000AB5F6 /* KoarasSimonSaysGameTests */ = {
@@ -362,8 +356,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAE6E6912488CABD0077D8AE /* ngBGM.caf in Resources */,
-				BAE6E68F2488CAAB0077D8AE /* okBGM.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,15 +554,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6YWC5R2B4W;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEVELOPMENT_TEAM = P2SUKVPCW7;
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yui.KoarasSimonSaysGame;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yui.KoalasSimonSaysGame;
+				PRODUCT_NAME = "コアラさんの旗ふりゲーム";
+				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGame;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -580,15 +576,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6YWC5R2B4W;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEVELOPMENT_TEAM = P2SUKVPCW7;
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yui.KoarasSimonSaysGame;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yui.KoalasSimonSaysGame;
+				PRODUCT_NAME = "コアラさんの旗ふりゲーム";
+				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGame;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
