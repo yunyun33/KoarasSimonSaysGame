@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uzv-2Y-VDv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uzv-2Y-VDv">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -21,7 +21,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="view1" id="BYZ-38-t0r" customClass="ViewController" customModule="コアラさんの旗振りゲーム" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="view1" id="BYZ-38-t0r" customClass="ViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,6 +67,14 @@
                                             <action selector="onTapMenuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTU-AK-K23"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ho-NL-4pB">
+                                        <rect key="frame" x="222" y="260" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTapFereStoreTestButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0K-aa-E9n"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="bVg-Pe-es2" firstAttribute="centerX" secondItem="JNS-69-aBf" secondAttribute="centerX" id="48h-jm-p5D"/>
@@ -101,7 +109,7 @@
         <!--Menu View Controller-->
         <scene sceneID="pjg-lD-Ne0">
             <objects>
-                <viewController storyboardIdentifier="view6" id="k9n-MK-cZj" customClass="MenuViewController" customModule="コアラさんの旗振りゲーム" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="view6" id="k9n-MK-cZj" customClass="MenuViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2a2-1o-U4h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,7 +289,7 @@
         <!--Play Game View Controller-->
         <scene sceneID="n0q-pH-UzF">
             <objects>
-                <viewController storyboardIdentifier="view2" modalPresentationStyle="fullScreen" id="dI3-5z-Wdi" customClass="PlayGameViewController" customModule="コアラさんの旗振りゲーム" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="view2" modalPresentationStyle="fullScreen" id="dI3-5z-Wdi" customClass="PlayGameViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hLS-iU-wjv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -420,7 +428,7 @@
         <!--Total Score View Controller-->
         <scene sceneID="6x8-aw-9O8">
             <objects>
-                <viewController storyboardIdentifier="view3" id="5RD-UR-qcS" customClass="TotalScoreViewController" customModule="コアラさんの旗振りゲーム" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="view3" id="5RD-UR-qcS" customClass="TotalScoreViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5w7-v7-L61">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -520,14 +528,13 @@
         <!--Register Name View Controller-->
         <scene sceneID="MiH-mz-KfF">
             <objects>
-                <viewController storyboardIdentifier="view4" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="FEb-5k-zNg" customClass="RegisterNameViewController" customModule="コアラさんの旗振りゲーム" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="view4" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="FEb-5k-zNg" customClass="RegisterNameViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="Otf-u4-MRz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RBf-IU-Edb">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBf-IU-Edb">
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="o7a-HH-XEs">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -626,9 +633,13 @@
                             </view>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="RBf-IU-Edb" firstAttribute="top" secondItem="WMb-qT-vMY" secondAttribute="top" id="5uw-R7-U4D"/>
                             <constraint firstItem="WMb-qT-vMY" firstAttribute="trailing" secondItem="e0M-rW-shp" secondAttribute="trailing" constant="20" id="Dg7-Ul-gtb"/>
                             <constraint firstItem="e0M-rW-shp" firstAttribute="centerY" secondItem="Otf-u4-MRz" secondAttribute="centerY" id="Jc0-Iz-h9t"/>
+                            <constraint firstItem="RBf-IU-Edb" firstAttribute="bottom" secondItem="WMb-qT-vMY" secondAttribute="bottom" id="SUR-Zb-3pm"/>
+                            <constraint firstItem="RBf-IU-Edb" firstAttribute="trailing" secondItem="WMb-qT-vMY" secondAttribute="trailing" id="TfX-67-rO8"/>
                             <constraint firstItem="e0M-rW-shp" firstAttribute="leading" secondItem="WMb-qT-vMY" secondAttribute="leading" constant="20" id="Zf8-hK-Yaj"/>
+                            <constraint firstItem="RBf-IU-Edb" firstAttribute="leading" secondItem="WMb-qT-vMY" secondAttribute="leading" id="eiG-l3-hjJ"/>
                             <constraint firstItem="e0M-rW-shp" firstAttribute="centerX" secondItem="Otf-u4-MRz" secondAttribute="centerX" id="jd7-fh-24J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WMb-qT-vMY"/>
@@ -645,7 +656,7 @@
         <!--Ranking Date View Controller-->
         <scene sceneID="Swf-h6-wqO">
             <objects>
-                <viewController storyboardIdentifier="view5" id="bRS-je-zfM" customClass="RankingDateViewController" customModule="コアラさんの旗振りゲーム" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="view5" id="bRS-je-zfM" customClass="RankingDateViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b2j-dG-Thn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -709,6 +720,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrX-Pb-wKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4381.6000000000004" y="125.61576354679804"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lD7-OB-MLX">
+            <objects>
+                <viewController id="2m4-Pi-aSR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eOY-DJ-2b8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="f4G-yO-RGE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NOr-UU-q5I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5217" y="831"/>
+        </scene>
+        <!--World Ranking Date View Controller-->
+        <scene sceneID="VhP-3o-7W0">
+            <objects>
+                <viewController storyboardIdentifier="view7" id="hKm-fL-yXB" customClass="WorldRankingDateViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OfA-Lf-vrK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a76-fG-dlS">
+                                <rect key="frame" x="15" y="124" width="345" height="584"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="mBu-Di-f5o">
+                                        <rect key="frame" x="0.0" y="28" width="345" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mBu-Di-f5o" id="9Z7-5O-1Ip">
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="a76-fG-dlS" firstAttribute="leading" secondItem="rQr-nm-N0C" secondAttribute="leading" constant="15" id="36J-US-SHW"/>
+                            <constraint firstItem="a76-fG-dlS" firstAttribute="top" secondItem="rQr-nm-N0C" secondAttribute="top" constant="80" id="S6R-Oc-iHt"/>
+                            <constraint firstItem="rQr-nm-N0C" firstAttribute="trailing" secondItem="a76-fG-dlS" secondAttribute="trailing" constant="15" id="YaA-Gj-OIm"/>
+                            <constraint firstItem="rQr-nm-N0C" firstAttribute="bottom" secondItem="a76-fG-dlS" secondAttribute="bottom" constant="70" id="fWV-QL-2Fo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rQr-nm-N0C"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zjW-9t-g4S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5216.8000000000002" y="125.61576354679804"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RW6-bq-TAo">

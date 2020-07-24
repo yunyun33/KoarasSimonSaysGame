@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7740CD2F6FC62AFD52E2D2CF /* Pods_KoarasSimonSaysGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B00EB239F123FFC1F3115B6 /* Pods_KoarasSimonSaysGame.framework */; };
+		7AA09E793C1E69FA54FF5182 /* Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7401D42F88528EC6BD1AC /* Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests.framework */; };
 		BA006F65243C58C0000AB5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F64243C58C0000AB5F6 /* AppDelegate.swift */; };
 		BA006F67243C58C0000AB5F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F66243C58C0000AB5F6 /* SceneDelegate.swift */; };
 		BA006F69243C58C0000AB5F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F68243C58C0000AB5F6 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 		BA006F972441D132000AB5F6 /* TotalScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */; };
 		BA006F992442FD74000AB5F6 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */; };
 		BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */; };
+		BA4C969C24B1984900226834 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA4C969B24B1984900226834 /* GoogleService-Info.plist */; };
+		BA98991A24CAED6900F90825 /* WorldRankingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA98991924CAED6900F90825 /* WorldRankingDateViewController.swift */; };
 		BAE6E6882483E6460077D8AE /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6862483E6460077D8AE /* RankingCell.swift */; };
 		BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6872483E6460077D8AE /* RankingCell.xib */; };
 		BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */; };
@@ -35,6 +39,7 @@
 		BAE6E6B4249257810077D8AE /* Kazesawa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A824919C980077D8AE /* Kazesawa-Light.ttf */; };
 		BAE6E6BC249645BE0077D8AE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */; };
 		BAFBB912246F8116005FFEEF /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BAFBB911246F8116005FFEEF /* playBGM.mp3 */; };
+		F5315BE8EC2B001F9D0E175A /* Pods_KoarasSimonSaysGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E462152CB272AA7677880C0F /* Pods_KoarasSimonSaysGameTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +60,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BA006F61243C58C0000AB5F6 /* コアラさんの旗ふりゲーム.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "コアラさんの旗ふりゲーム.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C55BF73379D4201C49FCD86 /* Pods-KoarasSimonSaysGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGame.release.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame.release.xcconfig"; sourceTree = "<group>"; };
+		4689ABC772748B65294B4AAF /* Pods-KoarasSimonSaysGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGameTests.release.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGameTests/Pods-KoarasSimonSaysGameTests.release.xcconfig"; sourceTree = "<group>"; };
+		63D7401D42F88528EC6BD1AC /* Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85448FA6E0915390D1F886AF /* Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.debug.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B00EB239F123FFC1F3115B6 /* Pods_KoarasSimonSaysGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoarasSimonSaysGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA006F61243C58C0000AB5F6 /* 旗ふりゲーム.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "旗ふりゲーム.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA006F64243C58C0000AB5F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA006F66243C58C0000AB5F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA006F68243C58C0000AB5F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +83,8 @@
 		BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoreViewController.swift; sourceTree = "<group>"; };
 		BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
 		BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDateViewController.swift; sourceTree = "<group>"; };
+		BA4C969B24B1984900226834 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA98991924CAED6900F90825 /* WorldRankingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldRankingDateViewController.swift; sourceTree = "<group>"; };
 		BAE6E6862483E6460077D8AE /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		BAE6E6872483E6460077D8AE /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
 		BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Semibold.woff"; sourceTree = "<group>"; };
@@ -97,6 +109,10 @@
 		BAE6E6A824919C980077D8AE /* Kazesawa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Light.ttf"; sourceTree = "<group>"; };
 		BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		BAFBB911246F8116005FFEEF /* playBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBGM.mp3; sourceTree = "<group>"; };
+		C9509991A866A86400DB60E8 /* Pods-KoarasSimonSaysGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGame.debug.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame.debug.xcconfig"; sourceTree = "<group>"; };
+		D40AFFF5008F1CC641B8362E /* Pods-KoarasSimonSaysGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGameTests.debug.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGameTests/Pods-KoarasSimonSaysGameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9008B114CB1634877767252 /* Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.release.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E462152CB272AA7677880C0F /* Pods_KoarasSimonSaysGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoarasSimonSaysGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7740CD2F6FC62AFD52E2D2CF /* Pods_KoarasSimonSaysGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5315BE8EC2B001F9D0E175A /* Pods_KoarasSimonSaysGameTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,12 +136,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AA09E793C1E69FA54FF5182 /* Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		055FA0CE8ECDED4D77DF98D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B00EB239F123FFC1F3115B6 /* Pods_KoarasSimonSaysGame.framework */,
+				63D7401D42F88528EC6BD1AC /* Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests.framework */,
+				E462152CB272AA7677880C0F /* Pods_KoarasSimonSaysGameTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77832CD2E474D8C3570F2C52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9509991A866A86400DB60E8 /* Pods-KoarasSimonSaysGame.debug.xcconfig */,
+				3C55BF73379D4201C49FCD86 /* Pods-KoarasSimonSaysGame.release.xcconfig */,
+				85448FA6E0915390D1F886AF /* Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.debug.xcconfig */,
+				D9008B114CB1634877767252 /* Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.release.xcconfig */,
+				D40AFFF5008F1CC641B8362E /* Pods-KoarasSimonSaysGameTests.debug.xcconfig */,
+				4689ABC772748B65294B4AAF /* Pods-KoarasSimonSaysGameTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BA006F58243C58C0000AB5F6 = {
 			isa = PBXGroup;
 			children = (
@@ -132,13 +174,15 @@
 				BA006F7A243C58C8000AB5F6 /* KoarasSimonSaysGameTests */,
 				BA006F85243C58C8000AB5F6 /* KoarasSimonSaysGameUITests */,
 				BA006F62243C58C0000AB5F6 /* Products */,
+				77832CD2E474D8C3570F2C52 /* Pods */,
+				055FA0CE8ECDED4D77DF98D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		BA006F62243C58C0000AB5F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA006F61243C58C0000AB5F6 /* コアラさんの旗ふりゲーム.app */,
+				BA006F61243C58C0000AB5F6 /* 旗ふりゲーム.app */,
 				BA006F77243C58C8000AB5F6 /* KoarasSimonSaysGameTests.xctest */,
 				BA006F82243C58C8000AB5F6 /* KoarasSimonSaysGameUITests.xctest */,
 			);
@@ -156,12 +200,14 @@
 				BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */,
 				BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */,
 				BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */,
+				BA98991924CAED6900F90825 /* WorldRankingDateViewController.swift */,
 				BAE6E6862483E6460077D8AE /* RankingCell.swift */,
 				BAE6E6872483E6460077D8AE /* RankingCell.xib */,
 				BA006F6D243C58C8000AB5F6 /* Assets.xcassets */,
 				BAFBB911246F8116005FFEEF /* playBGM.mp3 */,
 				BA006F6F243C58C8000AB5F6 /* LaunchScreen.storyboard */,
 				BA006F72243C58C8000AB5F6 /* Info.plist */,
+				BA4C969B24B1984900226834 /* GoogleService-Info.plist */,
 				BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */,
 			);
 			path = KoarasSimonSaysGame;
@@ -235,9 +281,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA006F8B243C58C8000AB5F6 /* Build configuration list for PBXNativeTarget "KoarasSimonSaysGame" */;
 			buildPhases = (
+				DE7821B0C3F240E644705EE5 /* [CP] Check Pods Manifest.lock */,
 				BA006F5D243C58C0000AB5F6 /* Sources */,
 				BA006F5E243C58C0000AB5F6 /* Frameworks */,
 				BA006F5F243C58C0000AB5F6 /* Resources */,
+				71EF9DA4AAA0FE1B3634ABEE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,13 +293,14 @@
 			);
 			name = KoarasSimonSaysGame;
 			productName = KoarasSimonSaysGame;
-			productReference = BA006F61243C58C0000AB5F6 /* コアラさんの旗ふりゲーム.app */;
+			productReference = BA006F61243C58C0000AB5F6 /* 旗ふりゲーム.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BA006F76243C58C8000AB5F6 /* KoarasSimonSaysGameTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA006F8E243C58C8000AB5F6 /* Build configuration list for PBXNativeTarget "KoarasSimonSaysGameTests" */;
 			buildPhases = (
+				F251AA040F6CFDFC075949F7 /* [CP] Check Pods Manifest.lock */,
 				BA006F73243C58C8000AB5F6 /* Sources */,
 				BA006F74243C58C8000AB5F6 /* Frameworks */,
 				BA006F75243C58C8000AB5F6 /* Resources */,
@@ -270,9 +319,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA006F91243C58C8000AB5F6 /* Build configuration list for PBXNativeTarget "KoarasSimonSaysGameUITests" */;
 			buildPhases = (
+				DE89FA0B5014879C830A3F40 /* [CP] Check Pods Manifest.lock */,
 				BA006F7E243C58C8000AB5F6 /* Sources */,
 				BA006F7F243C58C8000AB5F6 /* Frameworks */,
 				BA006F80243C58C8000AB5F6 /* Resources */,
+				3524DB9D0402631B780A93E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,6 +394,7 @@
 				BAFBB912246F8116005FFEEF /* playBGM.mp3 in Resources */,
 				BAE6E6B2249257790077D8AE /* Kazesawa-Regular.ttf in Resources */,
 				BAE6E6AF249257680077D8AE /* Kazesawa-Extrabold.ttf in Resources */,
+				BA4C969C24B1984900226834 /* GoogleService-Info.plist in Resources */,
 				BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */,
 				BA006F6E243C58C8000AB5F6 /* Assets.xcassets in Resources */,
 				BA006F6C243C58C0000AB5F6 /* Main.storyboard in Resources */,
@@ -368,6 +420,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3524DB9D0402631B780A93E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71EF9DA4AAA0FE1B3634ABEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE7821B0C3F240E644705EE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoarasSimonSaysGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE89FA0B5014879C830A3F40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F251AA040F6CFDFC075949F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoarasSimonSaysGameTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BA006F5D243C58C0000AB5F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -375,6 +530,7 @@
 			files = (
 				BA006F69243C58C0000AB5F6 /* ViewController.swift in Sources */,
 				BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */,
+				BA98991A24CAED6900F90825 /* WorldRankingDateViewController.swift in Sources */,
 				BA006F65243C58C0000AB5F6 /* AppDelegate.swift in Sources */,
 				BA006F992442FD74000AB5F6 /* RegisterNameViewController.swift in Sources */,
 				BAE6E6BC249645BE0077D8AE /* MenuViewController.swift in Sources */,
@@ -552,20 +708,21 @@
 		};
 		BA006F8C243C58C8000AB5F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9509991A866A86400DB60E8 /* Pods-KoarasSimonSaysGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1.1.1;
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yui.KoalasSimonSaysGame;
-				PRODUCT_NAME = "コアラさんの旗ふりゲーム";
+				PRODUCT_NAME = "旗ふりゲーム";
 				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGame;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -574,20 +731,21 @@
 		};
 		BA006F8D243C58C8000AB5F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C55BF73379D4201C49FCD86 /* Pods-KoarasSimonSaysGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1.1.1;
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yui.KoalasSimonSaysGame;
-				PRODUCT_NAME = "コアラさんの旗ふりゲーム";
+				PRODUCT_NAME = "旗ふりゲーム";
 				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGame;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -596,6 +754,7 @@
 		};
 		BA006F8F243C58C8000AB5F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D40AFFF5008F1CC641B8362E /* Pods-KoarasSimonSaysGameTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -618,6 +777,7 @@
 		};
 		BA006F90243C58C8000AB5F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4689ABC772748B65294B4AAF /* Pods-KoarasSimonSaysGameTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -640,6 +800,7 @@
 		};
 		BA006F92243C58C8000AB5F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85448FA6E0915390D1F886AF /* Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -660,6 +821,7 @@
 		};
 		BA006F93243C58C8000AB5F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9008B114CB1634877767252 /* Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

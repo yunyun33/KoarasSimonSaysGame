@@ -45,5 +45,13 @@ class ViewController: UIViewController {
             navigationController?.navigationBar.isHidden = false
     }
     
-
+    @IBAction func onTapFereStoreTestButton(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let nextView = storyboard.instantiateViewController(withIdentifier: "view8") as! FareStoreTestViewController
+        self.navigationController?.pushViewController(nextView, animated: true)
+        navigationController?.navigationBar.isHidden = false
+        
+    }
+    
+    
 }
