@@ -7,20 +7,25 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterNameViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     private var nameText: String?
+    @IBOutlet weak var worldRankingSwith: UISwitch!
     
     var totalScore: Int = 0
     var rankingArray: [String] = []
+    var defaultstore:Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
         nameTextField.delegate = self
+        
+        worldRankingSwith.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
     }
    
     @IBAction func onTapRegisterButton(_ sender: Any) {
@@ -33,6 +38,8 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         }
         // 保存するメモ情報を配列にする 0: 名前, 1: スコア
         let rankingToSave: [String] = [rankingName, "\(totalScore)"]
+        let rankingToSaveDictionary: [String: String] = [rankingName: "\(totalScore)"]
+        
         // すでに保存されているメモがあれば追加して保存
         if var memo: [[String]] = UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] {
             memo.append(rankingToSave)
@@ -79,5 +86,20 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameTextField.resignFirstResponder()
         return true
+    }
+    
+    
+    @IBAction func tappedWorldRankingSwith(_ sender: UISwitch) {
+        if sender.isOn {
+            Firestore.firestore().collection("users").getDocuments { (snaps, error) in
+                if let error = error {
+                    fatalError("\(error)")
+                }
+                guard let snaps = snaps else { return }
+                for document in snaps.documents {
+                        print(document.data())
+                }
+            }
+        }
     }
 }
