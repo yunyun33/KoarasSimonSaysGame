@@ -16,10 +16,8 @@ class ViewController: UIViewController {
                target: nil,
                action: nil
            )
-        
     }
 
-        
     @IBAction func gameStartButton(_ sender: Any) {
         
     //storyboardのインスタンス取得

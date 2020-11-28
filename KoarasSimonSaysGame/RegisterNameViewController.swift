@@ -38,6 +38,7 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         }
         
         writeName()
+        
         // 保存するメモ情報を配列にする 0: 名前, 1: スコア
         let rankingToSave: [String] = [rankingName, "\(totalScore)"]
         let rankingToSaveDictionary: [String: String] = [rankingName: "\(totalScore)"]
@@ -58,7 +59,7 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
                     }
                     guard let snaps = snaps else { return }
                     for document in snaps.documents {
-//                        print(document.data())
+
                         let data = document.data()
                         let rankingNameData: String = data["rankingName"] as! String
                         let totalScoreData:String = data["totalScore"] as! String

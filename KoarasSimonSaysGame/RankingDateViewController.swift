@@ -54,7 +54,6 @@ class RankingDateViewController: UIViewController, UINavigationControllerDelegat
     @IBAction func onTapDelete(_ sender: Any) {
         alert()
     }
-    
 }
 
 extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource {
@@ -67,6 +66,7 @@ extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nameAndScore.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rankingCell", for: indexPath) as! RankingCell
         
@@ -109,5 +109,4 @@ extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource 
                navigationController.navigationBar.isHidden = true
            }
        }
-
 }

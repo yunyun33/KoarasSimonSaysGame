@@ -8,7 +8,6 @@
 
 import UIKit
     
-
 class RankingCell: UITableViewCell {
 
     @IBOutlet weak var rankingNumberLabel: UILabel!   

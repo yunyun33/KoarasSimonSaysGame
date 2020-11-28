@@ -57,11 +57,9 @@ class TotalScoreViewController: UIViewController {
         self.navigationController?.present       (nextView, animated: true)
     }
     
-    
     @IBAction func reTryButton(_ sender: Any) {
         let index = navigationController!.viewControllers.count - 3
         navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)
         
     }
-
 }
