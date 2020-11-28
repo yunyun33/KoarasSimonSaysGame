@@ -36,6 +36,8 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         if nameTextField.text == "" {
             return
         }
+        
+        writeName()
         // 保存するメモ情報を配列にする 0: 名前, 1: スコア
         let rankingToSave: [String] = [rankingName, "\(totalScore)"]
         let rankingToSaveDictionary: [String: String] = [rankingName: "\(totalScore)"]
@@ -47,6 +49,34 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         } else {
             // 保存しているメモがなければ新規で保存
             UserDefaults.standard.set([rankingToSave], forKey: "nameAndScore")
+        }
+        
+        if worldRankingSwith.isOn {
+                Firestore.firestore().collection("users").getDocuments { (snaps, error) in
+                    if let error = error {
+                        fatalError("\(error)")
+                    }
+                    guard let snaps = snaps else { return }
+                    for document in snaps.documents {
+//                        print(document.data())
+                        let data = document.data()
+                        let rankingNameData: String = data["rankingName"] as! String
+                        let totalScoreData:String = data["totalScore"] as! String
+//                        print(rankingNameData)
+                        
+                        let rankingToSave: [String] = [rankingNameData, totalScoreData]
+                        let rankingToSaveDictionary: [String: String] = [rankingNameData: totalScoreData]
+                        
+                        // すでに保存されているメモがあれば追加して保存
+                        if var memo: [[String]] = UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] {
+                            memo.append(rankingToSave)
+                            UserDefaults.standard.set(memo, forKey: "nameAndScore")
+                        } else {
+                            // 保存しているメモがなければ新規で保存
+                            UserDefaults.standard.set([rankingToSave], forKey: "nameAndScore")
+                        }
+                    }
+                }
         }
 
         //登録するボタンを押してhomeへ戻る
@@ -86,20 +116,5 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameTextField.resignFirstResponder()
         return true
-    }
-    
-    
-    @IBAction func tappedWorldRankingSwith(_ sender: UISwitch) {
-        if sender.isOn {
-            Firestore.firestore().collection("users").getDocuments { (snaps, error) in
-                if let error = error {
-                    fatalError("\(error)")
-                }
-                guard let snaps = snaps else { return }
-                for document in snaps.documents {
-                        print(document.data())
-                }
-            }
-        }
     }
 }
