@@ -53,31 +53,49 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         }
         
         if worldRankingSwith.isOn {
-                Firestore.firestore().collection("users").getDocuments { (snaps, error) in
-                    if let error = error {
-                        fatalError("\(error)")
-                    }
-                    guard let snaps = snaps else { return }
-                    for document in snaps.documents {
+            //データをFirestoreに保存
+            var ref: DocumentReference? = nil
+            ref = Firestore.firestore().collection("users").addDocument(data: [
+                "rankingName": rankingName,
+                "totalScore": self.totalScore,
+            ]) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: \(ref!.documentID)")
+                }
+            }
+            
+            //Firestoreにあるデータを取得する
+            Firestore.firestore().collection("users").getDocuments { (snaps, error) in
+                if let error = error {
+                    fatalError("\(error)")
+                }
+                guard let snaps = snaps else { return }
+                for document in snaps.documents {
 
-                        let data = document.data()
-                        let rankingNameData: String = data["rankingName"] as! String
-                        let totalScoreData:String = data["totalScore"] as! String
-//                        print(rankingNameData)
+                    let data = document.data()
+                    guard let rankingNameData:String = data["rankingName"] as? String else {
+                        print("rankingName is nil")
+                        return
+                    }
+                    guard let totalScoreData:String = data["totalScore"] as? String else {
+                        print("totalScore is nil")
+                        return
+                    }
+                    let rankingToSave: [String] = [rankingNameData, totalScoreData]
+                    let rankingToSaveDictionary: [String: String] = [rankingNameData: totalScoreData]
                         
-                        let rankingToSave: [String] = [rankingNameData, totalScoreData]
-                        let rankingToSaveDictionary: [String: String] = [rankingNameData: totalScoreData]
-                        
-                        // すでに保存されているメモがあれば追加して保存
-                        if var memo: [[String]] = UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] {
-                            memo.append(rankingToSave)
-                            UserDefaults.standard.set(memo, forKey: "nameAndScore")
-                        } else {
-                            // 保存しているメモがなければ新規で保存
-                            UserDefaults.standard.set([rankingToSave], forKey: "nameAndScore")
-                        }
+                    // すでに保存されているメモがあれば追加して保存
+                    if var memo: [[String]] = UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] {
+                        memo.append(rankingToSave)
+                        UserDefaults.standard.set(memo, forKey: "nameAndScore")
+                    } else {
+                        // 保存しているメモがなければ新規で保存
+                        UserDefaults.standard.set([rankingToSave], forKey: "nameAndScore")
                     }
                 }
+            }
         }
 
         //登録するボタンを押してhomeへ戻る
