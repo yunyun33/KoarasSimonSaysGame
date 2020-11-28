@@ -69,14 +69,6 @@
                                             <action selector="onTapMenuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTU-AK-K23"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ho-NL-4pB">
-                                        <rect key="frame" x="222" y="260" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="onTapFereStoreTestButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0K-aa-E9n"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="bVg-Pe-es2" firstAttribute="centerX" secondItem="JNS-69-aBf" secondAttribute="centerX" id="48h-jm-p5D"/>
