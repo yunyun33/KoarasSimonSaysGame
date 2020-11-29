@@ -32,6 +32,15 @@ class ViewController: UIViewController {
     @IBAction func onTapRankingButton(_ sender: Any) {
         let storyboard: UIStoryboard = self.storyboard!
         let nextView = storyboard.instantiateViewController(withIdentifier: "view5") as! RankingDateViewController
+        nextView.isWorldRanking = false
+        self.navigationController?.pushViewController(nextView, animated: true)
+        navigationController?.navigationBar.isHidden = false
+    }
+    
+    @IBAction func onTapWorldRankingButton(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let nextView = storyboard.instantiateViewController(withIdentifier: "view5") as! RankingDateViewController
+        nextView.isWorldRanking = true
         self.navigationController?.pushViewController(nextView, animated: true)
         navigationController?.navigationBar.isHidden = false
     }

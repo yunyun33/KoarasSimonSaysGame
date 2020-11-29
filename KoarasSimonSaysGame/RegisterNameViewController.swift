@@ -66,36 +66,7 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
                 }
             }
             
-            //Firestoreにあるデータを取得する
-            Firestore.firestore().collection("users").getDocuments { (snaps, error) in
-                if let error = error {
-                    fatalError("\(error)")
-                }
-                guard let snaps = snaps else { return }
-                for document in snaps.documents {
-
-                    let data = document.data()
-                    guard let rankingNameData:String = data["rankingName"] as? String else {
-                        print("rankingName is nil")
-                        return
-                    }
-                    guard let totalScoreData:String = data["totalScore"] as? String else {
-                        print("totalScore is nil")
-                        return
-                    }
-                    let rankingToSave: [String] = [rankingNameData, totalScoreData]
-                    let rankingToSaveDictionary: [String: String] = [rankingNameData: totalScoreData]
-                        
-                    // すでに保存されているメモがあれば追加して保存
-                    if var memo: [[String]] = UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] {
-                        memo.append(rankingToSave)
-                        UserDefaults.standard.set(memo, forKey: "nameAndScore")
-                    } else {
-                        // 保存しているメモがなければ新規で保存
-                        UserDefaults.standard.set([rankingToSave], forKey: "nameAndScore")
-                    }
-                }
-            }
+            
         }
 
         //登録するボタンを押してhomeへ戻る
