@@ -22,7 +22,7 @@
 		BA006F992442FD74000AB5F6 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */; };
 		BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */; };
 		BA4C969C24B1984900226834 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA4C969B24B1984900226834 /* GoogleService-Info.plist */; };
-		BA98991A24CAED6900F90825 /* WorldRankingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA98991924CAED6900F90825 /* WorldRankingDateViewController.swift */; };
+		BA6DA34E2560E27B00DD918F /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA6DA34D2560E27A00DD918F /* playBGM.mp3 */; };
 		BAE6E6882483E6460077D8AE /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6862483E6460077D8AE /* RankingCell.swift */; };
 		BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6872483E6460077D8AE /* RankingCell.xib */; };
 		BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */; };
@@ -38,7 +38,6 @@
 		BAE6E6B32492577D0077D8AE /* Kazesawa-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A624919C980077D8AE /* Kazesawa-ExtraLight.ttf */; };
 		BAE6E6B4249257810077D8AE /* Kazesawa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A824919C980077D8AE /* Kazesawa-Light.ttf */; };
 		BAE6E6BC249645BE0077D8AE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */; };
-		BAFBB912246F8116005FFEEF /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BAFBB911246F8116005FFEEF /* playBGM.mp3 */; };
 		F5315BE8EC2B001F9D0E175A /* Pods_KoarasSimonSaysGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E462152CB272AA7677880C0F /* Pods_KoarasSimonSaysGameTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,7 +83,7 @@
 		BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
 		BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDateViewController.swift; sourceTree = "<group>"; };
 		BA4C969B24B1984900226834 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BA98991924CAED6900F90825 /* WorldRankingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldRankingDateViewController.swift; sourceTree = "<group>"; };
+		BA6DA34D2560E27A00DD918F /* playBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBGM.mp3; sourceTree = "<group>"; };
 		BAE6E6862483E6460077D8AE /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		BAE6E6872483E6460077D8AE /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
 		BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Semibold.woff"; sourceTree = "<group>"; };
@@ -108,7 +107,6 @@
 		BAE6E6A724919C980077D8AE /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		BAE6E6A824919C980077D8AE /* Kazesawa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Light.ttf"; sourceTree = "<group>"; };
 		BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		BAFBB911246F8116005FFEEF /* playBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBGM.mp3; sourceTree = "<group>"; };
 		C9509991A866A86400DB60E8 /* Pods-KoarasSimonSaysGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGame.debug.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame.debug.xcconfig"; sourceTree = "<group>"; };
 		D40AFFF5008F1CC641B8362E /* Pods-KoarasSimonSaysGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGameTests.debug.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGameTests/Pods-KoarasSimonSaysGameTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D9008B114CB1634877767252 /* Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.release.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,11 +198,10 @@
 				BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */,
 				BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */,
 				BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */,
-				BA98991924CAED6900F90825 /* WorldRankingDateViewController.swift */,
 				BAE6E6862483E6460077D8AE /* RankingCell.swift */,
 				BAE6E6872483E6460077D8AE /* RankingCell.xib */,
 				BA006F6D243C58C8000AB5F6 /* Assets.xcassets */,
-				BAFBB911246F8116005FFEEF /* playBGM.mp3 */,
+				BA6DA34D2560E27A00DD918F /* playBGM.mp3 */,
 				BA006F6F243C58C8000AB5F6 /* LaunchScreen.storyboard */,
 				BA006F72243C58C8000AB5F6 /* Info.plist */,
 				BA4C969B24B1984900226834 /* GoogleService-Info.plist */,
@@ -391,8 +388,8 @@
 				BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */,
 				BA006F71243C58C8000AB5F6 /* LaunchScreen.storyboard in Resources */,
 				BAE6E6AE249257580077D8AE /* Kazesawa-ExtraLight.woff in Resources */,
-				BAFBB912246F8116005FFEEF /* playBGM.mp3 in Resources */,
 				BAE6E6B2249257790077D8AE /* Kazesawa-Regular.ttf in Resources */,
+				BA6DA34E2560E27B00DD918F /* playBGM.mp3 in Resources */,
 				BAE6E6AF249257680077D8AE /* Kazesawa-Extrabold.ttf in Resources */,
 				BA4C969C24B1984900226834 /* GoogleService-Info.plist in Resources */,
 				BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */,
@@ -530,7 +527,6 @@
 			files = (
 				BA006F69243C58C0000AB5F6 /* ViewController.swift in Sources */,
 				BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */,
-				BA98991A24CAED6900F90825 /* WorldRankingDateViewController.swift in Sources */,
 				BA006F65243C58C0000AB5F6 /* AppDelegate.swift in Sources */,
 				BA006F992442FD74000AB5F6 /* RegisterNameViewController.swift in Sources */,
 				BAE6E6BC249645BE0077D8AE /* MenuViewController.swift in Sources */,
@@ -716,6 +712,7 @@
 				CURRENT_PROJECT_VERSION = 1.1.1;
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -739,6 +736,7 @@
 				CURRENT_PROJECT_VERSION = 1.1.1;
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
