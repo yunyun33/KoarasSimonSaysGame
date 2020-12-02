@@ -15,6 +15,7 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var registerButton: UIButton!
     private var nameText: String?
     @IBOutlet weak var worldRankingSwith: UISwitch!
+    @IBOutlet weak var joinTheWorldRankingLabel: UILabel!
     
     var totalScore: Int = 0
     var rankingArray: [String] = []
@@ -65,8 +66,6 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
                     print("Document added with ID: \(ref!.documentID)")
                 }
             }
-            
-            
         }
 
         //登録するボタンを押してhomeへ戻る
@@ -86,15 +85,23 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         //nillの場合は「登録する」ボタン押せない
         guard let nameText = self.nameText else {
             self.registerButton.isEnabled = false
+            //worldRankingSwithは最初無効にしておく
+            worldRankingSwith.isEnabled = false
+            joinTheWorldRankingLabel.textColor = UIColor.lightGray
             return
         }
         //文字数が0の場合(""空文字)も「登録する」ボタン押せない
         if nameText.count == 0 {
             self.registerButton.isEnabled = false
+            //worldRankingSwithは最初無効にしておく
+            worldRankingSwith.isEnabled = false
+            joinTheWorldRankingLabel.textColor = UIColor.lightGray
             return
         }
-        // nilでないかつ0文字以上は「登録する」ボタン押せる
-          self.registerButton.isEnabled = true
+        // nilでないかつ0文字以上は「登録する」ボタン押せる、worldRankingSwithも有効になる
+        self.registerButton.isEnabled = true
+        worldRankingSwith.isEnabled = true
+        joinTheWorldRankingLabel.textColor = UIColor.black
     }
     
     @IBAction func writeNameTextField(_ sender: Any) {
