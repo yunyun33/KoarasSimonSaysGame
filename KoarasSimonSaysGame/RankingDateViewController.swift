@@ -11,6 +11,7 @@ import Firebase
 
 class RankingDateViewController: UIViewController, UINavigationControllerDelegate {
     
+    @IBOutlet weak var garbageCanButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     private var nameAndScore: [[String]] = []
     
@@ -23,6 +24,8 @@ class RankingDateViewController: UIViewController, UINavigationControllerDelegat
         
         if isWorldRanking == true {
             self.navigationItem.title = "World Ranking"
+            garbageCanButton.isHidden = true
+            garbageCanButton.isEnabled = true
             getFirestoreDatas()
         } else {
             self.navigationItem.title = "ランキング"
