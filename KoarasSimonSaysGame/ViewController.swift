@@ -19,8 +19,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func gameStartButton(_ sender: Any) {
-        
-    //storyboardのインスタンス取得
+        //storyboardのインスタンス取得
         let storyboard: UIStoryboard = self.storyboard!
         //遷移先ViewControllerのインスタンス取得
         let nextView = storyboard.instantiateViewController(withIdentifier: "view2") as! PlayGameViewController

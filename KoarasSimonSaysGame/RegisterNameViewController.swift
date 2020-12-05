@@ -42,15 +42,17 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         }
         
         writeName()
-        
+    
         // 保存するメモ情報を配列にする 0: 名前, 1: スコア
         let rankingToSave: [String] = [rankingName, "\(totalScore)"]
         let rankingToSaveDictionary: [String: String] = [rankingName: "\(totalScore)"]
         
         // すでに保存されているメモがあれば追加して保存
         if var memo: [[String]] = UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] {
+            
             memo.append(rankingToSave)
             UserDefaults.standard.set(memo, forKey: "nameAndScore")
+            
         } else {
             // 保存しているメモがなければ新規で保存
             UserDefaults.standard.set([rankingToSave], forKey: "nameAndScore")
@@ -84,6 +86,17 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         navigationController?.popToRootViewController(animated: false)
     }
     
+    @IBAction func writeNameTextField(_ sender: Any) {
+        self.nameText = (sender as AnyObject).text
+        self.writeName()
+    }
+
+    //text打ち終わったらキーボードしまう
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        return true
+    }
+    
     private func writeName() {
         //nillの場合は「登録する」ボタン押せない
         guard let nameText = self.nameText else {
@@ -105,16 +118,5 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         self.registerButton.isEnabled = true
         worldRankingSwith.isEnabled = true
         joinTheWorldRankingLabel.textColor = UIColor.black
-    }
-    
-    @IBAction func writeNameTextField(_ sender: Any) {
-        self.nameText = (sender as AnyObject).text
-        self.writeName()
-    }
-
-    //text打ち終わったらキーボードしまう
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        nameTextField.resignFirstResponder()
-        return true
     }
 }
