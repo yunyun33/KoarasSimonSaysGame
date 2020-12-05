@@ -102,7 +102,7 @@ extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource 
     //Firestoreにあるデータを取得する
     private func getFirestoreDatas() {
         
-        Firestore.firestore().collection("users").getDocuments { (snaps, error) in
+        Firestore.firestore().collection("users").order(by: "totalScore", descending: true).getDocuments { (snaps, error) in
             if let error = error {
                 fatalError("\(error)")
             }
