@@ -11,7 +11,7 @@ target 'KoarasSimonSaysGame' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Database'
 
-  pod 'TransitionButton'
+  pod 'LicensePlist'
 
   target 'KoarasSimonSaysGameTests' do
     inherit! :search_paths

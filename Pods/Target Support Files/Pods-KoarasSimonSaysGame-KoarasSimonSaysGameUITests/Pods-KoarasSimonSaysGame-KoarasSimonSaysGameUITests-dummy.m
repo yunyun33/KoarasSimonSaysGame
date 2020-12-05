@@ -1,5 +1,0 @@
-#import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests : NSObject
-@end
-@implementation PodsDummy_Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests
-@end
