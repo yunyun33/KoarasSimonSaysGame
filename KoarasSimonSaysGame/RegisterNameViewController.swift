@@ -26,6 +26,9 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
        
         nameTextField.delegate = self
         
+        worldRankingSwith.isEnabled = false
+        joinTheWorldRankingLabel.textColor = UIColor.lightGray
+        
         worldRankingSwith.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
     }
    
