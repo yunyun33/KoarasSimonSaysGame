@@ -92,9 +92,7 @@ extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource 
     private func getUserDefaultsDatas() {
                
         if let savedname = UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] {
-            //同立の場合、最初にgameした人が上に表示される
-            nameAndScore = savedname.sorted(by: {Double($0[1])! > Double($1[1])!})
-            print(nameAndScore)
+            nameAndScore = savedname
         }
         tableView.reloadData()
     }
@@ -125,7 +123,6 @@ extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource 
                 
                 self.nameAndScore.append([rankingNameData, "\(totalScoreData)"])
             }
-
             self.tableView.reloadData()
         }
     }
