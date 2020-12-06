@@ -63,7 +63,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         //UserDefaultsのインスタンス生成
         let settingTimer = UserDefaults.standard
         //UserDefaultsに秒数を登録
-        settingTimer.register(defaults: [settingKey: 1])
+        settingTimer.register(defaults: [settingKey: 15])
         
         //タイマーをアンラップ
         if let timer = timer {
@@ -201,5 +201,4 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
             navigationController.navigationBar.isHidden = true
         }
     }
-    
 }
