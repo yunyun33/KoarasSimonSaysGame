@@ -20,7 +20,7 @@
         <scene sceneID="uBl-p6-MTl">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeY-y5-m4r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="rwg-Ps-5k6" customClass="MenuViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menuView" id="rwg-Ps-5k6" customClass="MenuViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K4y-dr-BO2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
