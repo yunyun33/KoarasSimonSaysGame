@@ -23,6 +23,11 @@
 		BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */; };
 		BA4C969C24B1984900226834 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA4C969B24B1984900226834 /* GoogleService-Info.plist */; };
 		BA6DA34E2560E27B00DD918F /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA6DA34D2560E27A00DD918F /* playBGM.mp3 */; };
+		BAAED80F2670422300DF5647 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED80E2670422300DF5647 /* Menu.storyboard */; };
+		BAAED8112670574E00DF5647 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8102670574E00DF5647 /* MenuPresenter.swift */; };
+		BAAED8162670617100DF5647 /* CommonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8152670617100DF5647 /* CommonValue.swift */; };
+		BAAED81826708FC200DF5647 /* TopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED81726708FC200DF5647 /* TopPresenter.swift */; };
+		BAAED81B2670A66100DF5647 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED81A2670A66100DF5647 /* ExtensionUIViewController.swift */; };
 		BAE6E6882483E6460077D8AE /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6862483E6460077D8AE /* RankingCell.swift */; };
 		BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6872483E6460077D8AE /* RankingCell.xib */; };
 		BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */; };
@@ -84,6 +89,11 @@
 		BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDateViewController.swift; sourceTree = "<group>"; };
 		BA4C969B24B1984900226834 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA6DA34D2560E27A00DD918F /* playBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBGM.mp3; sourceTree = "<group>"; };
+		BAAED80E2670422300DF5647 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		BAAED8102670574E00DF5647 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		BAAED8152670617100DF5647 /* CommonValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonValue.swift; sourceTree = "<group>"; };
+		BAAED81726708FC200DF5647 /* TopPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPresenter.swift; sourceTree = "<group>"; };
+		BAAED81A2670A66100DF5647 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
 		BAE6E6862483E6460077D8AE /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		BAE6E6872483E6460077D8AE /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
 		BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Semibold.woff"; sourceTree = "<group>"; };
@@ -190,22 +200,14 @@
 		BA006F63243C58C0000AB5F6 /* KoarasSimonSaysGame */ = {
 			isa = PBXGroup;
 			children = (
+				BAAED80826703F9F00DF5647 /* Pages */,
 				BA006F64243C58C0000AB5F6 /* AppDelegate.swift */,
 				BA006F66243C58C0000AB5F6 /* SceneDelegate.swift */,
-				BA006F68243C58C0000AB5F6 /* ViewController.swift */,
-				BA006F94243C5AB4000AB5F6 /* PlayGameViewController.swift */,
-				BA006F6A243C58C0000AB5F6 /* Main.storyboard */,
-				BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */,
-				BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */,
-				BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */,
-				BAE6E6862483E6460077D8AE /* RankingCell.swift */,
-				BAE6E6872483E6460077D8AE /* RankingCell.xib */,
 				BA006F6D243C58C8000AB5F6 /* Assets.xcassets */,
 				BA6DA34D2560E27A00DD918F /* playBGM.mp3 */,
 				BA006F6F243C58C8000AB5F6 /* LaunchScreen.storyboard */,
 				BA006F72243C58C8000AB5F6 /* Info.plist */,
 				BA4C969B24B1984900226834 /* GoogleService-Info.plist */,
-				BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */,
 			);
 			path = KoarasSimonSaysGame;
 			sourceTree = "<group>";
@@ -226,6 +228,83 @@
 				BA006F88243C58C8000AB5F6 /* Info.plist */,
 			);
 			path = KoarasSimonSaysGameUITests;
+			sourceTree = "<group>";
+		};
+		BAAED80826703F9F00DF5647 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				BAAED8192670A62700DF5647 /* Extension */,
+				BAAED8142670611E00DF5647 /* Common */,
+				BAAED80D267041EA00DF5647 /* Menu */,
+				BAAED80C2670403400DF5647 /* Ranking */,
+				BAAED80B2670401C00DF5647 /* ResultPage */,
+				BAAED80A26703FFC00DF5647 /* PlayGame */,
+				BAAED80926703FD100DF5647 /* TopPage */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		BAAED80926703FD100DF5647 /* TopPage */ = {
+			isa = PBXGroup;
+			children = (
+				BA006F68243C58C0000AB5F6 /* ViewController.swift */,
+				BA006F6A243C58C0000AB5F6 /* Main.storyboard */,
+				BAAED81726708FC200DF5647 /* TopPresenter.swift */,
+			);
+			path = TopPage;
+			sourceTree = "<group>";
+		};
+		BAAED80A26703FFC00DF5647 /* PlayGame */ = {
+			isa = PBXGroup;
+			children = (
+				BA006F94243C5AB4000AB5F6 /* PlayGameViewController.swift */,
+			);
+			path = PlayGame;
+			sourceTree = "<group>";
+		};
+		BAAED80B2670401C00DF5647 /* ResultPage */ = {
+			isa = PBXGroup;
+			children = (
+				BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */,
+				BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */,
+			);
+			path = ResultPage;
+			sourceTree = "<group>";
+		};
+		BAAED80C2670403400DF5647 /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */,
+				BAE6E6862483E6460077D8AE /* RankingCell.swift */,
+				BAE6E6872483E6460077D8AE /* RankingCell.xib */,
+			);
+			path = Ranking;
+			sourceTree = "<group>";
+		};
+		BAAED80D267041EA00DF5647 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */,
+				BAAED80E2670422300DF5647 /* Menu.storyboard */,
+				BAAED8102670574E00DF5647 /* MenuPresenter.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		BAAED8142670611E00DF5647 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BAAED8152670617100DF5647 /* CommonValue.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BAAED8192670A62700DF5647 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BAAED81A2670A66100DF5647 /* ExtensionUIViewController.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		BAE6E69224919C970077D8AE /* kazesawa */ = {
@@ -381,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAE6E6AB249257410077D8AE /* Kazesawa-Extrabold.woff in Resources */,
+				BAAED80F2670422300DF5647 /* Menu.storyboard in Resources */,
 				BAE6E6B02492576D0077D8AE /* Kazesawa-Bold.ttf in Resources */,
 				BAE6E6AC249257460077D8AE /* Kazesawa-Regular.woff in Resources */,
 				BAE6E6B32492577D0077D8AE /* Kazesawa-ExtraLight.ttf in Resources */,
@@ -525,11 +605,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAED81B2670A66100DF5647 /* ExtensionUIViewController.swift in Sources */,
 				BA006F69243C58C0000AB5F6 /* ViewController.swift in Sources */,
 				BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */,
 				BA006F65243C58C0000AB5F6 /* AppDelegate.swift in Sources */,
+				BAAED8112670574E00DF5647 /* MenuPresenter.swift in Sources */,
+				BAAED81826708FC200DF5647 /* TopPresenter.swift in Sources */,
 				BA006F992442FD74000AB5F6 /* RegisterNameViewController.swift in Sources */,
 				BAE6E6BC249645BE0077D8AE /* MenuViewController.swift in Sources */,
+				BAAED8162670617100DF5647 /* CommonValue.swift in Sources */,
 				BA006F95243C5AB4000AB5F6 /* PlayGameViewController.swift in Sources */,
 				BA006F67243C58C0000AB5F6 /* SceneDelegate.swift in Sources */,
 				BAE6E6882483E6460077D8AE /* RankingCell.swift in Sources */,
