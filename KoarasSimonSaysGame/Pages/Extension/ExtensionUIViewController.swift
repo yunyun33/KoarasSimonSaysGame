@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import UIKit
+
+extension UIViewController {
+    
+    func transitionToNextPage(nextVC: UIViewController) {
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+}
