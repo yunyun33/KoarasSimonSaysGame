@@ -26,7 +26,6 @@
 		BAAED80F2670422300DF5647 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED80E2670422300DF5647 /* Menu.storyboard */; };
 		BAAED8112670574E00DF5647 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8102670574E00DF5647 /* MenuPresenter.swift */; };
 		BAAED8162670617100DF5647 /* CommonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8152670617100DF5647 /* CommonValue.swift */; };
-		BAAED81826708FC200DF5647 /* TopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED81726708FC200DF5647 /* TopPresenter.swift */; };
 		BAAED81B2670A66100DF5647 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED81A2670A66100DF5647 /* ExtensionUIViewController.swift */; };
 		BAE6E6882483E6460077D8AE /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6862483E6460077D8AE /* RankingCell.swift */; };
 		BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6872483E6460077D8AE /* RankingCell.xib */; };
@@ -92,7 +91,6 @@
 		BAAED80E2670422300DF5647 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		BAAED8102670574E00DF5647 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		BAAED8152670617100DF5647 /* CommonValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonValue.swift; sourceTree = "<group>"; };
-		BAAED81726708FC200DF5647 /* TopPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPresenter.swift; sourceTree = "<group>"; };
 		BAAED81A2670A66100DF5647 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
 		BAE6E6862483E6460077D8AE /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		BAE6E6872483E6460077D8AE /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
@@ -249,7 +247,6 @@
 			children = (
 				BA006F68243C58C0000AB5F6 /* ViewController.swift */,
 				BA006F6A243C58C0000AB5F6 /* Main.storyboard */,
-				BAAED81726708FC200DF5647 /* TopPresenter.swift */,
 			);
 			path = TopPage;
 			sourceTree = "<group>";
@@ -610,7 +607,6 @@
 				BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */,
 				BA006F65243C58C0000AB5F6 /* AppDelegate.swift in Sources */,
 				BAAED8112670574E00DF5647 /* MenuPresenter.swift in Sources */,
-				BAAED81826708FC200DF5647 /* TopPresenter.swift in Sources */,
 				BA006F992442FD74000AB5F6 /* RegisterNameViewController.swift in Sources */,
 				BAE6E6BC249645BE0077D8AE /* MenuViewController.swift in Sources */,
 				BAAED8162670617100DF5647 /* CommonValue.swift in Sources */,
