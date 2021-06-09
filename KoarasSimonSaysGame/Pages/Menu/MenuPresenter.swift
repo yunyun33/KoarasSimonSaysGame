@@ -24,6 +24,10 @@ class MenuPresenter: MenuPresenterInput {
     
     private weak var view: MenuPresenterOutput!
     
+    init(view: MenuPresenterOutput) {
+        self.view = view
+    }
+    
     func didTapYunyunHp() {
         view.openSafariView(urlString: CommonValue.URL.illustratorContactURL)
     }

@@ -16,7 +16,7 @@ class MenuViewController: UIViewController, UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = MenuPresenter()
+        presenter = MenuPresenter(view: self)
         
         //navigationBarの戻るボタン押した時のイベントに必要
         navigationController?.delegate = self
