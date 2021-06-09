@@ -13,5 +13,6 @@ extension UIViewController {
     
     func transitionToNextPage(nextVC: UIViewController) {
         navigationController?.pushViewController(nextVC, animated: true)
+        navigationController?.navigationBar.isHidden = false
     }
 }
