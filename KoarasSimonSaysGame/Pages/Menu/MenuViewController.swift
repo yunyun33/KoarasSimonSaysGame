@@ -11,17 +11,12 @@ import SafariServices
 
 class MenuViewController: UIViewController, UINavigationControllerDelegate {
     
-    // 開発者の連絡先(HP)
-    let illustratorContactURL = "https://yunyun33.com/"
-    //プライバシーポリシー
-    let privacyPolicyURL = "https://yunyun33.com/koalasgame-privacy_policy/"
-    //コアラさんのニート診断
-    let neetCheckAppStorePage = "https://apps.apple.com/jp/app/%E3%82%B3%E3%82%A2%E3%83%A9%E3%81%95%E3%82%93%E3%81%AE%E3%83%8B%E3%83%BC%E3%83%88%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF/id1456451456?mt=8"
-    //コアラさんのおうちカフェ
-    let ouchiCafeAppAppStorePage =  "https://apps.apple.com/jp/app/%E3%82%B3%E3%82%A2%E3%83%A9%E3%81%95%E3%82%93%E3%81%AE%E3%81%8A%E3%81%86%E3%81%A1%E3%82%AB%E3%83%95%E3%82%A7/id1493333294?mt=8"
+    private var presenter: MenuPresenterInput!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter = MenuPresenter()
         
         //navigationBarの戻るボタン押した時のイベントに必要
         navigationController?.delegate = self
@@ -36,24 +31,19 @@ class MenuViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func onTapYunyun(_ sender: Any) {
-         openSafariView(urlString: illustratorContactURL)
+        presenter.didTapYunyunHp()
     }
 
     @IBAction func onTapPrivacyPolicy(_ sender: Any) {
-         openSafariView(urlString: privacyPolicyURL)
+        presenter.didTapPrivacyPolicy()
     }
     
     @IBAction func onTapNeetCheck(_ sender: Any) {
-         openSafariView(urlString: neetCheckAppStorePage)
+        presenter.didTapNeetCheck()
     }
     
     @IBAction func onTapOuchiCafe(_ sender: Any) {
-        openSafariView(urlString: ouchiCafeAppAppStorePage)
-    }
-    
-    func openSafariView(urlString: String) {
-        let safariVC = SFSafariViewController(url: NSURL(string: urlString)! as URL)
-        present(safariVC, animated: true, completion: nil)
+        presenter.didTapOuchiCafe()
     }
     
     //navigationBarの戻るボタン押した時の処理
@@ -62,4 +52,11 @@ class MenuViewController: UIViewController, UINavigationControllerDelegate {
             navigationController.navigationBar.isHidden = true
         }
     }
+}
+
+extension MenuViewController: MenuPresenterOutput {
+    func openSafariView(urlString: String) {
+            let safariVC = SFSafariViewController(url: NSURL(string: urlString)! as URL)
+            present(safariVC, animated: true, completion: nil)
+        }
 }
