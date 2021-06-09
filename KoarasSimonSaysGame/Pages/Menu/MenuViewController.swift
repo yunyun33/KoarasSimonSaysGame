@@ -56,7 +56,7 @@ class MenuViewController: UIViewController, UINavigationControllerDelegate {
 
 extension MenuViewController: MenuPresenterOutput {
     func openSafariView(urlString: String) {
-            let safariVC = SFSafariViewController(url: NSURL(string: urlString)! as URL)
+        let safariVC = SFSafariViewController(url: NSURL(string: urlString)! as URL)
             present(safariVC, animated: true, completion: nil)
-        }
+    }
 }

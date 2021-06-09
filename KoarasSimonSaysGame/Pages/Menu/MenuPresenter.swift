@@ -33,7 +33,7 @@ class MenuPresenter: MenuPresenterInput {
     }
     
     func didTapPrivacyPolicy() {
-        view?.openSafariView(urlString: CommonValue.URL.privacyPolicyURL)
+        view.openSafariView(urlString: CommonValue.URL.privacyPolicyURL)
     }
     
     func didTapNeetCheck() {
