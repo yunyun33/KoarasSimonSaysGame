@@ -11,6 +11,7 @@ import UIKit
 
 extension UIViewController {
     
+    //画面遷移
     func transitionToNextPage(nextVC: UIViewController) {
         navigationController?.pushViewController(nextVC, animated: true)
         navigationController?.navigationBar.isHidden = false
