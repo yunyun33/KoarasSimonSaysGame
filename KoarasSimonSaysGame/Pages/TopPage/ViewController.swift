@@ -45,9 +45,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onTapMenuButton(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
-            let nextView = storyboard.instantiateViewController(withIdentifier: "view6") as! MenuViewController
-            self.navigationController?.pushViewController(nextView, animated: true)
-            navigationController?.navigationBar.isHidden = false
+        let menuVC = MenuViewController()
+        transitionToNextPage(nextVC: menuVC)
+//        let storyboard: UIStoryboard = self.storyboard!
+//        let nextView = storyboard.instantiateViewController(withIdentifier: "menuView") as! MenuViewController
+//        self.navigationController?.pushViewController(nextView, animated: true)
+        navigationController?.navigationBar.isHidden = false
     }
 }
