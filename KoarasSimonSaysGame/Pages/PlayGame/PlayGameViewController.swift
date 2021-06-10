@@ -15,7 +15,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
     @IBOutlet weak var missLabel: UILabel!
 
     //回答を代入する変数
-    var answer: String = ""
+//    var answer: String = ""
     //スコアカウント
     var scoreCount: Int = 0
     
@@ -44,7 +44,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         // ナビゲーションバーの影画像（境界線の画像）を空に設定
         self.navigationController!.navigationBar.shadowImage = UIImage()
         
-        let randomInstructionText = instructionText.randomElement()!
+        let randomInstructionText = CommonValue.instructionText.randomElement()!
         
         countDownLabel.text = "残り15秒"
         instructionLabel.text = "\(randomInstructionText)"
@@ -64,51 +64,25 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         setTimer()
 
         //goodLabelをアニメーションするまで透明にしておく
-               goodLabel.alpha = 0.0
-               missLabel.alpha = 0.0
+        goodLabel.alpha = 0.0
+        missLabel.alpha = 0.0
     }
    
-    //--------旗揚げゲーム--------
+    //--------旗上げゲーム--------
     @IBAction func upButton(_ sender: Any) {
-        goToNextQuestion(tappedString: instructionText[0])
+        presenter.didTapUp()
     }
     
     @IBAction func downButton(_ sender: Any) {
-        goToNextQuestion(tappedString: instructionText[1])
+        presenter.didTapDown()
     }
     
     @IBAction func rightButton(_ sender: Any) {
-        goToNextQuestion(tappedString: instructionText[2])
+        presenter.didTapRight()
     }
     
     @IBAction func leftButton(_ sender: Any) {
-        goToNextQuestion(tappedString: instructionText[3])
-    }
-    
-    func goToNextQuestion(tappedString: String) {
-        answer = tappedString
-        
-        //正解の判定をする
-        if instructionLabel.text == answer {
-            scoreCount += 1
-            showGoodLabel()
-            nextInstructionText()
-        } else {
-            scoreCount -= 1
-                if scoreCount < 0 {
-                    scoreCount = 0
-                }
-            showMissLabel()
-        }
-
-        //画像を切り替える
-        switch tappedString {
-            case instructionText[0]: koalasFlagImageView.image = UIImage(named: "Up.png")
-            case instructionText[1]: koalasFlagImageView.image = UIImage(named: "Down.png")
-            case instructionText[2]: koalasFlagImageView.image = UIImage(named: "Right.png")
-            case instructionText[3]: koalasFlagImageView.image = UIImage(named: "Left.png")
-            default: break
-        }
+        presenter.didTapLeft()
     }
   
     private func showTotalScore() {
@@ -118,31 +92,6 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         navigationController?.navigationBar.isHidden = false
     }
     
-    //問題を表示する
-    private func nextInstructionText() {
-        let randomInstructionText = instructionText.randomElement()!
-            instructionLabel.text = "\(randomInstructionText)"
-    }
-    
-    //正解したらgoodLabel表示
-    private func showGoodLabel() {
-        goodLabel.center = self.view.center
-        goodLabel.alpha = 1.0
-        UIView.animate(withDuration: 0.5, delay: 0.0, animations: {
-            self.goodLabel.center.y -= 120.0
-            self.goodLabel.alpha = 0.0
-        }, completion: nil)
-    }
-    
-    //間違えたらmissLabel表示
-    private func showMissLabel() {
-        missLabel.center = self.view.center
-        missLabel.alpha = 1.0
-        UIView.animate(withDuration: 0.5, delay: 0.0, animations: {
-            self.missLabel.center.y -= 120.0
-            self.missLabel.alpha = 0.0
-        }, completion: nil)
-    }
     //画面の更新をする(戻り値: remainCount:残り時間)
     func displayUpdate() -> Int {
         let settingTimer = UserDefaults.standard
@@ -207,4 +156,53 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
 }
 
 extension PlayGameViewController: PlayGamePresenterOutput {
+    
+    //正解したらgoodLabel表示
+    func showGoodLabel() {
+        goodLabel.center = self.view.center
+        goodLabel.alpha = 1.0
+        UIView.animate(withDuration: 0.5, delay: 0.0, animations: {
+            self.goodLabel.center.y -= 120.0
+            self.goodLabel.alpha = 0.0
+        }, completion: nil)
+    }
+    
+    //間違えたらmissLabel表示
+    func showMissLabel() {
+        missLabel.center = self.view.center
+        missLabel.alpha = 1.0
+        UIView.animate(withDuration: 0.5, delay: 0.0, animations: {
+            self.missLabel.center.y -= 120.0
+            self.missLabel.alpha = 0.0
+        }, completion: nil)
+    }
+    
+    func showNextInstruction(tappedString: String) {
+//        answer = tappedString
+//
+//        //正解の判定をする
+//        if instructionLabel.text == answer {
+//            scoreCount += 1
+//            showGoodLabel()
+//            showNextInstructionText()
+//        } else {
+//            scoreCount -= 1
+//                if scoreCount < 0 {
+//                    scoreCount = 0
+//                }
+//            showMissLabel()
+//        }
+        
+        let randomInstructionText = CommonValue.instructionText.randomElement()!
+            instructionLabel.text = "\(randomInstructionText)"
+
+        //画像を切り替える
+        switch tappedString {
+            case CommonValue.instructionText[0]: koalasFlagImageView.image = UIImage(named: "Up.png")
+            case CommonValue.instructionText[1]: koalasFlagImageView.image = UIImage(named: "Down.png")
+            case CommonValue.instructionText[2]: koalasFlagImageView.image = UIImage(named: "Right.png")
+            case CommonValue.instructionText[3]: koalasFlagImageView.image = UIImage(named: "Left.png")
+            default: break
+        }
+    }
 }
