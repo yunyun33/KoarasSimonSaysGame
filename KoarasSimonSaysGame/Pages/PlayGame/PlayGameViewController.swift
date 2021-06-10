@@ -13,8 +13,6 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
     @IBOutlet weak var countDownLabel: UILabel!
     @IBOutlet weak var goodLabel: UILabel!
     @IBOutlet weak var missLabel: UILabel!
-    
-    let instructionText = ["上あげて！", "下さげて！", "右にして！", "左にして！"]
 
     //回答を代入する変数
     var answer: String = ""
