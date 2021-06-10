@@ -184,7 +184,7 @@
         <!--Total Score View Controller-->
         <scene sceneID="6x8-aw-9O8">
             <objects>
-                <viewController storyboardIdentifier="view3" id="5RD-UR-qcS" customClass="TotalScoreViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="totalScorewView" id="5RD-UR-qcS" customClass="TotalScoreViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5w7-v7-L61">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -132,13 +132,10 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
     }
   
     private func showTotalScore() {
-        //storyboardのインスタンス取得
-        let storyboard: UIStoryboard = self.storyboard!
-        //遷移先ViewControllerのインスタンス取得
-        let nextView = storyboard.instantiateViewController(withIdentifier: "view3") as! TotalScoreViewController
-        nextView.totalScore = scoreCount
-        //画面遷移
+        let totalScoreVC = UIStoryboard(name: "Main", bundle: nil)
+        let nextView = totalScoreVC.instantiateViewController(withIdentifier: "totalScorewView") as! TotalScoreViewController
         self.navigationController?.pushViewController(nextView, animated: true)
+        navigationController?.navigationBar.isHidden = false
     }
     
     //問題を表示する
