@@ -3,6 +3,8 @@ import UIKit
 import AVFoundation
 
 class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigationControllerDelegate {
+    
+    private var presenter: PlayGamePresenterInput!
 
     @IBOutlet weak var instructionLabel: UILabel!
     
@@ -30,6 +32,8 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter = PlayGamePresenter(view: self)
 
         //navigationBarの戻るボタン押した時のイベントに必要
         navigationController?.delegate = self
@@ -201,4 +205,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
             navigationController.navigationBar.isHidden = true
         }
     }
+}
+
+extension PlayGameViewController: PlayGamePresenterOutput {
 }

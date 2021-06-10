@@ -27,6 +27,7 @@
 		BAAED8112670574E00DF5647 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8102670574E00DF5647 /* MenuPresenter.swift */; };
 		BAAED8162670617100DF5647 /* CommonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8152670617100DF5647 /* CommonValue.swift */; };
 		BAAED81D267188F900DF5647 /* PlayGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED81C267188F900DF5647 /* PlayGame.storyboard */; };
+		BAAED81F26718EFF00DF5647 /* PlayGamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED81E26718EFF00DF5647 /* PlayGamePresenter.swift */; };
 		BAE6E6882483E6460077D8AE /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6862483E6460077D8AE /* RankingCell.swift */; };
 		BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6872483E6460077D8AE /* RankingCell.xib */; };
 		BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */; };
@@ -92,6 +93,7 @@
 		BAAED8102670574E00DF5647 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		BAAED8152670617100DF5647 /* CommonValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonValue.swift; sourceTree = "<group>"; };
 		BAAED81C267188F900DF5647 /* PlayGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayGame.storyboard; sourceTree = "<group>"; };
+		BAAED81E26718EFF00DF5647 /* PlayGamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGamePresenter.swift; sourceTree = "<group>"; };
 		BAE6E6862483E6460077D8AE /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		BAE6E6872483E6460077D8AE /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
 		BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Semibold.woff"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			children = (
 				BA006F94243C5AB4000AB5F6 /* PlayGameViewController.swift */,
 				BAAED81C267188F900DF5647 /* PlayGame.storyboard */,
+				BAAED81E26718EFF00DF5647 /* PlayGamePresenter.swift */,
 			);
 			path = PlayGame;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				BAAED8112670574E00DF5647 /* MenuPresenter.swift in Sources */,
 				BA006F992442FD74000AB5F6 /* RegisterNameViewController.swift in Sources */,
 				BAE6E6BC249645BE0077D8AE /* MenuViewController.swift in Sources */,
+				BAAED81F26718EFF00DF5647 /* PlayGamePresenter.swift in Sources */,
 				BAAED8162670617100DF5647 /* CommonValue.swift in Sources */,
 				BA006F95243C5AB4000AB5F6 /* PlayGameViewController.swift in Sources */,
 				BA006F67243C58C0000AB5F6 /* SceneDelegate.swift in Sources */,
