@@ -23,10 +23,10 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
     var audioPlayer : AVAudioPlayer!
     
     //タイマー
-           var timer : Timer?
-           var count = 0
-           //設定値を扱うキーを設定
-           let settingKey = "timerValue"
+    var timer : Timer?
+    var count = 0
+    //設定値を扱うキーを設定
+    let settingKey = "timerValue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,28 +61,8 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         }
         audioPlayer.play()
         
-        //--------タイマーの設定--------
-        //UserDefaultsのインスタンス生成
-        let settingTimer = UserDefaults.standard
-        //UserDefaultsに秒数を登録
-        settingTimer.register(defaults: [settingKey: 15])
-        
-        //タイマーをアンラップ
-        if let timer = timer {
-            //もしタイマーが、実行中だったらスタートしない
-            if timer.isValid == true {
-                //何もしない
-                return
-            }
-        }
-        
-        //タイマースタート
-        timer = Timer.scheduledTimer(timeInterval: 1.0,
-                                     target: self,
-                                     selector: #selector(self.timerInterrupt(_:)),
-                                     userInfo: nil,
-                                     repeats: true)        
-        
+        setTimer()
+
         //goodLabelをアニメーションするまで透明にしておく
                goodLabel.alpha = 0.0
                missLabel.alpha = 0.0
@@ -189,6 +169,30 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
             showTotalScore()
             audioPlayer.stop()
         }
+    }
+    
+    //タイマーの設定
+    func setTimer() {
+        //UserDefaultsのインスタンス生成
+        let settingTimer = UserDefaults.standard
+        //UserDefaultsに秒数を登録
+        settingTimer.register(defaults: [settingKey: 15])
+
+        //タイマーをアンラップ
+        if let timer = timer {
+            //もしタイマーが、実行中だったらスタートしない
+            if timer.isValid == true {
+                //何もしない
+                return
+            }
+        }
+
+        //タイマースタート
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(self.timerInterrupt(_:)),
+                                     userInfo: nil,
+                                     repeats: true)
     }
     
     //navigationBarの戻るボタン押した時の処理
