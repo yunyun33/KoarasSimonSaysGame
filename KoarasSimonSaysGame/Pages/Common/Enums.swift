@@ -27,4 +27,17 @@ enum Direction: CaseIterable {
             return "左にして！"
         }
     }
+    
+    func setFlagImage() -> String {
+        switch self {
+        case .UP:
+            return "Up.png"
+        case .DOWN:
+            return "Down.png"
+        case .RIGHT:
+            return "Right.png"
+        case .LEFT:
+            return "Left.png"
+        }
+    }
 }
