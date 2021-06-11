@@ -13,12 +13,12 @@ protocol PlayGamePresenterInput {
     func didTapDown()
     func didTapRight()
     func didTapLeft()
+    func setNextInstruction() -> Direction
 }
 
 protocol PlayGamePresenterOutput: AnyObject {
     func showGoodLabel()
     func showMissLabel()
-//    func showNextInstructionText()
     func showNextInstruction(tappedString: String)
 }
 
@@ -31,7 +31,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     //仮に初期値としてUPを入れる
-    var instructionDirection = Direction.UP
+    var instructionDirection: Direction = Direction.UP
     //正解カウント
     var okCount: Int = 0
     //不正解カウント
@@ -80,5 +80,10 @@ class PlayGamePresenter: PlayGamePresenterInput {
             view.showMissLabel()
         }
         view.showNextInstruction(tappedString: CommonValue.instructionText[3])
+    }
+    
+    func setNextInstruction() -> Direction {
+        instructionDirection = Direction.allCases.randomElement()!
+        return instructionDirection
     }
 }

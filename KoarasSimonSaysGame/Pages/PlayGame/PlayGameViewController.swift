@@ -14,8 +14,6 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
     @IBOutlet weak var goodLabel: UILabel!
     @IBOutlet weak var missLabel: UILabel!
 
-    //回答を代入する変数
-//    var answer: String = ""
     //スコアカウント
     var scoreCount: Int = 0
     
@@ -44,10 +42,11 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         // ナビゲーションバーの影画像（境界線の画像）を空に設定
         self.navigationController!.navigationBar.shadowImage = UIImage()
         
-        let randomInstructionText = CommonValue.instructionText.randomElement()!
-        
         countDownLabel.text = "残り15秒"
-        instructionLabel.text = "\(randomInstructionText)"
+        
+        let directionFromPresenter: Direction = presenter.setNextInstruction()
+        
+        instructionLabel.text = directionFromPresenter.getInstructionText()
         
         koalasFlagImageView.image = UIImage(named: "Ready.png")
 
@@ -178,24 +177,11 @@ extension PlayGameViewController: PlayGamePresenterOutput {
     }
     
     func showNextInstruction(tappedString: String) {
-//        answer = tappedString
-//
-//        //正解の判定をする
-//        if instructionLabel.text == answer {
-//            scoreCount += 1
-//            showGoodLabel()
-//            showNextInstructionText()
-//        } else {
-//            scoreCount -= 1
-//                if scoreCount < 0 {
-//                    scoreCount = 0
-//                }
-//            showMissLabel()
-//        }
         
-        let randomInstructionText = CommonValue.instructionText.randomElement()!
-            instructionLabel.text = "\(randomInstructionText)"
-
+        let directionFromPresenter: Direction = presenter.setNextInstruction()
+        
+        instructionLabel.text = directionFromPresenter.getInstructionText()
+        
         //画像を切り替える
         switch tappedString {
             case CommonValue.instructionText[0]: koalasFlagImageView.image = UIImage(named: "Up.png")
