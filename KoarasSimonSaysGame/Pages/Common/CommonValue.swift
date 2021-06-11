@@ -12,8 +12,6 @@ import Foundation
 
 struct CommonValue {
     
-    static let instructionText = ["上あげて！", "下さげて！", "右にして！", "左にして！"]
-    
     struct URL {
         // 開発者の連絡先(HP)
         static let illustratorContactURL = "https://yunyun33.com/"

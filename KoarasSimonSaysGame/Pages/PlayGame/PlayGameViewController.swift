@@ -176,19 +176,20 @@ extension PlayGameViewController: PlayGamePresenterOutput {
         }, completion: nil)
     }
     
-    func showNextInstruction(tappedString: String) {
+    func showNextInstruction(tappedButton: Direction) {
         
         let directionFromPresenter: Direction = presenter.setNextInstruction()
         
         instructionLabel.text = directionFromPresenter.getInstructionText()
         
         //画像を切り替える
-        switch tappedString {
-            case CommonValue.instructionText[0]: koalasFlagImageView.image = UIImage(named: "Up.png")
-            case CommonValue.instructionText[1]: koalasFlagImageView.image = UIImage(named: "Down.png")
-            case CommonValue.instructionText[2]: koalasFlagImageView.image = UIImage(named: "Right.png")
-            case CommonValue.instructionText[3]: koalasFlagImageView.image = UIImage(named: "Left.png")
-            default: break
+        let flagImage = tappedButton.setFlagImage()
+        
+        switch tappedButton {
+        case Direction.UP: koalasFlagImageView.image = UIImage(named: flagImage)
+        case Direction.DOWN: koalasFlagImageView.image = UIImage(named: flagImage)
+        case Direction.RIGHT: koalasFlagImageView.image = UIImage(named: flagImage)
+        case Direction.LEFT: koalasFlagImageView.image = UIImage(named: flagImage)
         }
     }
 }

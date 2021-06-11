@@ -19,7 +19,7 @@ protocol PlayGamePresenterInput {
 protocol PlayGamePresenterOutput: AnyObject {
     func showGoodLabel()
     func showMissLabel()
-    func showNextInstruction(tappedString: String)
+    func showNextInstruction(tappedButton: Direction)
 }
 
 class PlayGamePresenter: PlayGamePresenterInput {
@@ -46,7 +46,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
             ngCount += 1
             view.showMissLabel()
         }
-        view.showNextInstruction(tappedString: CommonValue.instructionText[0])
+        view.showNextInstruction(tappedButton: Direction.UP)
     }
     
     func didTapDown() {
@@ -57,7 +57,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
             ngCount += 1
             view.showMissLabel()
         }
-        view.showNextInstruction(tappedString: CommonValue.instructionText[1])
+        view.showNextInstruction(tappedButton: Direction.DOWN)
     }
     
     func didTapRight() {
@@ -68,7 +68,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
             ngCount += 1
             view.showMissLabel()
         }
-        view.showNextInstruction(tappedString: CommonValue.instructionText[2])
+        view.showNextInstruction(tappedButton: Direction.RIGHT)
     }
     
     func didTapLeft() {
@@ -79,7 +79,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
             ngCount += 1
             view.showMissLabel()
         }
-        view.showNextInstruction(tappedString: CommonValue.instructionText[3])
+        view.showNextInstruction(tappedButton: Direction.LEFT)
     }
     
     func setNextInstruction() -> Direction {
