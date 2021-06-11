@@ -7,15 +7,10 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
     private var presenter: PlayGamePresenterInput!
 
     @IBOutlet weak var instructionLabel: UILabel!
-    
     @IBOutlet weak var koalasFlagImageView: UIImageView!
-    
     @IBOutlet weak var countDownLabel: UILabel!
     @IBOutlet weak var goodLabel: UILabel!
     @IBOutlet weak var missLabel: UILabel!
-
-    //スコアカウント
-    var scoreCount: Int = 0
     
     //BGMのインスタンス生成
     var audioPlayer : AVAudioPlayer!
