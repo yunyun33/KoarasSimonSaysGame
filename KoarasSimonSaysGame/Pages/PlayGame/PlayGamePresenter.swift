@@ -15,7 +15,7 @@ protocol PlayGamePresenterInput {
     func didTapRight()
     func didTapLeft()
     func setNextInstruction() -> Direction
-    func finishOfTimer() -> Int
+    func finishOfTimer()
 }
 
 protocol PlayGamePresenterOutput: AnyObject {
@@ -24,6 +24,7 @@ protocol PlayGamePresenterOutput: AnyObject {
     func showGoodLabel()
     func showMissLabel()
     func showNextInstruction(tappedButton: Direction)
+    func transitToTotalScorePage(score: Int)
 }
 
 class PlayGamePresenter: PlayGamePresenterInput {
@@ -96,11 +97,11 @@ class PlayGamePresenter: PlayGamePresenterInput {
         return instructionDirection
     }
     
-    func finishOfTimer() -> Int {
+    func finishOfTimer() {
         totalScore = okCount - ngCount
         if ( totalScore < 0 ) {
             totalScore = 0
         }
-        return totalScore
+        view.transitToTotalScorePage(score: totalScore)
     }
 }
