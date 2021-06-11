@@ -18,6 +18,7 @@ protocol PlayGamePresenterInput {
 }
 
 protocol PlayGamePresenterOutput: AnyObject {
+    func setupUI()
     func setMusic()
     func showGoodLabel()
     func showMissLabel()
@@ -41,6 +42,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
     var totalCount: Int = 0
     
     func viewDidLoad() {
+        view.setupUI()
         view.setMusic()
     }
     

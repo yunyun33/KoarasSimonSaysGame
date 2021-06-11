@@ -30,33 +30,10 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         super.viewDidLoad()
         
         presenter = PlayGamePresenter(view: self)
-
-        //navigationBarの戻るボタン押した時のイベントに必要
-        navigationController?.delegate = self
         
-        // ナビゲーションバーの透明化
-        // 半透明の指定（デフォルト値）
-        self.navigationController?.navigationBar.isTranslucent = true
-        // 空の背景画像設定
-        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        // ナビゲーションバーの影画像（境界線の画像）を空に設定
-        self.navigationController!.navigationBar.shadowImage = UIImage()
-        
-        countDownLabel.text = "残り15秒"
-        
-        let directionFromPresenter: Direction = presenter.setNextInstruction()
-        
-        instructionLabel.text = directionFromPresenter.getInstructionText()
-        
-        koalasFlagImageView.image = UIImage(named: "Ready.png")
-
         presenter.viewDidLoad()
         
         setTimer()
-
-        //goodLabelをアニメーションするまで透明にしておく
-        goodLabel.alpha = 0.0
-        missLabel.alpha = 0.0
     }
    
     //--------旗上げゲーム--------
@@ -147,6 +124,31 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
 }
 
 extension PlayGameViewController: PlayGamePresenterOutput {
+    
+    func setupUI() {
+        //navigationBarの戻るボタン押した時のイベントに必要
+        navigationController?.delegate = self
+        
+        // ナビゲーションバーの透明化
+        // 半透明の指定（デフォルト値）
+        self.navigationController?.navigationBar.isTranslucent = true
+        // 空の背景画像設定
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        // ナビゲーションバーの影画像（境界線の画像）を空に設定
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        
+        countDownLabel.text = "残り15秒"
+        
+        koalasFlagImageView.image = UIImage(named: "Ready.png")
+        
+        let directionFromPresenter: Direction = presenter.setNextInstruction()
+        
+        instructionLabel.text = directionFromPresenter.getInstructionText()
+        
+        //goodLabelをアニメーションするまで透明にしておく
+        goodLabel.alpha = 0.0
+        missLabel.alpha = 0.0
+    }
     
     func setMusic() {
         do {
