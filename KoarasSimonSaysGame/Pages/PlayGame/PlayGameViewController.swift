@@ -53,9 +53,10 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         presenter.didTapLeft()
     }
   
-    private func showTotalScore() {
+    private func showTotalScore(score: Int) {
         let totalScoreVC = UIStoryboard(name: "Main", bundle: nil)
         let nextView = totalScoreVC.instantiateViewController(withIdentifier: "totalScorewView") as! TotalScoreViewController
+        nextView.totalScore = score
         self.navigationController?.pushViewController(nextView, animated: true)
         navigationController?.navigationBar.isHidden = false
     }
@@ -83,7 +84,8 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
             count = 0
             //タイマー停止,停止と一緒に実行すること
             timer.invalidate()
-            showTotalScore()
+            let score = presenter.finishOfTimer()
+            showTotalScore(score: score)
             audioPlayer.stop()
         }
     }

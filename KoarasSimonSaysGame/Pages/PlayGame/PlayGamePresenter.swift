@@ -15,6 +15,7 @@ protocol PlayGamePresenterInput {
     func didTapRight()
     func didTapLeft()
     func setNextInstruction() -> Direction
+    func finishOfTimer() -> Int
 }
 
 protocol PlayGamePresenterOutput: AnyObject {
@@ -39,7 +40,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
     var okCount: Int = 0
     //不正解カウント
     var ngCount: Int = 0
-    var totalCount: Int = 0
+    var totalScore: Int = 0
     
     func viewDidLoad() {
         view.setupUI()
@@ -93,5 +94,13 @@ class PlayGamePresenter: PlayGamePresenterInput {
     func setNextInstruction() -> Direction {
         instructionDirection = Direction.allCases.randomElement()!
         return instructionDirection
+    }
+    
+    func finishOfTimer() -> Int {
+        totalScore = okCount - ngCount
+        if ( totalScore < 0 ) {
+            totalScore = 0
+        }
+        return totalScore
     }
 }
