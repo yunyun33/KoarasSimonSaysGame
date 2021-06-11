@@ -50,15 +50,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         
         koalasFlagImageView.image = UIImage(named: "Ready.png")
 
-       //BGM再生
-        do {
-            let filePath = Bundle.main.path(forResource: "playBGM",ofType: "mp3")
-            let music = URL(fileURLWithPath: filePath!)
-            audioPlayer = try AVAudioPlayer(contentsOf: music)
-        } catch {
-            print("error")
-        }
-        audioPlayer.play()
+        presenter.viewDidLoad()
         
         setTimer()
 
@@ -155,6 +147,17 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
 }
 
 extension PlayGameViewController: PlayGamePresenterOutput {
+    
+    func setMusic() {
+        do {
+            let filePath = Bundle.main.path(forResource: "playBGM",ofType: "mp3")
+            let music = URL(fileURLWithPath: filePath!)
+            audioPlayer = try AVAudioPlayer(contentsOf: music)
+        } catch {
+            print("error")
+        }
+        audioPlayer.play()
+    }
     
     //正解したらgoodLabel表示
     func showGoodLabel() {

@@ -9,6 +9,7 @@
 import Foundation
 
 protocol PlayGamePresenterInput {
+    func viewDidLoad()
     func didTapUp()
     func didTapDown()
     func didTapRight()
@@ -17,6 +18,7 @@ protocol PlayGamePresenterInput {
 }
 
 protocol PlayGamePresenterOutput: AnyObject {
+    func setMusic()
     func showGoodLabel()
     func showMissLabel()
     func showNextInstruction(tappedButton: Direction)
@@ -37,6 +39,10 @@ class PlayGamePresenter: PlayGamePresenterInput {
     //不正解カウント
     var ngCount: Int = 0
     var totalCount: Int = 0
+    
+    func viewDidLoad() {
+        view.setMusic()
+    }
     
     func didTapUp() {
         if instructionDirection == Direction.UP {
