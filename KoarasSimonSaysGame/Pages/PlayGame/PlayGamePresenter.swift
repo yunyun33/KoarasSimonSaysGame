@@ -23,7 +23,8 @@ protocol PlayGamePresenterOutput: AnyObject {
     func setMusic()
     func showGoodLabel()
     func showMissLabel()
-    func showNextInstruction(tappedButton: Direction)
+    func showNextInstruction()
+    func setFlagImage(tappedButton: Direction)
     func transitToTotalScorePage(score: Int)
 }
 
@@ -56,7 +57,8 @@ class PlayGamePresenter: PlayGamePresenterInput {
             ngCount += 1
             view.showMissLabel()
         }
-        view.showNextInstruction(tappedButton: Direction.UP)
+        view.setFlagImage(tappedButton: Direction.UP)
+        view.showNextInstruction()
     }
     
     func didTapDown() {
@@ -67,7 +69,8 @@ class PlayGamePresenter: PlayGamePresenterInput {
             ngCount += 1
             view.showMissLabel()
         }
-        view.showNextInstruction(tappedButton: Direction.DOWN)
+        view.setFlagImage(tappedButton: Direction.DOWN)
+        view.showNextInstruction()
     }
     
     func didTapRight() {
@@ -78,7 +81,8 @@ class PlayGamePresenter: PlayGamePresenterInput {
             ngCount += 1
             view.showMissLabel()
         }
-        view.showNextInstruction(tappedButton: Direction.RIGHT)
+        view.setFlagImage(tappedButton: Direction.RIGHT)
+        view.showNextInstruction()
     }
     
     func didTapLeft() {
@@ -89,7 +93,8 @@ class PlayGamePresenter: PlayGamePresenterInput {
             ngCount += 1
             view.showMissLabel()
         }
-        view.showNextInstruction(tappedButton: Direction.LEFT)
+        view.setFlagImage(tappedButton: Direction.LEFT)
+        view.showNextInstruction()
     }
     
     func setNextInstruction() -> Direction {

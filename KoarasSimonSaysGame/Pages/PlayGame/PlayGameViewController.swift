@@ -169,13 +169,16 @@ extension PlayGameViewController: PlayGamePresenterOutput {
         }, completion: nil)
     }
     
-    func showNextInstruction(tappedButton: Direction) {
+    func showNextInstruction() {
         
         let directionFromPresenter: Direction = presenter.setNextInstruction()
         
         instructionLabel.text = directionFromPresenter.getInstructionText()
+    }
+    
+    //画像を切り替える
+    func setFlagImage(tappedButton: Direction) {
         
-        //画像を切り替える
         let flagImage = tappedButton.setFlagImage()
         
         switch tappedButton {
