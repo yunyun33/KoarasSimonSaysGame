@@ -24,7 +24,7 @@ protocol PlayGamePresenterOutput: AnyObject {
     func showGoodLabel()
     func showMissLabel()
     func showNextInstruction()
-    func setFlagImage(tappedButton: Direction)
+    func setFlagImage(Direction: Direction)
     func transitToTotalScorePage(score: Int)
 }
 
@@ -50,7 +50,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     func didTapUp() {
-        view.setFlagImage(tappedButton: Direction.UP)
+        view.setFlagImage(Direction: Direction.UP)
         
         if instructionDirection == Direction.UP {
             okCount += 1
@@ -63,7 +63,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     func didTapDown() {
-        view.setFlagImage(tappedButton: Direction.DOWN)
+        view.setFlagImage(Direction: Direction.DOWN)
         
         if instructionDirection == Direction.DOWN {
             okCount += 1
@@ -76,7 +76,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     func didTapRight() {
-        view.setFlagImage(tappedButton: Direction.RIGHT)
+        view.setFlagImage(Direction: Direction.RIGHT)
         
         if instructionDirection == Direction.RIGHT {
             okCount += 1
@@ -89,7 +89,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     func didTapLeft() {
-        view.setFlagImage(tappedButton: Direction.LEFT)
+        view.setFlagImage(Direction: Direction.LEFT)
         
         if instructionDirection == Direction.LEFT {
             okCount += 1
