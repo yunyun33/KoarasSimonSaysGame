@@ -112,6 +112,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
 
 extension PlayGamePresenter {
     
+    //次の方向指示をランダムで表示させる
     private func proceedToNextDirection() {
         
         instructionDirection = Direction.allCases.randomElement()!

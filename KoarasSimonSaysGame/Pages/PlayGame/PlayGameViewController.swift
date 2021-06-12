@@ -100,7 +100,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
                                      repeats: true)
     }
     
-    //navigationBarの戻るボタン押した時の処理
+    //ナビゲーションバーの戻るボタン押した時の処理
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         if viewController is ViewController {
             //タイマー停止,BGM停止
@@ -114,15 +114,15 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
 extension PlayGameViewController: PlayGamePresenterOutput {
     
     func setupUI() {
-        //navigationBarの戻るボタン押した時のイベントに必要
+        //ナビゲーションバーの戻るボタン押した時のイベントに必要
         navigationController?.delegate = self
         
-        // ナビゲーションバーの透明化
-        // 半透明の指定（デフォルト値）
+        //ナビゲーションバーの透明化
+        //半透明の指定（デフォルト値）
         self.navigationController?.navigationBar.isTranslucent = true
-        // 空の背景画像設定
+        //空の背景画像設定
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        // ナビゲーションバーの影画像（境界線の画像）を空に設定
+        //ナビゲーションバーの影画像（境界線の画像）を空に設定
         self.navigationController!.navigationBar.shadowImage = UIImage()
         
         countDownLabel.text = "残り15秒"
@@ -165,6 +165,7 @@ extension PlayGameViewController: PlayGamePresenterOutput {
         }, completion: nil)
     }
     
+    //方向指示を表示
     func showNextInstruction(direction: Direction) {
         instructionLabel.text = direction.getInstructionText()
     }
