@@ -170,16 +170,8 @@ extension PlayGameViewController: PlayGamePresenterOutput {
     }
     
     //画像を切り替える
-    func setFlagImage(Direction: Direction) {
-        
-        let flagImage = Direction.setFlagImage()
-        
-        switch Direction {
-        case Direction.UP: koalasFlagImageView.image = UIImage(named: flagImage)
-        case Direction.DOWN: koalasFlagImageView.image = UIImage(named: flagImage)
-        case Direction.RIGHT: koalasFlagImageView.image = UIImage(named: flagImage)
-        case Direction.LEFT: koalasFlagImageView.image = UIImage(named: flagImage)
-        }
+    func setFlagImage(direction: Direction) {
+        koalasFlagImageView.image = direction.getFlagImage()
     }
     
     func transitToTotalScorePage(score: Int) {

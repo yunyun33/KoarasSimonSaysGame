@@ -6,7 +6,7 @@
 //  Copyright © 2021 yuikonno. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 //旗上げの方向を定義
 enum Direction: CaseIterable {
@@ -28,16 +28,16 @@ enum Direction: CaseIterable {
         }
     }
     
-    func setFlagImage() -> String {
+    func getFlagImage() -> UIImage? {
         switch self {
         case .UP:
-            return "Up.png"
+            return UIImage(named: "Up.png")
         case .DOWN:
-            return "Down.png"
+            return UIImage(named: "Down.png")
         case .RIGHT:
-            return "Right.png"
+            return UIImage(named: "Right.png")
         case .LEFT:
-            return "Left.png"
+            return UIImage(named: "Left.png")
         }
     }
 }
