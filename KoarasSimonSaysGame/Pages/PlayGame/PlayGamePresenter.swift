@@ -36,7 +36,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     //仮に初期値としてUPを入れる
-    var instructionDirection: Direction = Direction.UP
+    var instructionDirection: Direction = .UP
     //正解カウント
     var okCount: Int = 0
     //不正解カウント
@@ -50,9 +50,9 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     func didTapUp() {
-        view.setFlagImage(direction: Direction.UP)
+        view.setFlagImage(direction: .UP)
         
-        if instructionDirection == Direction.UP {
+        if instructionDirection == .UP {
             okCount += 1
             view.showGoodLabel()
             proceedToNextDirection()
@@ -63,9 +63,9 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     func didTapDown() {
-        view.setFlagImage(direction: Direction.DOWN)
+        view.setFlagImage(direction: .DOWN)
         
-        if instructionDirection == Direction.DOWN {
+        if instructionDirection == .DOWN {
             okCount += 1
             view.showGoodLabel()
             proceedToNextDirection()
@@ -76,9 +76,9 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     func didTapRight() {
-        view.setFlagImage(direction: Direction.RIGHT)
+        view.setFlagImage(direction: .RIGHT)
         
-        if instructionDirection == Direction.RIGHT {
+        if instructionDirection == .RIGHT {
             okCount += 1
             view.showGoodLabel()
             proceedToNextDirection()
@@ -89,9 +89,9 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     func didTapLeft() {
-        view.setFlagImage(direction: Direction.LEFT)
+        view.setFlagImage(direction: .LEFT)
         
-        if instructionDirection == Direction.LEFT {
+        if instructionDirection == .LEFT {
             okCount += 1
             view.showGoodLabel()
             proceedToNextDirection()
