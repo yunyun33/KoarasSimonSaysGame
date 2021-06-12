@@ -23,7 +23,7 @@ protocol PlayGamePresenterOutput: AnyObject {
     func setMusic()
     func showGoodLabel()
     func showMissLabel()
-    func showNextInstruction()
+    func showNextInstruction(Direction: Direction)
     func setFlagImage(Direction: Direction)
     func transitToTotalScorePage(score: Int)
 }
@@ -55,7 +55,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
         if instructionDirection == Direction.UP {
             okCount += 1
             view.showGoodLabel()
-            view.showNextInstruction()
+            proceedToDirection()
         } else {
             ngCount += 1
             view.showMissLabel()
@@ -68,7 +68,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
         if instructionDirection == Direction.DOWN {
             okCount += 1
             view.showGoodLabel()
-            view.showNextInstruction()
+            proceedToDirection()
         } else {
             ngCount += 1
             view.showMissLabel()
@@ -81,7 +81,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
         if instructionDirection == Direction.RIGHT {
             okCount += 1
             view.showGoodLabel()
-            view.showNextInstruction()
+            proceedToDirection()
         } else {
             ngCount += 1
             view.showMissLabel()
@@ -94,7 +94,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
         if instructionDirection == Direction.LEFT {
             okCount += 1
             view.showGoodLabel()
-            view.showNextInstruction()
+            proceedToDirection()
         } else {
             ngCount += 1
             view.showMissLabel()
@@ -112,5 +112,13 @@ class PlayGamePresenter: PlayGamePresenterInput {
             totalScore = 0
         }
         view.transitToTotalScorePage(score: totalScore)
+    }
+}
+
+extension PlayGamePresenter {
+    
+    private func proceedToDirection() {
+        let directionFromPresenter: Direction = setNextInstruction()
+        view.showNextInstruction(Direction: directionFromPresenter)
     }
 }
