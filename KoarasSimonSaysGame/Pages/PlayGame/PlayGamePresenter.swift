@@ -50,51 +50,55 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     func didTapUp() {
+        view.setFlagImage(tappedButton: Direction.UP)
+        
         if instructionDirection == Direction.UP {
             okCount += 1
             view.showGoodLabel()
+            view.showNextInstruction()
         } else {
             ngCount += 1
             view.showMissLabel()
         }
-        view.setFlagImage(tappedButton: Direction.UP)
-        view.showNextInstruction()
     }
     
     func didTapDown() {
+        view.setFlagImage(tappedButton: Direction.DOWN)
+        
         if instructionDirection == Direction.DOWN {
             okCount += 1
             view.showGoodLabel()
+            view.showNextInstruction()
         } else {
             ngCount += 1
             view.showMissLabel()
         }
-        view.setFlagImage(tappedButton: Direction.DOWN)
-        view.showNextInstruction()
     }
     
     func didTapRight() {
+        view.setFlagImage(tappedButton: Direction.RIGHT)
+        
         if instructionDirection == Direction.RIGHT {
             okCount += 1
             view.showGoodLabel()
+            view.showNextInstruction()
         } else {
             ngCount += 1
             view.showMissLabel()
         }
-        view.setFlagImage(tappedButton: Direction.RIGHT)
-        view.showNextInstruction()
     }
     
     func didTapLeft() {
+        view.setFlagImage(tappedButton: Direction.LEFT)
+        
         if instructionDirection == Direction.LEFT {
             okCount += 1
             view.showGoodLabel()
+            view.showNextInstruction()
         } else {
             ngCount += 1
             view.showMissLabel()
         }
-        view.setFlagImage(tappedButton: Direction.LEFT)
-        view.showNextInstruction()
     }
     
     func setNextInstruction() -> Direction {
