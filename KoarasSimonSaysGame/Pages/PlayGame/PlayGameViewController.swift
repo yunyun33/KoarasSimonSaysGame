@@ -129,10 +129,6 @@ extension PlayGameViewController: PlayGamePresenterOutput {
         
         koalasFlagImageView.image = UIImage(named: "Ready.png")
         
-        let directionFromPresenter: Direction = presenter.setNextInstruction()
-        
-        instructionLabel.text = directionFromPresenter.getInstructionText()
-        
         //goodLabelをアニメーションするまで透明にしておく
         goodLabel.alpha = 0.0
         missLabel.alpha = 0.0
@@ -169,9 +165,8 @@ extension PlayGameViewController: PlayGamePresenterOutput {
         }, completion: nil)
     }
     
-    func showNextInstruction(Direction: Direction) {
-        
-        instructionLabel.text = Direction.getInstructionText()
+    func showNextInstruction(direction: Direction) {
+        instructionLabel.text = direction.getInstructionText()
     }
     
     //画像を切り替える

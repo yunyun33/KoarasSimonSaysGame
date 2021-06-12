@@ -14,7 +14,6 @@ protocol PlayGamePresenterInput {
     func didTapDown()
     func didTapRight()
     func didTapLeft()
-    func setNextInstruction() -> Direction
     func finishOfTimer()
 }
 
@@ -23,8 +22,8 @@ protocol PlayGamePresenterOutput: AnyObject {
     func setMusic()
     func showGoodLabel()
     func showMissLabel()
-    func showNextInstruction(Direction: Direction)
-    func setFlagImage(Direction: Direction)
+    func showNextInstruction(direction: Direction)
+    func setFlagImage(direction: Direction)
     func transitToTotalScorePage(score: Int)
 }
 
@@ -47,15 +46,16 @@ class PlayGamePresenter: PlayGamePresenterInput {
     func viewDidLoad() {
         view.setupUI()
         view.setMusic()
+        proceedToNextDirection()
     }
     
     func didTapUp() {
-        view.setFlagImage(Direction: Direction.UP)
+        view.setFlagImage(direction: Direction.UP)
         
         if instructionDirection == Direction.UP {
             okCount += 1
             view.showGoodLabel()
-            proceedToDirection()
+            proceedToNextDirection()
         } else {
             ngCount += 1
             view.showMissLabel()
@@ -63,12 +63,12 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     func didTapDown() {
-        view.setFlagImage(Direction: Direction.DOWN)
+        view.setFlagImage(direction: Direction.DOWN)
         
         if instructionDirection == Direction.DOWN {
             okCount += 1
             view.showGoodLabel()
-            proceedToDirection()
+            proceedToNextDirection()
         } else {
             ngCount += 1
             view.showMissLabel()
@@ -76,12 +76,12 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     func didTapRight() {
-        view.setFlagImage(Direction: Direction.RIGHT)
+        view.setFlagImage(direction: Direction.RIGHT)
         
         if instructionDirection == Direction.RIGHT {
             okCount += 1
             view.showGoodLabel()
-            proceedToDirection()
+            proceedToNextDirection()
         } else {
             ngCount += 1
             view.showMissLabel()
@@ -89,21 +89,16 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     func didTapLeft() {
-        view.setFlagImage(Direction: Direction.LEFT)
+        view.setFlagImage(direction: Direction.LEFT)
         
         if instructionDirection == Direction.LEFT {
             okCount += 1
             view.showGoodLabel()
-            proceedToDirection()
+            proceedToNextDirection()
         } else {
             ngCount += 1
             view.showMissLabel()
         }
-    }
-    
-    func setNextInstruction() -> Direction {
-        instructionDirection = Direction.allCases.randomElement()!
-        return instructionDirection
     }
     
     func finishOfTimer() {
@@ -117,8 +112,9 @@ class PlayGamePresenter: PlayGamePresenterInput {
 
 extension PlayGamePresenter {
     
-    private func proceedToDirection() {
-        let directionFromPresenter: Direction = setNextInstruction()
-        view.showNextInstruction(Direction: directionFromPresenter)
+    private func proceedToNextDirection() {
+        
+        instructionDirection = Direction.allCases.randomElement()!
+        view.showNextInstruction(direction: instructionDirection)
     }
 }
