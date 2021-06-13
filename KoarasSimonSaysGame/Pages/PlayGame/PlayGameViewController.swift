@@ -1,8 +1,7 @@
 
 import UIKit
-import AVFoundation
 
-class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigationControllerDelegate {
+class PlayGameViewController: UIViewController,  UINavigationControllerDelegate {
     
     private var presenter: PlayGamePresenterInput!
 

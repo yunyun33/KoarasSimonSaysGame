@@ -22,7 +22,6 @@ protocol PlayGamePresenterInput {
 
 protocol PlayGamePresenterOutput: AnyObject {
     func setupUI()
-    func setMusic()
     func showGoodLabel()
     func showMissLabel()
     func showNextInstruction(direction: Direction)
@@ -51,7 +50,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
     
     func viewDidLoad() {
         view.setupUI()
-        view.setMusic()
+        playMusic()
         proceedToNextDirection()
     }
     
