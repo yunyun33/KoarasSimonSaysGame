@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 protocol PlayGamePresenterInput {
     func viewDidLoad()
@@ -15,6 +16,8 @@ protocol PlayGamePresenterInput {
     func didTapRight()
     func didTapLeft()
     func finishOfTimer()
+    func playMusic()
+    func stopTheMusic()
 }
 
 protocol PlayGamePresenterOutput: AnyObject {
@@ -42,6 +45,9 @@ class PlayGamePresenter: PlayGamePresenterInput {
     //不正解カウント
     var ngCount: Int = 0
     var totalScore: Int = 0
+    
+    //audioPlayerのインスタンス生成
+    var audioPlayer : AVAudioPlayer!
     
     func viewDidLoad() {
         view.setupUI()
@@ -107,6 +113,23 @@ class PlayGamePresenter: PlayGamePresenterInput {
             totalScore = 0
         }
         view.transitToTotalScorePage(score: totalScore)
+    }
+    
+    //BGMの設定、再生
+    func playMusic() {
+
+        do {
+            let filePath = Bundle.main.path(forResource: "playBGM",ofType: "mp3")
+            let music = URL(fileURLWithPath: filePath!)
+            audioPlayer = try AVAudioPlayer(contentsOf: music)
+        } catch {
+            print("error")
+        }
+        audioPlayer.play()
+    }
+    
+    func stopTheMusic() {
+        audioPlayer.stop()
     }
 }
 

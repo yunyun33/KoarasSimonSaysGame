@@ -12,9 +12,6 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
     @IBOutlet weak var goodLabel: UILabel!
     @IBOutlet weak var missLabel: UILabel!
     
-    //BGMのインスタンス生成
-    var audioPlayer : AVAudioPlayer!
-    
     //タイマー
     var timer : Timer?
     var count = 0
@@ -71,7 +68,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
             count = 0
             //タイマー停止,停止と一緒に実行すること
             timer.invalidate()
-            audioPlayer.stop()
+            presenter.stopTheMusic()
             presenter.finishOfTimer()
         }
     }
@@ -105,7 +102,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
         if viewController is ViewController {
             //タイマー停止,BGM停止
             timer?.invalidate()
-            audioPlayer.stop()
+            presenter.stopTheMusic()
             navigationController.navigationBar.isHidden = true
         }
     }
@@ -135,14 +132,7 @@ extension PlayGameViewController: PlayGamePresenterOutput {
     }
     
     func setMusic() {
-        do {
-            let filePath = Bundle.main.path(forResource: "playBGM",ofType: "mp3")
-            let music = URL(fileURLWithPath: filePath!)
-            audioPlayer = try AVAudioPlayer(contentsOf: music)
-        } catch {
-            print("error")
-        }
-        audioPlayer.play()
+        presenter.playMusic()
     }
     
     //正解したらgoodLabel表示
