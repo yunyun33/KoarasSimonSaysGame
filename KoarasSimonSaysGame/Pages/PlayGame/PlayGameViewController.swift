@@ -11,20 +11,12 @@ class PlayGameViewController: UIViewController,  UINavigationControllerDelegate 
     @IBOutlet weak var goodLabel: UILabel!
     @IBOutlet weak var missLabel: UILabel!
     
-    //タイマー
-    var timer : Timer?
-    var count = 0
-    //設定値を扱うキーを設定
-    let settingKey = "timerValue"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         presenter = PlayGamePresenter(view: self)
         
         presenter.viewDidLoad()
-        
-        setTimer()
     }
    
     //--------旗上げゲーム--------
@@ -44,64 +36,11 @@ class PlayGameViewController: UIViewController,  UINavigationControllerDelegate 
         presenter.didTapLeft()
     }
     
-    //画面の更新をする(戻り値: remainCount:残り時間)
-    func displayUpdate() -> Int {
-        let settingTimer = UserDefaults.standard
-        //取得した秒数をtimerValueに渡す
-        let timerValue = settingTimer.integer(forKey: settingKey)
-        //残り時間
-        let remainCount = timerValue - count
-        //残り時間をラベルに表示
-        countDownLabel.text = "残り\(remainCount)秒"
-        //残り時間を戻り値に設定
-        return remainCount
-    }
-    
-    //時間経過の処理
-    @objc func timerInterrupt(_ timer: Timer) {
-        //経過時間に+1していく
-        count += 1
-        
-        //残り時間が0以下のとき、タイマーを止める
-        if displayUpdate() <= 0 {
-            count = 0
-            //タイマー停止,停止と一緒に実行すること
-            timer.invalidate()
-            presenter.stopTheMusic()
-            presenter.finishOfTimer()
-        }
-    }
-    
-    //タイマーの設定
-    func setTimer() {
-        //UserDefaultsのインスタンス生成
-        let settingTimer = UserDefaults.standard
-        //UserDefaultsに秒数を登録
-        settingTimer.register(defaults: [settingKey: 15])
-
-        //タイマーをアンラップ
-        if let timer = timer {
-            //もしタイマーが、実行中だったらスタートしない
-            if timer.isValid == true {
-                //何もしない
-                return
-            }
-        }
-
-        //タイマースタート
-        timer = Timer.scheduledTimer(timeInterval: 1.0,
-                                     target: self,
-                                     selector: #selector(self.timerInterrupt(_:)),
-                                     userInfo: nil,
-                                     repeats: true)
-    }
-    
     //ナビゲーションバーの戻るボタン押した時の処理
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         if viewController is ViewController {
             //タイマー停止,BGM停止
-            timer?.invalidate()
-            presenter.stopTheMusic()
+            presenter.stopTimerAndMusic()
             navigationController.navigationBar.isHidden = true
         }
     }
@@ -114,7 +53,7 @@ extension PlayGameViewController: PlayGamePresenterOutput {
         navigationController?.delegate = self
         
         //ナビゲーションバーの透明化
-        //半透明の指定（デフォルト値）
+        //透明の指定（デフォルト値）
         self.navigationController?.navigationBar.isTranslucent = true
         //空の背景画像設定
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -130,8 +69,8 @@ extension PlayGameViewController: PlayGamePresenterOutput {
         missLabel.alpha = 0.0
     }
     
-    func setMusic() {
-        presenter.playMusic()
+    func setCountDownLabel(timerCount: Int) {
+        countDownLabel.text = "残り\(timerCount)秒"
     }
     
     //正解したらgoodLabel表示

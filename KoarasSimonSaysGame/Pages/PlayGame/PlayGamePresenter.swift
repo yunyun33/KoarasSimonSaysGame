@@ -11,17 +11,19 @@ import AVFoundation
 
 protocol PlayGamePresenterInput {
     func viewDidLoad()
+    func startTimer()
     func didTapUp()
     func didTapDown()
     func didTapRight()
     func didTapLeft()
     func finishOfTimer()
     func playMusic()
-    func stopTheMusic()
+    func stopTimerAndMusic()
 }
 
 protocol PlayGamePresenterOutput: AnyObject {
     func setupUI()
+    func setCountDownLabel(timerCount: Int)
     func showGoodLabel()
     func showMissLabel()
     func showNextInstruction(direction: Direction)
@@ -48,10 +50,40 @@ class PlayGamePresenter: PlayGamePresenterInput {
     //audioPlayerのインスタンス生成
     var audioPlayer : AVAudioPlayer!
     
+    //タイマー
+    var timer : Timer?
+    var timerCount = 15
+    
     func viewDidLoad() {
         view.setupUI()
+        startTimer()
         playMusic()
         proceedToNextDirection()
+    }
+    
+    //時間経過の処理
+    @objc func timerInterrupt(_ timer: Timer) {
+        //経過時間に+1していく
+        timerCount -= 1
+        
+        //残り時間をラベルに表示
+        view.setCountDownLabel(timerCount: timerCount)
+        
+        //残り時間が0以下のとき、タイマーを止める
+        if timerCount == 0 {
+            //タイマー停止,停止と一緒に実行すること
+            stopTimerAndMusic()
+            finishOfTimer()
+        }
+    }
+    
+    func startTimer() {
+        //タイマースタート
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(self.timerInterrupt(_:)),
+                                     userInfo: nil,
+                                     repeats: true)
     }
     
     func didTapUp() {
@@ -127,7 +159,8 @@ class PlayGamePresenter: PlayGamePresenterInput {
         audioPlayer.play()
     }
     
-    func stopTheMusic() {
+    func stopTimerAndMusic() {
+        timer?.invalidate()
         audioPlayer.stop()
     }
 }
