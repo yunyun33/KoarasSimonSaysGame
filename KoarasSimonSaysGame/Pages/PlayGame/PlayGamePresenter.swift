@@ -11,13 +11,10 @@ import AVFoundation
 
 protocol PlayGamePresenterInput {
     func viewDidLoad()
-    func startTimer()
     func didTapUp()
     func didTapDown()
     func didTapRight()
     func didTapLeft()
-    func finishOfTimer()
-    func playMusic()
     func stopTimerAndMusic()
 }
 
@@ -59,31 +56,6 @@ class PlayGamePresenter: PlayGamePresenterInput {
         startTimer()
         playMusic()
         proceedToNextDirection()
-    }
-    
-    //時間経過の処理
-    @objc func timerInterrupt(_ timer: Timer) {
-        //経過時間に+1していく
-        timerCount -= 1
-        
-        //残り時間をラベルに表示
-        view.setCountDownLabel(timerCount: timerCount)
-        
-        //残り時間が0以下のとき、タイマーを止める
-        if timerCount == 0 {
-            //タイマー停止,停止と一緒に実行すること
-            stopTimerAndMusic()
-            finishOfTimer()
-        }
-    }
-    
-    func startTimer() {
-        //タイマースタート
-        timer = Timer.scheduledTimer(timeInterval: 1.0,
-                                     target: self,
-                                     selector: #selector(self.timerInterrupt(_:)),
-                                     userInfo: nil,
-                                     repeats: true)
     }
     
     func didTapUp() {
@@ -139,6 +111,35 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     func finishOfTimer() {
+extension PlayGamePresenter {
+
+    //時間経過の処理
+    @objc func timerInterrupt(_ timer: Timer) {
+        //経過時間を−1ずつする。
+        timerCount -= 1
+        
+        //残り時間をラベルに表示
+        view.setCountDownLabel(timerCount: timerCount)
+        
+        //残り時間が0以下のとき、タイマーを止める
+        if timerCount == 0 {
+            //タイマー停止
+            stopTimerAndMusic()
+            finishOfTimer()
+        }
+    }
+    
+    private func startTimer() {
+        //タイマースタート
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(self.timerInterrupt(_:)),
+                                     userInfo: nil,
+                                     repeats: true)
+    }
+    
+    //タイマーが終了した時に行う処理
+    private func finishOfTimer() {
         totalScore = okCount - ngCount
         if ( totalScore < 0 ) {
             totalScore = 0
@@ -147,7 +148,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
     }
     
     //BGMの設定、再生
-    func playMusic() {
+    private func playMusic() {
 
         do {
             let filePath = Bundle.main.path(forResource: "playBGM",ofType: "mp3")
@@ -163,10 +164,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
         timer?.invalidate()
         audioPlayer.stop()
     }
-}
 
-extension PlayGamePresenter {
-    
     //次の方向指示をランダムで表示させる
     private func proceedToNextDirection() {
         
