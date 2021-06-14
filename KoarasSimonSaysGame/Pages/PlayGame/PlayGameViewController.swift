@@ -1,152 +1,80 @@
 
 import UIKit
-import AVFoundation
 
-class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigationControllerDelegate {
+class PlayGameViewController: UIViewController,  UINavigationControllerDelegate {
+    
+    private var presenter: PlayGamePresenterInput!
 
     @IBOutlet weak var instructionLabel: UILabel!
-    
     @IBOutlet weak var koalasFlagImageView: UIImageView!
-    
     @IBOutlet weak var countDownLabel: UILabel!
     @IBOutlet weak var goodLabel: UILabel!
     @IBOutlet weak var missLabel: UILabel!
     
-    let instructionText = ["上あげて！", "下さげて！", "右にして！", "左にして！"]
-
-    //回答を代入する変数
-    var answer: String = ""
-    //スコアカウント
-    var scoreCount: Int = 0
-    
-    //BGMのインスタンス生成
-    var audioPlayer : AVAudioPlayer!
-    
-    //タイマー
-           var timer : Timer?
-           var count = 0
-           //設定値を扱うキーを設定
-           let settingKey = "timerValue"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //navigationBarの戻るボタン押した時のイベントに必要
-        navigationController?.delegate = self
         
-        // ナビゲーションバーの透明化
-        // 半透明の指定（デフォルト値）
-        self.navigationController?.navigationBar.isTranslucent = true
-        // 空の背景画像設定
-        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        // ナビゲーションバーの影画像（境界線の画像）を空に設定
-        self.navigationController!.navigationBar.shadowImage = UIImage()
+        presenter = PlayGamePresenter(view: self)
         
-        let randomInstructionText = instructionText.randomElement()!
-        
-        countDownLabel.text = "残り15秒"
-        instructionLabel.text = "\(randomInstructionText)"
-        
-        koalasFlagImageView.image = UIImage(named: "Ready.png")
-
-       //BGM再生
-        do {
-            let filePath = Bundle.main.path(forResource: "playBGM",ofType: "mp3")
-            let music = URL(fileURLWithPath: filePath!)
-            audioPlayer = try AVAudioPlayer(contentsOf: music)
-        } catch {
-            print("error")
-        }
-        audioPlayer.play()
-        
-        //--------タイマーの設定--------
-        //UserDefaultsのインスタンス生成
-        let settingTimer = UserDefaults.standard
-        //UserDefaultsに秒数を登録
-        settingTimer.register(defaults: [settingKey: 15])
-        
-        //タイマーをアンラップ
-        if let timer = timer {
-            //もしタイマーが、実行中だったらスタートしない
-            if timer.isValid == true {
-                //何もしない
-                return
-            }
-        }
-        
-        //タイマースタート
-        timer = Timer.scheduledTimer(timeInterval: 1.0,
-                                     target: self,
-                                     selector: #selector(self.timerInterrupt(_:)),
-                                     userInfo: nil,
-                                     repeats: true)        
-        
-        //goodLabelをアニメーションするまで透明にしておく
-               goodLabel.alpha = 0.0
-               missLabel.alpha = 0.0
+        presenter.viewDidLoad()
     }
    
-    //--------旗揚げゲーム--------
+    //--------旗上げゲーム--------
     @IBAction func upButton(_ sender: Any) {
-        goToNextQuestion(tappedString: instructionText[0])
+        presenter.didTapDirectionButton(tappedDirection: .UP)
     }
     
     @IBAction func downButton(_ sender: Any) {
-        goToNextQuestion(tappedString: instructionText[1])
+        presenter.didTapDirectionButton(tappedDirection: .DOWN)
     }
     
     @IBAction func rightButton(_ sender: Any) {
-        goToNextQuestion(tappedString: instructionText[2])
+        presenter.didTapDirectionButton(tappedDirection: .RIGHT)
     }
     
     @IBAction func leftButton(_ sender: Any) {
-        goToNextQuestion(tappedString: instructionText[3])
+        presenter.didTapDirectionButton(tappedDirection: .LEFT)
     }
     
-    func goToNextQuestion(tappedString: String) {
-        answer = tappedString
-        
-        //正解の判定をする
-        if instructionLabel.text == answer {
-            scoreCount += 1
-            showGoodLabel()
-            nextInstructionText()
-        } else {
-            scoreCount -= 1
-                if scoreCount < 0 {
-                    scoreCount = 0
-                }
-            showMissLabel()
+    //ナビゲーションバーの戻るボタン押した時の処理
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if viewController is ViewController {
+            //タイマー停止,BGM停止
+            presenter.didTapBackButton()
+            navigationController.navigationBar.isHidden = true
         }
+    }
+}
 
-        //画像を切り替える
-        switch tappedString {
-            case instructionText[0]: koalasFlagImageView.image = UIImage(named: "Up.png")
-            case instructionText[1]: koalasFlagImageView.image = UIImage(named: "Down.png")
-            case instructionText[2]: koalasFlagImageView.image = UIImage(named: "Right.png")
-            case instructionText[3]: koalasFlagImageView.image = UIImage(named: "Left.png")
-            default: break
-        }
-    }
-  
-    private func showTotalScore() {
-        //storyboardのインスタンス取得
-        let storyboard: UIStoryboard = self.storyboard!
-        //遷移先ViewControllerのインスタンス取得
-        let nextView = storyboard.instantiateViewController(withIdentifier: "view3") as! TotalScoreViewController
-        nextView.totalScore = scoreCount
-        //画面遷移
-        self.navigationController?.pushViewController(nextView, animated: true)
+extension PlayGameViewController: PlayGamePresenterOutput {
+    
+    func setupUI() {
+        //ナビゲーションバーの戻るボタン押した時のイベントに必要
+        navigationController?.delegate = self
+        
+        //ナビゲーションバーの透明化
+        //透明の指定（デフォルト値）
+        self.navigationController?.navigationBar.isTranslucent = true
+        //空の背景画像設定
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        //ナビゲーションバーの影画像（境界線の画像）を空に設定
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        
+        countDownLabel.text = "残り15秒"
+        
+        koalasFlagImageView.image = UIImage(named: "Ready.png")
+        
+        //goodLabelをアニメーションするまで透明にしておく
+        goodLabel.alpha = 0.0
+        missLabel.alpha = 0.0
     }
     
-    //問題を表示する
-    private func nextInstructionText() {
-        let randomInstructionText = instructionText.randomElement()!
-            instructionLabel.text = "\(randomInstructionText)"
+    func setCountDownLabel(timerCount: Int) {
+        countDownLabel.text = "残り\(timerCount)秒"
     }
     
     //正解したらgoodLabel表示
-    private func showGoodLabel() {
+    func showGoodLabel() {
         goodLabel.center = self.view.center
         goodLabel.alpha = 1.0
         UIView.animate(withDuration: 0.5, delay: 0.0, animations: {
@@ -156,7 +84,7 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
     }
     
     //間違えたらmissLabel表示
-    private func showMissLabel() {
+    func showMissLabel() {
         missLabel.center = self.view.center
         missLabel.alpha = 1.0
         UIView.animate(withDuration: 0.5, delay: 0.0, animations: {
@@ -164,41 +92,22 @@ class PlayGameViewController: UIViewController, AVAudioPlayerDelegate, UINavigat
             self.missLabel.alpha = 0.0
         }, completion: nil)
     }
-    //画面の更新をする(戻り値: remainCount:残り時間)
-    func displayUpdate() -> Int {
-        let settingTimer = UserDefaults.standard
-        //取得した秒数をtimerValueに渡す
-        let timerValue = settingTimer.integer(forKey: settingKey)
-        //残り時間
-        let remainCount = timerValue - count
-        //残り時間をラベルに表示
-        countDownLabel.text = "残り\(remainCount)秒"
-        //残り時間を戻り値に設定
-        return remainCount
+    
+    //方向指示を表示
+    func showNextInstruction(direction: Direction) {
+        instructionLabel.text = direction.getInstructionText()
     }
     
-    //時間経過の処理
-    @objc func timerInterrupt(_ timer: Timer) {
-        //経過時間に+1していく
-        count += 1
-        
-        //残り時間が0以下のとき、タイマーを止める
-        if displayUpdate() <= 0 {
-            count = 0
-            //タイマー停止,停止と一緒に実行すること
-            timer.invalidate()
-            showTotalScore()
-            audioPlayer.stop()
-        }
+    //画像を切り替える
+    func setFlagImage(direction: Direction) {
+        koalasFlagImageView.image = direction.getFlagImage()
     }
     
-    //navigationBarの戻るボタン押した時の処理
-    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        if viewController is ViewController {
-            //タイマー停止,BGM停止
-            timer?.invalidate()
-            audioPlayer.stop()
-            navigationController.navigationBar.isHidden = true
-        }
+    func transitToTotalScorePage(score: Int) {
+        let totalScoreVC = UIStoryboard(name: "Main", bundle: nil)
+        let nextView = totalScoreVC.instantiateViewController(withIdentifier: "totalScorewView") as! TotalScoreViewController
+        nextView.totalScore = score
+        self.navigationController?.pushViewController(nextView, animated: true)
+        navigationController?.navigationBar.isHidden = false
     }
 }

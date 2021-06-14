@@ -11,6 +11,7 @@ import Foundation
 //画面間でデータを共有、参照するための構造体を定義
 
 struct CommonValue {
+    
     struct URL {
         // 開発者の連絡先(HP)
         static let illustratorContactURL = "https://yunyun33.com/"

@@ -19,11 +19,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func gameStartButton(_ sender: Any) {
-        //storyboardのインスタンス取得
-        let storyboard: UIStoryboard = self.storyboard!
-        //遷移先ViewControllerのインスタンス取得
-        let nextView = storyboard.instantiateViewController(withIdentifier: "view2") as! PlayGameViewController
-        //画面遷移
+        let menuVC = UIStoryboard(name: "PlayGame", bundle: nil)
+        let nextView = menuVC.instantiateViewController(withIdentifier: "gameView") as! PlayGameViewController
         self.navigationController?.pushViewController(nextView, animated: true)
         navigationController?.navigationBar.isHidden = false
     }
