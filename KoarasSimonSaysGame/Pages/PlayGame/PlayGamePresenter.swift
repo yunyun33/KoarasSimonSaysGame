@@ -15,7 +15,7 @@ protocol PlayGamePresenterInput {
     func didTapDown()
     func didTapRight()
     func didTapLeft()
-    func stopTimerAndMusic()
+    func didTapBackButton()
 }
 
 protocol PlayGamePresenterOutput: AnyObject {
@@ -110,7 +110,12 @@ class PlayGamePresenter: PlayGamePresenterInput {
         }
     }
     
-    func finishOfTimer() {
+    //タイマー停止,BGM停止
+    func didTapBackButton() {
+        stopTimerAndMusic()
+    }
+}
+
 extension PlayGamePresenter {
 
     //時間経過の処理
@@ -160,7 +165,8 @@ extension PlayGamePresenter {
         audioPlayer.play()
     }
     
-    func stopTimerAndMusic() {
+    //タイマー停止,BGM停止
+    private func stopTimerAndMusic() {
         timer?.invalidate()
         audioPlayer.stop()
     }

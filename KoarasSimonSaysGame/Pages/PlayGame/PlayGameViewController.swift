@@ -40,7 +40,7 @@ class PlayGameViewController: UIViewController,  UINavigationControllerDelegate 
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         if viewController is ViewController {
             //タイマー停止,BGM停止
-            presenter.stopTimerAndMusic()
+            presenter.didTapBackButton()
             navigationController.navigationBar.isHidden = true
         }
     }
