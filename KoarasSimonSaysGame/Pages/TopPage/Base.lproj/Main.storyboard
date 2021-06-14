@@ -9,14 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Kazesawa-Bold.ttf">
-            <string>Kazesawa-Bold</string>
-        </array>
         <array key="Kazesawa-Extrabold.ttf">
             <string>Kazesawa-Extrabold</string>
-        </array>
-        <array key="Kazesawa-Regular.ttf">
-            <string>Kazesawa-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -54,7 +48,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAq-mq-TCB">
-                                                        <rect key="frame" x="100.33333333333334" y="28.333333333333314" width="102.33333333333334" height="23.333333333333329"/>
+                                                        <rect key="frame" x="95.333333333333343" y="26" width="112.33333333333334" height="28"/>
                                                         <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -81,7 +75,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Al-eF-V56" userLabel="Ranking">
-                                                        <rect key="frame" x="113" y="28.333333333333371" width="73" height="23.333333333333329"/>
+                                                        <rect key="frame" x="108" y="26" width="83" height="28"/>
                                                         <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -108,7 +102,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0n-BI-nhw" userLabel="World Ranking">
-                                                        <rect key="frame" x="86.333333333333357" y="28.333333333333371" width="130.66666666666663" height="23.333333333333329"/>
+                                                        <rect key="frame" x="78.333333333333329" y="26" width="146.66666666666669" height="28"/>
                                                         <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -135,7 +129,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEi-i1-ps5" userLabel="Menu">
-                                                        <rect key="frame" x="124.33333333333336" y="28.333333333333371" width="50.666666666666671" height="23.333333333333329"/>
+                                                        <rect key="frame" x="122" y="26" width="55" height="28"/>
                                                         <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -180,253 +174,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079.2" y="126.35467980295567"/>
-        </scene>
-        <!--Total Score View Controller-->
-        <scene sceneID="6x8-aw-9O8">
-            <objects>
-                <viewController storyboardIdentifier="totalScorewView" id="5RD-UR-qcS" customClass="TotalScoreViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5w7-v7-L61">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="totalScore" translatesAutoresizingMaskIntoConstraints="NO" id="QN7-PU-KDW">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの得点は" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ5-yv-1Ez">
-                                <rect key="frame" x="112.66666666666669" y="191" width="150" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="8m9-sQ-q8e"/>
-                                    <constraint firstAttribute="height" constant="30" id="gTn-gf-bfu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Kazesawa-Regular" family="Kazesawa" pointSize="19"/>
-                                <color key="textColor" red="0.34901960784313724" green="0.41960784313725491" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DF5-xO-HJ4">
-                                <rect key="frame" x="137.66666666666666" y="261" width="100" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="km6-DO-10r"/>
-                                    <constraint firstAttribute="height" constant="30" id="zCT-tR-bW8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="18"/>
-                                <color key="textColor" red="0.34901960784313724" green="0.41960784313725491" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyP-8V-TmQ">
-                                <rect key="frame" x="37.666666666666657" y="306" width="300" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Hf2-Nz-LhQ"/>
-                                    <constraint firstAttribute="width" constant="300" id="l7w-bY-prX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Kazesawa-Bold" family="Kazesawa" pointSize="18"/>
-                                <color key="textColor" red="0.34901960784313724" green="0.41960784313725491" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-fE-l2b">
-                                <rect key="frame" x="35" y="59" width="170" height="32"/>
-                                <fontDescription key="fontDescription" name="Kazesawa-Regular" family="Kazesawa" pointSize="17"/>
-                                <state key="normal" title="もう一度ゲームをする">
-                                    <color key="titleColor" red="0.34901960780000002" green="0.41960784309999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="reTryButton:" destination="5RD-UR-qcS" eventType="touchUpInside" id="VBQ-FD-t4y"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fk7-Ch-U1W">
-                                <rect key="frame" x="157.66666666666666" y="416" width="60" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Fvu-Wj-y27"/>
-                                    <constraint firstAttribute="width" constant="60" id="jnY-ZB-SbC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Kazesawa-Bold" family="Kazesawa" pointSize="19"/>
-                                <state key="normal" title="次へ">
-                                    <color key="titleColor" red="0.34901960780000002" green="0.41960784309999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="goToRegisterNameButton:" destination="5RD-UR-qcS" eventType="touchUpInside" id="lXs-AL-nd0"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="p12-dx-7mZ"/>
-                        <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="TyP-8V-TmQ" firstAttribute="centerX" secondItem="5w7-v7-L61" secondAttribute="centerX" id="5VO-6w-ZIS"/>
-                            <constraint firstItem="TJ5-yv-1Ez" firstAttribute="centerX" secondItem="5w7-v7-L61" secondAttribute="centerX" id="E8M-pF-uLb"/>
-                            <constraint firstItem="QN7-PU-KDW" firstAttribute="leading" secondItem="p12-dx-7mZ" secondAttribute="leading" id="EMo-85-AeI"/>
-                            <constraint firstItem="DF5-xO-HJ4" firstAttribute="centerX" secondItem="5w7-v7-L61" secondAttribute="centerX" id="FQT-Ye-hYU"/>
-                            <constraint firstItem="TyP-8V-TmQ" firstAttribute="centerY" secondItem="5w7-v7-L61" secondAttribute="centerY" constant="-60" id="Gdm-de-VfS"/>
-                            <constraint firstItem="zhm-fE-l2b" firstAttribute="leading" secondItem="p12-dx-7mZ" secondAttribute="leading" constant="35" id="HTo-pR-aPE"/>
-                            <constraint firstItem="p12-dx-7mZ" firstAttribute="bottom" secondItem="QN7-PU-KDW" secondAttribute="bottom" id="JGF-Mf-aPq"/>
-                            <constraint firstItem="QN7-PU-KDW" firstAttribute="top" secondItem="p12-dx-7mZ" secondAttribute="top" id="MTf-b8-ElN"/>
-                            <constraint firstItem="TJ5-yv-1Ez" firstAttribute="centerY" secondItem="5w7-v7-L61" secondAttribute="centerY" constant="-200" id="OZF-SE-FJY"/>
-                            <constraint firstItem="p12-dx-7mZ" firstAttribute="trailing" secondItem="QN7-PU-KDW" secondAttribute="trailing" id="OdK-bF-aQu"/>
-                            <constraint firstItem="zhm-fE-l2b" firstAttribute="top" secondItem="p12-dx-7mZ" secondAttribute="top" constant="15" id="Ys3-BF-iwc"/>
-                            <constraint firstItem="fk7-Ch-U1W" firstAttribute="centerX" secondItem="5w7-v7-L61" secondAttribute="centerX" id="d9W-xg-D5a"/>
-                            <constraint firstItem="fk7-Ch-U1W" firstAttribute="centerY" secondItem="5w7-v7-L61" secondAttribute="centerY" constant="30" id="r5x-Co-HwU"/>
-                            <constraint firstItem="DF5-xO-HJ4" firstAttribute="centerY" secondItem="5w7-v7-L61" secondAttribute="centerY" constant="-130" id="y68-n0-0dS"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="commentLabel" destination="TyP-8V-TmQ" id="rpu-D4-f0G"/>
-                        <outlet property="totalScoreLabel" destination="DF5-xO-HJ4" id="Sar-0G-njR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sOB-wX-IQv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2668" y="125.61576354679804"/>
-        </scene>
-        <!--Register Name View Controller-->
-        <scene sceneID="MiH-mz-KfF">
-            <objects>
-                <viewController storyboardIdentifier="view4" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="FEb-5k-zNg" customClass="RegisterNameViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="Otf-u4-MRz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBf-IU-Edb">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="o7a-HH-XEs">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0M-rW-shp">
-                                <rect key="frame" x="20" y="276" width="335" height="260"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ランキングに登録しますか？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdQ-X7-nW2">
-                                        <rect key="frame" x="44" y="35" width="247" height="22.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="Kazesawa-Bold" family="Kazesawa" pointSize="19"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxl-xz-dij">
-                                        <rect key="frame" x="29.666666666666664" y="87" width="35.999999999999993" height="21"/>
-                                        <fontDescription key="fontDescription" name="Kazesawa-Regular" family="Kazesawa" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UU8-nq-RDv">
-                                        <rect key="frame" x="0.0" y="153.33333333333331" width="167" height="106.66666666666669"/>
-                                        <color key="backgroundColor" red="0.90588235289999997" green="0.94117647059999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Kazesawa-Bold" family="Kazesawa" pointSize="17"/>
-                                        <state key="normal" title="登録しない"/>
-                                        <connections>
-                                            <action selector="onTapDoNotRegisterButton:" destination="FEb-5k-zNg" eventType="touchUpInside" id="jC6-kd-UEr"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's your name?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xAF-h6-hEM">
-                                        <rect key="frame" x="82.666666666666686" y="82.333333333333314" width="200" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Ulo-7Y-XaS"/>
-                                            <constraint firstAttribute="width" constant="200" id="iXa-qf-2JY"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                        <connections>
-                                            <action selector="writeNameTextField:" destination="FEb-5k-zNg" eventType="editingDidEnd" id="wmB-jW-Fmt"/>
-                                        </connections>
-                                    </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wm6-4a-hoP">
-                                        <rect key="frame" x="0.0" y="152.33333333333331" width="335" height="1"/>
-                                        <color key="backgroundColor" systemColor="darkTextColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="lbp-TL-Aar"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="duc-Bw-9MD">
-                                        <rect key="frame" x="167" y="153.33333333333331" width="1" height="106.66666666666669"/>
-                                        <color key="backgroundColor" systemColor="darkTextColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="1" id="gMC-ze-zqG"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EG-TZ-dsm">
-                                        <rect key="frame" x="168" y="153.33333333333331" width="167" height="106.66666666666669"/>
-                                        <color key="backgroundColor" red="0.90588235289999997" green="0.94117647059999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Kazesawa-Bold" family="Kazesawa" pointSize="18"/>
-                                        <state key="normal" title="登録する"/>
-                                        <connections>
-                                            <action selector="onTapRegisterButton:" destination="FEb-5k-zNg" eventType="touchUpInside" id="xOU-t3-mRl"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join the World Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIf-UP-lx0">
-                                        <rect key="frame" x="85" y="122.33333333333331" width="176" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kwA-0u-U37">
-                                        <rect key="frame" x="269" y="119.33333333333331" width="52" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="edk-zG-qdI"/>
-                                            <constraint firstAttribute="width" constant="50" id="zO9-zd-1ig"/>
-                                        </constraints>
-                                    </switch>
-                                </subviews>
-                                <color key="backgroundColor" red="0.90588235289999997" green="0.94117647059999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="7EG-TZ-dsm" firstAttribute="leading" secondItem="duc-Bw-9MD" secondAttribute="trailing" id="0DH-S2-icz"/>
-                                    <constraint firstItem="duc-Bw-9MD" firstAttribute="centerX" secondItem="e0M-rW-shp" secondAttribute="centerX" id="0kf-Kb-rmf"/>
-                                    <constraint firstItem="UdQ-X7-nW2" firstAttribute="top" secondItem="e0M-rW-shp" secondAttribute="top" constant="35" id="1rX-2X-y81"/>
-                                    <constraint firstAttribute="bottom" secondItem="7EG-TZ-dsm" secondAttribute="bottom" id="3wP-9t-NfA"/>
-                                    <constraint firstItem="7EG-TZ-dsm" firstAttribute="top" secondItem="wm6-4a-hoP" secondAttribute="bottom" id="3ze-gQ-fUM"/>
-                                    <constraint firstItem="kwA-0u-U37" firstAttribute="leading" secondItem="FIf-UP-lx0" secondAttribute="trailing" constant="8" id="6Bf-aN-z19"/>
-                                    <constraint firstItem="UU8-nq-RDv" firstAttribute="leading" secondItem="e0M-rW-shp" secondAttribute="leading" id="9y9-fA-9Es"/>
-                                    <constraint firstItem="Qxl-xz-dij" firstAttribute="centerY" secondItem="xAF-h6-hEM" secondAttribute="centerY" id="Gzb-Oj-WV8"/>
-                                    <constraint firstAttribute="height" constant="260" id="NGB-JW-fLC"/>
-                                    <constraint firstAttribute="bottom" secondItem="UU8-nq-RDv" secondAttribute="bottom" id="Rb3-vK-Cde"/>
-                                    <constraint firstItem="FIf-UP-lx0" firstAttribute="top" secondItem="xAF-h6-hEM" secondAttribute="bottom" constant="10" id="T41-ck-rR4"/>
-                                    <constraint firstItem="duc-Bw-9MD" firstAttribute="top" secondItem="wm6-4a-hoP" secondAttribute="bottom" id="bpg-OY-4jB"/>
-                                    <constraint firstItem="wm6-4a-hoP" firstAttribute="top" secondItem="xAF-h6-hEM" secondAttribute="bottom" constant="40" id="ctJ-js-QMt"/>
-                                    <constraint firstAttribute="trailing" secondItem="wm6-4a-hoP" secondAttribute="trailing" id="cxo-LD-12S"/>
-                                    <constraint firstItem="UU8-nq-RDv" firstAttribute="top" secondItem="wm6-4a-hoP" secondAttribute="bottom" id="g5O-ZQ-vhD"/>
-                                    <constraint firstItem="kwA-0u-U37" firstAttribute="top" secondItem="xAF-h6-hEM" secondAttribute="bottom" constant="7" id="gFn-8p-KyW"/>
-                                    <constraint firstItem="duc-Bw-9MD" firstAttribute="leading" secondItem="UU8-nq-RDv" secondAttribute="trailing" id="jHW-AJ-xNc"/>
-                                    <constraint firstItem="UdQ-X7-nW2" firstAttribute="centerX" secondItem="e0M-rW-shp" secondAttribute="centerX" id="jOJ-wD-nMK"/>
-                                    <constraint firstItem="xAF-h6-hEM" firstAttribute="centerX" secondItem="e0M-rW-shp" secondAttribute="centerX" constant="15" id="jtH-au-ads"/>
-                                    <constraint firstItem="wm6-4a-hoP" firstAttribute="leading" secondItem="e0M-rW-shp" secondAttribute="leading" id="nWg-E8-AIf"/>
-                                    <constraint firstAttribute="trailing" secondItem="7EG-TZ-dsm" secondAttribute="trailing" id="rD4-rk-MFK"/>
-                                    <constraint firstAttribute="trailing" secondItem="kwA-0u-U37" secondAttribute="trailing" constant="16" id="tTE-cE-3RZ"/>
-                                    <constraint firstItem="xAF-h6-hEM" firstAttribute="top" secondItem="UdQ-X7-nW2" secondAttribute="bottom" constant="25" id="tr1-MB-eoJ"/>
-                                    <constraint firstItem="xAF-h6-hEM" firstAttribute="leading" secondItem="Qxl-xz-dij" secondAttribute="trailing" constant="17" id="v4T-AZ-pLT"/>
-                                    <constraint firstAttribute="bottom" secondItem="duc-Bw-9MD" secondAttribute="bottom" id="zv2-WF-gdZ"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="WMb-qT-vMY"/>
-                        <constraints>
-                            <constraint firstItem="RBf-IU-Edb" firstAttribute="top" secondItem="WMb-qT-vMY" secondAttribute="top" id="5uw-R7-U4D"/>
-                            <constraint firstItem="WMb-qT-vMY" firstAttribute="trailing" secondItem="e0M-rW-shp" secondAttribute="trailing" constant="20" id="Dg7-Ul-gtb"/>
-                            <constraint firstItem="e0M-rW-shp" firstAttribute="centerY" secondItem="Otf-u4-MRz" secondAttribute="centerY" id="Jc0-Iz-h9t"/>
-                            <constraint firstItem="RBf-IU-Edb" firstAttribute="bottom" secondItem="WMb-qT-vMY" secondAttribute="bottom" id="SUR-Zb-3pm"/>
-                            <constraint firstItem="RBf-IU-Edb" firstAttribute="trailing" secondItem="WMb-qT-vMY" secondAttribute="trailing" id="TfX-67-rO8"/>
-                            <constraint firstItem="e0M-rW-shp" firstAttribute="leading" secondItem="WMb-qT-vMY" secondAttribute="leading" constant="20" id="Zf8-hK-Yaj"/>
-                            <constraint firstItem="RBf-IU-Edb" firstAttribute="leading" secondItem="WMb-qT-vMY" secondAttribute="leading" id="eiG-l3-hjJ"/>
-                            <constraint firstItem="e0M-rW-shp" firstAttribute="centerX" secondItem="Otf-u4-MRz" secondAttribute="centerX" id="jd7-fh-24J"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="joinTheWorldRankingLabel" destination="FIf-UP-lx0" id="UEY-vS-pah"/>
-                        <outlet property="nameTextField" destination="xAF-h6-hEM" id="K2K-hd-AtW"/>
-                        <outlet property="registerButton" destination="7EG-TZ-dsm" id="hau-7b-hyt"/>
-                        <outlet property="worldRankingSwith" destination="kwA-0u-U37" id="ah7-vr-dOI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5nb-2M-3Dg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3528.8000000000002" y="125.61576354679804"/>
         </scene>
         <!--Ranking Date View Controller-->
         <scene sceneID="Swf-h6-wqO">
@@ -521,10 +268,6 @@
         <image name="rankingKoala" width="374" height="184"/>
         <image name="title" width="650" height="385"/>
         <image name="topPageButton" width="566" height="234"/>
-        <image name="totalScore" width="684" height="1149"/>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

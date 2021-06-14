@@ -48,13 +48,11 @@ class TotalScoreViewController: UIViewController {
     }
     
     @IBAction func goToRegisterNameButton(_ sender: Any) {
-        //storyboardのインスタンス取得
-        let storyboard: UIStoryboard = self.storyboard!
-        //遷移先ViewControllerのインスタンス取得
-        let nextView = storyboard.instantiateViewController(withIdentifier: "view4") as! RegisterNameViewController
+        let totalScoreVC = UIStoryboard(name: "RegisterNameDialog", bundle: nil)
+        let nextView = totalScoreVC.instantiateViewController(withIdentifier: "RegisterNameDialogView") as! RegisterNameViewController
          nextView.totalScore = totalScore
         //画面遷移
-        self.navigationController?.present       (nextView, animated: true)
+        self.navigationController?.present(nextView, animated: true)
     }
     
     @IBAction func reTryButton(_ sender: Any) {

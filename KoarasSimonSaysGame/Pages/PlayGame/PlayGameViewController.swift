@@ -104,8 +104,8 @@ extension PlayGameViewController: PlayGamePresenterOutput {
     }
     
     func transitToTotalScorePage(score: Int) {
-        let totalScoreVC = UIStoryboard(name: "Main", bundle: nil)
-        let nextView = totalScoreVC.instantiateViewController(withIdentifier: "totalScorewView") as! TotalScoreViewController
+        let totalScoreVC = UIStoryboard(name: "TotalScore", bundle: nil)
+        let nextView = totalScoreVC.instantiateViewController(withIdentifier: "totalScoreView") as! TotalScoreViewController
         nextView.totalScore = score
         self.navigationController?.pushViewController(nextView, animated: true)
         navigationController?.navigationBar.isHidden = false

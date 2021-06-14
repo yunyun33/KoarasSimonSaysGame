@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kazesawa-Bold.ttf">
+            <string>Kazesawa-Bold</string>
+        </array>
+        <array key="Kazesawa-Extrabold.ttf">
+            <string>Kazesawa-Extrabold</string>
+        </array>
+        <array key="Kazesawa-Regular.ttf">
+            <string>Kazesawa-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Total Score View Controller-->
+        <scene sceneID="ET2-0Q-3Wf">
+            <objects>
+                <viewController storyboardIdentifier="totalScoreView" id="olb-zs-7HE" customClass="TotalScoreViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9lc-u7-mj0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="totalScore" translatesAutoresizingMaskIntoConstraints="NO" id="hav-KZ-Nmb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの得点は" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sH-Mr-cI6">
+                                <rect key="frame" x="132" y="233" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="T08-xl-Hdi"/>
+                                    <constraint firstAttribute="height" constant="30" id="ifx-cD-ENy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kazesawa-Regular" family="Kazesawa" pointSize="19"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.41960784309999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXm-iv-bX7">
+                                <rect key="frame" x="157" y="303" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8C5-X2-co6"/>
+                                    <constraint firstAttribute="width" constant="100" id="Lux-by-chz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="18"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.41960784309999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ab-lm-Enh">
+                                <rect key="frame" x="57" y="348" width="300" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="HZP-oj-pCg"/>
+                                    <constraint firstAttribute="width" constant="300" id="y0Q-Ee-8aG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kazesawa-Bold" family="Kazesawa" pointSize="18"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.41960784309999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RE3-Wc-Flg">
+                                <rect key="frame" x="35" y="59" width="165" height="36"/>
+                                <fontDescription key="fontDescription" name="Kazesawa-Regular" family="Kazesawa" pointSize="17"/>
+                                <state key="normal" title="もう一度ゲームをする">
+                                    <color key="titleColor" red="0.34901960780000002" green="0.41960784309999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reTryButton:" destination="olb-zs-7HE" eventType="touchUpInside" id="cr6-J1-Z1O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tv7-Fs-tVK">
+                                <rect key="frame" x="177" y="458" width="60" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Mog-ss-7EP"/>
+                                    <constraint firstAttribute="height" constant="40" id="ZeN-bV-ZnF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kazesawa-Bold" family="Kazesawa" pointSize="19"/>
+                                <state key="normal" title="次へ">
+                                    <color key="titleColor" red="0.34901960780000002" green="0.41960784309999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="goToRegisterNameButton:" destination="olb-zs-7HE" eventType="touchUpInside" id="WRB-3o-vtA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ksl-mQ-mXb"/>
+                        <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hav-KZ-Nmb" firstAttribute="top" secondItem="ksl-mQ-mXb" secondAttribute="top" id="68c-lV-PaJ"/>
+                            <constraint firstItem="8ab-lm-Enh" firstAttribute="centerY" secondItem="9lc-u7-mj0" secondAttribute="centerY" constant="-60" id="CoG-cC-gX9"/>
+                            <constraint firstItem="RE3-Wc-Flg" firstAttribute="leading" secondItem="ksl-mQ-mXb" secondAttribute="leading" constant="35" id="GoY-Cf-hN6"/>
+                            <constraint firstItem="RE3-Wc-Flg" firstAttribute="top" secondItem="ksl-mQ-mXb" secondAttribute="top" constant="15" id="Jj9-H0-8rv"/>
+                            <constraint firstItem="ksl-mQ-mXb" firstAttribute="bottom" secondItem="hav-KZ-Nmb" secondAttribute="bottom" id="Nl1-TL-1Z3"/>
+                            <constraint firstItem="2sH-Mr-cI6" firstAttribute="centerX" secondItem="9lc-u7-mj0" secondAttribute="centerX" id="P0L-fa-jZ3"/>
+                            <constraint firstItem="Tv7-Fs-tVK" firstAttribute="centerY" secondItem="9lc-u7-mj0" secondAttribute="centerY" constant="30" id="STF-sj-bHo"/>
+                            <constraint firstItem="2sH-Mr-cI6" firstAttribute="centerY" secondItem="9lc-u7-mj0" secondAttribute="centerY" constant="-200" id="dxQ-z5-68M"/>
+                            <constraint firstItem="qXm-iv-bX7" firstAttribute="centerX" secondItem="9lc-u7-mj0" secondAttribute="centerX" id="gVd-Ce-siT"/>
+                            <constraint firstItem="8ab-lm-Enh" firstAttribute="centerX" secondItem="9lc-u7-mj0" secondAttribute="centerX" id="ml4-PY-Hmr"/>
+                            <constraint firstItem="qXm-iv-bX7" firstAttribute="centerY" secondItem="9lc-u7-mj0" secondAttribute="centerY" constant="-130" id="mot-Ox-wR1"/>
+                            <constraint firstItem="Tv7-Fs-tVK" firstAttribute="centerX" secondItem="9lc-u7-mj0" secondAttribute="centerX" id="oJh-zB-09d"/>
+                            <constraint firstItem="ksl-mQ-mXb" firstAttribute="trailing" secondItem="hav-KZ-Nmb" secondAttribute="trailing" id="ooh-4x-Byp"/>
+                            <constraint firstItem="hav-KZ-Nmb" firstAttribute="leading" secondItem="ksl-mQ-mXb" secondAttribute="leading" id="qF3-43-0Ri"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentLabel" destination="8ab-lm-Enh" id="laS-Bi-rvW"/>
+                        <outlet property="totalScoreLabel" destination="qXm-iv-bX7" id="2mz-OZ-wcc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jom-I9-Sla" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="totalScore" width="684" height="1149"/>
+    </resources>
+</document>
