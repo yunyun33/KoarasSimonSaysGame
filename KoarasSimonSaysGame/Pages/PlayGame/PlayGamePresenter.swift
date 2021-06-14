@@ -11,10 +11,7 @@ import AVFoundation
 
 protocol PlayGamePresenterInput {
     func viewDidLoad()
-    func didTapUp()
-    func didTapDown()
-    func didTapRight()
-    func didTapLeft()
+    func didTapDirectionButton(tappedDirection: Direction)
     func didTapBackButton()
 }
 
@@ -58,49 +55,11 @@ class PlayGamePresenter: PlayGamePresenterInput {
         proceedToNextDirection()
     }
     
-    func didTapUp() {
-        view.setFlagImage(direction: .UP)
+    //ゲームの正解、不正解の判定
+    func didTapDirectionButton(tappedDirection: Direction) {
+        view.setFlagImage(direction: tappedDirection)
         
-        if instructionDirection == .UP {
-            okCount += 1
-            view.showGoodLabel()
-            proceedToNextDirection()
-        } else {
-            ngCount += 1
-            view.showMissLabel()
-        }
-    }
-    
-    func didTapDown() {
-        view.setFlagImage(direction: .DOWN)
-        
-        if instructionDirection == .DOWN {
-            okCount += 1
-            view.showGoodLabel()
-            proceedToNextDirection()
-        } else {
-            ngCount += 1
-            view.showMissLabel()
-        }
-    }
-    
-    func didTapRight() {
-        view.setFlagImage(direction: .RIGHT)
-        
-        if instructionDirection == .RIGHT {
-            okCount += 1
-            view.showGoodLabel()
-            proceedToNextDirection()
-        } else {
-            ngCount += 1
-            view.showMissLabel()
-        }
-    }
-    
-    func didTapLeft() {
-        view.setFlagImage(direction: .LEFT)
-        
-        if instructionDirection == .LEFT {
+        if instructionDirection == tappedDirection {
             okCount += 1
             view.showGoodLabel()
             proceedToNextDirection()

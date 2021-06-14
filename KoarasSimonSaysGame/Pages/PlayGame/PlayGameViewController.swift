@@ -21,19 +21,19 @@ class PlayGameViewController: UIViewController,  UINavigationControllerDelegate 
    
     //--------旗上げゲーム--------
     @IBAction func upButton(_ sender: Any) {
-        presenter.didTapUp()
+        presenter.didTapDirectionButton(tappedDirection: .UP)
     }
     
     @IBAction func downButton(_ sender: Any) {
-        presenter.didTapDown()
+        presenter.didTapDirectionButton(tappedDirection: .DOWN)
     }
     
     @IBAction func rightButton(_ sender: Any) {
-        presenter.didTapRight()
+        presenter.didTapDirectionButton(tappedDirection: .RIGHT)
     }
     
     @IBAction func leftButton(_ sender: Any) {
-        presenter.didTapLeft()
+        presenter.didTapDirectionButton(tappedDirection: .LEFT)
     }
     
     //ナビゲーションバーの戻るボタン押した時の処理
