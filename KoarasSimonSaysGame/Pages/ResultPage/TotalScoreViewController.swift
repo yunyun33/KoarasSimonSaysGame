@@ -9,6 +9,8 @@
 import UIKit
 
 class TotalScoreViewController: UIViewController {
+    
+    private var presenter: TotalScorePresenterInput!
 
     @IBOutlet weak var totalScoreLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
@@ -17,6 +19,8 @@ class TotalScoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter = TotalScorePresenter(view: self)
 
         //2つ前の画面に戻りたいため、navigationvarを消す。
         self.navigationController?.navigationBar.isHidden = true
@@ -60,4 +64,8 @@ class TotalScoreViewController: UIViewController {
         navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)
         
     }
+}
+
+extension TotalScoreViewController: TotalScorePresenterOutput {
+    
 }
