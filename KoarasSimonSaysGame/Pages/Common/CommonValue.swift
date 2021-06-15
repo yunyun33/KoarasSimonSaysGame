@@ -12,6 +12,14 @@ import Foundation
 
 struct CommonValue {
     
+    //ResultPageで表示するコアラさんからのメッセージ
+    static let resultMessegeExcellent = "あ、あなたは何者ですか！？\n旗ふりの達人ですね！"
+    static let resultMessegeAmazing = "す、すごい！\nあなたの弟子にしてください！"
+    static let resultMessegeWonderful = "すごいですね！\nあなたは旗ふり名人です！"
+    static let resultMessegeGreat = "パチパチパチ\nお上手ですね！"
+    static let resultMessegeLittleMore = "もう少しでしたね\nもう一度やってみましょう！"
+    static let resultMessegeSleep = "もしかして寝ていましたか？\n私も眠くなってきました..."
+    
     struct URL {
         // 開発者の連絡先(HP)
         static let illustratorContactURL = "https://yunyun33.com/"

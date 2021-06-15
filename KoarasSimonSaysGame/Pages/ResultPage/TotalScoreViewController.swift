@@ -9,57 +9,49 @@
 import UIKit
 
 class TotalScoreViewController: UIViewController {
+    
+    var presenter: TotalScorePresenterInput!
 
     @IBOutlet weak var totalScoreLabel: UILabel!
-    @IBOutlet weak var commentLabel: UILabel!
- 
-    var totalScore: Int = 0
+    @IBOutlet weak var messageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //2つ前の画面に戻りたいため、navigationvarを消す。
-        self.navigationController?.navigationBar.isHidden = true
+        presenter.viewDidLoad()
         
-        if totalScore >= 25 {
-            totalScoreLabel.text = "\(totalScore)点です。"
-            commentLabel.numberOfLines = 2
-            commentLabel.text = "す、すごい！\nあなたの弟子にしてください！"
-        } else if totalScore >= 21 {
-            totalScoreLabel.text = "\(totalScore)点です。"
-            commentLabel.numberOfLines = 2
-            commentLabel.text = "すごいですね\nあなたは旗振り名人です！"
-        } else if totalScore >= 16 {
-            totalScoreLabel.text = "\(totalScore)点です。"
-            commentLabel.numberOfLines = 2
-            commentLabel.text = "パチパチパチ\nお上手ですね"
-        } else if totalScore >= 11 {
-            totalScoreLabel.text = "\(totalScore)点です。"
-            commentLabel.numberOfLines = 2
-            commentLabel.text = "もう少しでしたね\nもう一度やってみましょう！"
-        } else if totalScore >= 1 {
-                totalScoreLabel.text = "\(totalScore)点です。"
-                commentLabel.text = "もう少し頑張りましょう"
-        } else if totalScore == 0 {
-            totalScoreLabel.text = "\(totalScore)点です。"
-            commentLabel.numberOfLines = 2
-            commentLabel.text = "もしかして寝ていましたか？\n私も眠くなってきました..."
-        }
+        //2つ前の画面に戻りたい(直接ゲーム画面には戻さない)ため、navigationvarを消す。
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func goToRegisterNameButton(_ sender: Any) {
-        //storyboardのインスタンス取得
-        let storyboard: UIStoryboard = self.storyboard!
-        //遷移先ViewControllerのインスタンス取得
-        let nextView = storyboard.instantiateViewController(withIdentifier: "view4") as! RegisterNameViewController
-         nextView.totalScore = totalScore
-        //画面遷移
-        self.navigationController?.present       (nextView, animated: true)
+        presenter.didTapRegisterNameButton()
     }
     
     @IBAction func reTryButton(_ sender: Any) {
+        presenter.didTapReTryButton()
+    }
+}
+
+extension TotalScoreViewController: TotalScorePresenterOutput {
+    
+    func showTotalScore(totalScore: Int) {
+        totalScoreLabel.text = "\(totalScore)点です。"
+    }
+    
+    func showKoalasMessage(message: String) {
+        messageLabel.text = message
+    }
+    
+    func transitToRegisterName(totalScore: Int) {
+        let totalScoreVC = UIStoryboard(name: "RegisterNameDialog", bundle: nil)
+        let nextView = totalScoreVC.instantiateViewController(withIdentifier: "RegisterNameDialogView") as! RegisterNameViewController
+         nextView.totalScore = totalScore
+        self.navigationController?.present(nextView, animated: true)
+    }
+    
+    func backToTopPage() {
         let index = navigationController!.viewControllers.count - 3
         navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)
-        
     }
 }
