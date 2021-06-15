@@ -13,7 +13,7 @@ class TotalScoreViewController: UIViewController {
     private var presenter: TotalScorePresenterInput!
 
     @IBOutlet weak var totalScoreLabel: UILabel!
-    @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
  
     var totalScore: Int = 0
     
@@ -25,31 +25,9 @@ class TotalScoreViewController: UIViewController {
         //2つ前の画面に戻りたいため、navigationvarを消す。
         self.navigationController?.navigationBar.isHidden = true
         
-        if totalScore >= 25 {
-            totalScoreLabel.text = "\(totalScore)点です。"
-            commentLabel.numberOfLines = 2
-            commentLabel.text = "す、すごい！\nあなたの弟子にしてください！"
-        } else if totalScore >= 21 {
-            totalScoreLabel.text = "\(totalScore)点です。"
-            commentLabel.numberOfLines = 2
-            commentLabel.text = "すごいですね\nあなたは旗振り名人です！"
-        } else if totalScore >= 16 {
-            totalScoreLabel.text = "\(totalScore)点です。"
-            commentLabel.numberOfLines = 2
-            commentLabel.text = "パチパチパチ\nお上手ですね"
-        } else if totalScore >= 11 {
-            totalScoreLabel.text = "\(totalScore)点です。"
-            commentLabel.numberOfLines = 2
-            commentLabel.text = "もう少しでしたね\nもう一度やってみましょう！"
-        } else if totalScore >= 1 {
-                totalScoreLabel.text = "\(totalScore)点です。"
-                commentLabel.text = "もう少し頑張りましょう"
-        } else if totalScore == 0 {
-            totalScoreLabel.text = "\(totalScore)点です。"
-            commentLabel.numberOfLines = 2
-            commentLabel.text = "もしかして寝ていましたか？\n私も眠くなってきました..."
-        }
+        presenter.setResult(totalScore: totalScore)
     }
+    
     
     @IBAction func goToRegisterNameButton(_ sender: Any) {
         let totalScoreVC = UIStoryboard(name: "RegisterNameDialog", bundle: nil)
@@ -68,4 +46,11 @@ class TotalScoreViewController: UIViewController {
 
 extension TotalScoreViewController: TotalScorePresenterOutput {
     
+    func showTotalScore(totalScore: Int) {
+        totalScoreLabel.text = "\(totalScore)点です。"
+    }
+    
+    func showKoalasMessage(message: String) {
+        messageLabel.text = message
+    }
 }
