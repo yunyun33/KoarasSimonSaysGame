@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import AVFoundation
 
 protocol PlayGamePresenterInput {
@@ -22,7 +23,7 @@ protocol PlayGamePresenterOutput: AnyObject {
     func showMissLabel()
     func showNextInstruction(direction: Direction)
     func setFlagImage(direction: Direction)
-    func transitToTotalScorePage(score: Int)
+    func transitToTotalScorePage(score: Int, presenter: TotalScorePresenter)
 }
 
 class PlayGamePresenter: PlayGamePresenterInput {
@@ -108,7 +109,10 @@ extension PlayGamePresenter {
         if ( totalScore < 0 ) {
             totalScore = 0
         }
-        view.transitToTotalScorePage(score: totalScore)
+        let totalScoreVC = UIStoryboard(name: "TotalScore", bundle: nil)
+        let nextView = totalScoreVC.instantiateViewController(withIdentifier: "totalScoreView") as! TotalScoreViewController
+        let presenter = TotalScorePresenter(totalScore: totalScore, view: nextView)
+        view.transitToTotalScorePage(score: totalScore, presenter: presenter)
     }
     
     //BGMの設定、再生

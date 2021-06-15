@@ -103,7 +103,7 @@ extension PlayGameViewController: PlayGamePresenterOutput {
         koalasFlagImageView.image = direction.getFlagImage()
     }
     
-    func transitToTotalScorePage(score: Int) {
+    func transitToTotalScorePage(score: Int, presenter: TotalScorePresenter) {
         let totalScoreVC = UIStoryboard(name: "TotalScore", bundle: nil)
         let nextView = totalScoreVC.instantiateViewController(withIdentifier: "totalScoreView") as! TotalScoreViewController
         nextView.totalScore = score

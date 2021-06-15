@@ -9,7 +9,7 @@
 import Foundation
 
 protocol TotalScorePresenterInput {
-    func setResult(totalScore: Int)
+    func setResult()
 }
 
 protocol TotalScorePresenterOutput: AnyObject {
@@ -19,14 +19,17 @@ protocol TotalScorePresenterOutput: AnyObject {
 
 class TotalScorePresenter: TotalScorePresenterInput {
     
+    var totalScore: Int = 0
+    
     private weak var view: TotalScorePresenterOutput!
     
-    init(view: TotalScorePresenterOutput) {
+    init(totalScore: Int, view: TotalScorePresenterOutput) {
+        self.totalScore = totalScore
         self.view = view
     }
     
     //TotalScoreを見て、スコアに合ったコアラさんのメッセージを表示
-    func setResult(totalScore: Int) {
+    func setResult() {
         if totalScore >= 28 {
             view.showTotalScore(totalScore: totalScore)
             view.showKoalasMessage(message: CommonValue.resultMessegeExcellent)
