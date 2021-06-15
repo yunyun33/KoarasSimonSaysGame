@@ -25,15 +25,11 @@ class TotalScoreViewController: UIViewController {
     }
     
     @IBAction func goToRegisterNameButton(_ sender: Any) {
-        let totalScoreVC = UIStoryboard(name: "RegisterNameDialog", bundle: nil)
-        let nextView = totalScoreVC.instantiateViewController(withIdentifier: "RegisterNameDialogView") as! RegisterNameViewController
-         nextView.totalScore = totalScore
-        self.navigationController?.present(nextView, animated: true)
+        presenter.didTapRegisterNameButton()
     }
     
     @IBAction func reTryButton(_ sender: Any) {
-        let index = navigationController!.viewControllers.count - 3
-        navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)
+        presenter.didTapReTryButton()
     }
 }
 
@@ -45,5 +41,17 @@ extension TotalScoreViewController: TotalScorePresenterOutput {
     
     func showKoalasMessage(message: String) {
         messageLabel.text = message
+    }
+    
+    func transitToRegisterName(totalScore: Int) {
+        let totalScoreVC = UIStoryboard(name: "RegisterNameDialog", bundle: nil)
+        let nextView = totalScoreVC.instantiateViewController(withIdentifier: "RegisterNameDialogView") as! RegisterNameViewController
+         nextView.totalScore = totalScore
+        self.navigationController?.present(nextView, animated: true)
+    }
+    
+    func backToTopPage() {
+        let index = navigationController!.viewControllers.count - 3
+        navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)
     }
 }

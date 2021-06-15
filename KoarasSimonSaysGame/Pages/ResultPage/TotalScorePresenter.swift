@@ -10,11 +10,15 @@ import Foundation
 
 protocol TotalScorePresenterInput {
     func viewDidLoad()
+    func didTapRegisterNameButton()
+    func didTapReTryButton()
 }
 
 protocol TotalScorePresenterOutput: AnyObject {
     func showTotalScore(totalScore: Int)
     func showKoalasMessage(message: String)
+    func transitToRegisterName(totalScore: Int)
+    func backToTopPage()
 }
 
 class TotalScorePresenter: TotalScorePresenterInput {
@@ -50,5 +54,13 @@ class TotalScorePresenter: TotalScorePresenterInput {
         } else if totalScore >= 0 {
             view.showKoalasMessage(message: CommonValue.resultMessegeSleep)
         }
+    }
+    
+    func didTapRegisterNameButton() {
+        view.transitToRegisterName(totalScore: totalScore)
+    }
+    
+    func didTapReTryButton() {
+        view.backToTopPage()
     }
 }
