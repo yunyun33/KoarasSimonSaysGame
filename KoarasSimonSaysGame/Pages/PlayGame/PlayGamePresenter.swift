@@ -23,7 +23,7 @@ protocol PlayGamePresenterOutput: AnyObject {
     func showMissLabel()
     func showNextInstruction(direction: Direction)
     func setFlagImage(direction: Direction)
-    func transitToTotalScorePage(score: Int, presenter: TotalScorePresenter)
+    func transitToTotalScorePage(score: Int)
 }
 
 class PlayGamePresenter: PlayGamePresenterInput {
@@ -109,10 +109,7 @@ extension PlayGamePresenter {
         if ( totalScore < 0 ) {
             totalScore = 0
         }
-        let totalScoreVC = UIStoryboard(name: "TotalScore", bundle: nil)
-        let nextView = totalScoreVC.instantiateViewController(withIdentifier: "totalScoreView") as! TotalScoreViewController
-        let presenter = TotalScorePresenter(totalScore: totalScore, view: nextView)
-        view.transitToTotalScorePage(score: totalScore, presenter: presenter)
+        view.transitToTotalScorePage(score: totalScore)
     }
     
     //BGMの設定、再生

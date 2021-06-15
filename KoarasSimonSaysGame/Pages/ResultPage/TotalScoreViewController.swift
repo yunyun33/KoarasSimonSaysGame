@@ -10,19 +10,15 @@ import UIKit
 
 class TotalScoreViewController: UIViewController {
     
-    private var presenter: TotalScorePresenterInput!
+    var presenter: TotalScorePresenterInput!
 
     @IBOutlet weak var totalScoreLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
- 
-    var totalScore: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        presenter = TotalScorePresenter(totalScore: totalScore, view: self)
 
-        presenter.setResult()
+        presenter.viewDidLoad()
         
         //2つ前の画面に戻りたい(直接ゲーム画面には戻さない)ため、navigationvarを消す。
         self.navigationController?.navigationBar.isHidden = true

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol TotalScorePresenterInput {
-    func setResult()
+    func viewDidLoad()
 }
 
 protocol TotalScorePresenterOutput: AnyObject {
@@ -19,7 +19,7 @@ protocol TotalScorePresenterOutput: AnyObject {
 
 class TotalScorePresenter: TotalScorePresenterInput {
     
-    var totalScore: Int = 0
+    var totalScore: Int
     
     private weak var view: TotalScorePresenterOutput!
     
@@ -29,29 +29,25 @@ class TotalScorePresenter: TotalScorePresenterInput {
     }
     
     //TotalScoreを見て、スコアに合ったコアラさんのメッセージを表示
-    func setResult() {
+    func viewDidLoad() {
+        view.showTotalScore(totalScore: totalScore)
+        
         if totalScore >= 28 {
-            view.showTotalScore(totalScore: totalScore)
             view.showKoalasMessage(message: CommonValue.resultMessegeExcellent)
             
         } else if totalScore >= 25 {
-            view.showTotalScore(totalScore: totalScore)
             view.showKoalasMessage(message: CommonValue.resultMessegeAmazing)
             
         } else if totalScore >= 21 {
-            view.showTotalScore(totalScore: totalScore)
             view.showKoalasMessage(message: CommonValue.resultMessegeWonderful)
 
         } else if totalScore >= 16 {
-            view.showTotalScore(totalScore: totalScore)
             view.showKoalasMessage(message: CommonValue.resultMessegeGreat)
 
         } else if totalScore >= 5 {
-            view.showTotalScore(totalScore: totalScore)
             view.showKoalasMessage(message: CommonValue.resultMessegeLittleMore)
 
         } else if totalScore >= 0 {
-            view.showTotalScore(totalScore: totalScore)
             view.showKoalasMessage(message: CommonValue.resultMessegeSleep)
         }
     }
