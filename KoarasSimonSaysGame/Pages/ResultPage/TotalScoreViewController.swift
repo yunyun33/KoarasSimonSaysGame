@@ -22,25 +22,22 @@ class TotalScoreViewController: UIViewController {
         
         presenter = TotalScorePresenter(view: self)
 
-        //2つ前の画面に戻りたいため、navigationvarを消す。
-        self.navigationController?.navigationBar.isHidden = true
-        
         presenter.setResult(totalScore: totalScore)
+        
+        //2つ前の画面に戻りたい(直接ゲーム画面には戻さない)ため、navigationvarを消す。
+        self.navigationController?.navigationBar.isHidden = true
     }
-    
     
     @IBAction func goToRegisterNameButton(_ sender: Any) {
         let totalScoreVC = UIStoryboard(name: "RegisterNameDialog", bundle: nil)
         let nextView = totalScoreVC.instantiateViewController(withIdentifier: "RegisterNameDialogView") as! RegisterNameViewController
          nextView.totalScore = totalScore
-        //画面遷移
         self.navigationController?.present(nextView, animated: true)
     }
     
     @IBAction func reTryButton(_ sender: Any) {
         let index = navigationController!.viewControllers.count - 3
         navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)
-        
     }
 }
 

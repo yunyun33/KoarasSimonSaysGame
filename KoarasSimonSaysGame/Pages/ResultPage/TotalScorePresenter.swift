@@ -19,14 +19,13 @@ protocol TotalScorePresenterOutput: AnyObject {
 
 class TotalScorePresenter: TotalScorePresenterInput {
     
-//    var totalScore: Int = 0
-    
     private weak var view: TotalScorePresenterOutput!
     
     init(view: TotalScorePresenterOutput) {
         self.view = view
     }
     
+    //TotalScoreを見て、スコアに合ったコアラさんのメッセージを表示
     func setResult(totalScore: Int) {
         if totalScore >= 28 {
             view.showTotalScore(totalScore: totalScore)
@@ -53,6 +52,4 @@ class TotalScorePresenter: TotalScorePresenterInput {
             view.showKoalasMessage(message: CommonValue.resultMessegeSleep)
         }
     }
-}
-
 }
