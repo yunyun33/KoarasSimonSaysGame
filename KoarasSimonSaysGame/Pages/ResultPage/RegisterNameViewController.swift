@@ -25,8 +25,6 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        presenter = RegisterNamePresenter(totalScore: totalScore, view: self)
        
         nameTextField.delegate = self
         

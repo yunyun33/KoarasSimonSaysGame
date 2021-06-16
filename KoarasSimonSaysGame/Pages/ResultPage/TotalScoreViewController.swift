@@ -46,7 +46,7 @@ extension TotalScoreViewController: TotalScorePresenterOutput {
     func transitToRegisterName(totalScore: Int) {
         let totalScoreVC = UIStoryboard(name: "RegisterNameDialog", bundle: nil)
         let nextView = totalScoreVC.instantiateViewController(withIdentifier: "RegisterNameDialogView") as! RegisterNameViewController
-        nextView.totalScore = totalScore
+        nextView.presenter = RegisterNamePresenter(totalScore: totalScore, view: nextView)
         self.navigationController?.present(nextView, animated: true)
     }
     
