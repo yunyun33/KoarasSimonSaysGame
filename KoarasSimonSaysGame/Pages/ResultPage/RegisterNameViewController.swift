@@ -77,17 +77,12 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
                 }
             }
         }
-        //登録するボタンを押してhomeへ戻る
-        self.dismiss(animated: false, completion: nil)
-        let navigationController = self.presentingViewController as? UINavigationController
-        navigationController?.popToRootViewController(animated: false)
+        //登録するボタンを押してTopへ戻る
+        presenter.didTapButton()
     }
     
     @IBAction func onTapDoNotRegisterButton(_ sender: Any) {
-        dismiss(animated: false, completion: nil)
-        //↑まず消して、↓homeに遷移(戻る)
-        let navigationController = presentingViewController as? UINavigationController
-        navigationController?.popToRootViewController(animated: false)
+        presenter.didTapButton()
     }
     
     @IBAction func writeNameTextField(_ sender: Any) {
@@ -127,4 +122,9 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
 
 extension RegisterNameViewController: RegisterNamePresenterOutput {
     
+    func backToTopPage() {
+        self.dismiss(animated: false, completion: nil)
+        let navigationController = self.presentingViewController as? UINavigationController
+        navigationController?.popToRootViewController(animated: false)
+    }
 }

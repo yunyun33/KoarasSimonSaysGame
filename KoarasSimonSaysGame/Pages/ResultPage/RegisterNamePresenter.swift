@@ -9,9 +9,11 @@
 import Foundation
 
 protocol RegisterNamePresenterInput {
+    func didTapButton()
 }
 
 protocol RegisterNamePresenterOutput: AnyObject {
+    func backToTopPage()
 }
 
 class RegisterNamePresenter: RegisterNamePresenterInput {
@@ -23,5 +25,9 @@ class RegisterNamePresenter: RegisterNamePresenterInput {
     init(totalScore: Int, view: RegisterNamePresenterOutput) {
         self.totalScore = totalScore
         self.view = view
+    }
+    
+    func didTapButton() {
+        view.backToTopPage()
     }
 }
