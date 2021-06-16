@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class RegisterNameViewController: UIViewController,UITextFieldDelegate {
+    
+    var presenter: RegisterNamePresenterInput!
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
@@ -23,6 +25,8 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter = RegisterNamePresenter(totalScore: totalScore, view: self)
        
         nameTextField.delegate = self
         
@@ -121,4 +125,8 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         worldRankingSwith.isEnabled = true
         joinTheWorldRankingLabel.textColor = UIColor.black
     }
+}
+
+extension RegisterNameViewController: RegisterNamePresenterOutput {
+    
 }
