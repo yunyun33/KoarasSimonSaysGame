@@ -35,8 +35,7 @@ class RegisterNameViewController: UIViewController {
     }
    
     @IBAction func onTapRegisterButton(_ sender: Any) {
-    
-        presenter.didTapRegisterButton(nameText: nameTextField.text, worldRankingSwith: false)
+        presenter.didTapRegisterButton(nameText: nameTextField.text, worldRankingSwith: worldRankingSwith.isOn)
     }
     
     @IBAction func onTapDoNotRegisterButton(_ sender: Any) {
