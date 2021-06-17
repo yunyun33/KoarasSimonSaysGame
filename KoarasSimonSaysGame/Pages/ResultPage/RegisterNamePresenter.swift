@@ -10,7 +10,6 @@ import UIKit
 
 protocol RegisterNamePresenterInput {
     func didTapRegisterButton(nameText: String?, worldRankingSwith: Bool)
-//    func didCheckWordRanking(nameText: String?)
     func didTapButton()
 }
 
@@ -40,9 +39,6 @@ class RegisterNamePresenter: RegisterNamePresenterInput {
         }
     }
     
-//    func didCheckWordRanking(nameText: String?) {
-//        model.seveToFirestore(name: nameText ?? "", score: totalScore)
-//    }
     
     func didTapButton() {
         view.backToTopPage()
@@ -51,7 +47,4 @@ class RegisterNamePresenter: RegisterNamePresenterInput {
 
 extension RegisterNamePresenter {
     
-//    private func saveRanking(nameText: String?) {
-//        model.saveToUserDefaults(name: nameText ?? "", score: totalScore)
-//    }
 }

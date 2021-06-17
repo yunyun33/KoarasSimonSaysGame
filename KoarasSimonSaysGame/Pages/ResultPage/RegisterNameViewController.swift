@@ -47,28 +47,6 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
     
         presenter.didTapRegisterButton(nameText: nameTextField.text, worldRankingSwith: worldRankingSwith.isEnabled)
         
-        
-//        // 保存するメモ情報を配列にする 0: 名前, 1: スコア
-//        let rankingToSave: [String] = [rankingName, "\(totalScore)"]
-//
-//        // すでに保存されているメモがあれば追加して保存
-//        if var memo: [[String]] = UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] {
-//
-//            memo.append(rankingToSave)
-//
-//            //並び替え。同立の場合、最初にgameした人が上に表示される
-//            let memoSorted = memo.sorted(by: {Double($0[1])! > Double($1[1])!})
-//
-//            UserDefaults.standard.set(memoSorted, forKey: "nameAndScore")
-//
-//        } else {
-//            // 保存しているメモがなければ新規で保存
-//            UserDefaults.standard.set([rankingToSave], forKey: "nameAndScore")
-//        }
-//
-//        if worldRankingSwith.isOn {
-//            presenter.didCheckWordRanking(nameText: rankingName)
-//        }
         //登録するボタンを押してTopへ戻る
         presenter.didTapButton()
     }
