@@ -64,9 +64,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                        <connections>
-                                            <action selector="writeNameTextField:" destination="b8b-hu-zsO" eventType="editingDidEnd" id="T2p-4u-baI"/>
-                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Xs-ph-xCr">
                                         <rect key="frame" x="0.0" y="157" width="374" height="1"/>
