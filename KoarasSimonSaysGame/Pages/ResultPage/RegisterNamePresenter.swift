@@ -9,6 +9,7 @@
 import UIKit
 
 protocol RegisterNamePresenterInput {
+    func viewDidLoad()
     func didTapRegisterButton(nameText: String?, worldRankingSwith: Bool)
     func textFieldShouldReturn(_ textField: UITextField)
     func didTapDoNotRegisterButton()
@@ -32,6 +33,10 @@ class RegisterNamePresenter: RegisterNamePresenterInput {
         self.totalScore = totalScore
         self.view = view
         self.model = model
+    }
+    
+    func viewDidLoad() {
+        view.configureRegisterButton(enabled: false)
     }
     
     func didTapRegisterButton(nameText: String?, worldRankingSwith: Bool) {
