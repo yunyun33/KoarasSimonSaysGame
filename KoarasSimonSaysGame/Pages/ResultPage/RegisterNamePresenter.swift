@@ -23,7 +23,6 @@ protocol RegisterNamePresenterOutput: AnyObject {
 class RegisterNamePresenter: RegisterNamePresenterInput {
     
     var totalScore: Int
-    private var nameText: String?
     
     private weak var view: RegisterNamePresenterOutput!
     private let model: RankingModelProtocol
