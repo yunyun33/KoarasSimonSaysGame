@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class RegisterNameViewController: UIViewController,UITextFieldDelegate {
+class RegisterNameViewController: UIViewController {
     
     var presenter: RegisterNamePresenterInput!
 
@@ -20,7 +20,7 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var joinTheWorldRankingLabel: UILabel!
     
     var totalScore: Int = 0
-    var rankingArray: [String] = []
+//    var rankingArray: [String] = []
 //    var defaultstore:Firestore!
     
     override func viewDidLoad() {
@@ -42,8 +42,6 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
         if nameTextField.text == "" {
             return
         }
-        
-        writeName()
     
         presenter.didTapRegisterButton(nameText: nameTextField.text, worldRankingSwith: worldRankingSwith.isEnabled)
         
@@ -57,40 +55,34 @@ class RegisterNameViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func writeNameTextField(_ sender: Any) {
         self.nameText = (sender as AnyObject).text
-        self.writeName()
     }
+}
 
+extension RegisterNameViewController: UITextFieldDelegate {
+    
     //text打ち終わったらキーボードしまう
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        presenter.textFieldShouldReturn(textField)
         nameTextField.resignFirstResponder()
         return true
-    }
-    
-    private func writeName() {
-        //nillの場合は「登録する」ボタン押せない
-        guard let nameText = self.nameText else {
-            self.registerButton.isEnabled = false
-            //worldRankingSwithは最初無効にしておく
-            worldRankingSwith.isEnabled = false
-            joinTheWorldRankingLabel.textColor = UIColor.lightGray
-            return
-        }
-        //文字数が0の場合(""空文字)も「登録する」ボタン押せない
-        if nameText.count == 0 {
-            self.registerButton.isEnabled = false
-            //worldRankingSwithは最初無効にしておく
-            worldRankingSwith.isEnabled = false
-            joinTheWorldRankingLabel.textColor = UIColor.lightGray
-            return
-        }
-        // nilでないかつ0文字以上は「登録する」ボタン押せる、worldRankingSwithも有効になる
-        self.registerButton.isEnabled = true
-        worldRankingSwith.isEnabled = true
-        joinTheWorldRankingLabel.textColor = UIColor.black
     }
 }
 
 extension RegisterNameViewController: RegisterNamePresenterOutput {
+    
+    func configureRegisterButton(enabled: Bool) {
+        
+        if enabled {
+            self.registerButton.isEnabled = true
+            worldRankingSwith.isEnabled = true
+            joinTheWorldRankingLabel.textColor = UIColor.black
+            
+        } else {
+            self.registerButton.isEnabled = false
+            worldRankingSwith.isEnabled = false
+            joinTheWorldRankingLabel.textColor = UIColor.lightGray
+        }
+    }
     
     func backToTopPage() {
         self.dismiss(animated: false, completion: nil)
