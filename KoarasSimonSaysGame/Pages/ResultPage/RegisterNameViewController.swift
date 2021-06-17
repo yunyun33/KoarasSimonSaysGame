@@ -43,14 +43,11 @@ class RegisterNameViewController: UIViewController {
             return
         }
     
-        presenter.didTapRegisterButton(nameText: nameTextField.text, worldRankingSwith: worldRankingSwith.isEnabled)
-        
-        //登録するボタンを押してTopへ戻る
-        presenter.didTapButton()
+        presenter.didTapRegisterButton(nameText: nameTextField.text, worldRankingSwith: false)
     }
     
     @IBAction func onTapDoNotRegisterButton(_ sender: Any) {
-        presenter.didTapButton()
+        presenter.didTapDoNotRegisterButton()
     }
     
     @IBAction func writeNameTextField(_ sender: Any) {

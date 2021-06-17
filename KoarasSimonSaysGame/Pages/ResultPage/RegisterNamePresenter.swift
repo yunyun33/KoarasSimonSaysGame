@@ -11,7 +11,7 @@ import UIKit
 protocol RegisterNamePresenterInput {
     func didTapRegisterButton(nameText: String?, worldRankingSwith: Bool)
     func textFieldShouldReturn(_ textField: UITextField)
-    func didTapButton()
+    func didTapDoNotRegisterButton()
 }
 
 protocol RegisterNamePresenterOutput: AnyObject {
@@ -36,12 +36,14 @@ class RegisterNamePresenter: RegisterNamePresenterInput {
     
     func didTapRegisterButton(nameText: String?, worldRankingSwith: Bool) {
         
-        
         model.saveToUserDefaults(name: nameText ?? "", score: totalScore)
         
         if worldRankingSwith == true {
             model.seveToFirestore(name: nameText ?? "", score: totalScore)
         }
+        
+        //登録するボタンを押してTopへ戻る
+        view.backToTopPage()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) {
@@ -53,7 +55,7 @@ class RegisterNamePresenter: RegisterNamePresenterInput {
         }
     }
     
-    func didTapButton() {
+    func didTapDoNotRegisterButton() {
         view.backToTopPage()
     }
 }
