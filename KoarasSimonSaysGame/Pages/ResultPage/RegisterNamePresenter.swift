@@ -23,7 +23,6 @@ protocol RegisterNamePresenterOutput: AnyObject {
 class RegisterNamePresenter: RegisterNamePresenterInput {
     
     var totalScore: Int
-//    var rankingArray: [String] = []
     private var nameText: String?
     
     private weak var view: RegisterNamePresenterOutput!
@@ -63,8 +62,4 @@ class RegisterNamePresenter: RegisterNamePresenterInput {
     func didTapDoNotRegisterButton() {
         view.backToTopPage()
     }
-}
-
-extension RegisterNamePresenter {
-    
 }

@@ -15,13 +15,10 @@ class RegisterNameViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
-    private var nameText: String?
     @IBOutlet weak var worldRankingSwith: UISwitch!
     @IBOutlet weak var joinTheWorldRankingLabel: UILabel!
     
     var totalScore: Int = 0
-//    var rankingArray: [String] = []
-//    var defaultstore:Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +36,6 @@ class RegisterNameViewController: UIViewController {
     
     @IBAction func onTapDoNotRegisterButton(_ sender: Any) {
         presenter.didTapDoNotRegisterButton()
-    }
-    
-    @IBAction func writeNameTextField(_ sender: Any) {
-        self.nameText = (sender as AnyObject).text
     }
 }
 
