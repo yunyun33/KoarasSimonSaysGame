@@ -40,10 +40,8 @@ class RegisterNameViewController: UIViewController {
 
 extension RegisterNameViewController: UITextFieldDelegate {
     
-    //text打ち終わったらキーボードしまう
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         presenter.textFieldShouldReturn(textField)
-        nameTextField.resignFirstResponder()
         return true
     }
 }

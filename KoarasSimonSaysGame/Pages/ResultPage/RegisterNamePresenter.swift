@@ -51,6 +51,9 @@ class RegisterNamePresenter: RegisterNamePresenterInput {
     
     func textFieldShouldReturn(_ textField: UITextField) {
         
+        //キーボードをしまう
+        textField.resignFirstResponder()
+        
         if let textInput = textField.text, !textInput.isEmpty {
             view.configureRegisterButton(enabled: true)
         } else {
