@@ -36,13 +36,6 @@ class RegisterNameViewController: UIViewController {
    
     @IBAction func onTapRegisterButton(_ sender: Any) {
     
-        guard let rankingName = nameTextField.text else {
-            return
-        }
-        if nameTextField.text == "" {
-            return
-        }
-    
         presenter.didTapRegisterButton(nameText: nameTextField.text, worldRankingSwith: false)
     }
     
