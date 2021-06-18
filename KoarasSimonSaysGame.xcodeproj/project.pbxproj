@@ -34,6 +34,7 @@
 		BAAED8282677284F00DF5647 /* TotalScorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8272677284F00DF5647 /* TotalScorePresenter.swift */; };
 		BAAED82B267977DB00DF5647 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED82A267977DB00DF5647 /* RankingModel.swift */; };
 		BAAED82D2679801000DF5647 /* RegisterNamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED82C2679801000DF5647 /* RegisterNamePresenter.swift */; };
+		BAAED82F267C183400DF5647 /* RankingDate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED82E267C183400DF5647 /* RankingDate.storyboard */; };
 		BAE6E6882483E6460077D8AE /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6862483E6460077D8AE /* RankingCell.swift */; };
 		BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6872483E6460077D8AE /* RankingCell.xib */; };
 		BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */; };
@@ -106,6 +107,7 @@
 		BAAED8272677284F00DF5647 /* TotalScorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScorePresenter.swift; sourceTree = "<group>"; };
 		BAAED82A267977DB00DF5647 /* RankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingModel.swift; sourceTree = "<group>"; };
 		BAAED82C2679801000DF5647 /* RegisterNamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNamePresenter.swift; sourceTree = "<group>"; };
+		BAAED82E267C183400DF5647 /* RankingDate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RankingDate.storyboard; sourceTree = "<group>"; };
 		BAE6E6862483E6460077D8AE /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		BAE6E6872483E6460077D8AE /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
 		BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Semibold.woff"; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */,
 				BAE6E6862483E6460077D8AE /* RankingCell.swift */,
 				BAE6E6872483E6460077D8AE /* RankingCell.xib */,
+				BAAED82E267C183400DF5647 /* RankingDate.storyboard */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				BAE6E6AC249257460077D8AE /* Kazesawa-Regular.woff in Resources */,
 				BAE6E6B32492577D0077D8AE /* Kazesawa-ExtraLight.ttf in Resources */,
 				BAAED823267708ED00DF5647 /* TotalScore.storyboard in Resources */,
+				BAAED82F267C183400DF5647 /* RankingDate.storyboard in Resources */,
 				BAE6E6AA24919CFD0077D8AE /* Kazesawa-Bold.woff in Resources */,
 				BAAED81D267188F900DF5647 /* PlayGame.storyboard in Resources */,
 				BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */,
