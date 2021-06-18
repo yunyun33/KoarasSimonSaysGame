@@ -20,7 +20,7 @@
 		BA006F95243C5AB4000AB5F6 /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F94243C5AB4000AB5F6 /* PlayGameViewController.swift */; };
 		BA006F972441D132000AB5F6 /* TotalScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */; };
 		BA006F992442FD74000AB5F6 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */; };
-		BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */; };
+		BA006F9B244909C2000AB5F6 /* RankingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F9A244909C2000AB5F6 /* RankingDataViewController.swift */; };
 		BA4C969C24B1984900226834 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA4C969B24B1984900226834 /* GoogleService-Info.plist */; };
 		BA6DA34E2560E27B00DD918F /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA6DA34D2560E27A00DD918F /* playBGM.mp3 */; };
 		BAAED80F2670422300DF5647 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED80E2670422300DF5647 /* Menu.storyboard */; };
@@ -34,7 +34,7 @@
 		BAAED8282677284F00DF5647 /* TotalScorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8272677284F00DF5647 /* TotalScorePresenter.swift */; };
 		BAAED82B267977DB00DF5647 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED82A267977DB00DF5647 /* RankingModel.swift */; };
 		BAAED82D2679801000DF5647 /* RegisterNamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED82C2679801000DF5647 /* RegisterNamePresenter.swift */; };
-		BAAED82F267C183400DF5647 /* RankingDate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED82E267C183400DF5647 /* RankingDate.storyboard */; };
+		BAAED82F267C183400DF5647 /* RankingData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED82E267C183400DF5647 /* RankingData.storyboard */; };
 		BAE6E6882483E6460077D8AE /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6862483E6460077D8AE /* RankingCell.swift */; };
 		BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6872483E6460077D8AE /* RankingCell.xib */; };
 		BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */; };
@@ -93,7 +93,7 @@
 		BA006F94243C5AB4000AB5F6 /* PlayGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
 		BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoreViewController.swift; sourceTree = "<group>"; };
 		BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
-		BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDateViewController.swift; sourceTree = "<group>"; };
+		BA006F9A244909C2000AB5F6 /* RankingDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDataViewController.swift; sourceTree = "<group>"; };
 		BA4C969B24B1984900226834 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA6DA34D2560E27A00DD918F /* playBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBGM.mp3; sourceTree = "<group>"; };
 		BAAED80E2670422300DF5647 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		BAAED8272677284F00DF5647 /* TotalScorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScorePresenter.swift; sourceTree = "<group>"; };
 		BAAED82A267977DB00DF5647 /* RankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingModel.swift; sourceTree = "<group>"; };
 		BAAED82C2679801000DF5647 /* RegisterNamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNamePresenter.swift; sourceTree = "<group>"; };
-		BAAED82E267C183400DF5647 /* RankingDate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RankingDate.storyboard; sourceTree = "<group>"; };
+		BAAED82E267C183400DF5647 /* RankingData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RankingData.storyboard; sourceTree = "<group>"; };
 		BAE6E6862483E6460077D8AE /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		BAE6E6872483E6460077D8AE /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
 		BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Semibold.woff"; sourceTree = "<group>"; };
@@ -293,10 +293,10 @@
 		BAAED80C2670403400DF5647 /* Ranking */ = {
 			isa = PBXGroup;
 			children = (
-				BA006F9A244909C2000AB5F6 /* RankingDateViewController.swift */,
+				BA006F9A244909C2000AB5F6 /* RankingDataViewController.swift */,
 				BAE6E6862483E6460077D8AE /* RankingCell.swift */,
 				BAE6E6872483E6460077D8AE /* RankingCell.xib */,
-				BAAED82E267C183400DF5647 /* RankingDate.storyboard */,
+				BAAED82E267C183400DF5647 /* RankingData.storyboard */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -486,7 +486,7 @@
 				BAE6E6AC249257460077D8AE /* Kazesawa-Regular.woff in Resources */,
 				BAE6E6B32492577D0077D8AE /* Kazesawa-ExtraLight.ttf in Resources */,
 				BAAED823267708ED00DF5647 /* TotalScore.storyboard in Resources */,
-				BAAED82F267C183400DF5647 /* RankingDate.storyboard in Resources */,
+				BAAED82F267C183400DF5647 /* RankingData.storyboard in Resources */,
 				BAE6E6AA24919CFD0077D8AE /* Kazesawa-Bold.woff in Resources */,
 				BAAED81D267188F900DF5647 /* PlayGame.storyboard in Resources */,
 				BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */,
@@ -631,7 +631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA006F69243C58C0000AB5F6 /* ViewController.swift in Sources */,
-				BA006F9B244909C2000AB5F6 /* RankingDateViewController.swift in Sources */,
+				BA006F9B244909C2000AB5F6 /* RankingDataViewController.swift in Sources */,
 				BA006F65243C58C0000AB5F6 /* AppDelegate.swift in Sources */,
 				BAAED8112670574E00DF5647 /* MenuPresenter.swift in Sources */,
 				BAAED82D2679801000DF5647 /* RegisterNamePresenter.swift in Sources */,

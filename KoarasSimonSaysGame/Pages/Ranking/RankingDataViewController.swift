@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class RankingDateViewController: UIViewController, UINavigationControllerDelegate {
+class RankingDataViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var garbageCanButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -38,7 +38,7 @@ class RankingDateViewController: UIViewController, UINavigationControllerDelegat
     }
 }
 
-extension RankingDateViewController: UITableViewDelegate, UITableViewDataSource {
+extension RankingDataViewController: UITableViewDelegate, UITableViewDataSource {
     
     //セルの高さ
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

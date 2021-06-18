@@ -26,16 +26,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onTapRankingButton(_ sender: Any) {
-        let menuVC = UIStoryboard(name: "RankingDate", bundle: nil)
-        let nextView = menuVC.instantiateViewController(withIdentifier: "RankingDateView") as! RankingDateViewController
+        let menuVC = UIStoryboard(name: "RankingData", bundle: nil)
+        let nextView = menuVC.instantiateViewController(withIdentifier: "RankingDataView") as! RankingDataViewController
         nextView.isWorldRanking = false
         self.navigationController?.pushViewController(nextView, animated: true)
         navigationController?.navigationBar.isHidden = false
     }
     
     @IBAction func onTapWorldRankingButton(_ sender: Any) {
-        let menuVC = UIStoryboard(name: "RankingDate", bundle: nil)
-        let nextView = menuVC.instantiateViewController(withIdentifier: "RankingDateView") as! RankingDateViewController
+        let menuVC = UIStoryboard(name: "RankingData", bundle: nil)
+        let nextView = menuVC.instantiateViewController(withIdentifier: "RankingDataView") as! RankingDataViewController
         nextView.isWorldRanking = true
         self.navigationController?.pushViewController(nextView, animated: true)
         navigationController?.navigationBar.isHidden = false
