@@ -18,7 +18,7 @@ protocol RankingDataOutput: AnyObject {
     func setupLocalRanking()
 }
 
-class RankingDtaPresenter: RankingDataPresenterInput {
+class RankingDataPresenter: RankingDataPresenterInput {
     
     var isWorldRanking: Bool
     
