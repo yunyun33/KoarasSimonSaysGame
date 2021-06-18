@@ -24,15 +24,7 @@ class RankingDataViewController: UIViewController, UINavigationControllerDelegat
         
         setupView()
         
-        if isWorldRanking == true {
-            self.navigationItem.title = "World Ranking"
-            garbageCanButton.isHidden = true
-            garbageCanButton.isEnabled = true
-            getFirestoreDatas()
-        } else {
-            self.navigationItem.title = "ランキング"
-            getUserDefaultsDatas()
-        }
+        presenter.viewDidLoad()
     }
     
     @IBAction func onTapDelete(_ sender: Any) {
@@ -157,4 +149,16 @@ extension RankingDataViewController: UITableViewDelegate, UITableViewDataSource 
 
 extension RankingDataViewController: RankingDataOutput {
     
+    //処理の動きを確認するため、一旦データ取得処理もここに書いておく
+    func setupWordRanking() {
+        self.navigationItem.title = "World Ranking"
+        garbageCanButton.isHidden = true
+        garbageCanButton.isEnabled = true
+        getFirestoreDatas()
+    }
+    
+    func setupLocalRanking() {
+        self.navigationItem.title = "ランキング"
+        getUserDefaultsDatas()
+    }
 }

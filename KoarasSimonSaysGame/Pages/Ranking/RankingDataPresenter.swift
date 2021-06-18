@@ -10,13 +10,34 @@ import Foundation
 import Firebase
 
 protocol RankingDataPresenterInput {
-    
+    func viewDidLoad()
 }
 
 protocol RankingDataOutput: AnyObject {
-    
+    func setupWordRanking()
+    func setupLocalRanking()
 }
 
 class RankingDtaPresenter: RankingDataPresenterInput {
     
+    var isWorldRanking: Bool
+    
+    var presenter: RankingDataPresenterInput!
+    
+    private weak var view: RankingDataOutput!
+    
+    init(isWorldRanking: Bool, view: RankingDataOutput) {
+        self.isWorldRanking = isWorldRanking
+        self.view = view
+    }
+    
+    func viewDidLoad() {
+        if isWorldRanking == true {
+            view.setupWordRanking()
+//            getFirestoreDatas()
+        } else {
+            view.setupLocalRanking()
+//            getUserDefaultsDatas()
+        }
+    }
 }

@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     @IBAction func onTapRankingButton(_ sender: Any) {
         let menuVC = UIStoryboard(name: "RankingData", bundle: nil)
         let nextView = menuVC.instantiateViewController(withIdentifier: "RankingDataView") as! RankingDataViewController
-        nextView.isWorldRanking = false
+        nextView.presenter = RankingDtaPresenter(isWorldRanking: false, view: nextView)
         self.navigationController?.pushViewController(nextView, animated: true)
         navigationController?.navigationBar.isHidden = false
     }
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     @IBAction func onTapWorldRankingButton(_ sender: Any) {
         let menuVC = UIStoryboard(name: "RankingData", bundle: nil)
         let nextView = menuVC.instantiateViewController(withIdentifier: "RankingDataView") as! RankingDataViewController
-        nextView.isWorldRanking = true
+        nextView.presenter = RankingDtaPresenter(isWorldRanking: true, view: nextView)
         self.navigationController?.pushViewController(nextView, animated: true)
         navigationController?.navigationBar.isHidden = false
     }
