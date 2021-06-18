@@ -11,6 +11,8 @@ import Firebase
 
 class RankingDataViewController: UIViewController, UINavigationControllerDelegate {
     
+    var presenter: RankingDataPresenterInput!
+    
     @IBOutlet weak var garbageCanButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     private var nameAndScore: [[String]] = []
@@ -151,4 +153,8 @@ extension RankingDataViewController: UITableViewDelegate, UITableViewDataSource 
         present(alert, animated: true, completion: nil)
         return
     }
+}
+
+extension RankingDataViewController: RankingDataOutput {
+    
 }
