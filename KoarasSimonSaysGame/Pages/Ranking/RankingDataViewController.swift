@@ -26,7 +26,7 @@ class RankingDataViewController: UIViewController {
     }
     
     @IBAction func onTapDelete(_ sender: Any) {
-        showAlert()
+        presenter.didTapDeleteButton()
     }
 }
 
@@ -117,31 +117,6 @@ extension RankingDataViewController {
             self.tableView.reloadData()
         }
     }
-    
-    //ランキング削除ボタンが押された時のアラート
-    private func showAlert() {
-        let alert: UIAlertController = UIAlertController(title: "ランキングデータを\n削除します。",
-                                                         message: "データは全て削除されます。",
-                                                         preferredStyle: .alert)
-        //OKボタン
-        let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler:{
-                    (action:UIAlertAction!) -> Void in
-            //OKボタン押されたらUserDefaltsのデータ削除
-            UserDefaults.standard.removeObject(forKey: "nameAndScore")
-            //↑のだけだとボタン押した瞬間は画面に表示されたままのため↓で表示を消す
-            self.nameAndScore.removeAll()
-            self.tableView.reloadData()
-        })
-        alert.addAction(okAction)
-        
-        //キャンセルボタン
-        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .default) { (UIAlertAction) in }
-        alert.addAction(cancelAction)
-        
-        //アラート画面を表示させる
-        present(alert, animated: true, completion: nil)
-        return
-    }
 }
 
 extension RankingDataViewController: RankingDataOutput {
@@ -160,5 +135,42 @@ extension RankingDataViewController: RankingDataOutput {
     
     func reloadTableView() {
         tableView.reloadData()
+    }
+    
+    //ランキング削除ボタンが押された時のアラート
+    func showDeleteAlert() {
+        let alert: UIAlertController = UIAlertController(title: "ランキングデータを\n削除します。",
+                                                         message: "データは全て削除されます。",
+                                                         preferredStyle: .alert)
+        //OKボタン
+        let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler:{
+                    (action:UIAlertAction!) -> Void in
+            self.presenter.didTapOkOnDeleteAll()
+        })
+        alert.addAction(okAction)
+        
+        //キャンセルボタン
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .default) { (UIAlertAction) in
+            // NOP
+        }
+        alert.addAction(cancelAction)
+        
+        //アラート画面を表示させる
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func showCanNotDeleteAlert() {
+        let alert: UIAlertController = UIAlertController(title: "削除するデータがありません。",
+                                                         message: "",
+                                                         preferredStyle: .alert)
+        
+        //OKボタン
+        let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler:{
+                    (action:UIAlertAction!) -> Void in
+            // NOP
+        })
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
     }
 }
