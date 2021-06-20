@@ -11,33 +11,56 @@ import Firebase
 
 protocol RankingDataPresenterInput {
     func viewDidLoad()
+    func numberOfNameAndScore() -> Int
+    func nameAndScore(forRow row: Int) -> [String]
 }
 
 protocol RankingDataOutput: AnyObject {
     func setupWordRanking()
     func setupLocalRanking()
+    func reloadTableView()
 }
 
-class RankingDataPresenter: RankingDataPresenterInput {
+class RankingDataPresenter {
     
     var isWorldRanking: Bool
-    
-    var presenter: RankingDataPresenterInput!
-    
+    var nameAndScore: [[String]] = []
+        
     private weak var view: RankingDataOutput!
     
     init(isWorldRanking: Bool, view: RankingDataOutput) {
         self.isWorldRanking = isWorldRanking
         self.view = view
     }
-    
+}
+
+extension RankingDataPresenter: RankingDataPresenterInput {
+
     func viewDidLoad() {
-        if isWorldRanking == true {
+        if isWorldRanking {
             view.setupWordRanking()
 //            getFirestoreDatas()
         } else {
             view.setupLocalRanking()
-//            getUserDefaultsDatas()
+            getUserDefaultsDatas()
         }
+    }
+    
+    func numberOfNameAndScore() -> Int {
+        return nameAndScore.count
+    }
+    
+    func nameAndScore(forRow row: Int) -> [String] {
+        return nameAndScore[row]
+    }
+}
+
+extension RankingDataPresenter {
+    
+    private func getUserDefaultsDatas() {
+        if let savedname = UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] {
+            nameAndScore = savedname
+        }
+        view.reloadTableView()
     }
 }

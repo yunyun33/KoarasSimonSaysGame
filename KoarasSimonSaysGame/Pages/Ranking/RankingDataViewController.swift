@@ -9,15 +9,13 @@
 import UIKit
 import Firebase
 
-class RankingDataViewController: UIViewController, UINavigationControllerDelegate {
+class RankingDataViewController: UIViewController {
     
     var presenter: RankingDataPresenterInput!
     
     @IBOutlet weak var garbageCanButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     private var nameAndScore: [[String]] = []
-    
-    var isWorldRanking = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,19 +38,23 @@ extension RankingDataViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nameAndScore.count
+        return presenter.numberOfNameAndScore()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rankingCell", for: indexPath) as! RankingCell
         
+        let nameAndScore = presenter.nameAndScore(forRow: indexPath.row)
+        
         cell.rankingNumberLabel.text = "\(indexPath.row + 1)位"
-        cell.rankingNameLabel.text = "\(nameAndScore[indexPath.row][0])"
-        cell.rankingScoreLabel.text = "\(nameAndScore[indexPath.row][1])点"
+        cell.rankingNameLabel.text = "\(nameAndScore[0])"
+        cell.rankingScoreLabel.text = "\(nameAndScore[1])点"
       
         return cell 
     }
-    
+}
+
+extension RankingDataViewController: UINavigationControllerDelegate {
     //navigationBarの戻るボタン押した時の処理
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         if viewController is ViewController {
@@ -60,7 +62,10 @@ extension RankingDataViewController: UITableViewDelegate, UITableViewDataSource 
             navigationController.navigationBar.isHidden = true
         }
     }
-    
+}
+
+extension RankingDataViewController {
+
     private func setupView() {
         // タイトルの文字の色設定
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(red: 89/225, green: 107/225, blue: 179/225, alpha: 1)]
@@ -81,14 +86,6 @@ extension RankingDataViewController: UITableViewDelegate, UITableViewDataSource 
         
         //navigationBarの戻るボタン押した時のイベントに必要
         navigationController?.delegate = self
-    }
-    
-    private func getUserDefaultsDatas() {
-               
-        if let savedname = UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] {
-            nameAndScore = savedname
-        }
-        tableView.reloadData()
     }
     
     //Firestoreにあるデータを取得する
@@ -159,6 +156,9 @@ extension RankingDataViewController: RankingDataOutput {
     
     func setupLocalRanking() {
         self.navigationItem.title = "ランキング"
-        getUserDefaultsDatas()
+    }
+    
+    func reloadTableView() {
+        tableView.reloadData()
     }
 }
