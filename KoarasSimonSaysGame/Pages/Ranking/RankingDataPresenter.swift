@@ -31,10 +31,12 @@ class RankingDataPresenter {
     var nameAndScore: [[String]] = []
         
     private weak var view: RankingDataOutput!
+    private let model: RankingModelProtocol
     
-    init(isWorldRanking: Bool, view: RankingDataOutput) {
+    init(isWorldRanking: Bool, view: RankingDataOutput, model: RankingModelProtocol) {
         self.isWorldRanking = isWorldRanking
         self.view = view
+        self.model = model
     }
 }
 
@@ -68,7 +70,7 @@ extension RankingDataPresenter: RankingDataPresenterInput {
     
     func didTapOkOnDeleteAll() {
         //OKボタン押されたらUserDefaltsのデータ削除
-        UserDefaults.standard.removeObject(forKey: "nameAndScore")
+        model.deleteToUserDefaultsDatas()
         //↑のだけだとボタン押した瞬間は画面に表示されたままのため↓で表示を消す
         nameAndScore.removeAll()
         view.reloadTableView()
