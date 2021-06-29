@@ -12,6 +12,7 @@ import Firebase
 protocol RankingModelProtocol {
     func saveToUserDefaults(name: String, score: Int)
     func seveToFirestore(name: String, score: Int)
+    func getToUserDefaultsDatas() -> [[String]]
     func deleteToUserDefaultsDatas()
 }
 
@@ -54,6 +55,10 @@ class RankingModel: RankingModelProtocol {
         }
     }
     
+    //UserDefaltsからデータ取得
+    func getToUserDefaultsDatas() -> [[String]] {
+        return UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] ?? [[]]
+    }
     //UserDefaltsのデータ削除
     func deleteToUserDefaultsDatas() {
         UserDefaults.standard.removeObject(forKey: "nameAndScore")

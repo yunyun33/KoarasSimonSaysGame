@@ -48,7 +48,7 @@ extension RankingDataPresenter: RankingDataPresenterInput {
 //            getFirestoreDatas()
         } else {
             view.setupLocalRanking()
-            getUserDefaultsDatas()
+            setUserDefaultsDatas()
         }
     }
     
@@ -79,10 +79,9 @@ extension RankingDataPresenter: RankingDataPresenterInput {
 
 extension RankingDataPresenter {
     
-    private func getUserDefaultsDatas() {
-        if let savedname = UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] {
-            nameAndScore = savedname
-        }
+    private func setUserDefaultsDatas() {
+        nameAndScore = model.getToUserDefaultsDatas()
+        
         view.reloadTableView()
     }
 }
