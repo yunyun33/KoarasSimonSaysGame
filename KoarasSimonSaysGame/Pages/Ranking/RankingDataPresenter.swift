@@ -90,8 +90,8 @@ extension RankingDataPresenter {
         model.getToFirestoreDatas(success: { (firestoreData) in
             DispatchQueue.main.async {
                 self.nameAndScore.append(firestoreData)
+                self.view.reloadTableView()
             }
         })
-        view.reloadTableView()
     }
 }

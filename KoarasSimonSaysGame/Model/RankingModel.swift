@@ -87,15 +87,9 @@ class RankingModel: RankingModelProtocol {
                 
                 let firestoreData: [String] = [rankingNameData, "\(totalScoreData)"]
                 success(firestoreData)
-                
             }
-            
-//                self.nameAndScore.append([rankingNameData, "\(totalScoreData)"])
         }
-        
-//            self.tableView.reloadData()
     }
-    
     
     //UserDefaltsのデータ削除
     func deleteToUserDefaultsDatas() {
