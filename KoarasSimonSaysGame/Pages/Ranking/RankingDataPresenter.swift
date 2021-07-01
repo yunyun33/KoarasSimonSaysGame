@@ -45,7 +45,8 @@ extension RankingDataPresenter: RankingDataPresenterInput {
     func viewDidLoad() {
         if isWorldRanking {
             view.setupWordRanking()
-//            getFirestoreDatas()
+            setFirestoreDatas()
+            
         } else {
             view.setupLocalRanking()
             setUserDefaultsDatas()
@@ -82,6 +83,15 @@ extension RankingDataPresenter {
     private func setUserDefaultsDatas() {
         nameAndScore = model.getToUserDefaultsDatas()
         
+        view.reloadTableView()
+    }
+    
+    private func setFirestoreDatas() {
+        model.getToFirestoreDatas(success: { (firestoreData) in
+            DispatchQueue.main.async {
+                self.nameAndScore.append(firestoreData)
+            }
+        })
         view.reloadTableView()
     }
 }

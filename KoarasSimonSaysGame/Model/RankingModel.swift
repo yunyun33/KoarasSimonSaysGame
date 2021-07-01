@@ -13,6 +13,7 @@ protocol RankingModelProtocol {
     func saveToUserDefaults(name: String, score: Int)
     func seveToFirestore(name: String, score: Int)
     func getToUserDefaultsDatas() -> [[String]]
+    func getToFirestoreDatas(success: @escaping (_ datas: [String]) -> Void)
     func deleteToUserDefaultsDatas()
 }
 
@@ -59,6 +60,43 @@ class RankingModel: RankingModelProtocol {
     func getToUserDefaultsDatas() -> [[String]] {
         return UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] ?? [[]]
     }
+    
+    //Firestoreからデータ取得
+    func getToFirestoreDatas(success: @escaping (_ datas: [String]) -> Void) {
+        
+        Firestore.firestore().collection("users").order(by: "totalScore", descending: true).getDocuments { (snaps, error) in
+            if let error = error {
+                fatalError("\(error)")
+            }
+            guard let snaps = snaps else { return }
+            for document in snaps.documents {
+                
+                let data = document.data()
+                
+                guard let rankingNameData:String = data["rankingName"] as? String else {
+                    print("rankingName is nil")
+                    return
+                }
+                guard let totalScoreData:Int = data["totalScore"] as? Int else {
+                    print("totalScore is nil")
+                    return
+                }
+                
+                print("Name: \(rankingNameData)")
+                print("Score: \(totalScoreData)")
+                
+                let firestoreData: [String] = [rankingNameData, "\(totalScoreData)"]
+                success(firestoreData)
+                
+            }
+            
+//                self.nameAndScore.append([rankingNameData, "\(totalScoreData)"])
+        }
+        
+//            self.tableView.reloadData()
+    }
+    
+    
     //UserDefaltsのデータ削除
     func deleteToUserDefaultsDatas() {
         UserDefaults.standard.removeObject(forKey: "nameAndScore")

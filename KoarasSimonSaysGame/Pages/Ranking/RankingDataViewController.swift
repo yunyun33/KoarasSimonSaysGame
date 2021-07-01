@@ -57,6 +57,7 @@ extension RankingDataViewController: UITableViewDelegate, UITableViewDataSource 
 extension RankingDataViewController: UINavigationControllerDelegate {
     //navigationBarの戻るボタン押した時の処理
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        
         if viewController is ViewController {
             //ホームでnavigationBarが出るのを防止
             navigationController.navigationBar.isHidden = true
@@ -87,46 +88,14 @@ extension RankingDataViewController {
         //navigationBarの戻るボタン押した時のイベントに必要
         navigationController?.delegate = self
     }
-    
-    //Firestoreにあるデータを取得する
-    private func getFirestoreDatas() {
-        
-        Firestore.firestore().collection("users").order(by: "totalScore", descending: true).getDocuments { (snaps, error) in
-            if let error = error {
-                fatalError("\(error)")
-            }
-            guard let snaps = snaps else { return }
-            for document in snaps.documents {
-
-                let data = document.data()
-                
-                guard let rankingNameData:String = data["rankingName"] as? String else {
-                    print("rankingName is nil")
-                    return
-                }
-                guard let totalScoreData:Int = data["totalScore"] as? Int else {
-                    print("totalScore is nil")
-                    return
-                }
-                
-                print("Name: \(rankingNameData)")
-                print("Score: \(totalScoreData)")
-                
-                self.nameAndScore.append([rankingNameData, "\(totalScoreData)"])
-            }
-            self.tableView.reloadData()
-        }
-    }
 }
 
 extension RankingDataViewController: RankingDataOutput {
     
-    //処理の動きを確認するため、一旦データ取得処理もここに書いておく
     func setupWordRanking() {
         self.navigationItem.title = "World Ranking"
         garbageCanButton.isHidden = true
         garbageCanButton.isEnabled = true
-        getFirestoreDatas()
     }
     
     func setupLocalRanking() {
