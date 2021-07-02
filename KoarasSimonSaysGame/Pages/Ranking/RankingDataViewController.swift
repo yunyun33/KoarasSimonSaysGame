@@ -15,7 +15,6 @@ class RankingDataViewController: UIViewController {
     
     @IBOutlet weak var garbageCanButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    private var nameAndScore: [[String]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
