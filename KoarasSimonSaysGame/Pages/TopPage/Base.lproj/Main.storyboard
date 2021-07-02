@@ -48,7 +48,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAq-mq-TCB">
-                                                        <rect key="frame" x="95.333333333333343" y="26" width="112.33333333333334" height="28"/>
+                                                        <rect key="frame" x="100.33333333333334" y="28.333333333333314" width="102.33333333333334" height="23.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -75,7 +75,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Al-eF-V56" userLabel="Ranking">
-                                                        <rect key="frame" x="108" y="26" width="83" height="28"/>
+                                                        <rect key="frame" x="113" y="28.333333333333371" width="73" height="23.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -102,7 +102,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0n-BI-nhw" userLabel="World Ranking">
-                                                        <rect key="frame" x="78.333333333333329" y="26" width="146.66666666666669" height="28"/>
+                                                        <rect key="frame" x="86.333333333333357" y="28.333333333333371" width="130.66666666666663" height="23.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -129,7 +129,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEi-i1-ps5" userLabel="Menu">
-                                                        <rect key="frame" x="122" y="26" width="55" height="28"/>
+                                                        <rect key="frame" x="124.33333333333336" y="28.333333333333371" width="50.666666666666671" height="23.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -175,75 +175,6 @@
             </objects>
             <point key="canvasLocation" x="1079.2" y="126.35467980295567"/>
         </scene>
-        <!--Ranking Date View Controller-->
-        <scene sceneID="Swf-h6-wqO">
-            <objects>
-                <viewController storyboardIdentifier="view5" id="bRS-je-zfM" customClass="RankingDateViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="b2j-dG-Thn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vx3-wP-zHP">
-                                <rect key="frame" x="15" y="124" width="345" height="584"/>
-                                <color key="backgroundColor" red="0.56470588239999997" green="0.83529411760000005" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="ABg-1D-0A3">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="345" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ABg-1D-0A3" id="MTc-wE-Upo">
-                                            <rect key="frame" x="0.0" y="0.0" width="345" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iau-Uj-hBw">
-                                <rect key="frame" x="280" y="718" width="45" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="IMQ-6S-s6J"/>
-                                    <constraint firstAttribute="width" constant="45" id="x07-dd-or0"/>
-                                </constraints>
-                                <state key="normal" title="Delete" image="garbageCan"/>
-                                <connections>
-                                    <action selector="onTapDelete:" destination="bRS-je-zfM" eventType="touchUpInside" id="tAt-hp-SyS"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rankingKoala" translatesAutoresizingMaskIntoConstraints="NO" id="orz-Gm-LmT">
-                                <rect key="frame" x="125" y="59" width="125" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="DgG-2R-GRk"/>
-                                    <constraint firstAttribute="height" constant="65" id="ET0-Gu-g1A"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="jtP-9R-NEO"/>
-                        <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Vx3-wP-zHP" firstAttribute="leading" secondItem="jtP-9R-NEO" secondAttribute="leading" constant="15" id="8nu-t5-XUe"/>
-                            <constraint firstItem="iau-Uj-hBw" firstAttribute="top" secondItem="Vx3-wP-zHP" secondAttribute="bottom" constant="10" id="DOl-AZ-FT6"/>
-                            <constraint firstItem="jtP-9R-NEO" firstAttribute="trailing" secondItem="iau-Uj-hBw" secondAttribute="trailing" constant="50" id="HtF-3J-yeS"/>
-                            <constraint firstItem="orz-Gm-LmT" firstAttribute="top" secondItem="jtP-9R-NEO" secondAttribute="top" constant="15" id="RGo-3D-Geq"/>
-                            <constraint firstItem="jtP-9R-NEO" firstAttribute="bottom" secondItem="Vx3-wP-zHP" secondAttribute="bottom" constant="70" id="SvQ-ed-e8t"/>
-                            <constraint firstItem="Vx3-wP-zHP" firstAttribute="top" secondItem="jtP-9R-NEO" secondAttribute="top" constant="80" id="fjy-nU-WNq"/>
-                            <constraint firstItem="jtP-9R-NEO" firstAttribute="trailing" secondItem="Vx3-wP-zHP" secondAttribute="trailing" constant="15" id="ksZ-ua-kv9"/>
-                            <constraint firstItem="orz-Gm-LmT" firstAttribute="centerX" secondItem="b2j-dG-Thn" secondAttribute="centerX" id="zWi-jx-rO3"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="garbageCanButton" destination="iau-Uj-hBw" id="kby-FX-HBh"/>
-                        <outlet property="tableView" destination="Vx3-wP-zHP" id="gdv-us-3Rl"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rrX-Pb-wKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4381.6000000000004" y="125.61576354679804"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="RW6-bq-TAo">
             <objects>
@@ -264,8 +195,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="garbageCan" width="506" height="567"/>
-        <image name="rankingKoala" width="374" height="184"/>
         <image name="title" width="650" height="385"/>
         <image name="topPageButton" width="566" height="234"/>
         <systemColor name="systemBackgroundColor">

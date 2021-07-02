@@ -17,8 +17,6 @@ class RegisterNameViewController: UIViewController {
     @IBOutlet weak var worldRankingSwith: UISwitch!
     @IBOutlet weak var joinTheWorldRankingLabel: UILabel!
     
-    var totalScore: Int = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
        

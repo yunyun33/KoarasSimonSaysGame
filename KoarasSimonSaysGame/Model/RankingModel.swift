@@ -12,6 +12,9 @@ import Firebase
 protocol RankingModelProtocol {
     func saveToUserDefaults(name: String, score: Int)
     func seveToFirestore(name: String, score: Int)
+    func getUserDefaultsDatas() -> [[String]]
+    func getFirestoreDatas(success: @escaping (_ datas: [[String]]) -> Void, failure: @escaping (Error) -> Void)
+    func deleteUserDefaultsDatas()
 }
 
 class RankingModel: RankingModelProtocol {
@@ -51,5 +54,50 @@ class RankingModel: RankingModelProtocol {
                 print("Document added with ID: \(ref!.documentID)")
             }
         }
+    }
+    
+    //UserDefaltsからデータ取得
+    func getUserDefaultsDatas() -> [[String]] {
+        return UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] ?? []
+    }
+    
+    //Firestoreからデータ取得
+    func getFirestoreDatas(success: @escaping (_ datas: [[String]]) -> Void, failure: @escaping (Error) -> Void) {
+        
+        Firestore.firestore().collection("users").order(by: "totalScore", descending: true).getDocuments { (snaps, error) in
+            if let error = error {
+                failure(error)
+            }
+            
+            guard let snaps = snaps else { return }
+            
+            var firestoreDatas: [[String]] = []
+            
+            for document in snaps.documents {
+                
+                let data = document.data()
+                
+                guard let rankingNameData:String = data["rankingName"] as? String else {
+                    print("rankingName is nil")
+                    return
+                }
+                guard let totalScoreData:Int = data["totalScore"] as? Int else {
+                    print("totalScore is nil")
+                    return
+                }
+                
+                print("Name: \(rankingNameData)")
+                print("Score: \(totalScoreData)")
+                
+                firestoreDatas.append([rankingNameData, "\(totalScoreData)"])
+            }
+            
+            success(firestoreDatas)
+        }
+    }
+    
+    //UserDefaltsのデータ削除
+    func deleteUserDefaultsDatas() {
+        UserDefaults.standard.removeObject(forKey: "nameAndScore")
     }
 }
