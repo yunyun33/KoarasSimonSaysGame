@@ -13,7 +13,7 @@ protocol RankingModelProtocol {
     func saveToUserDefaults(name: String, score: Int)
     func seveToFirestore(name: String, score: Int)
     func getUserDefaultsDatas() -> [[String]]
-    func getFirestoreDatas(success: @escaping (_ datas: [String]) -> Void, failure: @escaping (Error) -> Void)
+    func getFirestoreDatas(success: @escaping (_ datas: [[String]]) -> Void, failure: @escaping (Error) -> Void)
     func deleteUserDefaultsDatas()
 }
 
@@ -62,12 +62,14 @@ class RankingModel: RankingModelProtocol {
     }
     
     //Firestoreからデータ取得
-    func getFirestoreDatas(success: @escaping (_ datas: [String]) -> Void, failure: @escaping (Error) -> Void) {
+    func getFirestoreDatas(success: @escaping (_ datas: [[String]]) -> Void, failure: @escaping (Error) -> Void) {
         
         Firestore.firestore().collection("users").order(by: "totalScore", descending: true).getDocuments { (snaps, error) in
             if let error = error {
                 failure(error)
             }
+            
+            var firestoreDatas: [[String]] = []
             
             guard let snaps = snaps else { return }
             for document in snaps.documents {
@@ -86,9 +88,10 @@ class RankingModel: RankingModelProtocol {
                 print("Name: \(rankingNameData)")
                 print("Score: \(totalScoreData)")
                 
-                let firestoreData: [String] = [rankingNameData, "\(totalScoreData)"]
-                success(firestoreData)
+                firestoreDatas.append([rankingNameData, "\(totalScoreData)"])
             }
+            
+            success(firestoreDatas)
         }
     }
     
