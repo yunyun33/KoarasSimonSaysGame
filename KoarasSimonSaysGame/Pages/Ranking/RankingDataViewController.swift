@@ -94,7 +94,6 @@ extension RankingDataViewController: RankingDataOutput {
     func setupWordRanking() {
         self.navigationItem.title = "World Ranking"
         garbageCanButton.isHidden = true
-        garbageCanButton.isEnabled = true
     }
     
     func setupLocalRanking() {
