@@ -88,11 +88,9 @@ extension RankingDataPresenter {
     
     private func setFirestoreDatas() {
         model.getFirestoreDatas(success: { (firestoreDatas) in
-            DispatchQueue.main.async {
                 
-                self.nameAndScore = firestoreDatas
-                self.view.reloadTableView()
-            }
+            self.nameAndScore = firestoreDatas
+            self.view.reloadTableView()
             
         }, failure: { (Error) in
             print("Error!")

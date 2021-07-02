@@ -69,9 +69,10 @@ class RankingModel: RankingModelProtocol {
                 failure(error)
             }
             
+            guard let snaps = snaps else { return }
+            
             var firestoreDatas: [[String]] = []
             
-            guard let snaps = snaps else { return }
             for document in snaps.documents {
                 
                 let data = document.data()
