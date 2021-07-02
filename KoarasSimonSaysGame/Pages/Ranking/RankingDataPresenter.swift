@@ -71,7 +71,7 @@ extension RankingDataPresenter: RankingDataPresenterInput {
     
     func didTapOkOnDeleteAll() {
         //OKボタン押されたらUserDefaltsのデータ削除
-        model.deleteToUserDefaultsDatas()
+        model.deleteUserDefaultsDatas()
         //↑のだけだとボタン押した瞬間は画面に表示されたままのため↓で表示を消す
         nameAndScore.removeAll()
         view.reloadTableView()
@@ -81,13 +81,13 @@ extension RankingDataPresenter: RankingDataPresenterInput {
 extension RankingDataPresenter {
     
     private func setUserDefaultsDatas() {
-        nameAndScore = model.getToUserDefaultsDatas()
+        nameAndScore = model.getUserDefaultsDatas()
         
         view.reloadTableView()
     }
     
     private func setFirestoreDatas() {
-        model.getToFirestoreDatas(success: { (firestoreData) in
+        model.getFirestoreDatas(success: { (firestoreData) in
             DispatchQueue.main.async {
                 
                 self.nameAndScore.append(firestoreData)

@@ -12,9 +12,9 @@ import Firebase
 protocol RankingModelProtocol {
     func saveToUserDefaults(name: String, score: Int)
     func seveToFirestore(name: String, score: Int)
-    func getToUserDefaultsDatas() -> [[String]]
-    func getToFirestoreDatas(success: @escaping (_ datas: [String]) -> Void, failure: @escaping (Error) -> Void)
-    func deleteToUserDefaultsDatas()
+    func getUserDefaultsDatas() -> [[String]]
+    func getFirestoreDatas(success: @escaping (_ datas: [String]) -> Void, failure: @escaping (Error) -> Void)
+    func deleteUserDefaultsDatas()
 }
 
 class RankingModel: RankingModelProtocol {
@@ -57,12 +57,12 @@ class RankingModel: RankingModelProtocol {
     }
     
     //UserDefaltsからデータ取得
-    func getToUserDefaultsDatas() -> [[String]] {
+    func getUserDefaultsDatas() -> [[String]] {
         return UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] ?? []
     }
     
     //Firestoreからデータ取得
-    func getToFirestoreDatas(success: @escaping (_ datas: [String]) -> Void, failure: @escaping (Error) -> Void) {
+    func getFirestoreDatas(success: @escaping (_ datas: [String]) -> Void, failure: @escaping (Error) -> Void) {
         
         Firestore.firestore().collection("users").order(by: "totalScore", descending: true).getDocuments { (snaps, error) in
             if let error = error {
@@ -93,7 +93,7 @@ class RankingModel: RankingModelProtocol {
     }
     
     //UserDefaltsのデータ削除
-    func deleteToUserDefaultsDatas() {
+    func deleteUserDefaultsDatas() {
         UserDefaults.standard.removeObject(forKey: "nameAndScore")
     }
 }
