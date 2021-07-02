@@ -58,7 +58,7 @@ class RankingModel: RankingModelProtocol {
     
     //UserDefaltsからデータ取得
     func getToUserDefaultsDatas() -> [[String]] {
-        return UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] ?? [[]]
+        return UserDefaults.standard.array(forKey: "nameAndScore") as? [[String]] ?? []
     }
     
     //Firestoreからデータ取得
