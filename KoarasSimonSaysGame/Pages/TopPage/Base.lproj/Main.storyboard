@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uzv-2Y-VDv">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kazesawa-Extrabold.ttf">
+            <string>Kazesawa-Extrabold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="view1" id="BYZ-38-t0r" customClass="ViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNS-69-aBf">
+                                <rect key="frame" x="16" y="118" width="343" height="630"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="ZRT-T4-Lfb">
+                                        <rect key="frame" x="5" y="10" width="333" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="SW1-Xh-LZt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UfD-n9-NBM">
+                                        <rect key="frame" x="30" y="310" width="283" height="320"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuP-HS-46J">
+                                                <rect key="frame" x="0.0" y="0.0" width="283" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhd-ty-up3" userLabel="gameStartButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="283" height="80"/>
+                                                        <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="20"/>
+                                                        <state key="normal" image="topPageButton">
+                                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tHO-3i-jdr"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAq-mq-TCB">
+                                                        <rect key="frame" x="100.33333333333334" y="28.333333333333314" width="102.33333333333334" height="23.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="nhd-ty-up3" firstAttribute="leading" secondItem="AuP-HS-46J" secondAttribute="leading" id="4u3-sF-gzU"/>
+                                                    <constraint firstItem="nhd-ty-up3" firstAttribute="top" secondItem="AuP-HS-46J" secondAttribute="top" id="9Wh-El-FFh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="nhd-ty-up3" secondAttribute="bottom" id="E9E-HR-fDo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="nhd-ty-up3" secondAttribute="trailing" id="FFH-ir-9Sh"/>
+                                                    <constraint firstItem="eAq-mq-TCB" firstAttribute="centerY" secondItem="nhd-ty-up3" secondAttribute="centerY" id="Gqk-wM-BFG"/>
+                                                    <constraint firstItem="eAq-mq-TCB" firstAttribute="centerX" secondItem="nhd-ty-up3" secondAttribute="centerX" constant="10" id="TEP-So-Bof"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tu-UD-rC0">
+                                                <rect key="frame" x="0.0" y="80" width="283" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGj-G4-Qlt" userLabel="rankingButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="283" height="80"/>
+                                                        <state key="normal" image="topPageButton"/>
+                                                        <connections>
+                                                            <action selector="onTapRankingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahd-em-t1M"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Al-eF-V56" userLabel="Ranking">
+                                                        <rect key="frame" x="113" y="28.333333333333371" width="73" height="23.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="DGj-G4-Qlt" firstAttribute="leading" secondItem="1tu-UD-rC0" secondAttribute="leading" id="3i6-sd-lKP"/>
+                                                    <constraint firstItem="DGj-G4-Qlt" firstAttribute="top" secondItem="1tu-UD-rC0" secondAttribute="top" id="5nz-VY-F5o"/>
+                                                    <constraint firstAttribute="bottom" secondItem="DGj-G4-Qlt" secondAttribute="bottom" id="7aV-bO-YjE"/>
+                                                    <constraint firstItem="0Al-eF-V56" firstAttribute="centerY" secondItem="DGj-G4-Qlt" secondAttribute="centerY" id="T2b-hT-qxN"/>
+                                                    <constraint firstItem="0Al-eF-V56" firstAttribute="centerX" secondItem="DGj-G4-Qlt" secondAttribute="centerX" constant="8" id="Vvl-nO-Wf9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="DGj-G4-Qlt" secondAttribute="trailing" id="iuh-pC-Ig4"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F67-Qw-U50">
+                                                <rect key="frame" x="0.0" y="160" width="283" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrh-NX-2lo" userLabel="worldRankingButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="283" height="80"/>
+                                                        <state key="normal" image="topPageButton"/>
+                                                        <connections>
+                                                            <action selector="onTapWorldRankingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kfk-3N-rbw"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0n-BI-nhw" userLabel="World Ranking">
+                                                        <rect key="frame" x="86.333333333333357" y="28.333333333333371" width="130.66666666666663" height="23.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Yrh-NX-2lo" firstAttribute="leading" secondItem="F67-Qw-U50" secondAttribute="leading" id="CHI-Ey-cpS"/>
+                                                    <constraint firstItem="Yrh-NX-2lo" firstAttribute="top" secondItem="F67-Qw-U50" secondAttribute="top" id="NNf-z3-6hJ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Yrh-NX-2lo" secondAttribute="bottom" id="QQP-3M-BSJ"/>
+                                                    <constraint firstItem="V0n-BI-nhw" firstAttribute="centerY" secondItem="Yrh-NX-2lo" secondAttribute="centerY" id="myz-5J-wUf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Yrh-NX-2lo" secondAttribute="trailing" id="qox-kE-kb8"/>
+                                                    <constraint firstItem="V0n-BI-nhw" firstAttribute="centerX" secondItem="Yrh-NX-2lo" secondAttribute="centerX" constant="10" id="uxH-z3-zv6"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Amv-hU-IEg">
+                                                <rect key="frame" x="0.0" y="240" width="283" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVg-Pe-es2" userLabel="menuButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="283" height="80"/>
+                                                        <state key="normal" image="topPageButton"/>
+                                                        <connections>
+                                                            <action selector="onTapMenuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTU-AK-K23"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEi-i1-ps5" userLabel="Menu">
+                                                        <rect key="frame" x="124.33333333333336" y="28.333333333333371" width="50.666666666666671" height="23.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Kazesawa-Extrabold" family="Kazesawa" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="bVg-Pe-es2" secondAttribute="bottom" id="8un-I2-VtO"/>
+                                                    <constraint firstItem="cEi-i1-ps5" firstAttribute="centerX" secondItem="bVg-Pe-es2" secondAttribute="centerX" constant="8" id="Bu1-i1-AMe"/>
+                                                    <constraint firstItem="cEi-i1-ps5" firstAttribute="centerY" secondItem="bVg-Pe-es2" secondAttribute="centerY" id="Sm9-x7-HyC"/>
+                                                    <constraint firstItem="bVg-Pe-es2" firstAttribute="leading" secondItem="Amv-hU-IEg" secondAttribute="leading" id="mvU-Jn-q2v"/>
+                                                    <constraint firstItem="bVg-Pe-es2" firstAttribute="top" secondItem="Amv-hU-IEg" secondAttribute="top" id="o98-81-aeu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bVg-Pe-es2" secondAttribute="trailing" id="vNh-rY-GBA"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UfD-n9-NBM" firstAttribute="leading" secondItem="JNS-69-aBf" secondAttribute="leading" constant="30" id="8C9-n0-Rvg"/>
+                                    <constraint firstAttribute="bottom" secondItem="UfD-n9-NBM" secondAttribute="bottom" id="DHz-iC-NvV"/>
+                                    <constraint firstItem="ZRT-T4-Lfb" firstAttribute="centerX" secondItem="JNS-69-aBf" secondAttribute="centerX" id="Xx3-nW-FLu"/>
+                                    <constraint firstAttribute="trailing" secondItem="UfD-n9-NBM" secondAttribute="trailing" constant="30" id="ZaY-IM-sJQ"/>
+                                    <constraint firstItem="ZRT-T4-Lfb" firstAttribute="leading" secondItem="JNS-69-aBf" secondAttribute="leading" constant="5" id="aHc-fX-fx2"/>
+                                    <constraint firstItem="UfD-n9-NBM" firstAttribute="top" secondItem="ZRT-T4-Lfb" secondAttribute="bottom" id="cnE-p3-4SW"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZRT-T4-Lfb" secondAttribute="trailing" constant="5" id="cqV-Ql-rw5"/>
+                                    <constraint firstItem="ZRT-T4-Lfb" firstAttribute="top" secondItem="JNS-69-aBf" secondAttribute="top" constant="10" id="lDn-Am-Ddr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JNS-69-aBf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9pU-6V-PGu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JNS-69-aBf" secondAttribute="trailing" constant="16" id="FfC-ah-bqS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JNS-69-aBf" secondAttribute="bottom" constant="30" id="VcY-aQ-nDh"/>
+                            <constraint firstItem="JNS-69-aBf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="cGX-o7-JK1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="m1C-AE-Ill"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="126.35467980295567"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RW6-bq-TAo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uzv-2Y-VDv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HPq-lM-n2o">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="55x-Ku-Dpf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TwC-iB-1tP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="126.35467980295567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="title" width="650" height="385"/>
+        <image name="topPageButton" width="566" height="234"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kazesawa-Bold.ttf">
+            <string>Kazesawa-Bold</string>
+        </array>
+        <array key="Kazesawa-Regular.ttf">
+            <string>Kazesawa-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="uBl-p6-MTl">
+            <objects>
+                <viewController storyboardIdentifier="menuView" id="rwg-Ps-5k6" customClass="MenuViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K4y-dr-BO2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お問い合わせ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5x-CH-hBS">
+                                <rect key="frame" x="16" y="94" width="102" height="24"/>
+                                <fontDescription key="fontDescription" name="Kazesawa-Bold" family="Kazesawa" pointSize="17"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.41960784309999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="その他" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3Q-RK-BgO">
+                                <rect key="frame" x="16" y="203" width="51" height="24"/>
+                                <fontDescription key="fontDescription" name="Kazesawa-Bold" family="Kazesawa" pointSize="17"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.41960784309999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="関連アプリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhM-BG-KIC">
+                                <rect key="frame" x="16" y="312" width="82.5" height="24"/>
+                                <fontDescription key="fontDescription" name="Kazesawa-Bold" family="Kazesawa" pointSize="17"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.41960784309999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAg-BB-NEJ">
+                                <rect key="frame" x="16" y="123" width="382" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2n-11-ZPH">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                        <connections>
+                                            <action selector="onTapYunyun:" destination="rwg-Ps-5k6" eventType="touchUpInside" id="uhk-2e-949"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アプリ開発者へ連絡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRV-MK-gdc">
+                                        <rect key="frame" x="8" y="13" width="149.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="Kazesawa-Regular" family="Kazesawa" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.94117647059999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="hRV-MK-gdc" firstAttribute="centerY" secondItem="KAg-BB-NEJ" secondAttribute="centerY" id="C9r-xZ-qDa"/>
+                                    <constraint firstAttribute="height" constant="50" id="DPr-PF-hYo"/>
+                                    <constraint firstItem="hRV-MK-gdc" firstAttribute="leading" secondItem="KAg-BB-NEJ" secondAttribute="leading" constant="8" id="GWn-J2-PCG"/>
+                                    <constraint firstItem="m2n-11-ZPH" firstAttribute="leading" secondItem="KAg-BB-NEJ" secondAttribute="leading" id="W33-6R-z8A"/>
+                                    <constraint firstAttribute="bottom" secondItem="m2n-11-ZPH" secondAttribute="bottom" id="WjA-v9-dbR"/>
+                                    <constraint firstItem="m2n-11-ZPH" firstAttribute="top" secondItem="KAg-BB-NEJ" secondAttribute="top" id="gdG-F0-LdL"/>
+                                    <constraint firstAttribute="trailing" secondItem="m2n-11-ZPH" secondAttribute="trailing" id="kv7-Ti-xRL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIA-BC-6tH">
+                                <rect key="frame" x="16" y="232" width="382" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKO-EW-OS2">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                        <connections>
+                                            <action selector="onTapPrivacyPolicy:" destination="rwg-Ps-5k6" eventType="touchUpInside" id="cD3-KJ-GgK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プライバシーポリシー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1j-xl-Egt">
+                                        <rect key="frame" x="8" y="13" width="160.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="Kazesawa-Regular" family="Kazesawa" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.94117647059999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="AKO-EW-OS2" secondAttribute="bottom" id="JbG-VT-AFy"/>
+                                    <constraint firstItem="AKO-EW-OS2" firstAttribute="top" secondItem="CIA-BC-6tH" secondAttribute="top" id="OcD-m0-9qR"/>
+                                    <constraint firstItem="Q1j-xl-Egt" firstAttribute="centerY" secondItem="CIA-BC-6tH" secondAttribute="centerY" id="SP8-DS-Y1K"/>
+                                    <constraint firstAttribute="trailing" secondItem="AKO-EW-OS2" secondAttribute="trailing" id="hKU-jm-e1b"/>
+                                    <constraint firstItem="AKO-EW-OS2" firstAttribute="leading" secondItem="CIA-BC-6tH" secondAttribute="leading" id="naU-tT-hrE"/>
+                                    <constraint firstAttribute="height" constant="50" id="rZY-FB-DDi"/>
+                                    <constraint firstItem="Q1j-xl-Egt" firstAttribute="leading" secondItem="CIA-BC-6tH" secondAttribute="leading" constant="8" id="suN-Ma-b1t"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJU-FG-cGu">
+                                <rect key="frame" x="16" y="341" width="382" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCh-U6-qMj">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                        <connections>
+                                            <action selector="onTapNeetCheck:" destination="rwg-Ps-5k6" eventType="touchUpInside" id="ItZ-Ky-eG2"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コアラさんのニート診断" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP0-F8-u0t">
+                                        <rect key="frame" x="8" y="13" width="178.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="Kazesawa-Regular" family="Kazesawa" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.94117647059999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uCh-U6-qMj" secondAttribute="trailing" id="6Ta-JV-hqJ"/>
+                                    <constraint firstItem="QP0-F8-u0t" firstAttribute="leading" secondItem="bJU-FG-cGu" secondAttribute="leading" constant="8" id="DrV-pp-hv3"/>
+                                    <constraint firstAttribute="bottom" secondItem="uCh-U6-qMj" secondAttribute="bottom" id="Vu9-EV-f7x"/>
+                                    <constraint firstAttribute="height" constant="50" id="ds2-b2-SRi"/>
+                                    <constraint firstItem="uCh-U6-qMj" firstAttribute="top" secondItem="bJU-FG-cGu" secondAttribute="top" id="eKh-KH-eLo"/>
+                                    <constraint firstItem="uCh-U6-qMj" firstAttribute="leading" secondItem="bJU-FG-cGu" secondAttribute="leading" id="l1r-Lc-Jvw"/>
+                                    <constraint firstItem="QP0-F8-u0t" firstAttribute="centerY" secondItem="bJU-FG-cGu" secondAttribute="centerY" id="rif-6L-8C0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLO-Js-Bwu">
+                                <rect key="frame" x="16" y="394" width="382" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGP-Uv-ymN">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                        <connections>
+                                            <action selector="onTapOuchiCafe:" destination="rwg-Ps-5k6" eventType="touchUpInside" id="ok5-xA-brj"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コアラさんのおうちカフェ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iml-PM-cHg">
+                                        <rect key="frame" x="8" y="13" width="191" height="24"/>
+                                        <fontDescription key="fontDescription" name="Kazesawa-Regular" family="Kazesawa" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.94117647059999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="YGP-Uv-ymN" secondAttribute="bottom" id="GFn-8v-Kxb"/>
+                                    <constraint firstItem="Iml-PM-cHg" firstAttribute="centerY" secondItem="KLO-Js-Bwu" secondAttribute="centerY" id="IpK-Iu-lr4"/>
+                                    <constraint firstItem="Iml-PM-cHg" firstAttribute="leading" secondItem="KLO-Js-Bwu" secondAttribute="leading" constant="8" id="RY9-ec-vCK"/>
+                                    <constraint firstAttribute="trailing" secondItem="YGP-Uv-ymN" secondAttribute="trailing" id="WR4-vz-6iN"/>
+                                    <constraint firstAttribute="height" constant="50" id="dnr-Ra-Mcm"/>
+                                    <constraint firstItem="YGP-Uv-ymN" firstAttribute="leading" secondItem="KLO-Js-Bwu" secondAttribute="leading" id="ef0-gK-gdq"/>
+                                    <constraint firstItem="YGP-Uv-ymN" firstAttribute="top" secondItem="KLO-Js-Bwu" secondAttribute="top" id="yRc-Fo-g6U"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version 2.1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cft-k2-OHm">
+                                <rect key="frame" x="298.5" y="494" width="99.5" height="24"/>
+                                <fontDescription key="fontDescription" name="Kazesawa-Regular" family="Kazesawa" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="koalaMiniTitle" translatesAutoresizingMaskIntoConstraints="NO" id="naC-9B-Et5">
+                                <rect key="frame" x="20" y="762" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2P2-La-jRt"/>
+                                    <constraint firstAttribute="height" constant="80" id="v43-dW-wtf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0qe-yh-KtP"/>
+                        <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n5x-CH-hBS" firstAttribute="leading" secondItem="0qe-yh-KtP" secondAttribute="leading" constant="16" id="0i8-ap-LLG"/>
+                            <constraint firstItem="F3Q-RK-BgO" firstAttribute="top" secondItem="KAg-BB-NEJ" secondAttribute="bottom" constant="30" id="1rd-xL-MpN"/>
+                            <constraint firstItem="0qe-yh-KtP" firstAttribute="trailing" secondItem="KLO-Js-Bwu" secondAttribute="trailing" constant="16" id="6Mf-50-p42"/>
+                            <constraint firstItem="F3Q-RK-BgO" firstAttribute="leading" secondItem="0qe-yh-KtP" secondAttribute="leading" constant="16" id="DdV-EE-yDv"/>
+                            <constraint firstItem="CIA-BC-6tH" firstAttribute="leading" secondItem="0qe-yh-KtP" secondAttribute="leading" constant="16" id="I1b-WH-yrR"/>
+                            <constraint firstItem="Cft-k2-OHm" firstAttribute="top" secondItem="KLO-Js-Bwu" secondAttribute="bottom" constant="50" id="IbR-L1-Kkj"/>
+                            <constraint firstItem="n5x-CH-hBS" firstAttribute="top" secondItem="0qe-yh-KtP" secondAttribute="top" constant="50" id="Iw6-9g-QmE"/>
+                            <constraint firstItem="KAg-BB-NEJ" firstAttribute="top" secondItem="n5x-CH-hBS" secondAttribute="bottom" constant="5" id="TYO-MP-d9R"/>
+                            <constraint firstItem="bJU-FG-cGu" firstAttribute="leading" secondItem="0qe-yh-KtP" secondAttribute="leading" constant="16" id="YfT-nh-kLX"/>
+                            <constraint firstItem="KLO-Js-Bwu" firstAttribute="leading" secondItem="0qe-yh-KtP" secondAttribute="leading" constant="16" id="ZCj-qn-gEi"/>
+                            <constraint firstItem="0qe-yh-KtP" firstAttribute="trailing" secondItem="Cft-k2-OHm" secondAttribute="trailing" constant="16" id="ZGt-kN-eGv"/>
+                            <constraint firstItem="WhM-BG-KIC" firstAttribute="top" secondItem="CIA-BC-6tH" secondAttribute="bottom" constant="30" id="cEf-7d-o9g"/>
+                            <constraint firstItem="WhM-BG-KIC" firstAttribute="leading" secondItem="0qe-yh-KtP" secondAttribute="leading" constant="16" id="cWa-qj-7mf"/>
+                            <constraint firstItem="CIA-BC-6tH" firstAttribute="top" secondItem="F3Q-RK-BgO" secondAttribute="bottom" constant="5" id="cjJ-VR-ac3"/>
+                            <constraint firstItem="0qe-yh-KtP" firstAttribute="trailing" secondItem="CIA-BC-6tH" secondAttribute="trailing" constant="16" id="faI-AE-ris"/>
+                            <constraint firstItem="naC-9B-Et5" firstAttribute="leading" secondItem="0qe-yh-KtP" secondAttribute="leading" constant="20" id="h2T-M7-Vea"/>
+                            <constraint firstItem="KLO-Js-Bwu" firstAttribute="top" secondItem="bJU-FG-cGu" secondAttribute="bottom" constant="3" id="ht6-4g-qIw"/>
+                            <constraint firstItem="0qe-yh-KtP" firstAttribute="bottom" secondItem="naC-9B-Et5" secondAttribute="bottom" constant="20" id="rjw-Um-YwY"/>
+                            <constraint firstItem="0qe-yh-KtP" firstAttribute="trailing" secondItem="KAg-BB-NEJ" secondAttribute="trailing" constant="16" id="unb-dh-sd6"/>
+                            <constraint firstItem="bJU-FG-cGu" firstAttribute="top" secondItem="WhM-BG-KIC" secondAttribute="bottom" constant="5" id="xiW-ZL-cUt"/>
+                            <constraint firstItem="KAg-BB-NEJ" firstAttribute="leading" secondItem="0qe-yh-KtP" secondAttribute="leading" constant="16" id="y4E-jO-MFh"/>
+                            <constraint firstItem="0qe-yh-KtP" firstAttribute="trailing" secondItem="bJU-FG-cGu" secondAttribute="trailing" constant="16" id="yZq-pH-YJJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CeY-y5-m4r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="koalaMiniTitle" width="610" height="282"/>
+    </resources>
+</document>
