@@ -9,5 +9,5 @@
 - xcode 12.5 で開発
 - iOS Deployment Target 13.0
 
-## アナリティクス
+## データベース
 - [Firebase Firestore](https://firebase.google.com/docs/firestore?hl=ja) を使用しています。
