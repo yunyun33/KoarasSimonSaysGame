@@ -36,6 +36,47 @@
 		BAAED82D2679801000DF5647 /* RegisterNamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED82C2679801000DF5647 /* RegisterNamePresenter.swift */; };
 		BAAED82F267C183400DF5647 /* RankingData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED82E267C183400DF5647 /* RankingData.storyboard */; };
 		BAAED831267C1FA500DF5647 /* RankingDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED830267C1FA500DF5647 /* RankingDataPresenter.swift */; };
+		BAE5F5FB269D7A3500DBD2D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F68243C58C0000AB5F6 /* ViewController.swift */; };
+		BAE5F5FC269D7A3500DBD2D7 /* RankingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F9A244909C2000AB5F6 /* RankingDataViewController.swift */; };
+		BAE5F5FD269D7A3500DBD2D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F64243C58C0000AB5F6 /* AppDelegate.swift */; };
+		BAE5F5FE269D7A3500DBD2D7 /* RankingDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED830267C1FA500DF5647 /* RankingDataPresenter.swift */; };
+		BAE5F5FF269D7A3500DBD2D7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8102670574E00DF5647 /* MenuPresenter.swift */; };
+		BAE5F600269D7A3500DBD2D7 /* RegisterNamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED82C2679801000DF5647 /* RegisterNamePresenter.swift */; };
+		BAE5F601269D7A3500DBD2D7 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */; };
+		BAE5F602269D7A3500DBD2D7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */; };
+		BAE5F603269D7A3500DBD2D7 /* TotalScorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8272677284F00DF5647 /* TotalScorePresenter.swift */; };
+		BAE5F604269D7A3500DBD2D7 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED82A267977DB00DF5647 /* RankingModel.swift */; };
+		BAE5F605269D7A3500DBD2D7 /* PlayGamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED81E26718EFF00DF5647 /* PlayGamePresenter.swift */; };
+		BAE5F606269D7A3500DBD2D7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8202671DD1700DF5647 /* Enums.swift */; };
+		BAE5F607269D7A3500DBD2D7 /* CommonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8152670617100DF5647 /* CommonValue.swift */; };
+		BAE5F608269D7A3500DBD2D7 /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F94243C5AB4000AB5F6 /* PlayGameViewController.swift */; };
+		BAE5F609269D7A3500DBD2D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F66243C58C0000AB5F6 /* SceneDelegate.swift */; };
+		BAE5F60A269D7A3500DBD2D7 /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6862483E6460077D8AE /* RankingCell.swift */; };
+		BAE5F60B269D7A3500DBD2D7 /* TotalScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */; };
+		BAE5F60D269D7A3500DBD2D7 /* Pods_KoarasSimonSaysGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B00EB239F123FFC1F3115B6 /* Pods_KoarasSimonSaysGame.framework */; };
+		BAE5F60F269D7A3500DBD2D7 /* Kazesawa-Extrabold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69924919C970077D8AE /* Kazesawa-Extrabold.woff */; };
+		BAE5F610269D7A3500DBD2D7 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED80E2670422300DF5647 /* Menu.storyboard */; };
+		BAE5F611269D7A3500DBD2D7 /* Kazesawa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A124919C980077D8AE /* Kazesawa-Bold.ttf */; };
+		BAE5F612269D7A3500DBD2D7 /* Kazesawa-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69824919C970077D8AE /* Kazesawa-Regular.woff */; };
+		BAE5F613269D7A3500DBD2D7 /* Kazesawa-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A624919C980077D8AE /* Kazesawa-ExtraLight.ttf */; };
+		BAE5F614269D7A3500DBD2D7 /* TotalScore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED822267708ED00DF5647 /* TotalScore.storyboard */; };
+		BAE5F615269D7A3500DBD2D7 /* RankingData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED82E267C183400DF5647 /* RankingData.storyboard */; };
+		BAE5F616269D7A3500DBD2D7 /* Kazesawa-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69424919C970077D8AE /* Kazesawa-Bold.woff */; };
+		BAE5F617269D7A3500DBD2D7 /* PlayGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED81C267188F900DF5647 /* PlayGame.storyboard */; };
+		BAE5F618269D7A3500DBD2D7 /* Kazesawa-Semibold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */; };
+		BAE5F619269D7A3500DBD2D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA006F6F243C58C8000AB5F6 /* LaunchScreen.storyboard */; };
+		BAE5F61A269D7A3500DBD2D7 /* Kazesawa-ExtraLight.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A324919C980077D8AE /* Kazesawa-ExtraLight.woff */; };
+		BAE5F61B269D7A3500DBD2D7 /* Kazesawa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A524919C980077D8AE /* Kazesawa-Regular.ttf */; };
+		BAE5F61C269D7A3500DBD2D7 /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA6DA34D2560E27A00DD918F /* playBGM.mp3 */; };
+		BAE5F61D269D7A3500DBD2D7 /* Kazesawa-Extrabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69A24919C970077D8AE /* Kazesawa-Extrabold.ttf */; };
+		BAE5F61E269D7A3500DBD2D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA4C969B24B1984900226834 /* GoogleService-Info.plist */; };
+		BAE5F61F269D7A3500DBD2D7 /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6872483E6460077D8AE /* RankingCell.xib */; };
+		BAE5F620269D7A3500DBD2D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA006F6D243C58C8000AB5F6 /* Assets.xcassets */; };
+		BAE5F621269D7A3500DBD2D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA006F6A243C58C0000AB5F6 /* Main.storyboard */; };
+		BAE5F622269D7A3500DBD2D7 /* RegisterNameDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED825267724DE00DF5647 /* RegisterNameDialog.storyboard */; };
+		BAE5F623269D7A3500DBD2D7 /* Kazesawa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A824919C980077D8AE /* Kazesawa-Light.ttf */; };
+		BAE5F624269D7A3500DBD2D7 /* Kazesawa-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A224919C980077D8AE /* Kazesawa-Semibold.ttf */; };
+		BAE5F625269D7A3500DBD2D7 /* Kazesawa-Light.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A024919C980077D8AE /* Kazesawa-Light.woff */; };
 		BAE6E6882483E6460077D8AE /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6862483E6460077D8AE /* RankingCell.swift */; };
 		BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6872483E6460077D8AE /* RankingCell.xib */; };
 		BAE6E6A924919CF60077D8AE /* Kazesawa-Semibold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */; };
@@ -110,6 +151,7 @@
 		BAAED82C2679801000DF5647 /* RegisterNamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNamePresenter.swift; sourceTree = "<group>"; };
 		BAAED82E267C183400DF5647 /* RankingData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RankingData.storyboard; sourceTree = "<group>"; };
 		BAAED830267C1FA500DF5647 /* RankingDataPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDataPresenter.swift; sourceTree = "<group>"; };
+		BAE5F62A269D7A3500DBD2D7 /* KoarasSimonSaysGameDEVELOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoarasSimonSaysGameDEVELOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE6E6862483E6460077D8AE /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		BAE6E6872483E6460077D8AE /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
 		BAE6E69324919C970077D8AE /* Kazesawa-Semibold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Semibold.woff"; sourceTree = "<group>"; };
@@ -164,6 +206,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BAE5F60C269D7A3500DBD2D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE5F60D269D7A3500DBD2D7 /* Pods_KoarasSimonSaysGame.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -209,6 +259,7 @@
 				BA006F61243C58C0000AB5F6 /* 旗ふりゲーム.app */,
 				BA006F77243C58C8000AB5F6 /* KoarasSimonSaysGameTests.xctest */,
 				BA006F82243C58C8000AB5F6 /* KoarasSimonSaysGameUITests.xctest */,
+				BAE5F62A269D7A3500DBD2D7 /* KoarasSimonSaysGameDEVELOP.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -435,6 +486,25 @@
 			productReference = BA006F82243C58C8000AB5F6 /* KoarasSimonSaysGameUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		BAE5F5F8269D7A3500DBD2D7 /* KoarasSimonSaysGameDEVELOP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE5F627269D7A3500DBD2D7 /* Build configuration list for PBXNativeTarget "KoarasSimonSaysGameDEVELOP" */;
+			buildPhases = (
+				BAE5F5F9269D7A3500DBD2D7 /* [CP] Check Pods Manifest.lock */,
+				BAE5F5FA269D7A3500DBD2D7 /* Sources */,
+				BAE5F60C269D7A3500DBD2D7 /* Frameworks */,
+				BAE5F60E269D7A3500DBD2D7 /* Resources */,
+				BAE5F626269D7A3500DBD2D7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KoarasSimonSaysGameDEVELOP;
+			productName = KoarasSimonSaysGame;
+			productReference = BAE5F62A269D7A3500DBD2D7 /* KoarasSimonSaysGameDEVELOP.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -474,6 +544,7 @@
 				BA006F60243C58C0000AB5F6 /* KoarasSimonSaysGame */,
 				BA006F76243C58C8000AB5F6 /* KoarasSimonSaysGameTests */,
 				BA006F81243C58C8000AB5F6 /* KoarasSimonSaysGameUITests */,
+				BAE5F5F8269D7A3500DBD2D7 /* KoarasSimonSaysGameDEVELOP */,
 			);
 		};
 /* End PBXProject section */
@@ -523,6 +594,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BAE5F60E269D7A3500DBD2D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE5F60F269D7A3500DBD2D7 /* Kazesawa-Extrabold.woff in Resources */,
+				BAE5F610269D7A3500DBD2D7 /* Menu.storyboard in Resources */,
+				BAE5F611269D7A3500DBD2D7 /* Kazesawa-Bold.ttf in Resources */,
+				BAE5F612269D7A3500DBD2D7 /* Kazesawa-Regular.woff in Resources */,
+				BAE5F613269D7A3500DBD2D7 /* Kazesawa-ExtraLight.ttf in Resources */,
+				BAE5F614269D7A3500DBD2D7 /* TotalScore.storyboard in Resources */,
+				BAE5F615269D7A3500DBD2D7 /* RankingData.storyboard in Resources */,
+				BAE5F616269D7A3500DBD2D7 /* Kazesawa-Bold.woff in Resources */,
+				BAE5F617269D7A3500DBD2D7 /* PlayGame.storyboard in Resources */,
+				BAE5F618269D7A3500DBD2D7 /* Kazesawa-Semibold.woff in Resources */,
+				BAE5F619269D7A3500DBD2D7 /* LaunchScreen.storyboard in Resources */,
+				BAE5F61A269D7A3500DBD2D7 /* Kazesawa-ExtraLight.woff in Resources */,
+				BAE5F61B269D7A3500DBD2D7 /* Kazesawa-Regular.ttf in Resources */,
+				BAE5F61C269D7A3500DBD2D7 /* playBGM.mp3 in Resources */,
+				BAE5F61D269D7A3500DBD2D7 /* Kazesawa-Extrabold.ttf in Resources */,
+				BAE5F61E269D7A3500DBD2D7 /* GoogleService-Info.plist in Resources */,
+				BAE5F61F269D7A3500DBD2D7 /* RankingCell.xib in Resources */,
+				BAE5F620269D7A3500DBD2D7 /* Assets.xcassets in Resources */,
+				BAE5F621269D7A3500DBD2D7 /* Main.storyboard in Resources */,
+				BAE5F622269D7A3500DBD2D7 /* RegisterNameDialog.storyboard in Resources */,
+				BAE5F623269D7A3500DBD2D7 /* Kazesawa-Light.ttf in Resources */,
+				BAE5F624269D7A3500DBD2D7 /* Kazesawa-Semibold.ttf in Resources */,
+				BAE5F625269D7A3500DBD2D7 /* Kazesawa-Light.woff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -544,6 +645,45 @@
 			showEnvVarsInLog = 0;
 		};
 		71EF9DA4AAA0FE1B3634ABEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAE5F5F9269D7A3500DBD2D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoarasSimonSaysGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAE5F626269D7A3500DBD2D7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -666,6 +806,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA006F87243C58C8000AB5F6 /* KoarasSimonSaysGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE5F5FA269D7A3500DBD2D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE5F5FB269D7A3500DBD2D7 /* ViewController.swift in Sources */,
+				BAE5F5FC269D7A3500DBD2D7 /* RankingDataViewController.swift in Sources */,
+				BAE5F5FD269D7A3500DBD2D7 /* AppDelegate.swift in Sources */,
+				BAE5F5FE269D7A3500DBD2D7 /* RankingDataPresenter.swift in Sources */,
+				BAE5F5FF269D7A3500DBD2D7 /* MenuPresenter.swift in Sources */,
+				BAE5F600269D7A3500DBD2D7 /* RegisterNamePresenter.swift in Sources */,
+				BAE5F601269D7A3500DBD2D7 /* RegisterNameViewController.swift in Sources */,
+				BAE5F602269D7A3500DBD2D7 /* MenuViewController.swift in Sources */,
+				BAE5F603269D7A3500DBD2D7 /* TotalScorePresenter.swift in Sources */,
+				BAE5F604269D7A3500DBD2D7 /* RankingModel.swift in Sources */,
+				BAE5F605269D7A3500DBD2D7 /* PlayGamePresenter.swift in Sources */,
+				BAE5F606269D7A3500DBD2D7 /* Enums.swift in Sources */,
+				BAE5F607269D7A3500DBD2D7 /* CommonValue.swift in Sources */,
+				BAE5F608269D7A3500DBD2D7 /* PlayGameViewController.swift in Sources */,
+				BAE5F609269D7A3500DBD2D7 /* SceneDelegate.swift in Sources */,
+				BAE5F60A269D7A3500DBD2D7 /* RankingCell.swift in Sources */,
+				BAE5F60B269D7A3500DBD2D7 /* TotalScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,6 +991,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
+				DISPLAY_NAME = "旗ふりゲーム";
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -851,6 +1016,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
+				DISPLAY_NAME = "旗ふりゲーム";
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -954,6 +1120,56 @@
 			};
 			name = Release;
 		};
+		BAE5F628269D7A3500DBD2D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9509991A866A86400DB60E8 /* Pods-KoarasSimonSaysGame.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = P2SUKVPCW7;
+				DISPLAY_NAME = "旗ふりゲームDev";
+				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yui.KoalasSimonSaysGame-DEVELOP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGameDev;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAE5F629269D7A3500DBD2D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C55BF73379D4201C49FCD86 /* Pods-KoarasSimonSaysGame.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = P2SUKVPCW7;
+				DISPLAY_NAME = "旗ふりゲームDev";
+				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yui.KoalasSimonSaysGame-DEVELOP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGameDev;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -989,6 +1205,15 @@
 			buildConfigurations = (
 				BA006F92243C58C8000AB5F6 /* Debug */,
 				BA006F93243C58C8000AB5F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAE5F627269D7A3500DBD2D7 /* Build configuration list for PBXNativeTarget "KoarasSimonSaysGameDEVELOP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE5F628269D7A3500DBD2D7 /* Debug */,
+				BAE5F629269D7A3500DBD2D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
