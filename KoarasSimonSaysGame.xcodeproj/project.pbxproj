@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7740CD2F6FC62AFD52E2D2CF /* Pods_KoarasSimonSaysGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B00EB239F123FFC1F3115B6 /* Pods_KoarasSimonSaysGame.framework */; };
-		7AA09E793C1E69FA54FF5182 /* Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7401D42F88528EC6BD1AC /* Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests.framework */; };
+		7740CD2F6FC62AFD52E2D2CF /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		9C6BF8A0F0FA1E5F2AEFE6BD /* Pods_KoarasSimonSaysGameDEVELOP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315B47B2BB89778E85BBC860 /* Pods_KoarasSimonSaysGameDEVELOP.framework */; };
 		BA006F65243C58C0000AB5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F64243C58C0000AB5F6 /* AppDelegate.swift */; };
 		BA006F67243C58C0000AB5F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F66243C58C0000AB5F6 /* SceneDelegate.swift */; };
 		BA006F69243C58C0000AB5F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F68243C58C0000AB5F6 /* ViewController.swift */; };
@@ -21,6 +21,8 @@
 		BA006F972441D132000AB5F6 /* TotalScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */; };
 		BA006F992442FD74000AB5F6 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */; };
 		BA006F9B244909C2000AB5F6 /* RankingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F9A244909C2000AB5F6 /* RankingDataViewController.swift */; };
+		BA4254A426A081BC00DA876D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA4254A326A081BC00DA876D /* Settings.bundle */; };
+		BA4254A526A081E300DA876D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA4254A326A081BC00DA876D /* Settings.bundle */; };
 		BA4C969C24B1984900226834 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA4C969B24B1984900226834 /* GoogleService-Info.plist */; };
 		BA6DA34E2560E27B00DD918F /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA6DA34D2560E27A00DD918F /* playBGM.mp3 */; };
 		BAAED80F2670422300DF5647 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED80E2670422300DF5647 /* Menu.storyboard */; };
@@ -53,7 +55,6 @@
 		BAE5F609269D7A3500DBD2D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F66243C58C0000AB5F6 /* SceneDelegate.swift */; };
 		BAE5F60A269D7A3500DBD2D7 /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6862483E6460077D8AE /* RankingCell.swift */; };
 		BAE5F60B269D7A3500DBD2D7 /* TotalScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */; };
-		BAE5F60D269D7A3500DBD2D7 /* Pods_KoarasSimonSaysGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B00EB239F123FFC1F3115B6 /* Pods_KoarasSimonSaysGame.framework */; };
 		BAE5F60F269D7A3500DBD2D7 /* Kazesawa-Extrabold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E69924919C970077D8AE /* Kazesawa-Extrabold.woff */; };
 		BAE5F610269D7A3500DBD2D7 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED80E2670422300DF5647 /* Menu.storyboard */; };
 		BAE5F611269D7A3500DBD2D7 /* Kazesawa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A124919C980077D8AE /* Kazesawa-Bold.ttf */; };
@@ -92,7 +93,6 @@
 		BAE6E6B32492577D0077D8AE /* Kazesawa-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A624919C980077D8AE /* Kazesawa-ExtraLight.ttf */; };
 		BAE6E6B4249257810077D8AE /* Kazesawa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE6E6A824919C980077D8AE /* Kazesawa-Light.ttf */; };
 		BAE6E6BC249645BE0077D8AE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */; };
-		F5315BE8EC2B001F9D0E175A /* Pods_KoarasSimonSaysGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E462152CB272AA7677880C0F /* Pods_KoarasSimonSaysGameTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,11 +113,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		315B47B2BB89778E85BBC860 /* Pods_KoarasSimonSaysGameDEVELOP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoarasSimonSaysGameDEVELOP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C55BF73379D4201C49FCD86 /* Pods-KoarasSimonSaysGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGame.release.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame.release.xcconfig"; sourceTree = "<group>"; };
-		4689ABC772748B65294B4AAF /* Pods-KoarasSimonSaysGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGameTests.release.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGameTests/Pods-KoarasSimonSaysGameTests.release.xcconfig"; sourceTree = "<group>"; };
-		63D7401D42F88528EC6BD1AC /* Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85448FA6E0915390D1F886AF /* Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.debug.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8B00EB239F123FFC1F3115B6 /* Pods_KoarasSimonSaysGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoarasSimonSaysGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9355AA32FC6740B5658BE4E7 /* Pods-KoarasSimonSaysGameDEVELOP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGameDEVELOP.debug.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGameDEVELOP/Pods-KoarasSimonSaysGameDEVELOP.debug.xcconfig"; sourceTree = "<group>"; };
+		A2B6FA164AFF879D5629D244 /* Pods-KoarasSimonSaysGameDEVELOP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGameDEVELOP.release.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGameDEVELOP/Pods-KoarasSimonSaysGameDEVELOP.release.xcconfig"; sourceTree = "<group>"; };
 		BA006F61243C58C0000AB5F6 /* 旗ふりゲーム.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "旗ふりゲーム.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA006F64243C58C0000AB5F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA006F66243C58C0000AB5F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +135,7 @@
 		BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoreViewController.swift; sourceTree = "<group>"; };
 		BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
 		BA006F9A244909C2000AB5F6 /* RankingDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDataViewController.swift; sourceTree = "<group>"; };
+		BA4254A326A081BC00DA876D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BA4C969B24B1984900226834 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA6DA34D2560E27A00DD918F /* playBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBGM.mp3; sourceTree = "<group>"; };
 		BAAED80E2670422300DF5647 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
@@ -176,9 +176,6 @@
 		BAE6E6A824919C980077D8AE /* Kazesawa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Light.ttf"; sourceTree = "<group>"; };
 		BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C9509991A866A86400DB60E8 /* Pods-KoarasSimonSaysGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGame.debug.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame.debug.xcconfig"; sourceTree = "<group>"; };
-		D40AFFF5008F1CC641B8362E /* Pods-KoarasSimonSaysGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGameTests.debug.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGameTests/Pods-KoarasSimonSaysGameTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D9008B114CB1634877767252 /* Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.release.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E462152CB272AA7677880C0F /* Pods_KoarasSimonSaysGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoarasSimonSaysGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7740CD2F6FC62AFD52E2D2CF /* Pods_KoarasSimonSaysGame.framework in Frameworks */,
+				7740CD2F6FC62AFD52E2D2CF /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +191,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5315BE8EC2B001F9D0E175A /* Pods_KoarasSimonSaysGameTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +198,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AA09E793C1E69FA54FF5182 /* Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAE5F60D269D7A3500DBD2D7 /* Pods_KoarasSimonSaysGame.framework in Frameworks */,
+				9C6BF8A0F0FA1E5F2AEFE6BD /* Pods_KoarasSimonSaysGameDEVELOP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,9 +215,7 @@
 		055FA0CE8ECDED4D77DF98D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8B00EB239F123FFC1F3115B6 /* Pods_KoarasSimonSaysGame.framework */,
-				63D7401D42F88528EC6BD1AC /* Pods_KoarasSimonSaysGame_KoarasSimonSaysGameUITests.framework */,
-				E462152CB272AA7677880C0F /* Pods_KoarasSimonSaysGameTests.framework */,
+				315B47B2BB89778E85BBC860 /* Pods_KoarasSimonSaysGameDEVELOP.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,10 +225,8 @@
 			children = (
 				C9509991A866A86400DB60E8 /* Pods-KoarasSimonSaysGame.debug.xcconfig */,
 				3C55BF73379D4201C49FCD86 /* Pods-KoarasSimonSaysGame.release.xcconfig */,
-				85448FA6E0915390D1F886AF /* Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.debug.xcconfig */,
-				D9008B114CB1634877767252 /* Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.release.xcconfig */,
-				D40AFFF5008F1CC641B8362E /* Pods-KoarasSimonSaysGameTests.debug.xcconfig */,
-				4689ABC772748B65294B4AAF /* Pods-KoarasSimonSaysGameTests.release.xcconfig */,
+				9355AA32FC6740B5658BE4E7 /* Pods-KoarasSimonSaysGameDEVELOP.debug.xcconfig */,
+				A2B6FA164AFF879D5629D244 /* Pods-KoarasSimonSaysGameDEVELOP.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -243,6 +234,7 @@
 		BA006F58243C58C0000AB5F6 = {
 			isa = PBXGroup;
 			children = (
+				BA4254A326A081BC00DA876D /* Settings.bundle */,
 				BAE6E69224919C970077D8AE /* kazesawa */,
 				BA006F63243C58C0000AB5F6 /* KoarasSimonSaysGame */,
 				BA006F7A243C58C8000AB5F6 /* KoarasSimonSaysGameTests */,
@@ -437,6 +429,7 @@
 				BA006F5E243C58C0000AB5F6 /* Frameworks */,
 				BA006F5F243C58C0000AB5F6 /* Resources */,
 				71EF9DA4AAA0FE1B3634ABEE /* [CP] Embed Pods Frameworks */,
+				BA4254A1269F15FC00DA876D /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -451,7 +444,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA006F8E243C58C8000AB5F6 /* Build configuration list for PBXNativeTarget "KoarasSimonSaysGameTests" */;
 			buildPhases = (
-				F251AA040F6CFDFC075949F7 /* [CP] Check Pods Manifest.lock */,
 				BA006F73243C58C8000AB5F6 /* Sources */,
 				BA006F74243C58C8000AB5F6 /* Frameworks */,
 				BA006F75243C58C8000AB5F6 /* Resources */,
@@ -470,11 +462,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA006F91243C58C8000AB5F6 /* Build configuration list for PBXNativeTarget "KoarasSimonSaysGameUITests" */;
 			buildPhases = (
-				DE89FA0B5014879C830A3F40 /* [CP] Check Pods Manifest.lock */,
 				BA006F7E243C58C8000AB5F6 /* Sources */,
 				BA006F7F243C58C8000AB5F6 /* Frameworks */,
 				BA006F80243C58C8000AB5F6 /* Resources */,
-				3524DB9D0402631B780A93E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -495,6 +485,7 @@
 				BAE5F60C269D7A3500DBD2D7 /* Frameworks */,
 				BAE5F60E269D7A3500DBD2D7 /* Resources */,
 				BAE5F626269D7A3500DBD2D7 /* [CP] Embed Pods Frameworks */,
+				BA4254A2269FFE8400DA876D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -570,6 +561,7 @@
 				BA6DA34E2560E27B00DD918F /* playBGM.mp3 in Resources */,
 				BAE6E6AF249257680077D8AE /* Kazesawa-Extrabold.ttf in Resources */,
 				BA4C969C24B1984900226834 /* GoogleService-Info.plist in Resources */,
+				BA4254A426A081BC00DA876D /* Settings.bundle in Resources */,
 				BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */,
 				BA006F6E243C58C8000AB5F6 /* Assets.xcassets in Resources */,
 				BA006F6C243C58C0000AB5F6 /* Main.storyboard in Resources */,
@@ -614,6 +606,7 @@
 				BAE5F61C269D7A3500DBD2D7 /* playBGM.mp3 in Resources */,
 				BAE5F61D269D7A3500DBD2D7 /* Kazesawa-Extrabold.ttf in Resources */,
 				BAE5F61E269D7A3500DBD2D7 /* GoogleService-Info.plist in Resources */,
+				BA4254A526A081E300DA876D /* Settings.bundle in Resources */,
 				BAE5F61F269D7A3500DBD2D7 /* RankingCell.xib in Resources */,
 				BAE5F620269D7A3500DBD2D7 /* Assets.xcassets in Resources */,
 				BAE5F621269D7A3500DBD2D7 /* Main.storyboard in Resources */,
@@ -627,23 +620,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3524DB9D0402631B780A93E6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		71EF9DA4AAA0FE1B3634ABEE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -661,6 +637,41 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BA4254A1269F15FC00DA876D /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ $CONFIGURATION = \"Debug\" ]; then\n    ${PODS_ROOT}/LicensePlist/license-plist --output-path $PROJECT_NAME/Settings.bundle\nfi\n";
+		};
+		BA4254A2269FFE8400DA876D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n    ${PODS_ROOT}/LicensePlist/license-plist --output-path $PRODUCT_NAME/Settings.bundle\nfi\n";
+		};
 		BAE5F5F9269D7A3500DBD2D7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -676,7 +687,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KoarasSimonSaysGame-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-KoarasSimonSaysGameDEVELOP-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -689,15 +700,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGameDEVELOP/Pods-KoarasSimonSaysGameDEVELOP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGameDEVELOP/Pods-KoarasSimonSaysGameDEVELOP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGameDEVELOP/Pods-KoarasSimonSaysGameDEVELOP-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE7821B0C3F240E644705EE5 /* [CP] Check Pods Manifest.lock */ = {
@@ -716,50 +727,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-KoarasSimonSaysGame-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE89FA0B5014879C830A3F40 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F251AA040F6CFDFC075949F7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KoarasSimonSaysGameTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1034,7 +1001,6 @@
 		};
 		BA006F8F243C58C8000AB5F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D40AFFF5008F1CC641B8362E /* Pods-KoarasSimonSaysGameTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1057,7 +1023,6 @@
 		};
 		BA006F90243C58C8000AB5F6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4689ABC772748B65294B4AAF /* Pods-KoarasSimonSaysGameTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1080,7 +1045,6 @@
 		};
 		BA006F92243C58C8000AB5F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85448FA6E0915390D1F886AF /* Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1101,7 +1065,6 @@
 		};
 		BA006F93243C58C8000AB5F6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9008B114CB1634877767252 /* Pods-KoarasSimonSaysGame-KoarasSimonSaysGameUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1122,7 +1085,7 @@
 		};
 		BAE5F628269D7A3500DBD2D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9509991A866A86400DB60E8 /* Pods-KoarasSimonSaysGame.debug.xcconfig */;
+			baseConfigurationReference = 9355AA32FC6740B5658BE4E7 /* Pods-KoarasSimonSaysGameDEVELOP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1147,7 +1110,7 @@
 		};
 		BAE5F629269D7A3500DBD2D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C55BF73379D4201C49FCD86 /* Pods-KoarasSimonSaysGame.release.xcconfig */;
+			baseConfigurationReference = A2B6FA164AFF879D5629D244 /* Pods-KoarasSimonSaysGameDEVELOP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
