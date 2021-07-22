@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16D9B38106642D5F0DA83FAB /* Pods_KoarasSimonSaysGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD66A40F10C427B82C914E40 /* Pods_KoarasSimonSaysGame.framework */; };
 		7740CD2F6FC62AFD52E2D2CF /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		9C6BF8A0F0FA1E5F2AEFE6BD /* Pods_KoarasSimonSaysGameDEVELOP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315B47B2BB89778E85BBC860 /* Pods_KoarasSimonSaysGameDEVELOP.framework */; };
 		BA006F65243C58C0000AB5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F64243C58C0000AB5F6 /* AppDelegate.swift */; };
@@ -23,6 +24,8 @@
 		BA006F9B244909C2000AB5F6 /* RankingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F9A244909C2000AB5F6 /* RankingDataViewController.swift */; };
 		BA4254A426A081BC00DA876D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA4254A326A081BC00DA876D /* Settings.bundle */; };
 		BA4254A526A081E300DA876D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA4254A326A081BC00DA876D /* Settings.bundle */; };
+		BA4254A726A289E400DA876D /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4254A626A289E400DA876D /* AnalyticsManager.swift */; };
+		BA4254A826A289E400DA876D /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4254A626A289E400DA876D /* AnalyticsManager.swift */; };
 		BA4C969C24B1984900226834 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA4C969B24B1984900226834 /* GoogleService-Info.plist */; };
 		BA6DA34E2560E27B00DD918F /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA6DA34D2560E27A00DD918F /* playBGM.mp3 */; };
 		BAAED80F2670422300DF5647 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED80E2670422300DF5647 /* Menu.storyboard */; };
@@ -136,6 +139,7 @@
 		BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
 		BA006F9A244909C2000AB5F6 /* RankingDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDataViewController.swift; sourceTree = "<group>"; };
 		BA4254A326A081BC00DA876D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		BA4254A626A289E400DA876D /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		BA4C969B24B1984900226834 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA6DA34D2560E27A00DD918F /* playBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBGM.mp3; sourceTree = "<group>"; };
 		BAAED80E2670422300DF5647 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 		BAE6E6A824919C980077D8AE /* Kazesawa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kazesawa-Light.ttf"; sourceTree = "<group>"; };
 		BAE6E6BB249645BE0077D8AE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C9509991A866A86400DB60E8 /* Pods-KoarasSimonSaysGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGame.debug.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame.debug.xcconfig"; sourceTree = "<group>"; };
+		FD66A40F10C427B82C914E40 /* Pods_KoarasSimonSaysGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoarasSimonSaysGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7740CD2F6FC62AFD52E2D2CF /* (null) in Frameworks */,
+				16D9B38106642D5F0DA83FAB /* Pods_KoarasSimonSaysGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				315B47B2BB89778E85BBC860 /* Pods_KoarasSimonSaysGameDEVELOP.framework */,
+				FD66A40F10C427B82C914E40 /* Pods_KoarasSimonSaysGame.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -268,6 +275,7 @@
 				BA006F6F243C58C8000AB5F6 /* LaunchScreen.storyboard */,
 				BA006F72243C58C8000AB5F6 /* Info.plist */,
 				BA4C969B24B1984900226834 /* GoogleService-Info.plist */,
+				BA4254A626A289E400DA876D /* AnalyticsManager.swift */,
 			);
 			path = KoarasSimonSaysGame;
 			sourceTree = "<group>";
@@ -740,6 +748,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4254A726A289E400DA876D /* AnalyticsManager.swift in Sources */,
 				BA006F69243C58C0000AB5F6 /* ViewController.swift in Sources */,
 				BA006F9B244909C2000AB5F6 /* RankingDataViewController.swift in Sources */,
 				BA006F65243C58C0000AB5F6 /* AppDelegate.swift in Sources */,
@@ -780,6 +789,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4254A826A289E400DA876D /* AnalyticsManager.swift in Sources */,
 				BAE5F5FB269D7A3500DBD2D7 /* ViewController.swift in Sources */,
 				BAE5F5FC269D7A3500DBD2D7 /* RankingDataViewController.swift in Sources */,
 				BAE5F5FD269D7A3500DBD2D7 /* AppDelegate.swift in Sources */,
