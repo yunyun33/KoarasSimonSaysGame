@@ -19,7 +19,7 @@
         <!--Menu View Controller-->
         <scene sceneID="uBl-p6-MTl">
             <objects>
-                <viewController storyboardIdentifier="menuView" id="rwg-Ps-5k6" customClass="MenuViewController" customModule="旗ふりゲーム" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menuView" id="rwg-Ps-5k6" customClass="MenuViewController" customModule="KoarasSimonSaysGameDEVELOP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K4y-dr-BO2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,7 +150,7 @@
                                     <constraint firstItem="YGP-Uv-ymN" firstAttribute="top" secondItem="KLO-Js-Bwu" secondAttribute="top" id="yRc-Fo-g6U"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version 2.1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cft-k2-OHm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version 2.1.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cft-k2-OHm">
                                 <rect key="frame" x="298.5" y="494" width="99.5" height="24"/>
                                 <fontDescription key="fontDescription" name="Kazesawa-Regular" family="Kazesawa" pointSize="17"/>
                                 <nil key="textColor"/>
