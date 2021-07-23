@@ -13,6 +13,9 @@
 ## データベース
 - ゲーム得点の世界ランキングにおいて[Firebase Firestore](https://firebase.google.com/docs/firestore?hl=ja) を使用しています。
 
+## アナリティクス
+- [Firebase Analytics](https://firebase.google.com/docs/analytics?hl=ja)を使用しています。
+
 ## アーキテクチャ
 - MVPを採用しています。
 
