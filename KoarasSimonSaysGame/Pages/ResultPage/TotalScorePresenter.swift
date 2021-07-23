@@ -54,6 +54,9 @@ class TotalScorePresenter: TotalScorePresenterInput {
         } else if totalScore >= 0 {
             view.showKoalasMessage(message: CommonValue.resultMessegeSleep)
         }
+        
+        // 診断結果の表示イベントを、パーセントのパラメータとともにロギングする
+        AnalyticsManager.logShowResultEvent(with: totalScore)
     }
     
     func didTapRegisterNameButton() {
