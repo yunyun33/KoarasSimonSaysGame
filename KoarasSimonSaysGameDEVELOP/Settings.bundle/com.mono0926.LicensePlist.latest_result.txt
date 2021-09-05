@@ -84,6 +84,26 @@ body:
                    …
 version: 1.4.0
 
+name: FirebaseInstanceID, nameSpecified: 
+body: 
+                   …
+version: 4.4.0
+
+name: FirebaseInstanceID, nameSpecified: 
+body: 
+                   …
+version: 4.4.0
+
+name: FirebaseMessaging, nameSpecified: 
+body: 
+                   …
+version: 4.5.0
+
+name: FirebaseMessaging, nameSpecified: 
+body: 
+                   …
+version: 4.5.0
+
 name: GoogleAppMeasurement, nameSpecified: 
 body: Copyright 2020 Googl…
 version: 6.6.1
@@ -179,6 +199,14 @@ name: PromisesObjC, nameSpecified:
 body: 
                    …
 version: 1.2.9
+
+name: Protobuf, nameSpecified: 
+body: Copyright 2008 Googl…
+version: 3.17.0
+
+name: Protobuf, nameSpecified: 
+body: Copyright 2008 Googl…
+version: 3.17.0
 
 add-version-numbers: false
 

@@ -6,6 +6,7 @@
    pod 'Firebase/Firestore'
    pod 'Firebase/Database'
    pod 'Firebase/Analytics'
+   pod 'Firebase/Messaging'
    pod 'LicensePlist'
  end
 

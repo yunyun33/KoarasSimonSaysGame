@@ -22,6 +22,7 @@
 		BA006F972441D132000AB5F6 /* TotalScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */; };
 		BA006F992442FD74000AB5F6 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */; };
 		BA006F9B244909C2000AB5F6 /* RankingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F9A244909C2000AB5F6 /* RankingDataViewController.swift */; };
+		BA33D70326E3342000BC1A3F /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA33D70226E3342000BC1A3F /* GoogleService-Info-Dev.plist */; };
 		BA4254A426A081BC00DA876D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA4254A326A081BC00DA876D /* Settings.bundle */; };
 		BA4254A526A081E300DA876D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA4254A326A081BC00DA876D /* Settings.bundle */; };
 		BA4254A726A289E400DA876D /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4254A626A289E400DA876D /* AnalyticsManager.swift */; };
@@ -138,6 +139,9 @@
 		BA006F962441D131000AB5F6 /* TotalScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoreViewController.swift; sourceTree = "<group>"; };
 		BA006F982442FD73000AB5F6 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
 		BA006F9A244909C2000AB5F6 /* RankingDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDataViewController.swift; sourceTree = "<group>"; };
+		BA33D70026D66B9700BC1A3F /* KoarasSimonSaysGameDEVELOP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = KoarasSimonSaysGameDEVELOP.entitlements; path = KoarasSimonSaysGameDEVELOP/KoarasSimonSaysGameDEVELOP.entitlements; sourceTree = "<group>"; };
+		BA33D70126D6783700BC1A3F /* 旗ふりゲーム.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "旗ふりゲーム.entitlements"; sourceTree = "<group>"; };
+		BA33D70226E3342000BC1A3F /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
 		BA4254A326A081BC00DA876D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BA4254A626A289E400DA876D /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		BA4C969B24B1984900226834 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -241,6 +245,7 @@
 		BA006F58243C58C0000AB5F6 = {
 			isa = PBXGroup;
 			children = (
+				BA33D70026D66B9700BC1A3F /* KoarasSimonSaysGameDEVELOP.entitlements */,
 				BA4254A326A081BC00DA876D /* Settings.bundle */,
 				BAE6E69224919C970077D8AE /* kazesawa */,
 				BA006F63243C58C0000AB5F6 /* KoarasSimonSaysGame */,
@@ -266,6 +271,7 @@
 		BA006F63243C58C0000AB5F6 /* KoarasSimonSaysGame */ = {
 			isa = PBXGroup;
 			children = (
+				BA33D70126D6783700BC1A3F /* 旗ふりゲーム.entitlements */,
 				BAAED829267977AF00DF5647 /* Model */,
 				BAAED80826703F9F00DF5647 /* Pages */,
 				BA006F64243C58C0000AB5F6 /* AppDelegate.swift */,
@@ -275,6 +281,7 @@
 				BA006F6F243C58C8000AB5F6 /* LaunchScreen.storyboard */,
 				BA006F72243C58C8000AB5F6 /* Info.plist */,
 				BA4C969B24B1984900226834 /* GoogleService-Info.plist */,
+				BA33D70226E3342000BC1A3F /* GoogleService-Info-Dev.plist */,
 				BA4254A626A289E400DA876D /* AnalyticsManager.swift */,
 			);
 			path = KoarasSimonSaysGame;
@@ -438,6 +445,7 @@
 				BA006F5F243C58C0000AB5F6 /* Resources */,
 				71EF9DA4AAA0FE1B3634ABEE /* [CP] Embed Pods Frameworks */,
 				BA4254A1269F15FC00DA876D /* Run Script */,
+				BA33D70526E3CEA000BC1A3F /* Copy GoogleService-info.plist */,
 			);
 			buildRules = (
 			);
@@ -494,6 +502,7 @@
 				BAE5F60E269D7A3500DBD2D7 /* Resources */,
 				BAE5F626269D7A3500DBD2D7 /* [CP] Embed Pods Frameworks */,
 				BA4254A2269FFE8400DA876D /* ShellScript */,
+				BA33D70426E3CDFF00BC1A3F /* Copy GoogleService-info.plist */,
 			);
 			buildRules = (
 			);
@@ -608,6 +617,7 @@
 				BAE5F616269D7A3500DBD2D7 /* Kazesawa-Bold.woff in Resources */,
 				BAE5F617269D7A3500DBD2D7 /* PlayGame.storyboard in Resources */,
 				BAE5F618269D7A3500DBD2D7 /* Kazesawa-Semibold.woff in Resources */,
+				BA33D70326E3342000BC1A3F /* GoogleService-Info-Dev.plist in Resources */,
 				BAE5F619269D7A3500DBD2D7 /* LaunchScreen.storyboard in Resources */,
 				BAE5F61A269D7A3500DBD2D7 /* Kazesawa-ExtraLight.woff in Resources */,
 				BAE5F61B269D7A3500DBD2D7 /* Kazesawa-Regular.ttf in Resources */,
@@ -644,6 +654,42 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoarasSimonSaysGame/Pods-KoarasSimonSaysGame-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		BA33D70426E3CDFF00BC1A3F /* Copy GoogleService-info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy GoogleService-info.plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp \"${PROJECT_DIR}/KoarasSimonSaysGame/GoogleService-Info-Dev.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"dev GoogleService-Info.plist copied.\"\n";
+		};
+		BA33D70526E3CEA000BC1A3F /* Copy GoogleService-info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy GoogleService-info.plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp \"${PROJECT_DIR}/KoarasSimonSaysGame/GoogleService-Info.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"prod GoogleService-Info.plist copied.\"\n";
 		};
 		BA4254A1269F15FC00DA876D /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -964,7 +1010,8 @@
 			baseConfigurationReference = C9509991A866A86400DB60E8 /* Pods-KoarasSimonSaysGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = "KoarasSimonSaysGame/旗ふりゲーム.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
@@ -978,7 +1025,7 @@
 				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yui.KoalasSimonSaysGame;
 				PRODUCT_NAME = "旗ふりゲーム";
-				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGame;
+				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGame_debug;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -989,6 +1036,7 @@
 			baseConfigurationReference = 3C55BF73379D4201C49FCD86 /* Pods-KoarasSimonSaysGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "KoarasSimonSaysGame/旗ふりゲーム.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4;
@@ -1098,6 +1146,7 @@
 			baseConfigurationReference = 9355AA32FC6740B5658BE4E7 /* Pods-KoarasSimonSaysGameDEVELOP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KoarasSimonSaysGameDEVELOP/KoarasSimonSaysGameDEVELOP.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4;
@@ -1123,6 +1172,7 @@
 			baseConfigurationReference = A2B6FA164AFF879D5629D244 /* Pods-KoarasSimonSaysGameDEVELOP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KoarasSimonSaysGameDEVELOP/KoarasSimonSaysGameDEVELOP.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4;

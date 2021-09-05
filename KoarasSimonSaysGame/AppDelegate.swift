@@ -8,17 +8,42 @@
 
 import UIKit
 import Firebase
+import FirebaseMessaging
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         sleep(1)
+        
+        // デリゲートになる目的は、FCM tokenが生成された時に取得できるようにするため
+        Messaging.messaging().delegate = self
+        
+        // プッシュ通知(リモート通知にアプリを登録する)
+        // フォアグラウンドで通知がきた時のハンドリングをするため
+        UNUserNotificationCenter.current().delegate = self
+        
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        
+        // プッシュ通知が届いた時に、ユーザーアラート、バッチ、サウンドをもってお知らせがきたことの許可をリクエストする
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: authOptions,
+            completionHandler: { _, _ in }
+        )
+        
+        // APNsサーバーもdevice idを要求する
+        application.registerForRemoteNotifications()
+        
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+           print("APNsにプッシュ通知の登録が成功しました。")
+           
+           let tokenStr = deviceToken.map { String(format: "%.2hhx", $0) }.joined()
+           print("deviceToken: \(tokenStr)")
     }
 
     // MARK: UISceneSession Lifecycle
@@ -37,6 +62,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
 }
 
+extension AppDelegate: MessagingDelegate {
+    
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+      print("Firebase registration token: \(String(describing: fcmToken))")
+
+      let dataDict: [String: String] = ["token": fcmToken ?? ""]
+      NotificationCenter.default.post(
+        name: Notification.Name("FCMToken"),
+        object: nil,
+        userInfo: dataDict
+      )
+      // TODO: If necessary send token to application server.
+      // Note: This callback is fired at each app startup and whenever a new token is generated.
+    }
+}

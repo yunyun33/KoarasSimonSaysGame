@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>64001972040-ja55s6lk0vu7sun9g1bgab3c24hvuqlc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.64001972040-ja55s6lk0vu7sun9g1bgab3c24hvuqlc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA26vuyoVmhWC9xPC_5p9jxA1VKE_mNuq4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>64001972040</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.yui.KoalasSimonSaysGame</string>
+	<key>PROJECT_ID</key>
+	<string>koalassimonsaysgame</string>
+	<key>STORAGE_BUCKET</key>
+	<string>koalassimonsaysgame.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:64001972040:ios:39f37647df8f062bb3457d</string>
+	<key>DATABASE_URL</key>
+	<string>https://koalassimonsaysgame.firebaseio.com</string>
+</dict>
+</plist>
