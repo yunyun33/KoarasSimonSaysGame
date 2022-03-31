@@ -11,6 +11,8 @@ import SafariServices
 
 class MenuViewController: UIViewController, UINavigationControllerDelegate {
     
+    @IBOutlet weak var versionLabel: UILabel!
+    
     private var presenter: MenuPresenterInput!
 
     override func viewDidLoad() {
@@ -28,6 +30,10 @@ class MenuViewController: UIViewController, UINavigationControllerDelegate {
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         // ナビゲーションバーの影画像（境界線の画像）を空に設定
         self.navigationController!.navigationBar.shadowImage = UIImage()
+        
+        // versionの番号を表示
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        versionLabel.text = "version \(version)"
     }
     
     @IBAction func onTapYunyun(_ sender: Any) {
