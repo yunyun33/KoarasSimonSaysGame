@@ -44,13 +44,13 @@ class TotalScorePresenter: TotalScorePresenterInput {
             
         } else if totalScore >= 21 {
             view.showKoalasMessage(message: CommonValue.resultMessegeWonderful)
-
+            
         } else if totalScore >= 16 {
             view.showKoalasMessage(message: CommonValue.resultMessegeGreat)
-
+            
         } else if totalScore >= 5 {
             view.showKoalasMessage(message: CommonValue.resultMessegeLittleMore)
-
+            
         } else if totalScore >= 0 {
             view.showKoalasMessage(message: CommonValue.resultMessegeSleep)
         }

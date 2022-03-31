@@ -29,7 +29,7 @@ class RankingDataPresenter {
     
     var isWorldRanking: Bool
     var nameAndScore: [[String]] = []
-        
+    
     private weak var view: RankingDataOutput!
     private let model: RankingModelProtocol
     
@@ -41,7 +41,7 @@ class RankingDataPresenter {
 }
 
 extension RankingDataPresenter: RankingDataPresenterInput {
-
+    
     func viewDidLoad() {
         if isWorldRanking {
             view.setupWordRanking()
@@ -88,7 +88,7 @@ extension RankingDataPresenter {
     
     private func setFirestoreDatas() {
         model.getFirestoreDatas(success: { (firestoreDatas) in
-                
+            
             self.nameAndScore = firestoreDatas
             self.view.reloadTableView()
             

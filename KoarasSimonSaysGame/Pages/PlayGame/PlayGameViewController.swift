@@ -4,7 +4,7 @@ import UIKit
 class PlayGameViewController: UIViewController,  UINavigationControllerDelegate {
     
     private var presenter: PlayGamePresenterInput!
-
+    
     @IBOutlet weak var instructionLabel: UILabel!
     @IBOutlet weak var koalasFlagImageView: UIImageView!
     @IBOutlet weak var countDownLabel: UILabel!
@@ -18,8 +18,8 @@ class PlayGameViewController: UIViewController,  UINavigationControllerDelegate 
         
         presenter.viewDidLoad()
     }
-   
-    //--------旗上げゲーム--------
+    
+    // 旗上げゲーム
     @IBAction func upButton(_ sender: Any) {
         presenter.didTapDirectionButton(tappedDirection: .UP)
     }

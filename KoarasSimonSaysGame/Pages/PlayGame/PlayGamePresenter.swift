@@ -77,7 +77,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
 }
 
 extension PlayGamePresenter {
-
+    
     //時間経過の処理
     @objc func timerInterrupt(_ timer: Timer) {
         //経過時間を−1ずつする。
@@ -114,7 +114,7 @@ extension PlayGamePresenter {
     
     //BGMの設定、再生
     private func playMusic() {
-
+        
         do {
             let filePath = Bundle.main.path(forResource: "playBGM",ofType: "mp3")
             let music = URL(fileURLWithPath: filePath!)
@@ -130,7 +130,7 @@ extension PlayGamePresenter {
         timer?.invalidate()
         audioPlayer.stop()
     }
-
+    
     //次の方向指示をランダムで表示させる
     private func proceedToNextDirection() {
         
