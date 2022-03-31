@@ -19,128 +19,108 @@ version: 0.0.7
 name: Firebase, nameSpecified: 
 body: 
                    …
-version: 6.27.0
+version: 8.12.1
 
 name: Firebase, nameSpecified: 
 body: 
                    …
-version: 6.27.0
+version: 8.12.1
 
 name: FirebaseAnalytics, nameSpecified: 
-body: Copyright 2020 Googl…
-version: 6.6.1
+body: Copyright 2021 Googl…
+version: 8.12.0
 
 name: FirebaseAnalytics, nameSpecified: 
-body: Copyright 2020 Googl…
-version: 6.6.1
+body: Copyright 2021 Googl…
+version: 8.12.0
 
 name: FirebaseCore, nameSpecified: 
 body: 
                    …
-version: 6.8.0
+version: 8.12.1
 
 name: FirebaseCore, nameSpecified: 
 body: 
                    …
-version: 6.8.0
+version: 8.12.1
 
 name: FirebaseCoreDiagnostics, nameSpecified: 
 body: 
                    …
-version: 1.4.0
+version: 8.12.0
 
 name: FirebaseCoreDiagnostics, nameSpecified: 
 body: 
                    …
-version: 1.4.0
+version: 8.12.0
 
 name: FirebaseDatabase, nameSpecified: 
 body: 
                    …
-version: 6.3.0
+version: 8.12.0
 
 name: FirebaseDatabase, nameSpecified: 
 body: 
                    …
-version: 6.3.0
+version: 8.12.0
 
 name: FirebaseFirestore, nameSpecified: 
 body: 
                    …
-version: 1.16.0
+version: 8.12.1
 
 name: FirebaseFirestore, nameSpecified: 
 body: 
                    …
-version: 1.16.0
+version: 8.12.1
 
 name: FirebaseInstallations, nameSpecified: 
 body: 
                    …
-version: 1.4.0
+version: 8.12.0
 
 name: FirebaseInstallations, nameSpecified: 
 body: 
                    …
-version: 1.4.0
-
-name: FirebaseInstanceID, nameSpecified: 
-body: 
-                   …
-version: 4.4.0
-
-name: FirebaseInstanceID, nameSpecified: 
-body: 
-                   …
-version: 4.4.0
+version: 8.12.0
 
 name: FirebaseMessaging, nameSpecified: 
 body: 
                    …
-version: 4.5.0
+version: 8.12.0
 
 name: FirebaseMessaging, nameSpecified: 
 body: 
                    …
-version: 4.5.0
+version: 8.12.0
 
 name: GoogleAppMeasurement, nameSpecified: 
-body: Copyright 2020 Googl…
-version: 6.6.1
+body: Copyright 2021 Googl…
+version: 8.12.0
 
 name: GoogleAppMeasurement, nameSpecified: 
-body: Copyright 2020 Googl…
-version: 6.6.1
+body: Copyright 2021 Googl…
+version: 8.12.0
 
 name: GoogleDataTransport, nameSpecified: 
 body: 
                    …
-version: 6.2.1
+version: 9.1.2
 
 name: GoogleDataTransport, nameSpecified: 
 body: 
                    …
-version: 6.2.1
-
-name: GoogleDataTransportCCTSupport, nameSpecified: 
-body: 
-                   …
-version: 3.2.0
-
-name: GoogleDataTransportCCTSupport, nameSpecified: 
-body: 
-                   …
-version: 3.2.0
+version: 9.1.2
 
 name: GoogleUtilities, nameSpecified: 
 body: 
                    …
-version: 6.6.0
+version: 7.7.0
 
 name: GoogleUtilities, nameSpecified: 
 body: 
                    …
-version: 6.6.0
+version: 7.7.0
 
 name: gRPC-C++, nameSpecified: 
 body: 
@@ -164,50 +144,42 @@ version: 1.28.2
 
 name: leveldb-library, nameSpecified: 
 body: Copyright (c) 2011 T…
-version: 1.22
+version: 1.22.1
 
 name: leveldb-library, nameSpecified: 
 body: Copyright (c) 2011 T…
-version: 1.22
+version: 1.22.1
 
 name: LicensePlist, nameSpecified: 
 body: MIT License
 
 Copyrig…
-version: 2.16.0
+version: 3.17.0
 
 name: LicensePlist, nameSpecified: 
 body: MIT License
 
 Copyrig…
-version: 2.16.0
+version: 3.17.0
 
 name: nanopb, nameSpecified: 
 body: Copyright (c) 2011 P…
-version: 1.30905.0
+version: 2.30908.0
 
 name: nanopb, nameSpecified: 
 body: Copyright (c) 2011 P…
-version: 1.30905.0
+version: 2.30908.0
 
 name: PromisesObjC, nameSpecified: 
 body: 
                    …
-version: 1.2.9
+version: 2.0.0
 
 name: PromisesObjC, nameSpecified: 
 body: 
                    …
-version: 1.2.9
-
-name: Protobuf, nameSpecified: 
-body: Copyright 2008 Googl…
-version: 3.17.0
-
-name: Protobuf, nameSpecified: 
-body: Copyright 2008 Googl…
-version: 3.17.0
+version: 2.0.0
 
 add-version-numbers: false
 
-LicensePlist Version: 2.16.0
+LicensePlist Version: 3.17.0
