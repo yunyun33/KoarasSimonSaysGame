@@ -37,7 +37,7 @@ class RankingUseCase {
             success(firestoreDatas)
             
         }, failure: { (Error) in
-            print("Error!")
+            failure(Error)
         })
     }
     
