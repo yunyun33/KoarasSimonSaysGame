@@ -32,11 +32,13 @@ class RankingDataPresenter {
         
     private weak var view: RankingDataOutput!
     private let model: RankingModelProtocol
+    private let rankingUseCase: RankingUseCase
     
-    init(isWorldRanking: Bool, view: RankingDataOutput, model: RankingModelProtocol) {
+    init(isWorldRanking: Bool, view: RankingDataOutput, model: RankingModelProtocol, rankingUseCase: RankingUseCase) {
         self.isWorldRanking = isWorldRanking
         self.view = view
         self.model = model
+        self.rankingUseCase = rankingUseCase
     }
 }
 
@@ -71,7 +73,8 @@ extension RankingDataPresenter: RankingDataPresenterInput {
     
     func didTapOkOnDeleteAll() {
         //OKボタン押されたらUserDefaltsのデータ削除
-        model.deleteUserDefaultsDatas()
+//        model.deleteUserDefaultsDatas()
+        rankingUseCase.deleteRankingUserDefaultsDatas()
         //↑のだけだとボタン押した瞬間は画面に表示されたままのため↓で表示を消す
         nameAndScore.removeAll()
         view.reloadTableView()
@@ -81,14 +84,26 @@ extension RankingDataPresenter: RankingDataPresenterInput {
 extension RankingDataPresenter {
     
     private func setUserDefaultsDatas() {
-        nameAndScore = model.getUserDefaultsDatas()
+//        nameAndScore = model.getUserDefaultsDatas()
+        nameAndScore = rankingUseCase.getRankingUserDefaultsDatas()
         
         view.reloadTableView()
     }
     
+//    private func setFirestoreDatas() {
+//        model.getFirestoreDatas(success: { (firestoreDatas) in
+//
+//            self.nameAndScore = firestoreDatas
+//            self.view.reloadTableView()
+//
+//        }, failure: { (Error) in
+//            print("Error!")
+//        })
+//    }
+    
     private func setFirestoreDatas() {
-        model.getFirestoreDatas(success: { (firestoreDatas) in
-                
+        rankingUseCase.getRankingFirestoreDatas(success: { (firestoreDatas) in
+            
             self.nameAndScore = firestoreDatas
             self.view.reloadTableView()
             
