@@ -22,7 +22,7 @@ protocol RankingDataOutput: AnyObject {
     func setupLocalRanking()
     func reloadTableView()
     func showDeleteAlert()
-    func showCanNotDeleteAlert()
+    func showOkAlert(alertMessage: String)
 }
 
 class RankingDataPresenter {
@@ -63,7 +63,7 @@ extension RankingDataPresenter: RankingDataPresenterInput {
     
     func didTapDeleteButton() {
         if nameAndScore.count == 0 {
-            view.showCanNotDeleteAlert()
+            view.showOkAlert(alertMessage: CommonValue.AlertMessage.noDataToDelete)
         } else {
             view.showDeleteAlert()
         }
@@ -93,7 +93,7 @@ extension RankingDataPresenter {
             self.view.reloadTableView()
             
         }, failure: { (Error) in
-            print("Error!")
+            self.view.showOkAlert(alertMessage: CommonValue.AlertMessage.failedGetData)
         })
     }
 }
