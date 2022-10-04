@@ -71,7 +71,6 @@ extension RankingDataPresenter: RankingDataPresenterInput {
     
     func didTapOkOnDeleteAll() {
         //OKボタン押されたらUserDefaltsのデータ削除
-//        model.deleteUserDefaultsDatas()
         rankingUseCase.deleteRankingUserDefaultsDatas()
         //↑のだけだとボタン押した瞬間は画面に表示されたままのため↓で表示を消す
         nameAndScore.removeAll()
