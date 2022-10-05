@@ -25,12 +25,12 @@ class RegisterNamePresenter: RegisterNamePresenterInput {
     var totalScore: Int
     
     private weak var view: RegisterNamePresenterOutput!
-    private let model: RankingModelProtocol
+    private let rankingUseCase: RankingUseCase
     
-    init(totalScore: Int, view: RegisterNamePresenterOutput, model: RankingModelProtocol) {
+    init(totalScore: Int, view: RegisterNamePresenterOutput, rankingUseCase: RankingUseCase) {
         self.totalScore = totalScore
         self.view = view
-        self.model = model
+        self.rankingUseCase = rankingUseCase
     }
     
     func viewDidLoad() {
@@ -39,10 +39,10 @@ class RegisterNamePresenter: RegisterNamePresenterInput {
     
     func didTapRegisterButton(nameText: String?, worldRankingSwith: Bool) {
         
-        model.saveToUserDefaults(name: nameText ?? "", score: totalScore)
+        rankingUseCase.saveRankingToUserDefaults(name: nameText ?? "", score: totalScore)
         
         if worldRankingSwith == true {
-            model.seveToFirestore(name: nameText ?? "", score: totalScore)
+            rankingUseCase.seveRankingToFirestore(name: nameText ?? "", score: totalScore)
         }
         
         //登録するボタンを押してTopへ戻る
