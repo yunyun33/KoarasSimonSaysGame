@@ -19,4 +19,11 @@
  target 'KoarasSimonSaysGameDEVELOP' do
    use_frameworks!
    install_pods
+
+   # unitTest用に以下の設定が必要
+   target  'KoarasSimonSaysGameTests' do
+   	inherit! :search_paths
+        pod 'Firebase'
+   end
+
  end
