@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import KoarasSimonSaysGame
+@testable import KoarasSimonSaysGameDEVELOP
 
 class PlayGameModelTests: XCTestCase {
 
