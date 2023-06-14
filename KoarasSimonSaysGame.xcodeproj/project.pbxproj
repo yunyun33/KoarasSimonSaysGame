@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		16D9B38106642D5F0DA83FAB /* Pods_KoarasSimonSaysGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD66A40F10C427B82C914E40 /* Pods_KoarasSimonSaysGame.framework */; };
-		7740CD2F6FC62AFD52E2D2CF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		7740CD2F6FC62AFD52E2D2CF /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		9C6BF8A0F0FA1E5F2AEFE6BD /* Pods_KoarasSimonSaysGameDEVELOP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315B47B2BB89778E85BBC860 /* Pods_KoarasSimonSaysGameDEVELOP.framework */; };
 		BA006F65243C58C0000AB5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F64243C58C0000AB5F6 /* AppDelegate.swift */; };
 		BA006F67243C58C0000AB5F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F66243C58C0000AB5F6 /* SceneDelegate.swift */; };
@@ -121,6 +121,13 @@
 			remoteGlobalIDString = BA006F60243C58C0000AB5F6;
 			remoteInfo = KoarasSimonSaysGame;
 		};
+		BA7DCE922A399D630091BFBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA006F59243C58C0000AB5F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAE5F5F8269D7A3500DBD2D7;
+			remoteInfo = KoarasSimonSaysGameDEVELOP;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -203,7 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7740CD2F6FC62AFD52E2D2CF /* BuildFile in Frameworks */,
+				7740CD2F6FC62AFD52E2D2CF /* (null) in Frameworks */,
 				16D9B38106642D5F0DA83FAB /* Pods_KoarasSimonSaysGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +509,7 @@
 			);
 			dependencies = (
 				BA006F79243C58C8000AB5F6 /* PBXTargetDependency */,
+				BA7DCE932A399D630091BFBC /* PBXTargetDependency */,
 			);
 			name = KoarasSimonSaysGameTests;
 			productName = KoarasSimonSaysGameTests;
@@ -561,7 +569,7 @@
 					};
 					BA006F76243C58C8000AB5F6 = {
 						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = BA006F60243C58C0000AB5F6;
+						TestTargetID = BAE5F5F8269D7A3500DBD2D7;
 					};
 					BA006F81243C58C8000AB5F6 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -910,6 +918,11 @@
 			target = BA006F60243C58C0000AB5F6 /* KoarasSimonSaysGame */;
 			targetProxy = BA006F83243C58C8000AB5F6 /* PBXContainerItemProxy */;
 		};
+		BA7DCE932A399D630091BFBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAE5F5F8269D7A3500DBD2D7 /* KoarasSimonSaysGameDEVELOP */;
+			targetProxy = BA7DCE922A399D630091BFBC /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1115,7 +1128,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KoarasSimonSaysGameDEVELOP.app/KoarasSimonSaysGameDEVELOP";
 			};
 			name = Debug;
 		};
@@ -1138,7 +1151,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KoarasSimonSaysGame.app/KoarasSimonSaysGame";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KoarasSimonSaysGameDEVELOP.app/KoarasSimonSaysGameDEVELOP";
 			};
 			name = Release;
 		};
