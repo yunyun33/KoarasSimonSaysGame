@@ -32,6 +32,7 @@
 		BAABD9932A3981880056110F /* PlayGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABD9912A3981880056110F /* PlayGameModel.swift */; };
 		BAABD9962A398C430056110F /* PlayGameModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABD9952A398C430056110F /* PlayGameModelTests.swift */; };
 		BAABD9972A398C430056110F /* PlayGameModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABD9952A398C430056110F /* PlayGameModelTests.swift */; };
+		BAABD9992A398D610056110F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAABD9982A398D610056110F /* XCTest.framework */; };
 		BAAED80F2670422300DF5647 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED80E2670422300DF5647 /* Menu.storyboard */; };
 		BAAED8112670574E00DF5647 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8102670574E00DF5647 /* MenuPresenter.swift */; };
 		BAAED8162670617100DF5647 /* CommonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED8152670617100DF5647 /* CommonValue.swift */; };
@@ -150,6 +151,7 @@
 		BA6DA34D2560E27A00DD918F /* playBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBGM.mp3; sourceTree = "<group>"; };
 		BAABD9912A3981880056110F /* PlayGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameModel.swift; sourceTree = "<group>"; };
 		BAABD9952A398C430056110F /* PlayGameModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameModelTests.swift; sourceTree = "<group>"; };
+		BAABD9982A398D610056110F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BAAED80E2670422300DF5647 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		BAAED8102670574E00DF5647 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		BAAED8152670617100DF5647 /* CommonValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonValue.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAABD9992A398D610056110F /* XCTest.framework in Frameworks */,
 				9C6BF8A0F0FA1E5F2AEFE6BD /* Pods_KoarasSimonSaysGameDEVELOP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +233,7 @@
 		055FA0CE8ECDED4D77DF98D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAABD9982A398D610056110F /* XCTest.framework */,
 				315B47B2BB89778E85BBC860 /* Pods_KoarasSimonSaysGameDEVELOP.framework */,
 				FD66A40F10C427B82C914E40 /* Pods_KoarasSimonSaysGame.framework */,
 			);
