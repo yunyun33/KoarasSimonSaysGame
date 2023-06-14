@@ -20,6 +20,34 @@
                ReferencedContainer = "container:KoarasSimonSaysGame.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BA006F76243C58C8000AB5F6"
+               BuildableName = "KoarasSimonSaysGameTests.xctest"
+               BlueprintName = "KoarasSimonSaysGameTests"
+               ReferencedContainer = "container:KoarasSimonSaysGame.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BA006F81243C58C8000AB5F6"
+               BuildableName = "KoarasSimonSaysGameUITests.xctest"
+               BlueprintName = "KoarasSimonSaysGameUITests"
+               ReferencedContainer = "container:KoarasSimonSaysGame.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,6 +56,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BA006F76243C58C8000AB5F6"
+               BuildableName = "KoarasSimonSaysGameTests.xctest"
+               BlueprintName = "KoarasSimonSaysGameTests"
+               ReferencedContainer = "container:KoarasSimonSaysGame.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BA006F81243C58C8000AB5F6"
+               BuildableName = "KoarasSimonSaysGameUITests.xctest"
+               BlueprintName = "KoarasSimonSaysGameUITests"
+               ReferencedContainer = "container:KoarasSimonSaysGame.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
