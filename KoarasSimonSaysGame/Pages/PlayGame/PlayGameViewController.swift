@@ -3,7 +3,7 @@ import UIKit
 
 class PlayGameViewController: UIViewController,  UINavigationControllerDelegate {
     
-    private var presenter: PlayGamePresenterInput!
+    var presenter: PlayGamePresenterInput!
 
     @IBOutlet weak var instructionLabel: UILabel!
     @IBOutlet weak var koalasFlagImageView: UIImageView!
@@ -13,8 +13,6 @@ class PlayGameViewController: UIViewController,  UINavigationControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        presenter = PlayGamePresenter(view: self)
         
         presenter.viewDidLoad()
     }

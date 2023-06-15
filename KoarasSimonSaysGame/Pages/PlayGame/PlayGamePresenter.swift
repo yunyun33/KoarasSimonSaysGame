@@ -29,9 +29,11 @@ protocol PlayGamePresenterOutput: AnyObject {
 class PlayGamePresenter: PlayGamePresenterInput {
     
     private weak var view: PlayGamePresenterOutput!
+    private let model: PlayGameModel
     
-    init(view: PlayGamePresenterOutput) {
+    init(view: PlayGamePresenterOutput, model: PlayGameModel) {
         self.view = view
+        self.model = model
     }
     
     //仮に初期値としてUPを入れる
@@ -106,9 +108,8 @@ extension PlayGamePresenter {
     //タイマーが終了した時に行う処理
     private func finishOfTimer() {
         totalScore = okCount - ngCount
-        if ( totalScore < 0 ) {
-            totalScore = 0
-        }
+
+        let totalScore = model.getTotalScore(okCount: okCount, ngCount: ngCount)
         view.transitToTotalScorePage(score: totalScore)
     }
     
