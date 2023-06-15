@@ -36,24 +36,9 @@ class TotalScorePresenter: TotalScorePresenterInput {
     func viewDidLoad() {
         view.showTotalScore(totalScore: totalScore)
         
-        if totalScore >= 28 {
-            view.showKoalasMessage(message: CommonValue.resultMessegeExcellent)
-            
-        } else if totalScore >= 25 {
-            view.showKoalasMessage(message: CommonValue.resultMessegeAmazing)
-            
-        } else if totalScore >= 21 {
-            view.showKoalasMessage(message: CommonValue.resultMessegeWonderful)
-
-        } else if totalScore >= 16 {
-            view.showKoalasMessage(message: CommonValue.resultMessegeGreat)
-
-        } else if totalScore >= 5 {
-            view.showKoalasMessage(message: CommonValue.resultMessegeLittleMore)
-
-        } else if totalScore >= 0 {
-            view.showKoalasMessage(message: CommonValue.resultMessegeSleep)
-        }
+        // TODO: 一旦ここで直接TotalScoreModel()をinitしてテストの実装を確認する
+        let message = TotalScoreModel().getKoalasMessage(totalScore: totalScore)
+        view.showKoalasMessage(message: message)
         
         // 診断結果の表示イベントを、パーセントのパラメータとともにロギングする
         AnalyticsManager.logShowResultEvent(with: totalScore)

@@ -46,6 +46,10 @@
 		BAAED82D2679801000DF5647 /* RegisterNamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED82C2679801000DF5647 /* RegisterNamePresenter.swift */; };
 		BAAED82F267C183400DF5647 /* RankingData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAED82E267C183400DF5647 /* RankingData.storyboard */; };
 		BAAED831267C1FA500DF5647 /* RankingDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED830267C1FA500DF5647 /* RankingDataPresenter.swift */; };
+		BAB82A962A3AF17B008DECB7 /* TotalScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB82A952A3AF17B008DECB7 /* TotalScoreModel.swift */; };
+		BAB82A972A3AF17B008DECB7 /* TotalScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB82A952A3AF17B008DECB7 /* TotalScoreModel.swift */; };
+		BAB82A992A3AF310008DECB7 /* TotalScoreModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB82A982A3AF310008DECB7 /* TotalScoreModelTests.swift */; };
+		BAB82A9A2A3AF310008DECB7 /* TotalScoreModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB82A982A3AF310008DECB7 /* TotalScoreModelTests.swift */; };
 		BAD1A74228E7072E00A91A99 /* RankingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1A74128E7072E00A91A99 /* RankingUseCase.swift */; };
 		BAD1A74328E7072E00A91A99 /* RankingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1A74128E7072E00A91A99 /* RankingUseCase.swift */; };
 		BAE5F5FB269D7A3500DBD2D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA006F68243C58C0000AB5F6 /* ViewController.swift */; };
@@ -176,6 +180,8 @@
 		BAAED82C2679801000DF5647 /* RegisterNamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNamePresenter.swift; sourceTree = "<group>"; };
 		BAAED82E267C183400DF5647 /* RankingData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RankingData.storyboard; sourceTree = "<group>"; };
 		BAAED830267C1FA500DF5647 /* RankingDataPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDataPresenter.swift; sourceTree = "<group>"; };
+		BAB82A952A3AF17B008DECB7 /* TotalScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoreModel.swift; sourceTree = "<group>"; };
+		BAB82A982A3AF310008DECB7 /* TotalScoreModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoreModelTests.swift; sourceTree = "<group>"; };
 		BAD1A74128E7072E00A91A99 /* RankingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingUseCase.swift; sourceTree = "<group>"; };
 		BAE5F62A269D7A3500DBD2D7 /* KoarasSimonSaysGameDEVELOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoarasSimonSaysGameDEVELOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE6E6862483E6460077D8AE /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
@@ -332,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				BAABD9952A398C430056110F /* PlayGameModelTests.swift */,
+				BAB82A982A3AF310008DECB7 /* TotalScoreModelTests.swift */,
 			);
 			path = ModelTests;
 			sourceTree = "<group>";
@@ -417,6 +424,7 @@
 			children = (
 				BAAED82A267977DB00DF5647 /* RankingModel.swift */,
 				BAABD9912A3981880056110F /* PlayGameModel.swift */,
+				BAB82A952A3AF17B008DECB7 /* TotalScoreModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -856,6 +864,7 @@
 				BA006F95243C5AB4000AB5F6 /* PlayGameViewController.swift in Sources */,
 				BA006F67243C58C0000AB5F6 /* SceneDelegate.swift in Sources */,
 				BAE6E6882483E6460077D8AE /* RankingCell.swift in Sources */,
+				BAB82A962A3AF17B008DECB7 /* TotalScoreModel.swift in Sources */,
 				BA006F972441D132000AB5F6 /* TotalScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -864,6 +873,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB82A992A3AF310008DECB7 /* TotalScoreModelTests.swift in Sources */,
 				BA006F7C243C58C8000AB5F6 /* KoarasSimonSaysGameTests.swift in Sources */,
 				BAABD9962A398C430056110F /* PlayGameModelTests.swift in Sources */,
 			);
@@ -884,9 +894,11 @@
 				BA4254A826A289E400DA876D /* AnalyticsManager.swift in Sources */,
 				BAE5F5FB269D7A3500DBD2D7 /* ViewController.swift in Sources */,
 				BAE5F5FC269D7A3500DBD2D7 /* RankingDataViewController.swift in Sources */,
+				BAB82A972A3AF17B008DECB7 /* TotalScoreModel.swift in Sources */,
 				BAE5F5FD269D7A3500DBD2D7 /* AppDelegate.swift in Sources */,
 				BAABD9972A398C430056110F /* PlayGameModelTests.swift in Sources */,
 				BAE5F5FE269D7A3500DBD2D7 /* RankingDataPresenter.swift in Sources */,
+				BAB82A9A2A3AF310008DECB7 /* TotalScoreModelTests.swift in Sources */,
 				BAE5F5FF269D7A3500DBD2D7 /* MenuPresenter.swift in Sources */,
 				BAE5F600269D7A3500DBD2D7 /* RegisterNamePresenter.swift in Sources */,
 				BAE5F601269D7A3500DBD2D7 /* RegisterNameViewController.swift in Sources */,
