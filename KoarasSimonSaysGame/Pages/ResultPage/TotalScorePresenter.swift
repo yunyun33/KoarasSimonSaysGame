@@ -26,18 +26,19 @@ class TotalScorePresenter: TotalScorePresenterInput {
     var totalScore: Int
     
     private weak var view: TotalScorePresenterOutput!
+    private let model: TotalScoreModel
     
-    init(totalScore: Int, view: TotalScorePresenterOutput) {
+    init(totalScore: Int, view: TotalScorePresenterOutput, model : TotalScoreModel) {
         self.totalScore = totalScore
         self.view = view
+        self.model = model
     }
     
-    //TotalScoreを見て、スコアに合ったコアラさんのメッセージを表示
     func viewDidLoad() {
         view.showTotalScore(totalScore: totalScore)
         
-        // TODO: 一旦ここで直接TotalScoreModel()をinitしてテストの実装を確認する
-        let message = TotalScoreModel().getKoalasMessage(totalScore: totalScore)
+        // TotalScoreを見て、スコアに合ったコアラさんのメッセージを表示
+        let message = model.getKoalasMessage(totalScore: totalScore)
         view.showKoalasMessage(message: message)
         
         // 診断結果の表示イベントを、パーセントのパラメータとともにロギングする
