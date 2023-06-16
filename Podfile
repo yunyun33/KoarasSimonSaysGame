@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '13.0'
+ platform :ios, '13.0'
 
  def install_pods
    pod 'Firebase/Core'
@@ -19,4 +19,11 @@
  target 'KoarasSimonSaysGameDEVELOP' do
    use_frameworks!
    install_pods
+
+   # unitTest用に以下の設定が必要
+   target  'KoarasSimonSaysGameTests' do
+   	inherit! :search_paths
+        pod 'Firebase'
+   end
+
  end

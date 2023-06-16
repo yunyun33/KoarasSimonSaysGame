@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     @IBAction func gameStartButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "PlayGame", bundle: nil)
         let nextView = storyboard.instantiateViewController(withIdentifier: "gameView") as! PlayGameViewController
+        let playGameModel = PlayGameModel()
+        nextView.presenter = PlayGamePresenter(view: nextView, model: playGameModel)
         self.navigationController?.pushViewController(nextView, animated: true)
         navigationController?.navigationBar.isHidden = false
     }

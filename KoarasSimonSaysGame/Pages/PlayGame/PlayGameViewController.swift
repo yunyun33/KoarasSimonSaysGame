@@ -3,7 +3,7 @@ import UIKit
 
 class PlayGameViewController: UIViewController,  UINavigationControllerDelegate {
     
-    private var presenter: PlayGamePresenterInput!
+    var presenter: PlayGamePresenterInput!
 
     @IBOutlet weak var instructionLabel: UILabel!
     @IBOutlet weak var koalasFlagImageView: UIImageView!
@@ -13,8 +13,6 @@ class PlayGameViewController: UIViewController,  UINavigationControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        presenter = PlayGamePresenter(view: self)
         
         presenter.viewDidLoad()
     }
@@ -106,7 +104,8 @@ extension PlayGameViewController: PlayGamePresenterOutput {
     func transitToTotalScorePage(score: Int) {
         let totalScoreVC = UIStoryboard(name: "TotalScore", bundle: nil)
         let nextView = totalScoreVC.instantiateViewController(withIdentifier: "totalScoreView") as! TotalScoreViewController
-        nextView.presenter = TotalScorePresenter(totalScore: score, view: nextView)
+        let totalScoreModel = TotalScoreModel()
+        nextView.presenter = TotalScorePresenter(totalScore: score, view: nextView, model: totalScoreModel)
         self.navigationController?.pushViewController(nextView, animated: true)
         navigationController?.navigationBar.isHidden = false
     }

@@ -26,6 +26,15 @@ body:
                    …
 version: 6.27.0
 
+name: Firebase, nameSpecified: 
+body: 
+                   …
+version: 6.27.0
+
+name: FirebaseAnalytics, nameSpecified: 
+body: Copyright 2020 Googl…
+version: 6.6.1
+
 name: FirebaseAnalytics, nameSpecified: 
 body: Copyright 2020 Googl…
 version: 6.6.1
@@ -43,6 +52,16 @@ name: FirebaseCore, nameSpecified:
 body: 
                    …
 version: 6.8.0
+
+name: FirebaseCore, nameSpecified: 
+body: 
+                   …
+version: 6.8.0
+
+name: FirebaseCoreDiagnostics, nameSpecified: 
+body: 
+                   …
+version: 1.4.0
 
 name: FirebaseCoreDiagnostics, nameSpecified: 
 body: 
@@ -84,6 +103,11 @@ body:
                    …
 version: 1.4.0
 
+name: FirebaseInstallations, nameSpecified: 
+body: 
+                   …
+version: 1.4.0
+
 name: GoogleAppMeasurement, nameSpecified: 
 body: Copyright 2020 Googl…
 version: 6.6.1
@@ -91,6 +115,15 @@ version: 6.6.1
 name: GoogleAppMeasurement, nameSpecified: 
 body: Copyright 2020 Googl…
 version: 6.6.1
+
+name: GoogleAppMeasurement, nameSpecified: 
+body: Copyright 2020 Googl…
+version: 6.6.1
+
+name: GoogleDataTransport, nameSpecified: 
+body: 
+                   …
+version: 6.2.1
 
 name: GoogleDataTransport, nameSpecified: 
 body: 
@@ -111,6 +144,16 @@ name: GoogleDataTransportCCTSupport, nameSpecified:
 body: 
                    …
 version: 3.2.0
+
+name: GoogleDataTransportCCTSupport, nameSpecified: 
+body: 
+                   …
+version: 3.2.0
+
+name: GoogleUtilities, nameSpecified: 
+body: 
+                   …
+version: 6.6.0
 
 name: GoogleUtilities, nameSpecified: 
 body: 
@@ -169,6 +212,15 @@ version: 1.30905.0
 name: nanopb, nameSpecified: 
 body: Copyright (c) 2011 P…
 version: 1.30905.0
+
+name: nanopb, nameSpecified: 
+body: Copyright (c) 2011 P…
+version: 1.30905.0
+
+name: PromisesObjC, nameSpecified: 
+body: 
+                   …
+version: 1.2.9
 
 name: PromisesObjC, nameSpecified: 
 body: 
