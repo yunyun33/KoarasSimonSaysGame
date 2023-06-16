@@ -20,6 +20,12 @@ struct CommonValue {
     static let resultMessegeLittleMore = "もう少しでしたね\nもう一度やってみましょう！"
     static let resultMessegeSleep = "もしかして寝ていましたか？\n私も眠くなってきました..."
     
+    struct AlertMessage {
+        static let noDataToDelete = "削除するデータがありません。"
+        
+        static let failedGetData = "データの取得に失敗しました。"
+    }
+    
     struct URL {
         // 開発者の連絡先(HP)
         static let illustratorContactURL = "https://yunyun33.com/"

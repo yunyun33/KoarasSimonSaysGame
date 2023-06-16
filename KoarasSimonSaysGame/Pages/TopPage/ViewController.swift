@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "RankingData", bundle: nil)
         let nextView = storyboard.instantiateViewController(withIdentifier: "RankingDataView") as! RankingDataViewController
         let rankingModel = RankingModel()
-        nextView.presenter = RankingDataPresenter(isWorldRanking: false, view: nextView, model: rankingModel)
+        nextView.presenter = RankingDataPresenter(isWorldRanking: false, view: nextView, rankingUseCase: RankingUseCase(rankingModel: rankingModel))
         self.navigationController?.pushViewController(nextView, animated: true)
         navigationController?.navigationBar.isHidden = false
     }
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "RankingData", bundle: nil)
         let nextView = storyboard.instantiateViewController(withIdentifier: "RankingDataView") as! RankingDataViewController
         let rankingModel = RankingModel()
-        nextView.presenter = RankingDataPresenter(isWorldRanking: true, view: nextView, model: rankingModel)
+        nextView.presenter = RankingDataPresenter(isWorldRanking: true, view: nextView, rankingUseCase: RankingUseCase(rankingModel: rankingModel))
         self.navigationController?.pushViewController(nextView, animated: true)
         navigationController?.navigationBar.isHidden = false
     }

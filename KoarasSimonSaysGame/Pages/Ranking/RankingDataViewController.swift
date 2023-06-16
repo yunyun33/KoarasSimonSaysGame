@@ -126,8 +126,8 @@ extension RankingDataViewController: RankingDataOutput {
         present(alert, animated: true, completion: nil)
     }
     
-    func showCanNotDeleteAlert() {
-        let alert: UIAlertController = UIAlertController(title: "削除するデータがありません。",
+    func showOkAlert(alertMessage: String) {
+        let alert: UIAlertController = UIAlertController(title: alertMessage,
                                                          message: "",
                                                          preferredStyle: .alert)
         
