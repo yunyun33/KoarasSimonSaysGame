@@ -1003,7 +1003,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1057,7 +1057,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1076,9 +1076,10 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = P2SUKVPCW7;
 				DISPLAY_NAME = "旗ふりゲーム";
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1087,6 +1088,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yui.KoalasSimonSaysGame;
 				PRODUCT_NAME = "旗ふりゲーム";
 				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGame;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = KoalasSimonSaysGame;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1101,9 +1103,10 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = P2SUKVPCW7;
 				DISPLAY_NAME = "旗ふりゲーム";
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1112,6 +1115,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yui.KoalasSimonSaysGame;
 				PRODUCT_NAME = "旗ふりゲーム";
 				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGame;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = KoalasSimonSaysGame;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1121,12 +1125,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1131CFF31125C4D366A6A1CB /* Pods-KoarasSimonSaysGameTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6YWC5R2B4W;
 				INFOPLIST_FILE = KoarasSimonSaysGameTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1144,12 +1148,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7A229D729B8F4E31A60FC31 /* Pods-KoarasSimonSaysGameTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6YWC5R2B4W;
 				INFOPLIST_FILE = KoarasSimonSaysGameTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1214,7 +1218,7 @@
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
 				DISPLAY_NAME = "旗ふりゲームDev";
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1239,7 +1243,7 @@
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
 				DISPLAY_NAME = "旗ふりゲームDev";
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
