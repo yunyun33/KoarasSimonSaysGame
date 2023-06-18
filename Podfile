@@ -12,12 +12,14 @@
  target 'KoarasSimonSaysGame' do
    # Comment the next line if you don't want to use dynamic frameworks
    use_frameworks!
+   inhibit_all_warnings! # ライブラリの警告をなくす
    install_pods
  end
  
 
  target 'KoarasSimonSaysGameDEVELOP' do
    use_frameworks!
+   inhibit_all_warnings! # ライブラリの警告をなくす
    install_pods
 
    # unitTest用に以下の設定が必要
