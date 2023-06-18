@@ -16,8 +16,8 @@ class PlayGameViewController: UIViewController,  UINavigationControllerDelegate 
         
         presenter.viewDidLoad()
     }
-   
-    //--------旗上げゲーム--------
+    
+    // 旗上げゲーム
     @IBAction func upButton(_ sender: Any) {
         presenter.didTapDirectionButton(tappedDirection: .UP)
     }

@@ -29,7 +29,7 @@ class RankingDataPresenter {
     
     var isWorldRanking: Bool
     var nameAndScore: [[String]] = []
-        
+    
     private weak var view: RankingDataOutput!
     private let rankingUseCase: RankingUseCase
     
@@ -41,7 +41,7 @@ class RankingDataPresenter {
 }
 
 extension RankingDataPresenter: RankingDataPresenterInput {
-
+    
     func viewDidLoad() {
         if isWorldRanking {
             view.setupWordRanking()
