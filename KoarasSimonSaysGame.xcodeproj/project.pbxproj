@@ -1079,6 +1079,8 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = P2SUKVPCW7;
 				DISPLAY_NAME = "旗ふりゲーム";
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "旗ふりゲーム";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1106,6 +1108,8 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = P2SUKVPCW7;
 				DISPLAY_NAME = "旗ふりゲーム";
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "旗ふりゲーム";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1218,6 +1222,8 @@
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
 				DISPLAY_NAME = "旗ふりゲームDev";
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "旗ふりゲームDev";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1243,6 +1249,8 @@
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
 				DISPLAY_NAME = "旗ふりゲームDev";
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "旗ふりゲームDev";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
