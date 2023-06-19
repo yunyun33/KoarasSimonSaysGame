@@ -11,13 +11,13 @@ import UIKit
 class TotalScoreViewController: UIViewController {
     
     var presenter: TotalScorePresenterInput!
-
+    
     @IBOutlet weak var totalScoreLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         presenter.viewDidLoad()
         
         //2つ前の画面に戻りたい(直接ゲーム画面には戻さない)ため、navigationvarを消す。
