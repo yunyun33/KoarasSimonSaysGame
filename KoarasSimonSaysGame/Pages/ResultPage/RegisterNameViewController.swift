@@ -21,6 +21,9 @@ class RegisterNameViewController: UIViewController {
         super.viewDidLoad()
         
         nameTextField.delegate = self
+        // 画面のどこかをタップでTextFiledを閉じる
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
         
         worldRankingSwith.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
         
@@ -41,6 +44,10 @@ extension RegisterNameViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         presenter.textFieldShouldReturn(textField)
         return true
+    }
+    
+    @objc func closeKeyboard() {
+        presenter.textFieldShouldReturn(nameTextField)
     }
 }
 
