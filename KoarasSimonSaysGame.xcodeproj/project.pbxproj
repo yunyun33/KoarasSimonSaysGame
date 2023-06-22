@@ -141,7 +141,7 @@
 		A2B6FA164AFF879D5629D244 /* Pods-KoarasSimonSaysGameDEVELOP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGameDEVELOP.release.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGameDEVELOP/Pods-KoarasSimonSaysGameDEVELOP.release.xcconfig"; sourceTree = "<group>"; };
 		A45755299C858D102343A799 /* Pods_KoarasSimonSaysGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoarasSimonSaysGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A229D729B8F4E31A60FC31 /* Pods-KoarasSimonSaysGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoarasSimonSaysGameTests.release.xcconfig"; path = "Target Support Files/Pods-KoarasSimonSaysGameTests/Pods-KoarasSimonSaysGameTests.release.xcconfig"; sourceTree = "<group>"; };
-		BA006F61243C58C0000AB5F6 /* 旗ふりゲーム.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "旗ふりゲーム.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA006F61243C58C0000AB5F6 /* KoarasSimonSaysGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoarasSimonSaysGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA006F64243C58C0000AB5F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA006F66243C58C0000AB5F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA006F68243C58C0000AB5F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -287,7 +287,7 @@
 		BA006F62243C58C0000AB5F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA006F61243C58C0000AB5F6 /* 旗ふりゲーム.app */,
+				BA006F61243C58C0000AB5F6 /* KoarasSimonSaysGame.app */,
 				BA006F77243C58C8000AB5F6 /* KoarasSimonSaysGameTests.xctest */,
 				BA006F82243C58C8000AB5F6 /* KoarasSimonSaysGameUITests.xctest */,
 				BAE5F62A269D7A3500DBD2D7 /* KoarasSimonSaysGameDEVELOP.app */,
@@ -497,7 +497,7 @@
 			);
 			name = KoarasSimonSaysGame;
 			productName = KoarasSimonSaysGame;
-			productReference = BA006F61243C58C0000AB5F6 /* 旗ふりゲーム.app */;
+			productReference = BA006F61243C58C0000AB5F6 /* KoarasSimonSaysGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BA006F76243C58C8000AB5F6 /* KoarasSimonSaysGameTests */ = {
@@ -1088,7 +1088,8 @@
 				);
 				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yui.KoalasSimonSaysGame;
-				PRODUCT_NAME = "旗ふりゲーム";
+				PRODUCT_MODULE_NAME = "旗ふりゲーム";
+				PRODUCT_NAME = KoarasSimonSaysGame;
 				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGame;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = KoalasSimonSaysGame;
 				SWIFT_VERSION = 5.0;
@@ -1117,7 +1118,8 @@
 				);
 				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yui.KoalasSimonSaysGame;
-				PRODUCT_NAME = "旗ふりゲーム";
+				PRODUCT_MODULE_NAME = "旗ふりゲーム";
+				PRODUCT_NAME = KoarasSimonSaysGame;
 				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGame;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = KoalasSimonSaysGame;
 				SWIFT_VERSION = 5.0;
