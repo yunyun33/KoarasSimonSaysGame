@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BA006F60243C58C0000AB5F6"
-               BuildableName = "&#x65d7;&#x3075;&#x308a;&#x30b1;&#x3099;&#x30fc;&#x30e0;.app"
+               BuildableName = "KoarasSimonSaysGame.app"
                BlueprintName = "KoarasSimonSaysGame"
                ReferencedContainer = "container:KoarasSimonSaysGame.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BA006F60243C58C0000AB5F6"
-            BuildableName = "&#x65d7;&#x3075;&#x308a;&#x30b1;&#x3099;&#x30fc;&#x30e0;.app"
+            BuildableName = "KoarasSimonSaysGame.app"
             BlueprintName = "KoarasSimonSaysGame"
             ReferencedContainer = "container:KoarasSimonSaysGame.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BA006F60243C58C0000AB5F6"
-            BuildableName = "&#x65d7;&#x3075;&#x308a;&#x30b1;&#x3099;&#x30fc;&#x30e0;.app"
+            BuildableName = "KoarasSimonSaysGame.app"
             BlueprintName = "KoarasSimonSaysGame"
             ReferencedContainer = "container:KoarasSimonSaysGame.xcodeproj">
          </BuildableReference>
