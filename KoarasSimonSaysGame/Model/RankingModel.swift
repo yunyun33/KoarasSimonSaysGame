@@ -19,8 +19,6 @@ protocol RankingModelProtocol {
 
 class RankingModel: RankingModelProtocol {
     
-    var defaultstore:Firestore!
-    
     func saveToUserDefaults(name: String, score: Int) {
         // 保存するメモ情報を配列にする 0: 名前, 1: スコア
         let rankingToSave: [String] = [name, "\(score)"]

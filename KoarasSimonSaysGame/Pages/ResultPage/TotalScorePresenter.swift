@@ -26,34 +26,20 @@ class TotalScorePresenter: TotalScorePresenterInput {
     var totalScore: Int
     
     private weak var view: TotalScorePresenterOutput!
+    private let model: TotalScoreModel
     
-    init(totalScore: Int, view: TotalScorePresenterOutput) {
+    init(totalScore: Int, view: TotalScorePresenterOutput, model : TotalScoreModel) {
         self.totalScore = totalScore
         self.view = view
+        self.model = model
     }
     
-    //TotalScoreを見て、スコアに合ったコアラさんのメッセージを表示
     func viewDidLoad() {
         view.showTotalScore(totalScore: totalScore)
         
-        if totalScore >= 28 {
-            view.showKoalasMessage(message: CommonValue.resultMessegeExcellent)
-            
-        } else if totalScore >= 25 {
-            view.showKoalasMessage(message: CommonValue.resultMessegeAmazing)
-            
-        } else if totalScore >= 21 {
-            view.showKoalasMessage(message: CommonValue.resultMessegeWonderful)
-
-        } else if totalScore >= 16 {
-            view.showKoalasMessage(message: CommonValue.resultMessegeGreat)
-
-        } else if totalScore >= 5 {
-            view.showKoalasMessage(message: CommonValue.resultMessegeLittleMore)
-
-        } else if totalScore >= 0 {
-            view.showKoalasMessage(message: CommonValue.resultMessegeSleep)
-        }
+        // TotalScoreを見て、スコアに合ったコアラさんのメッセージを表示
+        let message = model.getKoalasMessage(totalScore: totalScore)
+        view.showKoalasMessage(message: message)
         
         // 診断結果の表示イベントを、パーセントのパラメータとともにロギングする
         AnalyticsManager.logShowResultEvent(with: totalScore)

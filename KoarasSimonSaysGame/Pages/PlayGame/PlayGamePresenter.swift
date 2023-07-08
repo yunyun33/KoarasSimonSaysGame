@@ -29,9 +29,11 @@ protocol PlayGamePresenterOutput: AnyObject {
 class PlayGamePresenter: PlayGamePresenterInput {
     
     private weak var view: PlayGamePresenterOutput!
+    private let model: PlayGameModel
     
-    init(view: PlayGamePresenterOutput) {
+    init(view: PlayGamePresenterOutput, model: PlayGameModel) {
         self.view = view
+        self.model = model
     }
     
     //仮に初期値としてUPを入れる
@@ -77,7 +79,7 @@ class PlayGamePresenter: PlayGamePresenterInput {
 }
 
 extension PlayGamePresenter {
-
+    
     //時間経過の処理
     @objc func timerInterrupt(_ timer: Timer) {
         //経過時間を−1ずつする。
@@ -106,15 +108,14 @@ extension PlayGamePresenter {
     //タイマーが終了した時に行う処理
     private func finishOfTimer() {
         totalScore = okCount - ngCount
-        if ( totalScore < 0 ) {
-            totalScore = 0
-        }
+
+        let totalScore = model.getTotalScore(okCount: okCount, ngCount: ngCount)
         view.transitToTotalScorePage(score: totalScore)
     }
     
     //BGMの設定、再生
     private func playMusic() {
-
+        
         do {
             let filePath = Bundle.main.path(forResource: "playBGM",ofType: "mp3")
             let music = URL(fileURLWithPath: filePath!)
@@ -130,7 +131,7 @@ extension PlayGamePresenter {
         timer?.invalidate()
         audioPlayer.stop()
     }
-
+    
     //次の方向指示をランダムで表示させる
     private func proceedToNextDirection() {
         

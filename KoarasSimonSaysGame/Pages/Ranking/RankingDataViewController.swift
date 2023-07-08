@@ -33,7 +33,7 @@ extension RankingDataViewController: UITableViewDelegate, UITableViewDataSource 
     
     //セルの高さ
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 60
+        return 60
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,8 +48,8 @@ extension RankingDataViewController: UITableViewDelegate, UITableViewDataSource 
         cell.rankingNumberLabel.text = "\(indexPath.row + 1)位"
         cell.rankingNameLabel.text = "\(nameAndScore[0])"
         cell.rankingScoreLabel.text = "\(nameAndScore[1])点"
-      
-        return cell 
+        
+        return cell
     }
 }
 
@@ -65,7 +65,7 @@ extension RankingDataViewController: UINavigationControllerDelegate {
 }
 
 extension RankingDataViewController {
-
+    
     private func setupView() {
         // タイトルの文字の色設定
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(red: 89/225, green: 107/225, blue: 179/225, alpha: 1)]
@@ -111,7 +111,7 @@ extension RankingDataViewController: RankingDataOutput {
                                                          preferredStyle: .alert)
         //OKボタン
         let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler:{
-                    (action:UIAlertAction!) -> Void in
+            (action:UIAlertAction!) -> Void in
             self.presenter.didTapOkOnDeleteAll()
         })
         alert.addAction(okAction)
@@ -126,14 +126,14 @@ extension RankingDataViewController: RankingDataOutput {
         present(alert, animated: true, completion: nil)
     }
     
-    func showCanNotDeleteAlert() {
-        let alert: UIAlertController = UIAlertController(title: "削除するデータがありません。",
+    func showOkAlert(alertMessage: String) {
+        let alert: UIAlertController = UIAlertController(title: alertMessage,
                                                          message: "",
                                                          preferredStyle: .alert)
         
         //OKボタン
         let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler:{
-                    (action:UIAlertAction!) -> Void in
+            (action:UIAlertAction!) -> Void in
             // NOP
         })
         alert.addAction(okAction)

@@ -22,26 +22,26 @@ protocol RankingDataOutput: AnyObject {
     func setupLocalRanking()
     func reloadTableView()
     func showDeleteAlert()
-    func showCanNotDeleteAlert()
+    func showOkAlert(alertMessage: String)
 }
 
 class RankingDataPresenter {
     
     var isWorldRanking: Bool
     var nameAndScore: [[String]] = []
-        
-    private weak var view: RankingDataOutput!
-    private let model: RankingModelProtocol
     
-    init(isWorldRanking: Bool, view: RankingDataOutput, model: RankingModelProtocol) {
+    private weak var view: RankingDataOutput!
+    private let rankingUseCase: RankingUseCase
+    
+    init(isWorldRanking: Bool, view: RankingDataOutput, rankingUseCase: RankingUseCase) {
         self.isWorldRanking = isWorldRanking
         self.view = view
-        self.model = model
+        self.rankingUseCase = rankingUseCase
     }
 }
 
 extension RankingDataPresenter: RankingDataPresenterInput {
-
+    
     func viewDidLoad() {
         if isWorldRanking {
             view.setupWordRanking()
@@ -63,7 +63,7 @@ extension RankingDataPresenter: RankingDataPresenterInput {
     
     func didTapDeleteButton() {
         if nameAndScore.count == 0 {
-            view.showCanNotDeleteAlert()
+            view.showOkAlert(alertMessage: CommonValue.AlertMessage.noDataToDelete)
         } else {
             view.showDeleteAlert()
         }
@@ -71,7 +71,7 @@ extension RankingDataPresenter: RankingDataPresenterInput {
     
     func didTapOkOnDeleteAll() {
         //OKボタン押されたらUserDefaltsのデータ削除
-        model.deleteUserDefaultsDatas()
+        rankingUseCase.deleteRankingUserDefaultsDatas()
         //↑のだけだとボタン押した瞬間は画面に表示されたままのため↓で表示を消す
         nameAndScore.removeAll()
         view.reloadTableView()
@@ -81,19 +81,19 @@ extension RankingDataPresenter: RankingDataPresenterInput {
 extension RankingDataPresenter {
     
     private func setUserDefaultsDatas() {
-        nameAndScore = model.getUserDefaultsDatas()
+        nameAndScore = rankingUseCase.getRankingUserDefaultsDatas()
         
         view.reloadTableView()
     }
     
     private func setFirestoreDatas() {
-        model.getFirestoreDatas(success: { (firestoreDatas) in
-                
+        rankingUseCase.getRankingFirestoreDatas(success: { (firestoreDatas) in
+            
             self.nameAndScore = firestoreDatas
             self.view.reloadTableView()
             
         }, failure: { (Error) in
-            print("Error!")
+            self.view.showOkAlert(alertMessage: CommonValue.AlertMessage.failedGetData)
         })
     }
 }
