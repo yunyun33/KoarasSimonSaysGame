@@ -6,9 +6,9 @@
 - ゲームの得点を登録、表示できるランキング機能もあります。(ローカルランキング、世界ランキング)
 
 ## 開発環境
-- macOS Big Sur 11.4
-- xcode 12.5 で開発
-- iOS Deployment Target 13.0
+- macOS Venture 13.3
+- xcode 14.3 で開発
+- iOS Deployment Target 14.0
 
 ## データベース
 - ゲーム得点の世界ランキングにおいて[Firebase Firestore](https://firebase.google.com/docs/firestore?hl=ja) を使用しています。
