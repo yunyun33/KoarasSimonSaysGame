@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1222,6 +1222,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = P2SUKVPCW7;
 				DISPLAY_NAME = "旗ふりゲームDev";
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "旗ふりゲームDev";
@@ -1235,6 +1236,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yui.KoalasSimonSaysGame-DEVELOP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGameDev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = KoalasSimonSaysGameDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1249,6 +1251,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = P2SUKVPCW7;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = P2SUKVPCW7;
 				DISPLAY_NAME = "旗ふりゲームDev";
 				INFOPLIST_FILE = KoarasSimonSaysGame/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "旗ふりゲームDev";
@@ -1262,6 +1265,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yui.KoalasSimonSaysGame-DEVELOP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = KoalasSimonSaysGameDev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = KoalasSimonSaysGameDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
