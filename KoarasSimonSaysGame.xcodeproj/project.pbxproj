@@ -27,6 +27,8 @@
 		BA4254A826A289E400DA876D /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4254A626A289E400DA876D /* AnalyticsManager.swift */; };
 		BA4C969C24B1984900226834 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA4C969B24B1984900226834 /* GoogleService-Info.plist */; };
 		BA6DA34E2560E27B00DD918F /* playBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA6DA34D2560E27A00DD918F /* playBGM.mp3 */; };
+		BA987B2F2C30E1DE002E5210 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = BA987B2B2C30DFEB002E5210 /* PrivacyInfo.xcprivacy */; };
+		BA987B302C30E1DF002E5210 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = BA987B2B2C30DFEB002E5210 /* PrivacyInfo.xcprivacy */; };
 		BAABD9922A3981880056110F /* PlayGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABD9912A3981880056110F /* PlayGameModel.swift */; };
 		BAABD9932A3981880056110F /* PlayGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABD9912A3981880056110F /* PlayGameModel.swift */; };
 		BAABD9962A398C430056110F /* PlayGameModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABD9952A398C430056110F /* PlayGameModelTests.swift */; };
@@ -162,6 +164,7 @@
 		BA4254A626A289E400DA876D /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		BA4C969B24B1984900226834 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA6DA34D2560E27A00DD918F /* playBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBGM.mp3; sourceTree = "<group>"; };
+		BA987B2B2C30DFEB002E5210 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		BAABD9912A3981880056110F /* PlayGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameModel.swift; sourceTree = "<group>"; };
 		BAABD9952A398C430056110F /* PlayGameModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameModelTests.swift; sourceTree = "<group>"; };
 		BAABD9982A398D610056110F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -273,6 +276,7 @@
 		BA006F58243C58C0000AB5F6 = {
 			isa = PBXGroup;
 			children = (
+				BA987B2B2C30DFEB002E5210 /* PrivacyInfo.xcprivacy */,
 				BA4254A326A081BC00DA876D /* Settings.bundle */,
 				BAE6E69224919C970077D8AE /* kazesawa */,
 				BA006F63243C58C0000AB5F6 /* KoarasSimonSaysGame */,
@@ -626,6 +630,7 @@
 				BA4C969C24B1984900226834 /* GoogleService-Info.plist in Resources */,
 				BA4254A426A081BC00DA876D /* Settings.bundle in Resources */,
 				BAE6E6892483E6460077D8AE /* RankingCell.xib in Resources */,
+				BA987B2F2C30E1DE002E5210 /* PrivacyInfo.xcprivacy in Resources */,
 				BA006F6E243C58C8000AB5F6 /* Assets.xcassets in Resources */,
 				BA006F6C243C58C0000AB5F6 /* Main.storyboard in Resources */,
 				BAAED826267724DE00DF5647 /* RegisterNameDialog.storyboard in Resources */,
@@ -671,6 +676,7 @@
 				BAE5F61E269D7A3500DBD2D7 /* GoogleService-Info.plist in Resources */,
 				BA4254A526A081E300DA876D /* Settings.bundle in Resources */,
 				BAE5F61F269D7A3500DBD2D7 /* RankingCell.xib in Resources */,
+				BA987B302C30E1DF002E5210 /* PrivacyInfo.xcprivacy in Resources */,
 				BAE5F620269D7A3500DBD2D7 /* Assets.xcassets in Resources */,
 				BAE5F621269D7A3500DBD2D7 /* Main.storyboard in Resources */,
 				BAE5F622269D7A3500DBD2D7 /* RegisterNameDialog.storyboard in Resources */,
