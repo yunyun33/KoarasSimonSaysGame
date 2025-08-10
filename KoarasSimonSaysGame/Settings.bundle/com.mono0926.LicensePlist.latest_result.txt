@@ -1,179 +1,179 @@
 name: abseil, nameSpecified: 
 body: 
                    …
-version: 1.20240116.2
+version: 1.20240722.0
 
 name: abseil, nameSpecified: 
 body: 
                    …
-version: 1.20240116.2
+version: 1.20240722.0
 
 name: BoringSSL-GRPC, nameSpecified: 
 body: BoringSSL is a fork …
-version: 0.0.32
+version: 0.0.37
 
 name: BoringSSL-GRPC, nameSpecified: 
 body: BoringSSL is a fork …
-version: 0.0.32
+version: 0.0.37
 
 name: Firebase, nameSpecified: 
 body: 
                    …
-version: 10.28.1
+version: 11.13.0
 
 name: Firebase, nameSpecified: 
 body: 
                    …
-version: 10.28.1
+version: 11.13.0
 
 name: Firebase, nameSpecified: 
 body: 
                    …
-version: 10.28.1
+version: 11.13.0
 
 name: FirebaseAnalytics, nameSpecified: 
 body: Copyright 2022 Googl…
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseAnalytics, nameSpecified: 
 body: Copyright 2022 Googl…
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseAnalytics, nameSpecified: 
 body: Copyright 2022 Googl…
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseAppCheckInterop, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseAppCheckInterop, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseCore, nameSpecified: 
 body: 
                    …
-version: 10.28.1
+version: 11.13.0
 
 name: FirebaseCore, nameSpecified: 
 body: 
                    …
-version: 10.28.1
+version: 11.13.0
 
 name: FirebaseCore, nameSpecified: 
 body: 
                    …
-version: 10.28.1
+version: 11.13.0
 
 name: FirebaseCoreExtension, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseCoreExtension, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseCoreInternal, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseCoreInternal, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseCoreInternal, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseDatabase, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseDatabase, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseFirestore, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseFirestore, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseFirestoreInternal, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseFirestoreInternal, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseInstallations, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseInstallations, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseInstallations, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseSharedSwift, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: FirebaseSharedSwift, nameSpecified: 
 body: 
                    …
-version: 10.28.0
+version: 11.13.0
 
 name: GoogleAppMeasurement, nameSpecified: 
 body: Copyright 2022 Googl…
-version: 10.28.0
+version: 11.13.0
 
 name: GoogleAppMeasurement, nameSpecified: 
 body: Copyright 2022 Googl…
-version: 10.28.0
+version: 11.13.0
 
 name: GoogleAppMeasurement, nameSpecified: 
 body: Copyright 2022 Googl…
-version: 10.28.0
+version: 11.13.0
 
 name: GoogleUtilities, nameSpecified: 
 body: 
                    …
-version: 7.13.3
+version: 8.1.0
 
 name: GoogleUtilities, nameSpecified: 
 body: 
                    …
-version: 7.13.3
+version: 8.1.0
 
 name: GoogleUtilities, nameSpecified: 
 body: 
                    …
-version: 7.13.3
+version: 8.1.0
 
 name: gRPC-C++, nameSpecified: 
 body: 
@@ -188,20 +188,20 @@ version:
 name: gRPC-Core, nameSpecified: 
 body: 
                    …
-version: 1.62.5
+version: 1.69.0
 
 name: gRPC-Core, nameSpecified: 
 body: 
                    …
-version: 1.62.5
+version: 1.69.0
 
 name: leveldb-library, nameSpecified: 
 body: Copyright (c) 2011 T…
-version: 1.22.5
+version: 1.22.6
 
 name: leveldb-library, nameSpecified: 
 body: Copyright (c) 2011 T…
-version: 1.22.5
+version: 1.22.6
 
 name: LicensePlist, nameSpecified: 
 body: MIT License
@@ -217,15 +217,15 @@ version: 3.25.1
 
 name: nanopb, nameSpecified: 
 body: Copyright (c) 2011 P…
-version: 2.30910.0
+version: 3.30910.0
 
 name: nanopb, nameSpecified: 
 body: Copyright (c) 2011 P…
-version: 2.30910.0
+version: 3.30910.0
 
 name: nanopb, nameSpecified: 
 body: Copyright (c) 2011 P…
-version: 2.30910.0
+version: 3.30910.0
 
 name: PromisesObjC, nameSpecified: 
 body: 
